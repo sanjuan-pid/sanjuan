@@ -50,11 +50,11 @@ class UpdatesController extends Controller
      */
     public function store(Request $request)
     {
-        // $hide = DB::table('news')
-        // ->where('id', '!=', 0)
-        // ->where('content_tag', '=', 'vm')
-        // ->where('content_type', '=', 'Programs')
-        // ->update(['show' => 0]);
+        $hide = DB::table('news')
+        ->where('id', '!=', 0)
+        ->where('content_tag', '=', 'vm')
+        ->where('content_type', '=', 'Updates')
+        ->update(['show' => 0]);
 
         //para marequire nya ung sa form
         $this->validate($request,[

@@ -24,12 +24,25 @@
 
         </div>
     </div> --}}
+<style>
+@media only screen and (max-width: 768px) {
+#id{
+  max-width: 100%;
+}
+
+}
+</style>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <div class="container" style="max-width: 70%;">
+        <div class="container" id="con1" style="max-width: 60%; background-color:white;">
           <div class="row">
-            <h1 style="margin-top: 25px; text-align: center;">SAN JUAN CITY</h1>
+            <h1 style="margin-top: 25px; text-align: center; border-bottom: 5px solid #1b2560;">SAN JUAN CITY</h1>
             <div class=" col-6 col-sm-6 col-md-6 col-lg-6">
-              <img src="{{asset('assets/SANJUAN.jpg')}}"  style="width: 100%; border-radius:5px; margin-top: 18%;"/>
+              <br>
+              <br>
+              <br>
+              <br>
+              <img src="{{asset('assets/SANJUAN.jpg')}}"  style="width: 100%; border-radius: 5px;"/>
             </div>
             <div class=" col-6 col-sm-6 col-md-6 col-lg-6">
               <br>

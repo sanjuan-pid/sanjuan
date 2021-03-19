@@ -82,4 +82,14 @@ Route::prefix('admin')->group(function(){
     Route::resource('/events','EventsController');
     // Route::post('/qr/', 'CovidController@Covid_target');
 
+    //programs
+    Route::get('/vice-mayor/programs/prog_list', 'ProgramsController@index')->name('admin.vice-mayor.programs.prog_list');
+    Route::post('/vice-mayor/programs/prog_list', 'ProgramsController@store');
+    Route::resource('/vice-mayor/programs','ProgramsController');
+
+    //updates
+    Route::get('/vice-mayor/updates/updates_list', 'UpdatesController@index')->name('admin.vice-mayor.updates.updates_list');
+    Route::post('/vice-mayor/updates/updates_list', 'UpdatesController@store');
+    Route::resource('/vice-mayor/updates','UpdatesController');
+    
 });

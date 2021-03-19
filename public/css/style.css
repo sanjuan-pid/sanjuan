@@ -955,10 +955,7 @@ div#mayorqr {
         padding: 0 !important;
     }
     div#news_sec .col-sm-8{
-       /* padding: 0 !important;*/
-    }
-    .card-body.sc {
-        padding: 0;
+        padding: 0 !important;
     }
     .soc_med{
         /* position:relative;
@@ -967,8 +964,8 @@ div#mayorqr {
         top: 15px; */
     }
   .datesss img, .soc_med img {
-      width: 24px !important;
-      height: 24px !important;
+      width: 24px;
+      height: 24px;
   }
   .datesss a{
     display: inline;
@@ -1001,7 +998,9 @@ div#mayorqr {
     .nav_linkssss_{
         color: #fff ;
     }
-    
+    .card-body.sc {
+        padding: 0;
+    }
     div#mayorqr,div#mayors_corner,div#covid_updates,div#news_sec {
         max-width: 70% !important;
     }

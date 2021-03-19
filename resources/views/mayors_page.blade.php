@@ -86,7 +86,9 @@
 
  <div class="container" id="news_sec">
     <br>
+    @include('layouts.index.agenda')
     <br>
+
     <div class="row" id="news">
         <h1 style="text-align: center;">NEWS</h1>
         <div class="col-sm-15">
@@ -120,7 +122,7 @@
 
             </div>
         </div>
-        <div class=" col-sm-12">
+        <div class=" col-sm-12" style="display: none;">
             <div class="card">
                     <div class="card-body" id="bulletin_sec">
                         <h2 class="card-title">BULLETIN</h2>

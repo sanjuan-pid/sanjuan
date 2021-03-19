@@ -41,47 +41,26 @@ body {font-family: "Lato", sans-serif;}
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  width: 100%;
+  border: 1px solid #ccc;
+  width: 70%;
   border-left: none;
   height: 512px;
 }
-.tabcontent img{
-  width:100% !important;
-}/* width */
-.agenda_::-webkit-scrollbar {
-  width: 10px;
-    
-}
-
-/* Track */
-.agenda_::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 5px;
-}
-
-/* Handle */
-.agenda_::-webkit-scrollbar-thumb {
-  background: blue;
-  border-radius: 5px;
-}
-
-/* Handle on hover */
-.agenda_::-webkit-scrollbar-thumb:hover {
-  background: #5fa3f5;
-}
 </style>
         <br>
-        <div class="container" style="width: 100%; max-width:100% !important;" >
+        <br>
+        <h3 style="text-align: center; color: #1f1c4b; font-size: 60px; font-weight: 700;">AGENDA</h3>
+        <div class="container"  >
           <div class="row">
-            <div class="col">
-              <div class="tab agenda_" style="height: 115px;overflow-x: scroll;width: 100%; white-space: nowrap;">
-                  <button class="tablinks" style="width: 50%;display: inline-block;" onclick="openCity(event, 'two')" id="defaultOpen"><img src="{{asset('assets/Icon/hospital-buildings.svg')}}" style="width:30%;display: block; margin-left: auto; margin-right: auto;"/></button>
-                  <button class="tablinks" style="width: 50%;display: inline-block;" onclick="openCity(event, 'three')"><img src="{{asset('assets/Icon/school.svg')}}"style="width:30%;display: block; margin-left: auto; margin-right: auto;"/></button>
-                  <button class="tablinks" style="width: 50%;display: inline-block;" onclick="openCity(event, 'four')"><img src="{{asset('assets/Icon/statistics.svg')}}"style="width:30%;display: block; margin-left: auto; margin-right: auto;"/></button>
-                  <button class="tablinks" style="width: 50%;display: inline-block;" onclick="openCity(event, 'six')"><img src="{{asset('assets/Icon/wifi.svg')}}"style="width:30%;display: block; margin-left: auto; margin-right: auto;"/></button>
-                  <button class="tablinks" style="width: 50%;display: inline-block;" onclick="openCity(event, 'eight')"><img src="{{asset('assets/Icon/seeding.svg')}}"style="width:30%;display: block; margin-left: auto; margin-right: auto;"/></button>
-                  <button class="tablinks" style="width: 50%;display: inline-block;" onclick="openCity(event, 'nine')"><img src="{{asset('assets/Icon/fam.svg')}}"style="width:30%;display: block; margin-left: auto; margin-right: auto;"/></button>
-                  <button class="tablinks" style="width: 50%;display: inline-block;" onclick="openCity(event, 'ten')"><img src="{{asset('assets/Icon/businessmen.svg')}}"style="width:30%;display: block; margin-left: auto; margin-right: auto;"/></button>
+            <div class="col mt-5">
+              <div class="tab" style="height: 512px; overflow-y: scroll;">
+                  <button class="tablinks" onclick="openCity(event, 'two')" id="defaultOpen"><img src="{{asset('assets/Icon/hospital-buildings.svg')}}" style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
+                  <button class="tablinks" onclick="openCity(event, 'three')"><img src="{{asset('assets/Icon/school.svg')}}"style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
+                  <button class="tablinks" onclick="openCity(event, 'four')"><img src="{{asset('assets/Icon/statistics.svg')}}"style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
+                  <button class="tablinks" onclick="openCity(event, 'six')"><img src="{{asset('assets/Icon/wifi.svg')}}"style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
+                  <button class="tablinks" onclick="openCity(event, 'eight')"><img src="{{asset('assets/Icon/seeding.svg')}}"style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
+                  <button class="tablinks" onclick="openCity(event, 'nine')"><img src="{{asset('assets/Icon/fam.svg')}}"style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
+                  <button class="tablinks" onclick="openCity(event, 'ten')"><img src="{{asset('assets/Icon/businessmen.svg')}}"style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
 
               </div>
               <div id="two" class="tabcontent">
