@@ -1,5 +1,19 @@
 @extends('layouts.admin-app')
-
+<style>
+span#descriptions_{
+    height: 110px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    /* color: #000; */
+    /* font-weight: 600; */
+    font-size: 16px;
+    text-decoration: none;
+}
+</style>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -10,7 +24,7 @@
                     {{ session('status') }}
                 </div>
                 @endif
-                <div class="card-header">Announcents <a href="{{action('AnnouncementController@create')}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a></div>
+                <div class="card-header">Vice Mayor's Programs <a href="{{action('ProgramsController@create')}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a></div>
                 
                 @if(\Session::has('success'))
                 {{-- session ung nilagay mo sa return ng controller --}}
@@ -32,23 +46,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                         @foreach($ann as $row)
+                         @foreach($programs as $row)
                             <tr id={{$row['id']}}>
                                 <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="80px"/></td>
                               
                                 <td >{{$row['title']}}</td>
-                                <td  id="desc" >{{$row['desc']}}</td>
+                                <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
                                 <td>
-                                    <form method="post" action="{{action('AnnouncementController@makefirst',$row['id'])}}" style="display: inline;" >
-                                        {{csrf_field()}}
-                                        <input type="hidden" name="_method" value="POST">
-                                        <input type="hidden" name="id" value="{{$row['id']}}">
-                                        <button type="submit" class="btn btn-info" style="color:#fff;">Show First</button>
-                                    </form>
-                                
-                                    <a href="{{action('AnnouncementController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                    
-                                    <form method="post" class="delete_form" action="{{action('AnnouncementController@destroy',$row['id'])}}" >
+                                    <a href="{{action('ProgramsController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
+                                    <form method="post" class="delete_form" action="{{action('ProgramsController@destroy',$row['id'])}}" >
                                         {{csrf_field()}}
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
