@@ -62,7 +62,21 @@ class Pages extends Controller
     }
     public function vice()
     {
-        return view('ourcity/vicemayor_page');
+        $ann = DB::select('select * from news
+            where content_tag ="VM"
+            and content_type="Announcement"', [1]);
+        $programs = News::where('status', 1)
+            ->where('content_tag', "VM")
+            ->where('content_type', "Programs")
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $updates = News::where('status', 1)
+            ->where('content_tag', "VM")
+            ->where('content_type', "Updates")
+            ->orderBy('created_at', 'desc')
+            ->get();
+        // return view('');
+        return view('ourcity/vicemayor_page',compact('programs','updates'),['ann' => $ann]);
     }
   
     public function city()

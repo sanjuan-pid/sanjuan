@@ -62,8 +62,13 @@
 
                                 @if($row['show'] == 1)
                                     <div class="recent_big">
-                                        <img src="{{asset("uploads/" . $row['filename']) }}"  id="image_big" style="width: 100%;" />
-                                        <p class="card-text title_big"><a href="#"><?php echo $row['title'] ?></p></a>
+                                      <div class="col-12 col-sm-12">
+
+                                        <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%; height: auto !important; margin-bottom:2%;" />
+                                        <p class="recent_psmall">
+                                            <a href="{{action( 'Pages@news_contents', $row->id )}}" target="_blank" ><?php echo $row['title'] ?> </a>
+                                        </p>
+                                      </div>
                                     </div>
 
                                 @endif
@@ -79,12 +84,13 @@
                                                 <?php $i++; ?>
                                                 <div class="col-12 col-sm-12">
 
-                                                    <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%; height: 250px !important; margin-bottom:2%;" />
+                                                    <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;  height: auto; margin-bottom:2%;" />
                                                     <p class="recent_psmall">
                                                         <a href="{{action( 'Pages@news_contents', $row->id )}}" target="_blank" ><?php echo $row['title'] ?> </a>
                                                     </p>
+                                                    <br>
                                                 </div>
-                                                @if ($i == 10)
+                                                @if ($i == 2)
                                                     @break
                                                 @endif
                                             @endif
@@ -103,7 +109,7 @@
                         <div class="card-body">
                         </div>
                     </div> --}}
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="15000">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
                         <!-- Carousel indicators -->
 
                         <ol class="carousel-indicators">
@@ -128,7 +134,7 @@
                                     <div class=" col-sm-12">
                                       <div id="img_slot">
                                         <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                         <img src="{{asset("uploads/" . $row['filename']) }}" style="height: 100%;width: 58%;" id="image_slide">
+                                         <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width: 100%;" id="image_slide">
                                         </a>
                                       </div>
                                     </div>
@@ -145,7 +151,7 @@
                                     <div class=" col-sm-12">
                                       <div id="img_slot">
                                         <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                          <img src="{{asset("uploads/" . $row['filename']) }}" style="height: 100%;width: 58%;"  id="image_slide">
+                                          <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width: 100%;"  id="image_slide">
                                         </a>
                                       </div>
                                     </div>
@@ -185,7 +191,7 @@
     <div class="row">
         <h1 style="text-align: center;">MAYOR'S CORNER</h1>
         <div class="container-lg my-3">
-            <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="15000">
+            <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="3000">
                 <!-- Carousel indicators -->
 
                 <ol class="carousel-indicators">
@@ -338,7 +344,9 @@
               <div class="card" id="news_card">
                   <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
                       <h2 class="card-title blue" style="color:#fff; padding: 0 !important;">NEWS</h2>
-                          @foreach($news as $row)
+                        <?php $i=0; ?>
+                            @foreach($news as $row)
+                              <?php $i++; ?>
                               <div class="card" style="margin: 2%;">
                                   <div class="card-body" id="bulletin_bod">
                                       <div class="col-4 col-sm-4" style="float: left; display: inline-block;">
@@ -348,11 +356,17 @@
                                       </div>
                                       <div class="col-8 col-sm-8" style="display: inline-block; padding:5px;">
                                               <a id="bulletin_desc" href="#"><?php echo $row->title ?> </a>
+                                              <span id="article_contents">
+                                                <?php echo $row['desc'] ?>
+                                              </span>
                                               <br>
                                               <a id="bulletin_readmore" href="{{action( 'Pages@news_contents', $row->id )}}" target="_blank"  >readmore</a>
                                       </div>
                                   </div>
                               </div>
+                              @if ($i == 4)
+                                  @break
+                              @endif
                           @endforeach
                   </div>
 

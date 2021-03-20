@@ -25,6 +25,7 @@ class AnnouncementController extends Controller
         // $ann = Announcement::all()->toArray();
         $ann = News::where('status', 1)
                ->where('content_type', 'Announcement')
+               ->where('content_tag', '0')
                ->orderBy('created_at')
                ->get();
         return view('admin.announcment.list', compact('ann'));

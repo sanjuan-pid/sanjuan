@@ -17,14 +17,18 @@ class WelcomeController extends Controller
                ->get();
         $announcement = News::where('status', 1)
                 ->where('content_type', "Announcement")
+                ->where('content_tag', "0")
                 ->orderBy('created_at', 'desc')
                 ->get();
+        // echo $announcement;
         $news = News::where('status', 1)
-                ->where('content_type', "News")        
+                ->where('content_type', "News")     
+                ->where('content_tag', 0)   
                 ->orderBy('created_at', 'desc')
                 ->get();
         $events = News::where('status', 1)
-                ->where('content_type', "Events")        
+                ->where('content_type', "Events")  
+                ->where('content_tag', 0)      
                 ->orderBy('created_at', 'desc')
                 ->get();
         $news2 = DB::select('select id , title, filename, date(created_at), DATE(NOW()) - INTERVAL 2 DAY from news 

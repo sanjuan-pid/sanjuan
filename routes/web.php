@@ -91,5 +91,9 @@ Route::prefix('admin')->group(function(){
     Route::get('/vice-mayor/updates/updates_list', 'UpdatesController@index')->name('admin.vice-mayor.updates.updates_list');
     Route::post('/vice-mayor/updates/updates_list', 'UpdatesController@store');
     Route::resource('/vice-mayor/updates','UpdatesController');
-    
+   
+    //updates
+    Route::get('/vice-mayor/announcements/announcement_list', 'VM_AnnouncementsController@index')->name('admin.vice-mayor.announcements.announcement_list');
+    Route::post('/vice-mayor/announcements/announcement_list', 'VM_AnnouncementsController@store');
+    Route::resource('/vice-mayor/announcements','VM_AnnouncementsController');
 });

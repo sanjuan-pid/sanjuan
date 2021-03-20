@@ -955,7 +955,7 @@ div#mayorqr {
         padding: 0 !important;
     }
     div#news_sec .col-sm-8{
-        padding: 0 !important;
+        /* padding: 0 !important; */
     }
     .soc_med{
         /* position:relative;
@@ -1027,3 +1027,28 @@ div#mayorqr {
         background: #fff;
     }
     
+    #desc{
+        height: 115px;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        color: #000;
+        font-size: 16px;
+        text-decoration: none;
+    }
+    .skills {
+      text-align: right;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+    }
+    #news #bulletin_bod #bulletin_desc{
+        height:20px !important;
+    }
+    #news #article_contents{
+        margin-top: 0;
+        height: 90px !important;
+    }

@@ -65,10 +65,10 @@
                  <nav class="navbar navbar-expand-lg navbar-light" style="border-bottom: 2px solid rgb(49 64 150);">
                    <div class="container">
                      <div class="col-sm-2" id="nav_logo">
-                       <a class="navbar-brand" href="/">
+                       <a class="navbar-brand" href="/pid/public/welcome">
                          <img src="{{asset('assets/sjc.png')}}" style="margin-right: 0 !important;"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
-                       <a class="navbar-brand" href="/">
+                       <a class="navbar-brand" href="/pid/public/welcome">
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
                      </div>
@@ -83,12 +83,12 @@
                               Our City
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                               <li><a class="dropdown-item" href="/sanjuan/pid/public/ourcity/government_page">Government</a></li>
-                               <li><a class="dropdown-item" href="/sanjuan/pid/public/ourcity/congressman_page">Congressman's Desk</a></li>
-                               <li><a class="dropdown-item" href="/sanjuan/pid/public/mayors_page">Mayor's Desk</a></li>
-                               <li><a class="dropdown-item" href="/sanjuan/pid/public/ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
+                               <li><a class="dropdown-item" href="/pid/public/ourcity/government_page">Government</a></li>
+                               <li><a class="dropdown-item" href="/pid/public/ourcity/congressman_page">Congressman's Desk</a></li>
+                               <li><a class="dropdown-item" href="/pid/public/mayors_page">Mayor's Desk</a></li>
+                               <li><a class="dropdown-item" href="/pid/public/ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
                                <li><a class="dropdown-item" href="#">City Council</a></li>
-                               <li><a class="dropdown-item" href="/sanjuan/pid/public/ourcity/barangay_page">Barangay</a></li>
+                               <li><a class="dropdown-item" href="/pid/public/ourcity/barangay_page">Barangay</a></li>
                              </ul>
                            </li>
                            <li class="nav-item dropdown" >
@@ -217,7 +217,7 @@
         @yield('content')
     </body>
     <footer>
-      <div class="container" style="margin-bottom: 0%; background-color: #ce2029;">
+      <div class="container" style="margin-bottom: 0%; background-color: #e82525;">
           <br>
           <br>
           <div class="row">

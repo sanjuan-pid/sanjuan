@@ -35,6 +35,7 @@ class EventsController extends Controller
 
         $hide = DB::table('news')
         ->where('id', '!=', 0)
+        ->where('content_type', '=', 'Events')
         ->update(['show' => 0]);
 
         //para marequire nya ung sa form

@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\News;
 
-class UpdatesController extends Controller
+
+class VM_AnnouncementsController extends Controller
 {
     public function __construct()
     {
@@ -23,11 +24,11 @@ class UpdatesController extends Controller
     {
         // $ann = Announcement::all()->toArray();
         $programs = News::where('status', 1)
-               ->where('content_type', 'Updates')
+               ->where('content_type', 'Announcement')
                ->where('content_tag', 'vm')
                ->orderBy('created_at')
                ->get();
-        return view('admin.vice-mayor.updates.updates_list', compact('programs'));
+        return view('admin.vice-mayor.announcements.announcement_list', compact('programs'));
         //
     }
 
@@ -38,7 +39,7 @@ class UpdatesController extends Controller
      */
     public function create()
     {
-        return view('admin.vice-mayor.updates.updates_create');
+        return view('admin.vice-mayor.announcements.announcement_create');
         
     }
 
@@ -52,8 +53,8 @@ class UpdatesController extends Controller
     {
         $hide = DB::table('news')
         ->where('id', '!=', 0)
-        ->where('content_tag', '=', 'vm')
-        ->where('content_type', '=', 'Updates')
+        ->where('content_tag', '=', 'VM')
+        ->where('content_type', '=', 'Announcement')
         ->update(['show' => 0]);
 
         //para marequire nya ung sa form
@@ -65,7 +66,7 @@ class UpdatesController extends Controller
         
         $cover = $request->file('filename');
         $extension = $cover->getClientOriginalExtension();
-        Storage::disk('public')->put('News/'.$cover->getFilename().'.'.$extension,  File::get($cover));
+        Storage::disk('public')->put('Announcement/'.$cover->getFilename().'.'.$extension,  File::get($cover));
         //get values ng mga nasa form to save
         $ann = new News();
         $ann->title = $request->title;
@@ -73,16 +74,16 @@ class UpdatesController extends Controller
         $ann->filename = $request->filename;
         $ann->status = 1;
         $ann->show = 1;
-        $ann->content_type = "Updates";
+        $ann->content_type = "Announcement";
         $ann->content_tag = "VM";
         
         
-        $ann->filename = 'News/'.$cover->getFilename().'.'.$extension;
+        $ann->filename = 'Announcement/'.$cover->getFilename().'.'.$extension;
         $ann->save();
 
 
         //to redirect
-        return redirect()->route('admin.vice-mayor.updates.updates_list')->with('success','Data Added');
+        return redirect()->route('admin.vice-mayor.announcements.announcement_list')->with('success','Data Added');
     }
 
     /**
@@ -140,7 +141,7 @@ class UpdatesController extends Controller
         $update->filename = $filename;
 
         $update->save();
-        return redirect()->route('admin.vice-mayor.updates.updates_list')->with('success','Data Updated');
+        return redirect()->route('admin.vice-mayor.announcements.announcement_list')->with('success','Data Updated');
         
     }
 
@@ -153,10 +154,10 @@ class UpdatesController extends Controller
     public function destroy($id)
     {
         
-        // $news = news::find($id);
-        // $news->status = 0;
-        // $news->save();
-        // return redirect()->route('admin.vice-mayor.updates.news.index')->with('success', 'News is already removed');
+        $news = news::find($id);
+        $news->status = 0;
+        $news->save();
+        return redirect()->route('admin.vice-mayor.announcements.announcement_list')->with('success', 'Announcement is already removed');
     }
     public function makefirst(Request $request)
     {
