@@ -39,15 +39,14 @@
                                 <td >{{$row['title']}}</td>
                                 <td  id="desc" >{{$row['desc']}}</td>
                                 <td>
-                                    <form method="post" action="{{action('AnnouncementController@makefirst',$row['id'])}}" style="display: inline;" >
-                                        {{csrf_field()}}
-                                        <input type="hidden" name="_method" value="POST">
-                                        <input type="hidden" name="id" value="{{$row['id']}}">
-                                        <button type="submit" class="btn btn-info" style="color:#fff;">Show First</button>
-                                    </form>
-                                
+                                   
+                                        <form method="post" action="{{action('AnnouncementController@makefirst',$row['id'])}}" style="display: inline;" >
+                                            {{csrf_field()}}
+                                            <input type="hidden" name="_method" value="POST">
+                                            <input type="hidden" name="id" value="{{$row['id']}}">
+                                            <button type="submit" class="btn btn-info" style="color:#fff;">Show First</button>
+                                        </form>
                                     <a href="{{action('AnnouncementController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                    
                                     <form method="post" class="delete_form" action="{{action('AnnouncementController@destroy',$row['id'])}}" >
                                         {{csrf_field()}}
                                         <input type="hidden" name="_method" value="DELETE">

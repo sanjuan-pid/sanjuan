@@ -82,7 +82,7 @@
 
                                 <li><a class="dropdown-item" href="{{route('admin.vice-mayor.programs.prog_list')}}" >Programs</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.vice-mayor.updates.updates_list')}}">Updates</a></li>
-                                {{-- <li><a class="dropdown-item" href="{{route('admin.vice-mayor.vm-announcements.vm-announcements')}}" >Announcements</a></li> --}}
+                                <li><a class="dropdown-item" href="{{route('admin.vice-mayor.announcements.announcement_list')}}" >Announcements</a></li>
                                 
                                 {{-- <li><a class="dropdown-item" href="{{route('admin.mayors.list_MC')}}" >Covid Cases</a></li> --}}
                                 {{-- <li><a class="dropdown-item" href="{{route('admin.covid.brgy')}}" >Covid Cases - GRAPH</a></li> --}}

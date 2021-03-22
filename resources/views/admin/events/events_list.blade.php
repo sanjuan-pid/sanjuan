@@ -47,11 +47,13 @@
                                     </form> --}}
 
                                     <a href="{{action('EventsController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                    <form method="post" class="delete_form" action="{{action('EventsController@destroy',$row['id'])}}" >
-                                        {{csrf_field()}}
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
-                                    </form>
+                                    @if($row['show'] != 1)
+                                        <form method="post" class="delete_form" action="{{action('EventsController@destroy',$row['id'])}}" >
+                                            {{csrf_field()}}
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
+                                        </form>
+                                    @endif
                                 </td>
                                 
                             </tr>

@@ -24,7 +24,7 @@ span#descriptions_{
                     {{ session('status') }}
                 </div>
                 @endif
-                <div class="card-header">News <a href="{{action('NewsController@create')}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a></div>
+                <div class="card-header">Vice Mayor's News Announcements <a href="{{action('VM_AnnouncementsController@create')}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a></div>
                 
                 @if(\Session::has('success'))
                 {{-- session ung nilagay mo sa return ng controller --}}
@@ -46,16 +46,16 @@ span#descriptions_{
                             </tr>
                         </thead>
                         <tbody>
-                         @foreach($news as $row)
+                         @foreach($programs as $row)
                             <tr id={{$row['id']}}>
                                 <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="80px"/></td>
                               
                                 <td >{{$row['title']}}</td>
                                 <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
                                 <td>
-                                    <a href="{{action('NewsController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                    @if($row['show'] != 1)
-                                        <form method="post" class="delete_form" action="{{action('NewsController@destroy',$row['id'])}}" >
+                                    <a href="{{action('UpdatesController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
+                                    @if($row['show']!=1)
+                                        <form method="post" class="delete_form" action="{{action('VM_AnnouncementsController@destroy',$row['id'])}}" >
                                             {{csrf_field()}}
                                             <input type="hidden" name="_method" value="DELETE">
                                             <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>

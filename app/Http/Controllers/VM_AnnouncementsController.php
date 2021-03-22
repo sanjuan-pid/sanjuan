@@ -130,7 +130,11 @@ class VM_AnnouncementsController extends Controller
             $extension = $cover->getClientOriginalExtension();
             Storage::disk('public')->put('Announcement/'.$cover->getFilename().'.'.$extension,  File::get($cover));
             //get values ng mga nasa form to save
+<<<<<<< HEAD
             $filename = 'Announcement/'.$cover->getFilename().'.'.$extension;
+=======
+            $filename = 'News/'.$cover->getFilename().'.'.$extension;
+>>>>>>> ccf0455dc63e0bdf63c96f77a53a158e441f5875
         }
         else{
             $filename= $request->get('filename_');
@@ -141,7 +145,11 @@ class VM_AnnouncementsController extends Controller
         $update->filename = $filename;
 
         $update->save();
+<<<<<<< HEAD
         return redirect()->route('admin.vice-mayor.announcements.announcement_list')->with('success: '.$update->title,'Data Updated');
+=======
+        return redirect()->route('admin.vice-mayor.announcements.announcement_list')->with('success','Data Updated');
+>>>>>>> ccf0455dc63e0bdf63c96f77a53a158e441f5875
         
     }
 

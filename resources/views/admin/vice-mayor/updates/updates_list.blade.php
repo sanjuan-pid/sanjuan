@@ -54,11 +54,13 @@ span#descriptions_{
                                 <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
                                 <td>
                                     <a href="{{action('UpdatesController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                    <form method="post" class="delete_form" action="{{action('UpdatesController@destroy',$row['id'])}}" >
-                                        {{csrf_field()}}
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
-                                    </form>
+                                    @if($row['show'] != 1)
+                                        <form method="post" class="delete_form" action="{{action('UpdatesController@destroy',$row['id'])}}" >
+                                            {{csrf_field()}}
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
+                                        </form>
+                                    @endif
                                 </td>
                                 
                             </tr>
