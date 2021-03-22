@@ -66,10 +66,10 @@
                  <nav class="navbar navbar-expand-lg navbar-light" style="border-bottom: 2px solid rgb(49 64 150);">
                    <div class="container">
                      <div class="col-sm-2" id="nav_logo">
-                       <a class="navbar-brand" href="/pid/public/welcome">
+                       <a class="navbar-brand" href="/welcome">
                          <img src="{{asset('assets/sjc.png')}}" style="margin-right: 0 !important;"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
-                       <a class="navbar-brand" href="/pid/public/welcome">
+                       <a class="navbar-brand" href="/welcome">
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
                      </div>

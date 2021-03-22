@@ -107,4 +107,9 @@ Route::prefix('admin')->group(function(){
     Route::post('/congressman/updates/updates_list', 'UpdatesCongressman@store');
     Route::resource('/congressman/updates','UpdatesCongressman');
 
+    //cong-announcement
+    Route::get('/congressman/announcements/announcement_list', 'AnnouncementsCongressman@index')->name('admin.congressman.announcements.announcement_list');
+    Route::post('/congressman/announcements/announcement_list', 'AnnouncementsCongressman@store');
+    Route::resource('/congressman/announcements','AnnouncementsCongressman');
+
 });

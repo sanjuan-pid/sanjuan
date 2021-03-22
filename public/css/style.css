@@ -976,79 +976,87 @@ div#mayorqr {
     margin-bottom:2px;
   }
 
-    a#navbarDropdownMenuLink {
-        color:#1b2560 ;
+a#navbarDropdownMenuLink {
+    color:#1b2560 ;
+}
+.header-section .nav-item .nav-link,a.nav-link {
+    font-size: 14px;
+    color: #656b72 ;
+}
+nav.navbar.navbar-expand-lg.navbar-light {
+    background: #fff ;
     }
-    .header-section .nav-item .nav-link,a.nav-link {
-        font-size: 14px;
-        color: #656b72 ;
-    }
-    nav.navbar.navbar-expand-lg.navbar-light {
-        background: #fff ;
-        }
-    div#nav {
-        position: sticky;
-        z-index: 99;
-        top: 0;
-    }
-    .nav_linkssss{
-        
-        background: #1b2560 ;
-    }
-    .nav_linkssss_{
-        color: #fff ;
-    }
-    .card-body.sc {
-        padding: 0;
-    }
-    div#mayorqr,div#mayors_corner,div#covid_updates,div#news_sec {
-        max-width: 70% !important;
-    }
-    body {
-        background: #f3f3f3;
-    }
-    img{
-       border-radius: 1% !important; 
-    }
-    img.covid_img {
-        padding: 3% 0;
-    }
-    #covid_updates .card-body {
-        border-radius: 1% !important;
-    }
-    #covid_updates .card, #news_card,#news .card, #mayorqr #news_card{
-        border: 0 ;
-    }
+div#nav {
+    position: sticky;
+    z-index: 99;
+    top: 0;
+}
+.nav_linkssss{
     
-    #news .card-body, #news_card .card-body, #mayorqr #news_card{
-         border-radius: 1% !important;   
-    }
-    div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
-        background: #fff;
-    }
-    
-    #desc{
-        height: 115px;
-        margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        color: #000;
-        font-size: 16px;
-        text-decoration: none;
-    }
-    .skills {
-      text-align: right;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      color: white;
-    }
-    #news #bulletin_bod #bulletin_desc{
-        height:20px !important;
-    }
-    #news #article_contents{
-        margin-top: 0;
-        height: 90px !important;
-    }
+    background: #1b2560 ;
+}
+.nav_linkssss_{
+    color: #fff ;
+}
+.card-body.sc {
+    padding: 0;
+}
+div#mayorqr,div#mayors_corner,div#covid_updates,div#news_sec,#gov-sites {
+    max-width: 70% !important;
+}
+body {
+    background: #f3f3f3;
+}
+img{
+   border-radius: 1% !important; 
+}
+img.covid_img {
+    padding: 3% 0;
+}
+#covid_updates .card-body {
+    border-radius: 1% !important;
+}
+#covid_updates .card, #news_card,#news .card, #mayorqr #news_card{
+    border: 0 ;
+}
+
+#news .card-body, #news_card .card-body, #mayorqr #news_card{
+     border-radius: 1% !important;   
+}
+div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
+    background: #fff;
+}
+
+#desc{
+    height: 115px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+}
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+#news #bulletin_bod #bulletin_desc{
+    height:20px !important;
+}
+#news #article_contents{
+    margin-top: 0;
+    height: 90px !important;
+}
+#mayorqr .recent_small {
+    height: 12px !important;
+}
+
+@media screen and (max-device-width: 1500px) {
+    div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec, #gov-sites {max-width: 90% !important;}
+    #nav .container {margin: 0px 4% !important;}
+}
