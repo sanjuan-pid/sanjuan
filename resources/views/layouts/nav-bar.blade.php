@@ -84,12 +84,12 @@
                               Our City
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                               <li><a class="dropdown-item" href="ourcity/government_page">Government</a></li>
-                               <li><a class="dropdown-item" href="ourcity/congressman_page">Congressman's Desk</a></li>
-                               <li><a class="dropdown-item" href="mayors_page">Mayor's Desk</a></li>
-                               <li><a class="dropdown-item" href="ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
+                               <li><a class="dropdown-item" href="/ourcity/government_page">Government</a></li>
+                               <li><a class="dropdown-item" href="/ourcity/congressman_page">Congressman's Desk</a></li>
+                               <li><a class="dropdown-item" href="/mayors_page">Mayor's Desk</a></li>
+                               <li><a class="dropdown-item" href="/ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
                                <li><a class="dropdown-item" href="#">City Council</a></li>
-                               <li><a class="dropdown-item" href="ourcity/barangay_page">Barangay</a></li>
+                               <li><a class="dropdown-item" href="/ourcity/barangay_page">Barangay</a></li>
                              </ul>
                            </li>
                            <li class="nav-item dropdown" >
