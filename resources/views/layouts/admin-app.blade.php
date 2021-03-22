@@ -82,7 +82,7 @@
 
                                 <li><a class="dropdown-item" href="{{route('admin.congressman.programs.prog_list')}}">Programs</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.congressman.updates.updates_list')}}" >Updates</a></li>
-                                <li><a class="dropdown-item" href="#" >Announcements</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.congressman.announcements.announcement_list')}}" >Announcements</a></li>
                                 <!-- <li><a class="dropdown-item" href="{{route('admin.qr.list_qr')}}" >Upload QR</a></li> -->
                                <!--  {{-- <li><a class="dropdown-item" href="{{route('admin.mayors.list_MC')}}" >Covid Cases</a></li> --}}
                                 {{-- <li><a class="dropdown-item" href="{{route('admin.covid.brgy')}}" >Covid Cases - GRAPH</a></li> --}} -->

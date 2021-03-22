@@ -401,7 +401,7 @@
       </div>
   </div>
 
-  <div class="container" id="gov-sites" style="background:#fff;    max-width: 70% !important; padding:2% 0;">
+  <div class="container" id="gov-sites" style="background:#fff; padding:2% 0;">
     <div class="row">
 
           <div class="col-sm">
