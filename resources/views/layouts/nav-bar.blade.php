@@ -16,6 +16,7 @@
         <meta name="keywords" content="San Juan City, City Hall, News">
         <meta name="author" content="San Juan City">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAKABAGONG SAN JUAN !</title>
         <link href="{{asset('css/style.css')}}" rel="stylesheet">
         <style>
 

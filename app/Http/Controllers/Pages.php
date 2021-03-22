@@ -64,7 +64,8 @@ class Pages extends Controller
     {
         $ann = DB::select('select * from news
             where content_tag ="VM"
-            and content_type="Announcement"', [1]);
+            and content_type="Announcement"
+            and status = 1', [1]);
         $programs = News::where('status', 1)
             ->where('content_tag', "VM")
             ->where('content_type', "Programs")

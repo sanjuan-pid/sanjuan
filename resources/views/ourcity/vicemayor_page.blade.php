@@ -60,15 +60,11 @@
                <div class="card-body">
                  <div class="sj">
                    <h1 style="font-size:40px; margin-top: 0; text-align: center;">PROGRAMS</h1>
+                   @foreach ($programs as $program)
                     <div class=" col-12 col-sm-12">
-                      <h1 style="font-size:25px;">Medicines</h1>
+                      <h1 style="font-size:25px;">{{ $program->title }}</h1>
                     </div>
-                    <div class=" col-12 col-sm-12">
-                      <h1 style="font-size:25px;">Medical Assistant</h1>
-                    </div>
-                    <div class=" col-12 col-sm-12">
-                      <h1 style="font-size:25px;">Medical Equipments</h1>
-                    </div>
+                   @endforeach
                  </div>
                </div>
             </div>
@@ -83,20 +79,41 @@
                       <div class="card-body">
                           <h2 class="card-title"> <h1 style="font-size:40px; margin-top: 0; text-align: center;">UPDATES</h1></h2>
                               <div class="recent_big">
-                                  <img src="{{asset('assets/vice/vm.jpg')}}"  id="image_big" style="width: 100%; height: 100%;" />
-                                  <p class="card-text title_big"style="white-space: nowrap; width: 458px; overflow: hidden; text-overflow: ellipsis;"><a href="https://www.facebook.com/photo.php?fbid=10159303444986477&set=pcb.10159303483126477&type=3&theater">San Juan City Covid-19 Vaccination Program Rollout for San Juan Medical Center and City Health Office FRONTLINERS with Dr. Joseph M Acosta and Dr. Rosalie Matubang Sto Domingo
-                                  </p></a>
+                                  <?php $i=0; ?>
+                                   @foreach ($updates as $update)
+                                   <?php $i++; ?>
+                                   @if($update->show = 1)
+                                    <div class=" col-12 col-sm-12">
+                                     <img src="{{asset("uploads/" . $update['filename']) }}"  style="width: 100%;  height: auto; margin-bottom:2%;" />
+
+                                         
+                                    <p class="card-text title_big"style="white-space: nowrap; width: 458px; overflow: hidden; text-overflow: ellipsis;"><a href="#">{{ $update->title }}</p></a>
+                                      </div>
+                                    @endif
+                                    @if ($i == 1)
+                                        @break
+                                    @endif
+                                   @endforeach
                               </div>
                               <br>
                               <div class="recent_small">
 
                                   <div class="row">
-                                      <div class="col-4 col-sm-4">
-                                          <img src="{{asset('assets/vice/vm.jpg')}}"  style="width: 100%; height: 60%;" />
-                                          <p class="recent_psmall">
-                                              <a href="https://www.facebook.com/vicemayorwarrenvilla/photos/pcb.4034476069898345/4034456809900271/?type=3&theater"></a>
-                                          </p>
-                                      </div>
+                                     <?php $i=0; ?>
+                                     @foreach ($updates as $update)
+                                      @if($update->show != 1)
+                                       <?php $i++; ?>
+                                          <div class="col-4 col-sm-4">
+                                               <img src="{{asset("uploads/" . $update['filename']) }}"  style="width: 100%; height: 60%;" />
+                                              <p class="recent_psmall">
+                                                  <a href="#">{{ $update->title }}</a>
+                                              </p>
+                                          </div>
+                                      @endif
+                                    @if ($i == 3)
+                                        @break
+                                    @endif
+                                   @endforeach
                                   </div>
                               </div>
                               <div id="_viewmore">
@@ -109,19 +126,33 @@
                         <div class="card">
                             <div class="card-body">
                                 <h2 class="card-title"><h1 style="font-size:40px; margin-top: 0; text-align: center;">ANNOUNCEMENT</h1></h2>
-                                    <div class="recent_big">
-                                        <img src="{{asset('assets/vice/an.png')}}"  id="image_big" style="width: 71%; height:71%;" />
-                                        <p class="card-text title_big" style="white-space: nowrap; width: 458px; overflow: hidden; text-overflow: ellipsis;"><a href="https://www.facebook.com/vicemayorwarrenvilla/photos/a.118327924846532/4111478462198105/?type=3&theater" >Due to delays in the delivery of our medicines, we are temporarily suspending the releasing of medicines.</p></a>
-                                    </div>
+                                    @foreach ($ann as $row)
+                                       @if($row->show == 1)
+                                          <div class="recent_big">
+                                              <img src='{{asset("uploads/" . $row->filename) }}' id="image_big" style="width: 100%; height:100%;" />
+                                              <p class="card-text title_big" style="white-space: nowrap; width: 458px; overflow: hidden; text-overflow: ellipsis;"><a href="#" >{{$row->title}}</p></a>
+                                          </div>
+                                        @endif
+                                      @endforeach
                                     <br>
                                     <div class="recent_small">
                                         <div class="row">
-                                            <div class="col-4 col-sm-4">
-                                                <img src="{{asset('assets/vice/an2.png')}}"  style="width: 51%; height: 51%;" />
-                                                <p class="recent_psmall">
-                                                    <a href="https://www.facebook.com/vicemayorwarrenvilla/photos/pcb.4034476069898345/4034456809900271/?type=3&theater"style="font-size:12px;">LIBRENG GAMOT! </a>
-                                                </p>
-                                            </div>
+                                          <?php $i=0; ?>
+                                            @foreach ($ann as $row)
+                                              @if($row->show != 1)
+                                              <?php $i++; ?>
+
+                                              <div class="col-4 col-sm-4">
+                                                  <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; height: 60%;" />
+                                                  <p class="recent_psmall">
+                                                      <a href="#"style="font-size:12px;">{{$row->title}} </a>
+                                                  </p>
+                                              </div>
+                                              @endif 
+                                              @if ($i == 3)
+                                                  @break
+                                              @endif
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div id="_viewmore">
