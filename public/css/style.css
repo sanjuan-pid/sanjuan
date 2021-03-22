@@ -1056,6 +1056,12 @@ div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
     height: 12px !important;
 }
 
+#gov-sites .col-sm {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
 @media screen and (max-device-width: 1500px) {
     div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec, #gov-sites {max-width: 90% !important;}
     #nav .container {margin: 0px 4% !important;}
