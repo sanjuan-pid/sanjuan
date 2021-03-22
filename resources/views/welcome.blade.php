@@ -273,7 +273,7 @@
     </div>
 </div>
     <div class="container" id="covid_updates" style="padding: 0 !important;">
-        <div class="row justify-content-md-center mt-xl-5" style="position:relative;">
+        <div class="row justify-content-md-center" style="position:relative;">
             <div class=" col-sm-12" style="padding: 0 !important;">
                 <div class=" col-sm-4" style="float: left; ">
                     <div class="card">
