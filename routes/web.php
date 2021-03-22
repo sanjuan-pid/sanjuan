@@ -91,9 +91,20 @@ Route::prefix('admin')->group(function(){
     Route::get('/vice-mayor/updates/updates_list', 'UpdatesController@index')->name('admin.vice-mayor.updates.updates_list');
     Route::post('/vice-mayor/updates/updates_list', 'UpdatesController@store');
     Route::resource('/vice-mayor/updates','UpdatesController');
-   
+
     //announcements
     Route::get('/vice-mayor/announcements/announcement_list', 'VM_AnnouncementsController@index')->name('admin.vice-mayor.announcements.announcement_list');
     Route::post('/vice-mayor/announcements/announcement_list', 'VM_AnnouncementsController@store');
     Route::resource('/vice-mayor/announcements','VM_AnnouncementsController');
+
+    //cong-programs
+    Route::get('/congressman/programs/prog_list', 'ProgramsCongressman@index')->name('admin.congressman.programs.prog_list');
+    Route::post('/congressman/programs/prog_list', 'ProgramsCongressman@store');
+    Route::resource('/congressman/programs','ProgramsCongressman');
+
+    //cong-updates
+    Route::get('/congressman/updates/updates_list', 'UpdatesCongressman@index')->name('admin.congressman.updates.updates_list');
+    Route::post('/congressman/updates/updates_list', 'UpdatesCongressman@store');
+    Route::resource('/congressman/updates','UpdatesCongressman');
+
 });

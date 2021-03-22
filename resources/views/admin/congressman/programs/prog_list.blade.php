@@ -24,7 +24,7 @@ span#descriptions_{
                     {{ session('status') }}
                 </div>
                 @endif
-                <div class="card-header">Vice Mayor's News Announcements <a href="{{action('VM_AnnouncementsController@create')}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a></div>
+                <div class="card-header">Congressman's Programs <a href="{{action('ProgramsCongressman@create')}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a></div>
                 
                 @if(\Session::has('success'))
                 {{-- session ung nilagay mo sa return ng controller --}}
@@ -40,30 +40,34 @@ span#descriptions_{
                         <thead>
                             <tr>
                                 <th >Image</th>
+                                <th >Tag</th>
                                 <th >Title</th>
                                 <th style="width: 50%;">Description</th>
                                 <th >Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                         @foreach($programs as $row)
-                            <tr id={{$row['id']}}>
-                                <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="80px"/></td>
-                              
-                                <td >{{$row['title']}}</td>
-                                <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
-                                <td>
-                                    <a href="{{action('VM_AnnouncementsController@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                    @if($row['show']!=1)
-                                        <form method="post" class="delete_form" action="{{action('VM_AnnouncementsController@destroy',$row['id'])}}" >
-                                            {{csrf_field()}}
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
-                                        </form>
-                                    @endif
-                                </td>
-                                
-                            </tr>
+                         @foreach($programs_cong as $row)
+                            <?php $cong_ = $row['content_tag']  ; ?>
+                                <tr id={{$row['id']}}>
+                                 @if($cong_ == "cong" OR $cong_ == "atty_b" )
+                                    <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="80px"/></td>
+                                    <td >{{$cong_}}</td>
+                                    <td >{{$row['title']}}</td>
+                                    <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
+                                    <td>
+                                        <a href="{{action('ProgramsCongressman@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
+                                        @if($row['show'] != 1)
+                                            <form method="post" class="delete_form" action="{{action('ProgramsCongressman@destroy',$row['id'])}}" >
+                                                {{csrf_field()}}
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
+                                            </form>
+                                        @endif
+                                    </td>
+                                     @endif
+                                </tr>
+                           
                          @endforeach
                         </tbody>
                     </table>

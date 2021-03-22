@@ -57,23 +57,37 @@
                                 Admin
                             </a>
                         </li> --}}
-                        
+
                         <li class="nav-item dropdown" id="News">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                              Upload News
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                                
+
                                 <li><a class="dropdown-item" href="{{route('admin.announcment.announcement')}}">Announcement</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.events.events_list')}}" >Events</a></li>
-                                <li><a class="dropdown-item" href="{{route('admin.covid_update.list_MC')}}" >Covid Cases</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.covid_update.list_MC')}}" >Covid Upload</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.news.index')}}" >News</a></li>
-                                <li><a class="dropdown-item" href="{{route('admin.qr.list_qr')}}" >Upload QR</a></li>
+                                <!-- <li><a class="dropdown-item" href="{{route('admin.qr.list_qr')}}" >Upload QR</a></li> -->
                                 {{-- <li><a class="dropdown-item" href="{{route('admin.mayors.list_MC')}}" >Covid Cases</a></li> --}}
                                 {{-- <li><a class="dropdown-item" href="{{route('admin.covid.brgy')}}" >Covid Cases - GRAPH</a></li> --}}
                             </ul>
                         </li>
- 
+
+                         <li class="nav-item dropdown" id="News">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Congressman
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+
+                                <li><a class="dropdown-item" href="{{route('admin.congressman.programs.prog_list')}}">Programs</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.congressman.updates.updates_list')}}" >Updates</a></li>
+                                <li><a class="dropdown-item" href="#" >Announcements</a></li>
+                                <!-- <li><a class="dropdown-item" href="{{route('admin.qr.list_qr')}}" >Upload QR</a></li> -->
+                               <!--  {{-- <li><a class="dropdown-item" href="{{route('admin.mayors.list_MC')}}" >Covid Cases</a></li> --}}
+                                {{-- <li><a class="dropdown-item" href="{{route('admin.covid.brgy')}}" >Covid Cases - GRAPH</a></li> --}} -->
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown" id="News">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                              Vice Mayor
@@ -83,12 +97,9 @@
                                 <li><a class="dropdown-item" href="{{route('admin.vice-mayor.programs.prog_list')}}" >Programs</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.vice-mayor.updates.updates_list')}}">Updates</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.vice-mayor.announcements.announcement_list')}}" >Announcements</a></li>
-                                
-                                {{-- <li><a class="dropdown-item" href="{{route('admin.mayors.list_MC')}}" >Covid Cases</a></li> --}}
-                                {{-- <li><a class="dropdown-item" href="{{route('admin.covid.brgy')}}" >Covid Cases - GRAPH</a></li> --}}
                             </ul>
-                        </li>                        
-                        
+                        </li>
+
                         </div>
                     </li>
                     </ul>
@@ -144,7 +155,7 @@
                                                             document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-    
+
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>

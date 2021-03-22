@@ -90,7 +90,7 @@
                                                     </p>
                                                     <br>
                                                 </div>
-                                                @if ($i == 2)
+                                                @if ($i == 3)
                                                     @break
                                                 @endif
                                             @endif
@@ -109,7 +109,7 @@
                         <div class="card-body">
                         </div>
                     </div> --}}
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="15000">
                         <!-- Carousel indicators -->
 
                         <ol class="carousel-indicators">
@@ -191,7 +191,7 @@
     <div class="row">
         <h1 style="text-align: center;">MAYOR'S CORNER</h1>
         <div class="container-lg my-3">
-            <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="15000">
                 <!-- Carousel indicators -->
 
                 <ol class="carousel-indicators">
