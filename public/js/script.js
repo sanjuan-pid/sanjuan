@@ -139,20 +139,20 @@ $(document).ready(function(){
             
     });
     
-    // $(document).ready(function(){
-    //     setTimeout(function(){ 
-    //         $("#directory").css("visibility","visible")
-    //         $("#directory").fadeIn();
-    //     }, 800);
-    //         setTimeout(function(){ 
-    //         $("#mayors_corner").css("visibility","visible")
-    //         $("#mayors_corner").fadeIn();
-    //     }, 1500);
-    //     setTimeout(function(){ 
-    //         $("#news").css("visibility","visible")
-    //         $("#news").fadeIn();
-    //     }, 3000);
-    // });
+    $(document).ready(function(){
+        setTimeout(function(){ 
+            $("#directory").css("visibility","visible")
+            $("#directory").fadeIn();
+        }, 800);
+            setTimeout(function(){ 
+            $("#mayors_corner").css("visibility","visible")
+            $("#mayors_corner").fadeIn();
+        }, 1500);
+        setTimeout(function(){ 
+            $("#news").css("visibility","visible")
+            $("#news").fadeIn();
+        }, 3000);
+    });
 
 
     $(document).ready(function(){
