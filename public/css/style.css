@@ -46,6 +46,9 @@ font-size: 18px
     max-width: 100%;
     padding:0  !important;
 } */
+div#agenda_row {
+    margin-top: -23%;
+}
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -173,7 +176,7 @@ nav ul.dropdown-menu.show {
 .red{
     background-color: #b2505c;
     background-image: linear-gradient(315deg, #b2505c 0%, #D82020 74%);
-} 
+}
 .contents_orig{
     top:-2550%;
     color:transparent;
@@ -992,7 +995,7 @@ div#nav {
     top: 0;
 }
 .nav_linkssss{
-    
+
     background: #1b2560 ;
 }
 .nav_linkssss_{
@@ -1008,7 +1011,7 @@ body {
     background: #f3f3f3;
 }
 img{
-   border-radius: 1% !important; 
+   border-radius: 1% !important;
 }
 img.covid_img {
     padding: 3% 0;
@@ -1021,7 +1024,7 @@ img.covid_img {
 }
 
 #news .card-body, #news_card .card-body, #mayorqr #news_card{
-     border-radius: 1% !important;   
+     border-radius: 1% !important;
 }
 div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
     background: #fff;
@@ -1060,6 +1063,91 @@ div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
     margin: 0 auto;
     display: block;
     text-align: center;
+}
+/*#image_big {*/
+/*    margin: 0 auto;*/
+/*    display: block;*/
+/*    height: 100%;*/
+/*}*/
+/*#news_card img{*/
+/*    width: 100% !important;*/
+/*    height: 100% !important;*/
+/*}*/
+div#side_prof {
+    position: fixed;
+    margin-top: 5%;
+    width: 15%;
+}
+.side_btn{
+    left:-190px;
+    position:absolute;
+    width: 100%;
+}
+.side_btn:hover{
+    left:1px;
+    transition: all 0.5s ease 0s;
+    background:#e82525 !important;
+}
+div#profile_contents {
+    height: 400px;
+    overflow-y: scroll;
+}
+div#achievements_contents {
+    height: 320px;
+    overflow-y: scroll;
+}
+#achievement_row h5.card-title {
+    height: 105px;
+}
+
+#descriptions_ {
+
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    /* color: #000; */
+    /* font-weight: 600; */
+    font-size: 16px;
+    text-decoration: none;
+}
+
+div#profile_row, div#achievement_row, div#carousel_row,div#agenda_row{
+    display: none;
+}
+
+@media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
+    .side_btn{
+    left:-230px;
+    position:absolute;
+    width: 100%;
+}
+}
+
+@media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
+    .side_btn{
+    left:-170px;
+    position:absolute;
+    width: 100%;
+}
+}
+
+@media screen and (min-device-width: 1205px) and (max-device-width: 1366px) {
+    .side_btn{
+    left:-160px;
+    position:absolute;
+    width: 100%;
+}
+}
+
+@media screen and (min-device-width: 1199px) and (max-device-width: 1204px) {
+    .side_btn{
+    left:-145px;
+    position:absolute;
+    width: 100%;
+}
 }
 
 @media screen and (max-device-width: 1500px) {

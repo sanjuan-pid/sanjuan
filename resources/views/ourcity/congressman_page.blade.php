@@ -26,10 +26,22 @@
     </div> --}}
     <br>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <div id="side_prof" style="position: fixed;margin-top: 5%;">
+        <a href="#" class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 13%; float: right;"/></a>
+        <br>
+        <br>
+        <a href="#" class="btn side_btn" id="achievement_btn"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS<img src={{asset('assets/achievement.svg')}} style="width: 13%; float: right;"/></a>
+        <br>
+        <br>
+        <a href="#" class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 13%; float: right;"/></a>
+        <br>
+        <br>
+        <a href="#" class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 13%; float: right;"/></a>
+    </div>
         <div class="container" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
-              <img src="{{asset('assets/congronnie/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
+              <img src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
             </div>
           </div>
         </div>
@@ -68,7 +80,7 @@
                       <div class="card-body">
                           <h2 class="card-title">LATEST</h2>
                               <div class="recent_big">
-                                  <img src="{{asset('assets/congronnie/news1.jpg')}}"  id="image_big" style="width: 100%;" />
+                                  <img src="{{asset('assets/congronny/news1.jpg')}}"  id="image_big" style="width: 100%;" />
                                   <p class="card-text title_big"><a href="https://metromanila.politics.com.ph/2020/03/24/ronny-zamora-does-the-fundraising-for-san-juans-covid-19-fight-at-home/">Ronny Zamora does the fundraising for San Juan’s COVID-19 fight at home
                                   </p></a>
                               </div>
@@ -77,7 +89,7 @@
 
                                   <div class="row">
                                       <div class="col-4 col-sm-4">
-                                          <img src="{{asset('assets/congronnie/news2.jpg')}}"  style="width: 100%;" />
+                                          <img src="{{asset('assets/congronny/news2.jpg')}}"  style="width: 100%;" />
                                           <p class="recent_psmall">
                                               <a href="https://www.facebook.com/CongRonnyZamora/photos/a.2076948352444420/3494690084003566/?type=3&theater">Pinangunahan ni Kong. Ronny Zamora ang pagpupulong ng Lupon ng Mababang Kapulungan para sa Komisyon </a>
                                           </p>

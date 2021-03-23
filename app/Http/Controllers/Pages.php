@@ -45,13 +45,24 @@ class Pages extends Controller
                     ->orderBy('created_at', 'desc')
                     ->get();
         $events = News::where('status', 1)
-                    ->where('content_type', "Events")  
+                    ->where('content_type', "Events")
                     ->orderBy('created_at', 'desc')
                     ->get();
         // echo $ann;
         return view('news.contents',compact('news','events'),['ann' => $ann]);
     }
-    // our city folder
+    public function news_list()
+    {
+        $news = News::where('status', 1)
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+        $events = News::where('status', 1)
+                    ->where('content_type', "Events")
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+        return view('news/list',compact('news','events'));
+    }
+
     public function gov()
     {
         return view('ourcity/government_page');
@@ -79,7 +90,7 @@ class Pages extends Controller
         // return view('');
         return view('ourcity/vicemayor_page',compact('programs','updates'),['ann' => $ann]);
     }
-  
+    //ourcity
     public function city()
     {
         return view('ourcity/citycouncil_page');
@@ -88,4 +99,18 @@ class Pages extends Controller
     {
         return view('ourcity/barangay_page');
     }
+    public function history()
+  {
+      return view('ourcity/history_page');
+  }
+  
+  //programs and projects
+  public function current()
+  {
+      return view('programsandprojects/current_page');
+  }
+  public function archives()
+  {
+      return view('programsandprojects/archives_page');
+  }
 }

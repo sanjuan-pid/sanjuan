@@ -47,12 +47,13 @@ body {font-family: "Lato", sans-serif;}
   height: 512px;
 }
 </style>
-        <br>
-        <br>
-        <h3 style="text-align: center; color: #1f1c4b; font-size: 60px; font-weight: 700;">AGENDA</h3>
-        <div class="container"  >
+
+        <div class="container" id="agenda_row" >
+
+          <br>
           <div class="row">
-            <div class="col mt-5">
+            <h1 style="text-align: center; color: #1f1c4b; font-size: 60px; font-weight: 700;">AGENDA</h1>
+            <div class="col">
               <div class="tab" style="height: 512px; overflow-y: scroll;">
                   <button class="tablinks" onclick="openCity(event, 'two')" id="defaultOpen"><img src="{{asset('assets/Icon/hospital-buildings.svg')}}" style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>
                   <button class="tablinks" onclick="openCity(event, 'three')"><img src="{{asset('assets/Icon/school.svg')}}"style="width:20%;display: block; margin-left: auto; margin-right: auto;"/></button>

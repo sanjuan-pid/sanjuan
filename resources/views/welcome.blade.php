@@ -368,6 +368,9 @@
                                   @break
                               @endif
                           @endforeach
+                          <div id="_viewmore">
+                            <a  href="#">view more articles</a>
+                        </div>
                   </div>
 
               </div>
