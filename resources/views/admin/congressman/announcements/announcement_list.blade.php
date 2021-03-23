@@ -62,7 +62,7 @@ span#descriptions_{
                                     <td >{{$row['title']}}</td>
                                     <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
                                     <td>
-                                        <a href="{{action('UpdatesCongressman@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
+                                        <a href="{{action('AnnouncementsCongressman@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
                                         @if($row['show'] != 1)
                                             <form method="post" class="delete_form" action="{{action('UpdatesCongressman@destroy',$row['id'])}}" >
                                                 {{csrf_field()}}
