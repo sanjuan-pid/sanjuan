@@ -1119,6 +1119,14 @@ div#profile_row, div#achievement_row, div#carousel_row,div#agenda_row{
     display: none;
 }
 
+.container h3 ,.container h1 ,.container h2 , .container p,.container h5{
+    color: #000 !important;
+}
+button.tablinks {
+    font-weight: 700;
+    color:#1f1c4b !important;
+}
+
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
     .side_btn{
     left:-230px;
