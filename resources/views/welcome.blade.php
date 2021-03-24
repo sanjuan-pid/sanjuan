@@ -369,7 +369,7 @@
                               @endif
                           @endforeach
                           <div id="_viewmore">
-                            <a  href="#">view more articles</a>
+                            <a  href="/contents/list">view more articles</a>
                         </div>
                   </div>
 
@@ -400,7 +400,40 @@
               </div>
           </div>
           <br>
-
+          <div class="row" id="act">
+            <div class=" col-sm-12">
+                <div class="card" id="news_card">
+                    <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
+                        <h2 class="card-title blue" style="color:#fff; padding: 0 !important; text-align:center;">ACTIVITY</h2>
+                          <?php $i=0; ?>
+                              @foreach($news as $row)
+                                <?php $i++; ?>
+                                <div class="card" style="margin: 2%;">
+                                    <div class="card-body" id="bulletin_bod">
+                                        <div class="col-4 col-sm-4" style="float: left; display: inline-block;">
+                                            <a  href="{{action( 'Pages@news_contents', $row->id )}}" target="_blank" >
+                                                <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; height:100% !important;" />
+                                            </a>
+                                        </div>
+                                        <div class="col-8 col-sm-8" style="display: inline-block; padding:5px;">
+                                                <a id="bulletin_desc" href="#"><?php echo $row->title ?> </a>
+                                                <span id="article_contents">
+                                                  <?php echo $row['desc'] ?>
+                                                </span>
+                                                <br>
+                                                <a id="bulletin_readmore" href="{{action( 'Pages@news_contents', $row->id )}}" target="_blank"  >readmore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @if ($i == 4)
+                                    @break
+                                @endif
+                            @endforeach
+                    </div>
+  
+                </div>
+            </div>
+          </div>
       </div>
   </div>
 

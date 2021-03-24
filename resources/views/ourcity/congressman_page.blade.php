@@ -38,13 +38,41 @@
         <br>
         <a href="#" class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 13%; float: right;"/></a>
     </div>
-        <div class="container" style="max-width: 100%;">
+        {{-- <div class="container" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
-              <img src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
+            </div>
+          </div>
+        </div> --}}
+        <div class="container" style="max-width: 60%; z-index: 4; margin-top: -13.8%;">
+          <div class="row" id="profile_row">
+            <div class=" col-12 col-sm-12">
+              <div class="c">
+                <img src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
+                <div class="cbody">
+                {{-- <h1 style="font-size:40px;" onclick="document.getElementById('id01').style.display='block'">VICE MAYOR WARREN VILLA</h1> --}}
+                <h1 style="font-size:40px;">BIOGRAPHY</h1>
+                <p style=" font-weight: 500; margin-top: 15px;">Hon. Warren Villa is a man known for his strong faith and belief in God. He is also known for his dedication and passion to be of service to the city of San Juan, and is commonly known for being the public servant who gives free medicines to his constituents. He is the eldest son of Enriqueta and Eduardo Villa. And he is happily married to Regina Villa, and a father to their only son Nathanael Habakkuk.
+                <br><br>What others might not know is that from the year 1989 to 1997, he was the Assistant Program Director of Magic 89.9 DWTM-FM. And by the year 1997 to 2003, he became the Program Director of Smooth Jazz Citylite 88.3 DWCT-FM.
+                <br><br>He served as the Chairman of Kristiyanong kabataan para sa Bayan, San Juan Chapter, in the year 1999 to 2004. He also became the NCR Chairman of Bangon Kabataan in the year 2004. He was involved in a local organization in San Juan which is the JCI San Juan “Pinaglabanan” Chapter where he became the President in the year 2005. Two years later, he was elected as the Regional Vice President of the JCI Philippines.
+              </p>
+                {{-- <div id="id01" class="w3-modal">
+                  <div class="w3-modal-content" style="margin-top: 10%;">
+                    <div class="w3-container">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                      <h1 style="font-size:40px;">PROFILE</h1>
+                      <p style=" font-weight: 500; margin-top: 15px;">Hon. Warren Villa is a man known for his strong faith and belief in God. He is also known for his dedication and passion to be of service to the city of San Juan, and is commonly known for being the public servant who gives free medicines to his constituents. He is the eldest son of Enriqueta and Eduardo Villa. And he is happily married to Regina Villa, and a father to their only son Nathanael Habakkuk.
+                      <br><br>What others might not know is that from the year 1989 to 1997, he was the Assistant Program Director of Magic 89.9 DWTM-FM. And by the year 1997 to 2003, he became the Program Director of Smooth Jazz Citylite 88.3 DWCT-FM.
+                      <br><br>He served as the Chairman of Kristiyanong kabataan para sa Bayan, San Juan Chapter, in the year 1999 to 2004. He also became the NCR Chairman of Bangon Kabataan in the year 2004. He was involved in a local organization in San Juan which is the JCI San Juan “Pinaglabanan” Chapter where he became the President in the year 2005. Two years later, he was elected as the Regional Vice President of the JCI Philippines.
+                      </p>
+                    </div>
+                  </div>
+                </div> --}}
             </div>
           </div>
         </div>
+
+
 
         <div class="container" style="max-width: 60%; z-index: 4; margin-top: -13.8%;">
           <div class="row">

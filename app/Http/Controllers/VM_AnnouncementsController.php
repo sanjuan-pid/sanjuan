@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\News;
 
 
-class VM_AnnouncementsController@store extends Controller
+class VM_AnnouncementsController extends Controller
 {
     public function __construct()
     {

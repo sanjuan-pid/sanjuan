@@ -52,51 +52,21 @@
     <br>
     <div class="row" id="achievement_row" style="margin-top: -28%;">
       <h2 class="card-title" style="font-weight: 800; font-size: 200;"><img src={{asset('assets/achievement.svg')}} style="width: 5%; vertical-align: baseline;"/> Achievements </h2>
-      <div class="col-sm-4" style="margin-top:2%;">
-         <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-weight: 800; font-size: 200;">MODERNIZATION OF CITY AND BARANGAY EMERGENCY RESPONSE UNITS </h5>
-                    <div id="achievements_contents">
-                      <p>
-                        He was instrumental in the modernization of the City and Barangay Emergency Response Units as Vice Chairman of the City Disaster and Risk Reduction and Management Council. He upgraded many of the Cities and Barangay’s equipments such as rescue boats, vehicles and other communication devices, as well as providing the necessary training and seminars for emergency responders.
-                      </p>
-                    </div>
-                </div>
-          </div>
-      </div>
-
-      <div class="col-sm-4" style="margin-top:2%;">
-         <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-weight: 800; font-size: 200;"> PRIORITIZING PEACE AND ORDER AND ANTI-DRUG ABUSE </h5>
-                   <div id="achievements_contents">
-                      <p>
-                        A heightened surveillance and police visibility was also prioritized by Francis Zamora as Vice Chairman of the City Peace and Order Council. Additional pro-batons, handcuffs, vests, boots, raincoats and handheld radios were distributed to the city’s security enforcers to ensure the safety of San Juan.
-                      </p>
-                      <p>
-                        His anti-drug campaign “Ako ay San Juaneño, Ayaw ko sa Droga” was widely successful in detering drug abuse among the youth of San Juan by engaging them into sports and physical activities and by encouraging them to live a healthy lifestyle. He started the San Juan Inter Elementary Basketball Tournament, and the San Juan Mini Olympics, annual sports events participated in by thousands of young people in San Juan.
-                      </p>
-                    </div>
-                </div>
-          </div>
-      </div>
-
-       <div class="col-sm-4" style="margin-top:2%;">
-         <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-weight: 800; font-size: 200;"> BID TO SAN JUAN CITY MAYORSHIP</h5>
-                   <div id="achievements_contents">
-                    <p>
-                      On October 13, 2015, he filed his Certificate of Candidacy for the position of Mayor of the City of San Juan for the 2016 elections under the Nacionalista Party.
-                    </p>
-                    <p>
-                      On October 17, 2018, he filed his Certificate of Candidacy for the position of Mayor of the City of San Juan for the 2019 elections under PDP LABAN.
-                    </p>
+      
+      @foreach ($achievement as $ach) 
+        <div class="col-sm-4" style="margin-top:2%;">
+          <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title" style="font-weight: 800; font-size: 200;">{{$ach->title}}</h5>
+                      <div id="achievements_contents">
+                        <p>
+                          {{$ach->description}}
+                        </p>
+                      </div>
                   </div>
-                </div>
-          </div>
-      </div>
-
+            </div>
+        </div>
+       @endforeach
     </div>
     <br>
 
@@ -183,7 +153,7 @@
 
 
     <br>
-    <div class="row news_row" style="margin-top: -28%;" >
+    <div class="row news_row" style="margin-top: -18%;" >
 
         <h1 style="text-align: center;">NEWS</h1>
         <div class="col-sm-12">
@@ -199,7 +169,7 @@
                                         <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;height: 80%!important;display: block;margin: 0 auto;" />
                                         <p class="recent_psmall">
                                             <br>
-                                            <a href="#"><?php echo $row['title'] ?></a>
+                                            <a href="{{action( 'Pages@news_contents', $row->id )}}"><?php echo $row['title'] ?></a>
                                         </p>
                                     </div>
                                     @if ($i == 3)
@@ -209,7 +179,7 @@
                             </div>
                         </div>
                         <div id="_viewmore">
-                            <a  href="#">view more articles</a>
+                          <a  href="/contents/list">view more articles</a>
                         </div>
                 </div>
 
@@ -225,7 +195,7 @@
                                     <div class="card-body" id="bulletin_bod">
                                         <div class="col-12 col-sm-12" style="float: left; display: inline-block;">
                                             <img src="{{asset("uploads/" . $row->filename) }}" style="width: 100%; !important;display:block; margin:0 auto; height: 160px !important;" />
-                                            <br><a id="bulletin_desc" href="#"> <?php echo $row->title; ?></a>
+                                            <br><a id="bulletin_desc" href="{{action( 'Pages@news_contents', $row->id )}}"> <?php echo $row->title; ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +203,7 @@
                         @endforeach
                     </div>
                     <div id="_viewmore">
-                        <a  href="#">view more articles</a>
+                        <a  href="/content/list">view more articles</a>
                     </div>
                 </div>
             </div>

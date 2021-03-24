@@ -117,4 +117,10 @@ Route::prefix('admin')->group(function(){
     Route::post('/congressman/announcements/announcement_list', 'AnnouncementsCongressman@store');
     Route::resource('/congressman/announcements','AnnouncementsCongressman');
 
+    //Achievement
+    Route::get('/achievement/congressman-list', 'AchievementsController@index')->name('admin.achievement.congressman-list');
+    Route::get('/achievement/mayors-list', 'AchievementsController@mayor')->name('admin.achievement.mayors-list');
+    Route::get('/achievement/vm-list', 'AchievementsController@vm')->name('admin.achievement.vm-list');
+    // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
+    Route::resource('/achievement','AchievementsController');
 });
