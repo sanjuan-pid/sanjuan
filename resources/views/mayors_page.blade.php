@@ -1,7 +1,7 @@
 @extends('layouts.nav-bar')
 
 @section('content')
-    <div id="side_prof" style="position: fixed;margin-top: 5%;">
+    <div id="side_prof" style="position: fixed;margin-top: 5%; z-index: 999;">
         <a href="#" class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 13%; float: right;"/></a>
         <br>
         <br>
