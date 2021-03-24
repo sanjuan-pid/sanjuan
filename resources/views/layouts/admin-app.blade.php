@@ -60,7 +60,18 @@
 
                         <li class="nav-item dropdown" id="News">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                             Upload News
+                             Achievements
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                                <li><a class="dropdown-item" href="{{route('admin.achievement.mayors-list')}}?content_type=mayors">Mayor</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.achievement.congressman-list')}}?content_type=congressman">Congressman</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.achievement.vm-list')}}?content_type=vm">Vice Mayor</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown" id="News">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Mayors (San Juan)
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
 

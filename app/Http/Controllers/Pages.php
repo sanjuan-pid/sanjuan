@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Mayors;
 use App\News;
+use App\Achievement;
 
 class Pages extends Controller
 {
@@ -23,7 +24,10 @@ class Pages extends Controller
         $news2 = DB::select('select id , title, filename, date(created_at), DATE(NOW()) - INTERVAL 2 DAY from news
                             where DATE(created_at) <= DATE(NOW()) - INTERVAL 2 DAY
                             and status = 1 and content_type = "news";', [1]);
-        return view('/mayors_page', compact('news'),['news2' => $news2]);
+        $achievement = DB::select('select * from achievement
+                            where status = 1 and content_tag = "mayors";', [1]);    
+        // return($achievement)   ;             
+         return view('/mayors_page', compact('news','achievement'),['news2' => $news2]);
     }
     public function skills()
     {
@@ -88,7 +92,9 @@ class Pages extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
         // return view('');
-        return view('ourcity/vicemayor_page',compact('programs','updates'),['ann' => $ann]);
+        $achievement = DB::select('select * from achievement
+            where status = 1 and content_tag = "vm";', [1]);  
+        return view('ourcity/vicemayor_page',compact('programs','updates','achievement'),['ann' => $ann]);
     }
     //ourcity
     public function city()

@@ -45,13 +45,13 @@
                       time_is_widget.init({Philippines_z42c:{template:"DATE TIME", date_format:"dayname, monthname dnum, year", time_format:"12hours:minutes AMPM"}});
                   </script>
                   <span class="align-middle d-inline mx-1">|</span>
-                  <a class="nav-link" href="https://www.facebook.com/CityofSanJuanNCRPhilippines/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link" href="https://www.facebook.com/CityofSanJuanNCRPhilippines/" >
                     <img  src="{{asset('assets/facebook.svg')}}" >
                   </a>
-                  <a class="nav-link" href="https://twitter.com/sanjuancityncr?lang=en" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link" href="https://twitter.com/sanjuancityncr?lang=en" >
                     <img src="{{asset('assets/twitter.svg')}}" >
                   </a>
-                  <a class="nav-link" href="https://www.instagram.com/sanjuancityncr/?hl=en" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link" href="https://www.instagram.com/sanjuancityncr/?hl=en" >
                     <img src="{{asset('assets/instagram.svg')}}" >
                   </a>
 
@@ -72,7 +72,7 @@
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
                      </div>
-                     <div class="col-sm-10" id="nav_mob">
+                     <div class="col-sm-10" id="nav_mob" style="padding: 0;"> 
                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                        </button>
@@ -97,7 +97,8 @@
                             Programs and Projects
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                              <li><a class="dropdown-item" href="/programsandprojects/current_page">Current</a></li>
+                              <li><a class="dropdown-item" href="/programsandprojects/current_page">Current</a>
+                              </li>
                               <li><a class="dropdown-item" href="/programsandprojects/archives_page">Archives</a></li>
                             </ul>
                           </li>
@@ -110,7 +111,17 @@
                              <li><a class="dropdown-item" href="#">SJMC</a></li>
                              <li><a class="dropdown-item" href="#">Quarantine Facilities</a></li>
                              <li><a class="dropdown-item" href="#">Downloadable Forms </a></li>
-                               </ul>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown" >
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Department
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                              <li>
+                                <a class="dropdown-item" href="#">e-Services</a>
+                              </li>
+                             </ul>
                           </li>
                           <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
