@@ -16,7 +16,6 @@
         <meta name="keywords" content="San Juan City, City Hall, News">
         <meta name="author" content="San Juan City">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MAKABAGONG SAN JUAN !</title>
         <link href="{{asset('css/style.css')}}" rel="stylesheet">
         <style>
 
@@ -66,10 +65,10 @@
                  <nav class="navbar navbar-expand-lg navbar-light" style="border-bottom: 2px solid rgb(49 64 150);">
                    <div class="container">
                      <div class="col-sm-2" id="nav_logo">
-                       <a class="navbar-brand" href="/welcome">
+                       <a class="navbar-brand" href="/">
                          <img src="{{asset('assets/sjc.png')}}" style="margin-right: 0 !important;"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
-                       <a class="navbar-brand" href="/welcome">
+                       <a class="navbar-brand" href="/">
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
                      </div>
@@ -85,10 +84,11 @@
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                <li><a class="dropdown-item" href="/ourcity/government_page">Government</a></li>
-                               <li><a class="dropdown-item" href="/ourcity/congressman_page">Congressman's Desk</a></li>
+                               <li><a class="dropdown-item" href="/ourcity/history_page">History</a></li>
                                <li><a class="dropdown-item" href="/mayors_page">Mayor's Desk</a></li>
+                               <li><a class="dropdown-item" href="/ourcity/congressman_page">Congressman's Desk</a></li>
                                <li><a class="dropdown-item" href="/ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
-                               <li><a class="dropdown-item" href="#">City Council</a></li>
+                               <li><a class="dropdown-item" href="/ourcity/citycouncil_page">City Council</a></li>
                                <li><a class="dropdown-item" href="/ourcity/barangay_page">Barangay</a></li>
                              </ul>
                            </li>
@@ -97,18 +97,18 @@
                             Programs and Projects
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                             <li><a class="dropdown-item" href="#">Current and Archives</a></li>
-                               </ul>
+                              <li><a class="dropdown-item" href="/programsandprojects/current_page">Current</a></li>
+                              <li><a class="dropdown-item" href="/programsandprojects/archives_page">Archives</a></li>
+                            </ul>
                           </li>
                           <li class="nav-item dropdown" >
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                             <li><a class="dropdown-item" href="#">EServices</a></li>
-                              <br>
-                              <li><a class="dropdown-item" href="#">Skills</a></li>
-                             <li><a class="dropdown-item" href="#">Citizen's Charter per Department</a></li>
+                             <li><a class="dropdown-item" href="#">e-Services</a></li>
+                             <li><a class="dropdown-item" href="#">SJMC</a></li>
+                             <li><a class="dropdown-item" href="#">Quarantine Facilities</a></li>
                              <li><a class="dropdown-item" href="#">Downloadable Forms </a></li>
                                </ul>
                           </li>
@@ -135,18 +135,11 @@
                            <li><a class="dropdown-item" href="#">Announcements</a></li>
                              </ul>
                         </li>
-                        <li class="nav-item dropdown" >
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Directory
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                         <li><a class="dropdown-item" href="#">Executive</a></li>
-                         <li><a class="dropdown-item" href="#">Legislative</a></li>
-                         <li><a class="dropdown-item" href="#">Judiciary</a></li>
-                         <li><a class="dropdown-item" href="#">NGAs in San Juan</a></li>
 
-                           </ul>
-                         </li>
                          <li class="nav-item" >
                           <a class="nav-link" aria-current="page" href="/">Contact Us</a>
                         </li>

@@ -162,7 +162,7 @@ class AnnouncementsCongressman extends Controller
         $news = news::find($id);
         $news->status = 0;
         $news->save();
-        return redirect()->route('admin.vice-mayor.programs.prog_list')->with('success', 'Program is already removed');
+        return redirect()->route('admin.congressman.announcements.announcement_list')->with('success', 'Program is already removed');
     }
     public function makefirst(Request $request)
     {
