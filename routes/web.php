@@ -123,4 +123,11 @@ Route::prefix('admin')->group(function(){
     Route::get('/achievement/vm-list', 'AchievementsController@vm')->name('admin.achievement.vm-list');
     // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
     Route::resource('/achievement','AchievementsController');
+
+    //Activity
+    Route::get('/activity/act-list', 'ActivityController@index')->name('admin.activity.act-list');
+    // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
+    Route::resource('/activity','AchievementsController');
+
+
 });

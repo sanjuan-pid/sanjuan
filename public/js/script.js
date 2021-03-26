@@ -298,22 +298,26 @@ $(document).ready(function(){
     $(document).ready(function(){
       $(".t1").click(function(){
        $("div#prgph0").slideToggle( "slow" );
+       $("#h").slideToggle( "slow" );
        //  $("div#con1 h1").css("border-bottom","2px")
        // $(this).css("border-bottom"," 2px solid red")
       })
 
       $(".t2").click(function(){
        $("div#prgph1").slideToggle( "slow" );
+        $("#t").slideToggle( "slow" );
        // $("div#con1 h1").css("border-bottom","0px")
        // $(this).css("border-bottom"," 2px solid red")
       })
       $(".t3").click(function(){
        $("div#prgph2").slideToggle( "slow" );
+       $("#g").slideToggle( "slow" );
        // $("div#con1 h1").css("border-bottom","0px")
        // $(this).css("border-bottom"," 2px solid red")
       })
       $(".t4").click(function(){
        $("div#prgph3").slideToggle( "slow" );
+       $("#r").slideToggle( "slow" );
        // $("div#con1 h1").css("border-bottom","0px")
        // $(this).css("border-bottom"," 2px solid red")
       })
@@ -321,3 +325,7 @@ $(document).ready(function(){
 
 
 });
+  //history_page
+  $(document).ready(function(){
+
+  });

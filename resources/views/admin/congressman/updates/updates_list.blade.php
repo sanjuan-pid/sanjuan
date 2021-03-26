@@ -60,7 +60,7 @@ span#descriptions_{
                                         @endif
                                     </td>
                                     <td >{{$row['title']}}</td>
-                                    <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
+                                    <td  id="desc" ><span id="descriptions_"><?php echo $row['desc'] ?></span></td>
                                     <td>
                                         <a href="{{action('UpdatesCongressman@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
                                         @if($row['show'] != 1)

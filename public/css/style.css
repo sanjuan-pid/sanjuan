@@ -60,6 +60,7 @@ div#agenda_row {
 footer .container {
     border-top: 1px solid #274d78;
     width:100% !important;
+    color: #fff !important;
 }
 footer .container .row {
     margin: 0% 20% !important;
@@ -395,6 +396,9 @@ nav ul.dropdown-menu.show {
     float:right;
     text-transform:uppercase;
     text-decoration:none;
+    right: 3%;
+    top: 95%;
+    position: absolute;
 }
 /*mayors corner end*/
 
@@ -1122,11 +1126,35 @@ div#profile_row, div#achievement_row, div#carousel_row,div#agenda_row{
 .container h3 ,.container h1 ,.container h2 , .container p,.container h5{
     color: #000 !important;
 }
+footer #sitelink {
+    color: #fff !important;
+}
 button.tablinks {
     font-weight: 700;
     color:#1f1c4b !important;
 }
+/*scroll*/
+.sc::-webkit-scrollbar {
+  width: 6px;
 
+}
+
+/* Track */
+.sc::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+.sc::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.sc::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
     .side_btn{
     left:-230px;

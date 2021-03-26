@@ -35,13 +35,14 @@
                         <tbody>
                         <?php 
                             $checker = "congressman";
+                            $checker1 = "atty_b";
                         ?>
                          @foreach($achievement as $row)
-                            @if($row->content_tag == $checker)
+                            @if($row->content_tag == $checker || $row->content_tag == $checker1)
                                 <tr id={{$row['id']}}>
 
                                     <td >{{$row['title']}}</td>
-                                    <td  id="desc" >{{$row['description']}}</td>
+                                    <td  id="desc" ><?php echo $row['description']; ?></td>
                                     <td>
                                     
                                         {{-- <form method="post" action="{{action('AnnouncementController@makefirst',$row['id'])}}" style="display: inline;" >

@@ -56,7 +56,13 @@ class AchievementsController extends Controller
         $ann->save();
         //to redirect
         //  return view('/admin/achievement/'.$redirectTo.'-list');
-       return redirect()->route('admin.achievement.'.$redirectTo.'-list')->with('success', 'Data inserted');
+        if($redirectTo == "atty_b"){
+            $redirectTo="congressman";
+            return redirect()->route('admin.achievement.'.$redirectTo.'-list')->with('success', 'Data inserted');
+        }
+        else{
+        return redirect()->route('admin.achievement.'.$redirectTo.'-list')->with('success', 'Data inserted');
+        }
     }
 
     public function edit($id)
@@ -79,8 +85,14 @@ class AchievementsController extends Controller
         $ann_update->description = $request->get('description');
 
         $ann_update->save();
+
+        if($redirectTo == "atty_b"){
+            $redirectTo="congressman";
+            return redirect()->route('admin.achievement.'.$redirectTo.'-list')->with('success', 'Data inserted');
+        }
+        else{
         return redirect()->route('admin.achievement.'.$redirectTo.'-list')->with('success', 'Data inserted');
-        
+        }
     }
 
     public function mayor()

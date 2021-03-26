@@ -54,7 +54,7 @@ span#descriptions_{
                                     <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="80px"/></td>
                                     <td >{{$cong_}}</td>
                                     <td >{{$row['title']}}</td>
-                                    <td  id="desc" ><span id="descriptions_">{{$row['desc']}}</span></td>
+                                    <td  id="desc" ><span id="descriptions_"><?php echo $row['desc'] ?> </span></td>
                                     <td>
                                         <a href="{{action('ProgramsCongressman@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
                                         @if($row['show'] != 1)

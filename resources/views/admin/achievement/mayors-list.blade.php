@@ -41,7 +41,7 @@
                                 <tr id={{$row['id']}}>
 
                                     <td >{{$row['title']}}</td>
-                                    <td  id="desc" >{{$row['description']}}</td>
+                                    <td  id="desc" ><?php echo $row['description']; ?></td>
                                     <td>
                                     
                                         {{-- <form method="post" action="{{action('AnnouncementController@makefirst',$row['id'])}}" style="display: inline;" >

@@ -22,6 +22,30 @@
         </style>
     </head>
     <body>
+      <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl" style="    max-width: fit-content;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="{{asset('assets/advisory.gif')}}" />
+              </div>
+              <div class="modal-footer">
+         
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container" id="nav">
             <div class="row" style="background:rgb(27, 37, 96); color:#fff; padding: 4px 0;">
               {{-- <div class="soc_med col-sm-6">
@@ -92,58 +116,52 @@
                                <li><a class="dropdown-item" href="/ourcity/barangay_page">Barangay</a></li>
                              </ul>
                            </li>
+
+                           <li class="nav-item" >
+                            <a class="nav-link" href="#"  id="navbarDropdownMenuLink" data-toggle="modal" data-target="#exampleModal">Departments</a>
+                          </li>
                            <li class="nav-item dropdown" >
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Programs and Projects
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                              <li><a class="dropdown-item" href="/programsandprojects/current_page">Current</a>
+                              <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Current</a>
                               </li>
-                              <li><a class="dropdown-item" href="/programsandprojects/archives_page">Archives</a></li>
+                              <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Archives</a></li>
                             </ul>
                           </li>
                           <li class="nav-item dropdown" >
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="modal" data-target="#exampleModal" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                             <li><a class="dropdown-item" href="#">e-Services</a></li>
-                             <li><a class="dropdown-item" href="#">SJMC</a></li>
-                             <li><a class="dropdown-item" href="#">Quarantine Facilities</a></li>
-                             <li><a class="dropdown-item" href="#">Downloadable Forms </a></li>
+                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">e-Services</a></li>
+                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">SJMC</a></li>
+                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Quarantine Facilities</a></li>
+                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Downloadable Forms </a></li>
                             </ul>
                           </li>
-                          <li class="nav-item dropdown" >
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Department
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                              <li>
-                                <a class="dropdown-item" href="#">e-Services</a>
-                              </li>
-                             </ul>
-                          </li>
                           <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <a class="nav-link dropdown-toggle" href="#" data-toggle="modal" data-target="#exampleModal" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                              Events
                            </a>
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                            <li><a class="dropdown-item" href="#">Tourism Festivities</a></li>
-                            <li><a class="dropdown-item" href="#">Departmental project activities</a></li>
-                            <li><a class="dropdown-item" href="#"> Barangay</a></li>
-                            <li><a class="dropdown-item" href="#">Communities and CSOs'</a></li>
+                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Tourism Festivities</a></li>
+                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Departmental project activities</a></li>
+                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal"> Barangay</a></li>
+                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Communities and CSOs'</a></li>
                               </ul>
                          </li>
                          <li class="nav-item dropdown" >
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" data-toggle="modal" data-target="#exampleModal" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Public Notices
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                           <li><a class="dropdown-item" href="#">Notice of Bids</a></li>
-                           <li><a class="dropdown-item" href="#">Disclosures </a></li>
-                           <li><a class="dropdown-item" href="#"> Executive Orders</a></li>
-                           <li><a class="dropdown-item" href="#">Ordinances</a></li>
-                           <li><a class="dropdown-item" href="#">Announcements</a></li>
+                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Notice of Bids</a></li>
+                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Disclosures </a></li>
+                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" > Executive Orders</a></li>
+                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Ordinances</a></li>
+                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Announcements</a></li>
                              </ul>
                         </li>
 
@@ -152,7 +170,7 @@
                         </a>
 
                          <li class="nav-item" >
-                          <a class="nav-link" aria-current="page" href="/">Contact Us</a>
+                          <a class="nav-link"  id="navbarDropdownMenuLink" href="#" data-toggle="modal" data-target="#exampleModal">Contact Us</a>
                         </li>
 
                            <li class="nav-item dropdown">
@@ -160,9 +178,9 @@
                                 Login
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                               <li><a class="dropdown-item" href="#">Employee</a></li>
-                               <li><a class="dropdown-item" href="#">Residence</a></li>
-                               <li><a class="dropdown-item" href="#">Visitors</a></li>
+                               <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Employee</a></li>
+                               <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Residence</a></li>
+                               <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Visitors</a></li>
                              </ul>
                            </li>
                          </ul>
@@ -224,7 +242,6 @@
     <footer>
       <div class="container" style="margin-bottom: 0%; background-color: #e82525;">
           <br>
-          <br>
           <div class="row">
               {{-- <h1 style="text-align: center; margin-top:-2%;">FOOTERsss</h1> --}}
               <div class="col-sm-4">
@@ -259,7 +276,7 @@
       <div id="footersss">
         <div class="row" id="end_footer" style="background: #8c0d11;">
             <center>
-                <h3 id="sitelink" style="color:#fff; margin: auto;">SAN JUAN CITY © ALL RIGHTS RESERVED.</h3>
+                <h3 id="sitelink" style="color:#fff; margin: auto;padding: 8px 0;">SAN JUAN CITY © ALL RIGHTS RESERVED.</h3>
             </center>
         </div>
     </div>
