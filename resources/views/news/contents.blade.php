@@ -11,7 +11,7 @@
                             <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%;" />
                             <h1>{{ $row->title }}</h1>
                             <br>
-                            <p>{{ $row->desc }}</p>
+                            <p><?php echo $row->desc ?></p>
                             <br>
                         @endforeach
                         

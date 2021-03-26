@@ -57,9 +57,13 @@
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-4 col-form-label"><b>Article / Description</b></label>
                         <div class="col-sm-8">
-                          <textarea  rows="10" name ="description" class="form-control">{{$news->desc}}</textarea>
+                            <div id="editor">
+                                <?php echo $news->desc; ?>
+                             </div>
+                              <textarea  rows="10" id="description" hidden name ="description" class="form-control">{{$news->desc}}</textarea>
                         </div>
                     </div>
+                    <br><br>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-4 col-form-label"><b>Image</b></label>
                         <div class="col-sm-8">

@@ -27,35 +27,13 @@
 
     {{-- @include('layouts.index.map-2') --}}
 
-    <style>
-        .sc::-webkit-scrollbar {
-          width: 10px;
-
-        }
-
-        /* Track */
-        .sc::-webkit-scrollbar-track {
-          box-shadow: inset 0 0 5px grey;
-          border-radius: 5px;
-        }
-
-        /* Handle */
-        .sc::-webkit-scrollbar-thumb {
-          background: blue;
-          border-radius: 5px;
-        }
-
-        /* Handle on hover */
-        .sc::-webkit-scrollbar-thumb:hover {
-          background: #5fa3f5;
-        }
-        </style>
+   
 
         <div class="container" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
            <div class="row justify-content-md-center" style="position:relative;">
                 <div class="col-sm-3">
                     <div class="card" id="news_card" style="border: 3px solid #003471;">
-                        <h2 class="card-title blue" style="text-align:center;color:#fff;font-size:17pt;">ANNOUNCEMENT</h2>
+                        <h2 class="card-title blue" style="text-align:center;color:#fff !important;font-size:17pt; margin-bottom: 0!important;">ANNOUNCEMENT</h2>
                         <div class="card-body sc" style="overflow-y: scroll; direction:rtl;">
 
                             @foreach($announcement as $row)
@@ -224,7 +202,9 @@
                               <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
                                 <h2 id="article_title" style="color:#000; text-decoration:none !important;">{{$row['title']}}</h2>
                               </a>
-                              <p id="article_contents" style="color:#000;text-decoration:none !important;">{{$row['desc']}}</p>
+                              <div id="article_contents" style="color:#000;text-decoration:none !important;">
+                                  <?php echo $row['desc'] ?>
+                              </div>
                               {{-- <a id="article_link" href="https://www.facebook.com/CityofSanJuanNCRPhilippines/" style="margin-top:2%;color:#2b92b0; font-weight: 700; float: right;" >READ MORE</a> --}}
                             </div>
                           </div>
@@ -282,7 +262,7 @@
                                     <div class="card-body" id="bulletin_bod" style="padding-top:0px;padding-right:0px;padding-left:0px;height: 550px; overflow: hidden;border: 3px solid #003471;">
                                         <div class="col-12 col-sm-12 covid_date" style="display: inline-block;    padding: 0;">
                                                 @if($row["type"] == 1)
-                                                    <a  id="bulletin_desc" href="#" class="blue" style="text-align: center !important; color:white;"><h4>Daily Update</h4></a>
+                                                    <a  id="bulletin_desc" href="#"  class="blue" style="text-align: center !important; color:white;"><h4>Daily Update</h4></a>
                                                 @endif
                                         </div>
                                         <div class="col-12 col-sm-12" style="float: left; display: inline-block;">
@@ -343,7 +323,7 @@
           <div class=" col-sm-8">
               <div class="card" id="news_card">
                   <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
-                      <h2 class="card-title blue" style="color:#fff; padding: 0 !important;">NEWS</h2>
+                      <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">NEWS</h2>
                         <?php $i=0; ?>
                             @foreach($news as $row)
                               <?php $i++; ?>
@@ -355,8 +335,8 @@
                                           </a>
                                       </div>
                                       <div class="col-8 col-sm-8" style="display: inline-block; padding:5px;">
-                                              <a id="bulletin_desc" href="#"><?php echo $row->title ?> </a>
-                                              <span id="article_contents">
+                                              <a id="bulletin_desc" href="#" style="height:auto !important;font-size: 25px;"><?php echo $row->title ?> </a>
+                                              <span id="article_contents" style="font-size: 15px;">
                                                 <?php echo $row['desc'] ?>
                                               </span>
                                               <br>
@@ -375,36 +355,173 @@
 
               </div>
           </div>
-          <div class=" col-sm-4">
+           <div class=" col-sm-4">
               <div class="card" style="height: 100%;">
-                      <div class="card-body" id="bulletin_sec" style="overflow-y: auto; padding:0 !important;border: 3px solid #003471;">
-                        <h2 class="card-title blue" style="color:#fff; padding: 0 !important;">E-SERVICES</h2>
-                          <ul class="list-group" style="margin: 2%;">
-                            <li class="list-group-item">Real Property Tax (RPTAX)</li>
-                            <li class="list-group-item">Business Tax (BTAX)</li>
-                            <li class="list-group-item">Local Civil Registry</li>
-                            <li class="list-group-item">Occupational Permit / Health Certificates</li>
-                            <li class="list-group-item">Community Tax Certificate</li>
-                            <li class="list-group-item">Ordinance Violation Receipts</li>
-                            <li class="list-group-item">Notice of Violations</li>
-                            <li class="list-group-item">Business Permit Licensing</li>
-                          </ul>
-                          <br>
-                          <div id="_viewmore">
-                              {{-- <a  href="#">view more articles</a> --}}
+                      <div class="card-body" id="bulletin_sec" style="padding:0 !important;border: 3px solid #003471;">
+                        <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">e-SERVICES</h2>
+                         
+                        <div class="card" style="margin: 2%;">
+                                      <div class="card-body" style="margin-top: -5%;">
+                                          <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                              <a >
+                                                  <img src="{{asset('assets/Eservices/Taxes.svg')}}"style="width:70%; " />
+                                              </a>
+                                      </div>
+                                      <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <br>                                            
+                                            <p style="margin: auto; position: absolute;">Real Property Tax (RPTAX)
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/income.svg')}}"style="width:70%; " />
+                                          </a>
+                                      </div>
+                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <br>                                            
+                                            <p style="margin: auto; position: absolute;">Business Tax (BTAX)
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/CivilReg.svg')}}"style="width:70%; " />
+                                          </a>
+                                      </div>
+                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <br>                                            
+                                            <p style="margin: auto; position: absolute;">Local Civil Registry
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/insurance.svg')}}"style="width:70%; " />
+                                          </a>
+                                      </div>
+                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+
+                                            <p style="margin: auto; position: absolute;">Occupational Permit / Health Certificates
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/Community.svg')}}"style="width:70%; " />
+                                          </a>
+                                      </div>
+                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <br>
+                                            <p style="margin: auto; position: absolute;">Community Tax Certificate
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/alarm.svg')}}"style="width:70%; " />
+                                          </a>
+                                      </div>
+                                  <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <p style="margin: auto; position: absolute;">Ordinance Violation Receipts
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                        <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/danger.svg')}}"style="width:70%; " />
+                                          </a>
+                                        </div>
+                                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <br>
+                                            <p style="margin: auto; position: absolute;">Notice of Violations
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+                        <div class="card" style="margin: 2%;">
+                          <div class="card-body" style="margin-top: -10%;">
+                            <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                <a >
+                                    <img src="{{asset('assets/Eservices/checking.svg')}}"style="width:70%; " />
+                                </a>
+                            </div>
+                            <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                  <br>
+                                  <p style="margin: auto; position: absolute;">Business Permit Licensing
+                                  </p>
+                            </div>
                           </div>
+                        </div>
+                        <div class="card" style="margin: 2%;">
+                            <div class="card-body" style="margin-top: -10%;">
+                                <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                    <a >
+                                        <img src="{{asset('assets/Eservices/portfolio.svg')}}"style="width:70%; " />
+                                    </a>
+                                </div>
+                                <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                      <br>
+                                      <p style="margin: auto; position: absolute;">PESO
+                                      </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="margin: 2%;">
+                            <div class="card-body" style="margin-top: -10%;">
+                              <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                  <a >
+                                      <img src="{{asset('assets/Eservices/logical-thinking.svg')}}"style="width:70%; " />
+                                  </a>
+                              </div>
+                              <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                    <br>
+                                    <p style="margin: auto; position: absolute;">Skills
+                                    </p>
+                              </div>
+                            </div>
+                        </div>
+
+
+
+                         
                       </div>
 
 
                   </div>
               </div>
-          </div>
+            </div>
           <br>
           <div class="row" id="act">
             <div class=" col-sm-12">
                 <div class="card" id="news_card">
                     <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
-                        <h2 class="card-title blue" style="color:#fff; padding: 0 !important; text-align:center;">ACTIVITY</h2>
+                        <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align:center;">ACTIVITY</h2>
                           <?php $i=0; ?>
                               @foreach($news as $row)
                                 <?php $i++; ?>
@@ -416,8 +533,8 @@
                                             </a>
                                         </div>
                                         <div class="col-8 col-sm-8" style="display: inline-block; padding:5px;">
-                                                <a id="bulletin_desc" href="#"><?php echo $row->title ?> </a>
-                                                <span id="article_contents">
+                                                <a id="bulletin_desc" href="#" style="font-size:25px;height: auto;"><?php echo $row->title ?> </a>
+                                                <span id="article_contents" style="margin-top:0 !important;">
                                                   <?php echo $row['desc'] ?>
                                                 </span>
                                                 <br>

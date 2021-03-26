@@ -43,7 +43,10 @@
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Description</label>
                         <div class="col-sm-10">
-                         <textarea  name ="description" required class="form-control" cols="30" rows="10"></textarea>
+                            <div id="editor">
+                                
+                            </div>
+                            <textarea  rows="10" id="description" hidden name ="description" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group">

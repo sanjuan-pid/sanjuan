@@ -2,16 +2,18 @@
 
 @section('content')
     <div id="side_prof" style="position: fixed;margin-top: 5%; z-index: 999;">
-        <a href="#" class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 13%; float: right;"/></a>
+        <a class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 13%; float: right;"/></a>
         <br>
         <br>
-        <a href="#" class="btn side_btn" id="achievement_btn"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS<img src={{asset('assets/achievement.svg')}} style="width: 13%; float: right;"/></a>
+        <a class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 13%; float: right;"/></a>
         <br>
         <br>
-        <a href="#" class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 13%; float: right;"/></a>
+        <a class="btn side_btn" id="achievement_btn"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS<img src={{asset('assets/achievement.svg')}} style="width: 13%; float: right;"/></a>
         <br>
         <br>
-        <a href="#" class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 13%; float: right;"/></a>
+        <a class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 13%; float: right;"/></a>
+       
+
     </div>
 
 
@@ -60,7 +62,7 @@
                       <h5 class="card-title" style="font-weight: 800; font-size: 200;">{{$ach->title}}</h5>
                       <div id="achievements_contents">
                         <p>
-                          {{$ach->description}}
+                          <?php echo $ach->description ?>
                         </p>
                       </div>
                   </div>
@@ -150,10 +152,7 @@
 
  <div class="container" id="news_sec">
    @include('layouts.index.agenda')
-
-
-    <br>
-    <div class="row news_row" style="margin-top: -18%;" >
+      <div class="row news_row" style="margin-top: -18%;" >
 
         <h1 style="text-align: center;">NEWS</h1>
         <div class="col-sm-12">
@@ -240,8 +239,10 @@
           </div>
           </div>
         </div>
-
       </div>
+
+    <br>
+
     </div>
   </div>
 </div>

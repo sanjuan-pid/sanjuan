@@ -36,7 +36,7 @@
                                 <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="120px"/></td>
                               
                                 <td >{{$row['title']}}</td>
-                                <td >{{$row['desc']}}</td>
+                                <td ><?php echo $row['desc'] ?></td>
                                 @if($row['type'] == 1)
                                     <td><b>Daily</b></td>
                                 @endif

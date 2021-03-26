@@ -37,7 +37,7 @@
                                 <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="80px"/></td>
                               
                                 <td >{{$row['title']}}</td>
-                                <td  id="desc" >{{$row['desc']}}</td>
+                                <td  id="desc" ><?php echo $row['desc'] ?></td>
                                 <td>
                                     {{-- <form method="post" action="{{action('AnnouncementController@makefirst',$row['id'])}}" style="display: inline;" >
                                         {{csrf_field()}}

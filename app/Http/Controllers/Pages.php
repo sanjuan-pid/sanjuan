@@ -25,7 +25,8 @@ class Pages extends Controller
                             where DATE(created_at) <= DATE(NOW()) - INTERVAL 2 DAY
                             and status = 1 and content_type = "news";', [1]);
         $achievement = DB::select('select * from achievement
-                            where status = 1 and content_tag = "mayors";', [1]);    
+                            where status = 1 and content_tag = "mayors";', [1]);  
+
         // return($achievement)   ;             
          return view('/mayors_page', compact('news','achievement'),['news2' => $news2]);
     }
@@ -72,8 +73,21 @@ class Pages extends Controller
         return view('ourcity/government_page');
     }
     public function cong()
-    {
-        return view('ourcity/congressman_page');
+    {   
+        $updates_atty = DB::select('select * from news
+            where content_type="Updates" and status = 1 and content_tag ="atty_b" ;');
+        $ann_atty = DB::select('select * from news
+            where content_type="Announcement" and status = 1 and content_tag ="atty_b";');
+        $ann = DB::select('select * from news
+            where content_type="Announcement" and status = 1 and content_tag = "cong";');
+        $programs = DB::select('select * from news
+            where content_type="Programs" and status = 1 and (content_tag = "cong" || content_tag ="atty_b");'); 
+        $updates = DB::select('select * from news
+            where content_type="Updates" and status = 1 and content_tag = "cong" ;');
+        // return view('');
+        $achievement = DB::select('select * from achievement
+            where status = 1 and content_tag = "congressman" || content_tag ="atty_b";');  
+        return view('ourcity/congressman_page',compact('programs','updates','achievement','ann','updates_atty','ann_atty'));
     }
     public function vice()
     {
