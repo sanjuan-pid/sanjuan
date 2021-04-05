@@ -34,8 +34,15 @@
                 <div class="col-sm-3">
                     <div class="card" id="news_card" style="border: 3px solid #003471;">
                         <h2 class="card-title blue" style="text-align:center;color:#fff !important;font-size:17pt; margin-bottom: 0!important;">ANNOUNCEMENT</h2>
-                        <div class="card-body sc" style="overflow-y: scroll; direction:rtl;">
-
+                        <div class="card-body sc" style="overflow-y: scroll; direction:;">
+                          <br>
+                          <ul class="list-group">
+                            <li class="list-group-item"><a href="#" > Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#" > Dapibus ac facilisis in</a></li>
+                            <li class="list-group-item"><a href="#" > Morbi leo risus</a></li>
+                            <li class="list-group-item"><a href="#" > Porta ac consectetur ac</a></li>
+                            <li class="list-group-item"><a href="#" > Vestibulum at eros</a></li>
+                          </ul>
                             @foreach($announcement as $row)
 
                                 @if($row['show'] == 1)
