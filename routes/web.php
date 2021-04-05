@@ -77,6 +77,8 @@ Route::prefix('admin')->group(function(){
 
     //qr
     Route::get('/qr/list_qr', 'QRController@index')->name('admin.qr.list_qr');
+    Route::post('/qr/list_qr', 'QRController@store1');
+    Route::get('/qr/list_sched', 'QRController@list_sched')->name('admin.qr.list_sched');
     // Route::post('/qr/brgy', 'CovidController@Covid_update');
     Route::resource('/qr','QRController');
     // Route::post('/qr/', 'CovidController@Covid_target');
@@ -128,6 +130,5 @@ Route::prefix('admin')->group(function(){
     Route::get('/activity/act-list', 'ActivityController@index')->name('admin.activity.act-list');
     // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
     Route::resource('/activity','AchievementsController');
-
 
 });
