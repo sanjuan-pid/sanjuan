@@ -28,6 +28,8 @@ Route::get('/skills_page','Pages@skills');
 Route::get('/contents/news/{id}','Pages@news_contents');
 Route::get('/contents/list','Pages@news_list');
 
+Route::get('/brgy/contents/{id}','Pages@brgy_contents');
+
 Route::get('ourcity/government_page','Pages@gov');
 Route::get('ourcity/congressman_page','Pages@cong');
 Route::get('ourcity/vicemayor_page','Pages@vice');
