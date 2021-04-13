@@ -133,4 +133,15 @@ class Pages extends Controller
   {
       return view('programsandprojects/archives_page');
   }
+  
+  public function brgy_contents($id)
+  {
+
+      // return view('news.contents');
+      $brgy = DB::select('select * from brgy
+                          where id='.$id, [1]);
+      // echo $ann;
+      return view('brgy.contents',compact('brgy'));
+  }
+
 }

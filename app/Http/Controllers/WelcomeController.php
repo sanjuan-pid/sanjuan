@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Mayors;
 use App\News;
+use App\brgy;
 
 class WelcomeController extends Controller
 {
@@ -31,10 +32,13 @@ class WelcomeController extends Controller
                 ->where('content_tag', 0)      
                 ->orderBy('created_at', 'desc')
                 ->get();
+        $brgy_announcement = brgy::where('brgy_code', 0)
+                ->orderBy('name', 'asc')
+                ->get();
         $news2 = DB::select('select id , title, filename, date(created_at), DATE(NOW()) - INTERVAL 2 DAY from news 
                 where DATE(created_at) <= DATE(NOW()) - INTERVAL 2 DAY
                 and status = 1 and content_type = "News";', [1]);
                 
-        return view('/welcome', compact('mayors','news','announcement','events'),['news2' => $news2]);
+        return view('/welcome', compact('mayors','news','announcement','events','brgy_announcement'),['news2' => $news2]);
     }
 }
