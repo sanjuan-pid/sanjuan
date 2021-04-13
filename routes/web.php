@@ -22,20 +22,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/news_article','Pages@index');
-Route::get('/mayors_page','Pages@mayor');
+Route::get('/mayors_page','Pages@mayor')->name('mayor');
 Route::get('/skills_page','Pages@skills');
 
 Route::get('/contents/news/{id}','Pages@news_contents');
 Route::get('/contents/list','Pages@news_list');
 
-Route::get('/brgy/contents/{id}','Pages@brgy_contents');
-
-Route::get('ourcity/government_page','Pages@gov');
-Route::get('ourcity/congressman_page','Pages@cong');
-Route::get('ourcity/vicemayor_page','Pages@vice');
-Route::get('ourcity/citycouncil_page','Pages@city');
-Route::get('ourcity/barangay_page','Pages@brgy');
-Route::get('ourcity/history_page','Pages@history');
+Route::get('ourcity/government_page','Pages@gov')->name('gov');
+Route::get('ourcity/congressman_page','Pages@cong')->name('cong');
+Route::get('ourcity/vicemayor_page','Pages@vice')->name('vice');
+Route::get('ourcity/citycouncil_page','Pages@city')->name('city');
+Route::get('ourcity/barangay_page','Pages@brgy')->name('brgy');
+Route::get('ourcity/history_page','Pages@history')->name('history');
 
 Route::get('programsandprojects/current_page','Pages@current');
 Route::get('programsandprojects/archives_page','Pages@archives');
