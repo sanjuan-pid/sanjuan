@@ -31,12 +31,12 @@
 
         <div class="container" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
            <div class="row justify-content-md-center" style="position:relative;">
-                <div class="col-sm-3">
+                <div class="col-sm-3" id="aanouncementss">
                     <div class="card" id="news_card" style="border: 3px solid #003471;">
                         <h2 class="card-title blue" style="text-align:center;color:#fff !important;font-size:17pt; margin-bottom: 0!important;">ANNOUNCEMENT</h2>
                         <div class="card-body sc" style="overflow-y: scroll; direction:;">
                           <br>
-                          <ul class="">
+                          <ul class="sap_list">
                             <b>SAP Brgy List</b>
                             @foreach($brgy_announcement as $row)
                               <li style="font-weight: 600;"><a href="{{action( 'Pages@brgy_contents', $row->id )}}" target="_blank" > <?php echo $row['name'] ?></a></li>
