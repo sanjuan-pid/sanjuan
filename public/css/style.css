@@ -667,7 +667,7 @@ div#end_footer h3 {
         width: 30%;
     }
     nav .col-sm-2{
-        width: 80%;
+        width: 100%;
         text-align:center;
     }
     nav .col-sm-8{
@@ -677,9 +677,9 @@ div#end_footer h3 {
         float: right;
     }
     div#mobile_nav {
-        width: 100%;
+        width: 56% !important;
         position:absolute;
-        right:0px;
+        right:0;
         z-index:2;
         display:none;
     }
@@ -689,8 +689,8 @@ div#end_footer h3 {
 }
     div#mobile_nav {
         width: 50%;
-        position:absolute;
-        right:0px;
+        position:fixed;
+        right:0;
         z-index:2;
         display:none;
     }

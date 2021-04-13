@@ -31,145 +31,305 @@ body {font-family: "Lato", sans-serif;}
 
 /* Style the tab */
 .tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 15%;
-  height: 512px;
+
+  width: 100%;
+
+
+}
+.tab2{
+
+  width: 100%;
+
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  display: block;
+
   background-color: inherit;
   color: black;
-  padding: 22px 16px;
-  width: 100%;
+  padding: 0 0;
+  width: 60%;
   border: none;
-  outline: none;
-  text-align: left;
+
   cursor: pointer;
   transition: 0.3s;
-  font-size: 17px;
+
+}
+.tab2 button {
+
+  background-color: inherit;
+  color: black;
+  padding: 0 0;
+  width: 60%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
+.tab button :hover {
+  border: 3px solid blue;
+    margin:0;
+}
+.tab2 button :hover {
+  border: 3px solid blue;
+    margin: 0;
 }
 
 /* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
+.tab .active {
+  border: 3px solid blue;
+    margin: 0;
+    border-radius: 10px !important;
+
+}
+.tab2 .active {
+  border: 3px solid blue;
+    margin: 0;
+    border-radius: 10px !important;
 }
 
 /* Style the tab content */
 .tabcontent {
-  float: left;
   padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 70%;
-  border-left: none;
-  height: 600px;
+  width: 100%;
+  height: 760px;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  overflow-y: scroll;
+  border-radius: 10px;
 }
+/* .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}  */
+#council{
+   margin: auto;
+}
+@media only screen and (max-width: 1920px) and (min-width: 1080px){
+  #council{
+    max-width: 70% !important;
+    width:70% !important;
+    flex: 0 0 100%;
+  }
+  #council .col-8 h1{
+      font-size: 40px;
+  }
+  #council .col-8 .tabcontent{
+    max-width: 100% !important;
+    width:100% !important;
+    height: 100% !important;
+    flex: 0 0 100%;
+  }
+  #council .col-8 .tabcontent img{
+    width: 50% !important;
+  }
+  #council h3{
+      font-size: 100px !important;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 900px){
+  #council{
+    max-width: 60% !important;
+    width:60% !important;
+    flex: 0 0 100%;
+  }
+  #council .col-8 h1{
+      font-size: 25px;
+  }
+  #council .col-8 .tabcontent{
+    max-width: 100% !important;
+    width:100% !important;
+    height: 100% !important;
+    flex: 0 0 100%;
+  }
+  #council .col-8 .tabcontent img{
+    width: 45% !important;
+  }
+}
+
+@media screen and (max-width: 766px) and (min-width: 200px) {
+  #council {
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #council .col-8{
+    max-width: 80% !important;
+    width:80% !important;
+  }
+   #council .col-2 .tab{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+
+  }
+  #council .col-2 .tab2 {
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+
+  }
+  #council .tab .button{
+      width:200% !important;
+  }
+    #council .tab2 .button{
+      width:200% !important;
+  }
+  #council .col-8 h1{
+      font-size:18px;
+  }
+  #council .col-8 .tabcontent{
+    max-width: 100% !important;
+    width:100% !important;
+    height: 430px !important;
+    flex: 0 0 100%;
+    margin-left: 7%;
+  }
+    #council .col-8 .tabcontent img{
+      width: 80% !important;
+      display: block;
+      top: 10%;
+    }
+}
+
 </style>
 
 
-        <h3 style="text-align: center; color: #1f1c4b; font-size: 60px; font-weight: 700;">CHOOSE YOUR COUNCILOR</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="tab" style="height: 600px; overflow-y: scroll;">
-                  <button class="tablinks" onclick="openCity(event, 'two')"> <img src="{{asset('assets/konsehal/AQUINO.png')}}" style="width:60%;display: block; margin-left: auto; margin-right: auto; border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'three')"><img src="{{asset('assets/konsehal/ARTADI.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'four')"><img src="{{asset('assets/konsehal/ATAD.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'six')"><img src="{{asset('assets/konsehal/CHUA.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'eight')"><img src="{{asset('assets/konsehal/PACHECO.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'nine')"><img src="{{asset('assets/konsehal/REYES.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'ten')"><img src="{{asset('assets/konsehal/SUBIJANO.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'ele')"><img src="{{asset('assets/konsehal/VELASCO.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
+    <h3 style="text-align: center; color: #1f1c4b; font-size: 50px; font-weight: 700;">COUNCILORS</h3>
+    <div class="container" id="council" style="max-width: 60%;">
+        <div class="row">
+          <div class="col-2">
+            <div class="tab ml-5">
+                  <button class="tablinks button" onclick="openCity(event, 'two')"><img src="{{asset('assets/konsehal/AQUINO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important; margin-top:2%;"/></button>
+                  <button class="tablinks button" onclick="openCity(event, 'three')"><img src="{{asset('assets/konsehal/ARTADI.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important; margin-top:2%;"/></button>
+                  <button class="tablinks button" onclick="openCity(event, 'four')"><img src="{{asset('assets/konsehal/ATAD.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onclick="openCity(event, 'six')"><img src="{{asset('assets/konsehal/CHUA.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onclick="openCity(event, 'eight')"><img src="{{asset('assets/konsehal/PACHECO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onclick="openCity(event, 'nine')"><img src="{{asset('assets/konsehal/REYES.png')}}"style="width:100%;display: block; margin-left:auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onclick="openCity(event, 'ten')"><img src="{{asset('assets/konsehal/SUBIJANO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
 
               </div>
-              <div class="tab" style="height: 600px; overflow-y: scroll;">
-                  <button class="tablinks" onclick="openCity(event, 'a')" id="defaultOpen"> <img src="{{asset('assets/konsehal/bernardo.png')}}" style="width:60%;display: block; margin-left: auto; margin-right: auto; border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'b')"><img src="{{asset('assets/konsehal/deguzman.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'c')"><img src="{{asset('assets/konsehal/ejercito.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'd')"><img src="{{asset('assets/konsehal/mathay.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'e')"><img src="{{asset('assets/konsehal/mj.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-                  <button class="tablinks" onclick="openCity(event, 'f')"><img src="{{asset('assets/konsehal/peralta.png')}}"style="width:60%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/></button>
-              </div>
-              <div id="two" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/AQUINO.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="three" class="tabcontent">
-                <br>
-                <br><img src="{{asset('assets/konsehal/ARTADI.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 5px;"/>
-              </div>
-               <div id="four" class="tabcontent">
-                <br>
-                <br>
-                  <img src="{{asset('assets/konsehal/ATAD.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 5px;"/>
-               </div>
-               <div id="six" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/CHUA.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 5px;"/>
-              </div>
-              <div id="eight" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/PACHECO.png')}}" style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="nine" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/REYES.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="ten" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/SUBIJANO.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="ele" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/VELASCO.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 5px;"/>
-              </div>
-              <div id="a" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/bernardo.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="b" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/deguzman.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="c" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/ejercito.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="d" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/mathay.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="e" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/mj.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
-              <div id="f" class="tabcontent">
-                <br>
-                <br>
-                <img src="{{asset('assets/konsehal/peralta.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 5px;"/>
-              </div>
             </div>
+
+          <div class="col-8">
+            <div id="two" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/AQUINO.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Arthur Alfredo E. Aquino</h1>
+            </div>
+            <div id="three" class="tabcontent">
+              <br>
+              <br><img src="{{asset('assets/konsehal/ARTADI.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Paul Anthony D. Artadi</h1>
+            </div>
+             <div id="four" class="tabcontent">
+              <br>
+              <br>
+                <img src="{{asset('assets/konsehal/ATAD.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 10px !important;"/>
+                <h1 style="text-align:center;">SK Federation President: Coun. Ariel I. Atad<h1>
+             </div>
+              <div id="six" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/CHUA.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Liga ng mga Barangay President: Coun. Herbert O. Chua<h1>
+            </div>
+            <div id="eight" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/PACHECO.png')}}" style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Vincent Rainier M. Pacheco</h1>
+            </div>
+            <div id="nine" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/REYES.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;"> Coun. Victor Jose L. Reyes</h1>
+            </div>
+            <div id="ten" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/SUBIJANO.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;"> Coun. Raissa H. Laurel-Subijano</h1>
+            </div>
+            <div id="ele" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/VELASCO.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto; border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Franchesco Paul R. Velasco</h1>
+            </div>
+            <div id="a" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/bernardo.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Rolando M. Bernardo</h1>
+            </div>
+            <div id="b" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/deguzman.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Bea Celine D. De Guzman</h1>
            </div>
+            <div id="c" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/ejercito.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Jannah A. Ejerciton</h1>
+            </div>
+            <div id="d" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/mathay.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Michael Cristopher R. Mathay</h1>
+            </div>
+            <div id="e" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/mj.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;">Coun. Mary Joy A. Ibuna-Leoy</h1>
+            </div>
+            <div id="f" class="tabcontent">
+              <br>
+              <br>
+              <img src="{{asset('assets/konsehal/peralta.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
+              <h1 style="text-align:center;"> Coun. Francis Keith R. Peralta</h1>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="tab2">
+                <button class="tablinks button" onclick="openCity(event, 'a')" id="defaultOpen"> <img src="{{asset('assets/konsehal/bernardo.png')}}" style="width:100%;display: block; margin-left: auto; margin-right: auto; border-radius: 10px !important; "/></button>
+                <button class="tablinks button" onclick="openCity(event, 'b')"><img src="{{asset('assets/konsehal/deguzman.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button"  onclick="openCity(event, 'c')"><img src="{{asset('assets/konsehal/ejercito.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onclick="openCity(event, 'd')"><img src="{{asset('assets/konsehal/mathay.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onclick="openCity(event, 'e')"><img src="{{asset('assets/konsehal/mj.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onclick="openCity(event, 'f')"><img src="{{asset('assets/konsehal/peralta.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onclick="openCity(event, 'ele')"><img src="{{asset('assets/konsehal/VELASCO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
         <script>
             function openCity(evt, cityName) {
               var i, tabcontent, tablinks;
@@ -189,4 +349,6 @@ body {font-family: "Lato", sans-serif;}
             document.getElementById("defaultOpen").click();
        </script>
        <br>
+
+
 @endsection

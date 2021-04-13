@@ -95,7 +95,7 @@
                        <a class="navbar-brand" href="/">
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
-                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                       <button style="float: right;margin-top: 7%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                        </button>
                      </div>
@@ -207,38 +207,87 @@
         <div class="card" id="mobile_nav">
           <div class="card-body">
             <ul class="navbar-nav" id="nav_mob">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item" class="">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Legislative</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   <img src="{{asset('assets/meat.svg')}}" alt="Sign in / up">
+              <li class="nav-item dropdown" id="ourcity">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Our City
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                  <li><a class="dropdown-item" href="/ourcity/government_page">Government</a></li>
+                  <li><a class="dropdown-item" href="/ourcity/history_page">History</a></li>
+                  <li><a class="dropdown-item" href="/mayors_page">Mayor's Desk</a></li>
+                  <li><a class="dropdown-item" href="/ourcity/congressman_page">Congressman's Desk</a></li>
+                  <li><a class="dropdown-item" href="/ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
+                  <li><a class="dropdown-item" href="/ourcity/citycouncil_page">City Council</a></li>
+                  <li><a class="dropdown-item" href="/ourcity/barangay_page">Barangay</a></li>
                 </ul>
               </li>
-            </ul>
-
-          </div>
+              <li class="nav-item dropdown" >
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               Programs and Projects
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                 <li><a class="dropdown-item" href="/programsandprojects/current_page">Current</a></li>
+                 <li><a class="dropdown-item" href="/programsandprojects/archives_page">Archives</a></li>
+               </ul>
+             </li>
+             <li class="nav-item dropdown" >
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               Services
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                <li><a class="dropdown-item" href="#">e-Services</a></li>
+                <li><a class="dropdown-item" href="#">SJMC</a></li>
+                <li><a class="dropdown-item" href="#">Quarantine Facilities</a></li>
+                <li><a class="dropdown-item" href="#">Downloadable Forms </a></li>
+                  </ul>
+             </li>
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Events
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+               <li><a class="dropdown-item" href="#">Tourism Festivities</a></li>
+               <li><a class="dropdown-item" href="#">Departmental project activities</a></li>
+               <li><a class="dropdown-item" href="#"> Barangay</a></li>
+               <li><a class="dropdown-item" href="#">Communities and CSOs'</a></li>
+                 </ul>
+            </li>
+            <li class="nav-item dropdown" >
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Public Notices
+             </a>
+             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+              <li><a class="dropdown-item" href="#">Notice of Bids</a></li>
+              <li><a class="dropdown-item" href="#">Disclosures </a></li>
+              <li><a class="dropdown-item" href="#"> Executive Orders</a></li>
+              <li><a class="dropdown-item" href="#">Ordinances</a></li>
+              <li><a class="dropdown-item" href="#">Announcements</a></li>
+                </ul>
+             </li>
+             <li class="nav-item dropdown" >
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Directory
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+               <li><a class="dropdown-item" href="#">Notice of Bids</a></li>
+             </ul>
+            </li>
+            <li class="nav-item" >
+             <a class="nav-link" aria-current="page" href="/contactus_page">Contact Us</a>
+           </li>
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+             </a>
+             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+               <li><a class="dropdown-item" href="#">Employee</a></li>
+               <li><a class="dropdown-item" href="#">Residence</a></li>
+               <li><a class="dropdown-item" href="#">Visitors</a></li>
+             </ul>
+           </li>
+          </ul>
         </div>
+      </div>
         @yield('content')
     </body>
     <footer>
