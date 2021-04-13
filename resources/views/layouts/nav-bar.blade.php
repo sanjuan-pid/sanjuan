@@ -95,11 +95,12 @@
                        <a class="navbar-brand" href="/">
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
-                     </div>
-                     <div class="col-sm-10" id="nav_mob" style="padding: 0;"> 
                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                        </button>
+                     </div>
+                     <div class="col-sm-10" id="nav_mob" style="padding: 0;"> 
+                       
                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
                          <ul class="navbar-nav">
                            <li class="nav-item dropdown" id="ourcity">
