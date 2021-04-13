@@ -95,7 +95,7 @@
                        <a class="navbar-brand" href="/">
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
-                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                       <button style="float: right;margin-top: 7%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                        </button>
                      </div>
