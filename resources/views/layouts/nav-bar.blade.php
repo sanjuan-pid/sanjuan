@@ -108,7 +108,6 @@
                               Our City
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                              <li><a class="dropdown-item" href="">Government1</a></li>
                                <li><a class="dropdown-item" href="{{route('gov')}}">Government</a></li>
                                <li><a class="dropdown-item" href="{{route('history')}}">History</a></li>
                                <li><a class="dropdown-item" href="{{route('mayor')}}">Mayor's Desk</a></li>
@@ -212,13 +211,15 @@
                  Our City
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                  <li><a class="dropdown-item" href="/ourcity/government_page">Government</a></li>
-                  <li><a class="dropdown-item" href="/ourcity/history_page">History</a></li>
-                  <li><a class="dropdown-item" href="/mayors_page">Mayor's Desk</a></li>
-                  <li><a class="dropdown-item" href="/ourcity/congressman_page">Congressman's Desk</a></li>
-                  <li><a class="dropdown-item" href="/ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
-                  <li><a class="dropdown-item" href="/ourcity/citycouncil_page">City Council</a></li>
-                  <li><a class="dropdown-item" href="/ourcity/barangay_page">Barangay</a></li>
+                           <li><a class="dropdown-item" href="{{route('gov')}}">Government</a></li>
+                           <li><a class="dropdown-item" href="{{route('history')}}">History</a></li>
+                           <li><a class="dropdown-item" href="{{route('mayor')}}">Mayor's Desk</a></li>
+                           <li><a class="dropdown-item" href="{{route('cong')}}">Congressman's Desk</a></li>
+                           <li><a class="dropdown-item" href="{{route('vice')}}">Vice Mayor's Desk</a></li>
+                           <li><a class="dropdown-item" href="{{route('city')}}">City Council</a></li>
+                           <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
+
+
                 </ul>
               </li>
               <li class="nav-item dropdown" >
