@@ -8,9 +8,12 @@
                 <div class="card-body">
                         <br>
                         @foreach($brgy as $row)
-                            <h1>{{ $row->name }}</h1>
+                            <h1 style="text-align: center; font-weight:900;">{{ $row->name }}</h1>
                             <br>
-                            <p><?php echo $row->address ?></p>
+                            <p style="text-align: center; font-weight:500;font-weight:600;"><?php echo $row->address ?></p>
+                            <div id= officials style="text-align: center; font-weight:600;">
+                                <?php echo $row ->officials ?>
+                            </div>
                             <br>
                         @endforeach
                         
