@@ -95,11 +95,12 @@
                        <a class="navbar-brand" href="/">
                          <img  src="{{asset('assets/makabago.png')}}"  alt="" width="80" height="80" class="d-inline-block align-top">
                        </a>
-                     </div>
-                     <div class="col-sm-10" id="nav_mob" style="padding: 0;"> 
                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon"></span>
                        </button>
+                     </div>
+                     <div class="col-sm-10" id="nav_mob" style="padding: 0;"> 
+                       
                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
                          <ul class="navbar-nav">
                            <li class="nav-item dropdown" id="ourcity">
@@ -107,13 +108,14 @@
                               Our City
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                               <li><a class="dropdown-item" href="/ourcity/government_page">Government</a></li>
-                               <li><a class="dropdown-item" href="/ourcity/history_page">History</a></li>
-                               <li><a class="dropdown-item" href="/mayors_page">Mayor's Desk</a></li>
-                               <li><a class="dropdown-item" href="/ourcity/congressman_page">Congressman's Desk</a></li>
-                               <li><a class="dropdown-item" href="/ourcity/vicemayor_page">Vice Mayor's Desk</a></li>
-                               <li><a class="dropdown-item" href="/ourcity/citycouncil_page">City Council</a></li>
-                               <li><a class="dropdown-item" href="/ourcity/barangay_page">Barangay</a></li>
+                              <li><a class="dropdown-item" href="">Government1</a></li>
+                               <li><a class="dropdown-item" href="{{route('gov')}}">Government</a></li>
+                               <li><a class="dropdown-item" href="{{route('history')}}">History</a></li>
+                               <li><a class="dropdown-item" href="{{route('mayor')}}">Mayor's Desk</a></li>
+                               <li><a class="dropdown-item" href="{{route('cong')}}">Congressman's Desk</a></li>
+                               <li><a class="dropdown-item" href="{{route('vice')}}">Vice Mayor's Desk</a></li>
+                               <li><a class="dropdown-item" href="{{route('city')}}">City Council</a></li>
+                               <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
                              </ul>
                            </li>
 
