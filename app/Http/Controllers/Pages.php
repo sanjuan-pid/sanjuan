@@ -143,5 +143,8 @@ class Pages extends Controller
       // echo $ann;
       return view('brgy.contents',compact('brgy'));
   }
-
+  public function contactus()
+  {
+      return view('contactus_page');
+  }
 }

@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 
 Auth::routes();
+Route::get('/contactus_page','Pages@contactus')->name('contactus');
 
 Route::get('/home', 'HomeController@index');
 Route::get('/news_article','Pages@index');
