@@ -687,6 +687,46 @@ div#end_footer h3 {
         width: 100%;
     }
 }
+/* for footer */
+@media screen and (max-width: 766px) and (min-width: 200px) {
+  #foot .col-sm-4 #tab3 #e{
+    font-size: 16px !important;
+    margin-left: -40% !important;
+  }
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+    
+    td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+}
+
     div#mobile_nav {
         width: 50%;
         position:fixed;
@@ -1190,4 +1230,212 @@ button.tablinks {
 @media screen and (max-device-width: 1500px) {
     div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec, #gov-sites {max-width: 90% !important;}
     #nav .container {margin: 0px 4% !important;}
+}
+section{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+
+section .container{
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+section .container .contactform{
+  position: relative;
+  padding: 10px 10px;
+  background: #fff;
+  width: calc(100% - 150px);
+  height: 50%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: auto;
+}
+#sjch1{
+  font-size: 25px;
+  color:#1b2560;
+  font-weight: bolder;
+}
+#sjch2{
+  font-size: 25px;
+  color: red;
+  font-weight:700;
+}
+#sjch3{
+  font-size: 20px;
+  color:#1b2560;
+  font-weight: bolder;
+}
+#sjch3{
+  font-size: 20px;
+  color:#1b2560;
+  font-weight: bolder;
+}
+#sjchbrgy{
+  font-size: 20px;
+  color:#1b2560;
+  font-weight: bolder;
+}
+#konsilaman{
+  font-size: 20px;
+  color:#1b2560;
+  font-weight: bolder;
+}
+.ctus{
+  font-size: 15px;
+  color:black;
+  font-weight: bolder;
+}
+.pula{
+  font-size: 15px;
+  color:red;
+  font-weight: 700;
+}
+.sjcat{
+  font-size: 30px;
+  color:red;
+  text-align: center;
+  font-weight: 700;
+}
+#loc{
+  width: 20%;
+}
+@media screen and (max-width: 766px) and (min-width: 200px) {
+  #conus {
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #conus .contactform{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important
+  }
+  #conus .contactform #sjch1{
+    font-size: 15px;
+  }
+  #conus .contactform #sjch2{
+    font-size: 15px;
+  }
+  #deptconus .contactform{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important
+  }
+  #deptconus .contactform h1{
+    font-size: 22px;
+  }
+  #deptconus .contactform #dir{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #deptconus .contactform thead{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #deptconus .contactform thead #sjch3{
+    font-size: 20px;
+  }
+  #deptconus .contactform tbody .sjcat{
+    font-size: 17px;
+  }
+  #deptconus .contactform tbody .ctus{
+    font-size: 10px;
+  }
+  #deptconus .contactform tbody .pula{
+    font-size: 10px;
+  }
+
+
+  #brgyconus .contactform{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important
+  }
+  #brgyconus .contactform h1{
+    font-size: 22px;
+  }
+  #brgyconus .contactform #brgydirect{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #brgyconus .contactform thead{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #brgyconus .contactform thead #sjchbrgy{
+    font-size: 15px !important;
+  }
+  #brgyconus .contactform tbody .sjcat{
+    font-size: 17px;
+  }
+  #brgyconus .contactform tbody .ctus{
+    font-size: 8px;
+    font-weight: 700;
+  }
+  #brgyconus .contactform tbody .pula{
+    font-size: 10px;
+  }
+
+  #konsiconus .contactform{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important
+  }
+  #konsiconus .contactform h1{
+    font-size: 22px;
+  }
+  #konsiconus .contactform #konsehal{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #konsiconus .contactform thead{
+    max-width: 100% !important;
+    width:100% !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #konsiconus .contactform thead #konsilaman{
+    font-size: 23px !important;
+  }
+  #konsiconus .contactform tbody .sjcat{
+    font-size: 17px;
+  }
+  #konsiconus .contactform tbody .ctus{
+    font-size: 10px;
+    font-weight: 700;
+  }
+  #konsiconus .contactform tbody .pula{
+    font-size: 12px;
+  }
 }

@@ -159,7 +159,7 @@
                             {{-- </li> --}}
                             <li class="nav-item dropdown" id="News">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }} 
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                     <li class="nav-item dropdown">

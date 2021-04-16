@@ -171,7 +171,8 @@
                         </a>
 
                          <li class="nav-item" >
-                          <a class="nav-link"  id="navbarDropdownMenuLink" href="#" data-toggle="modal" data-target="#exampleModal">Contact Us</a>
+                          <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('contactus')}}">Contact Us</a>
+                         
                         </li>
 
                            <li class="nav-item dropdown">
@@ -317,7 +318,7 @@
                   <p id="sitelink" href="#" style="color:#fff;">
                     CONTACT INFORMATION<br>
                     <a style="color:#fff; font-size:16px">Hotline: 137-135</a><br>
-                    <a style="color:#fff; font-size:16px">Email:publicinfo@sanjuancity.gov.ph</a><br>
+                    <a id="e" style="color:#fff; font-size:16px">Email:publicinfo@sanjuancity.gov.ph</a><br>
                     <a style="color:#fff; font-size:16px">Office Hours: 8:00 AM to 5:00 PM</a><br>
                     <a style="color:#fff; font-size:16px">Office Days: Monday to Friday</a><br>
                   </p>
