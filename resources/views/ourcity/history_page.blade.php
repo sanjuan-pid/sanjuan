@@ -27,15 +27,15 @@
 <style>
 .item {
    position : sticky;
-	top : 0;
+  top : 0;
   width: 100%;
   transition: transform .2s;
 }
 
 .item:hover {
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari 3-8 */
-  transform: scale(1.2); }
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); }
 
 .hisB{
 opacity: 0;
@@ -174,8 +174,8 @@ opacity: 1;
                   <p style=" font-weight: 500; margin-top: 15px;text-indent: 50px;line-height: 200%;">At some point, different solutions to the water problem of Manila were developed to address the needs of the city. A water system was developed and construction began in 1878. The Carriedo Water System was inaugurated in 1882 and the San Juan reservoir, known as the El Deposito, became a tourist attraction.”</p>
                </div>
              </div>
-           <div class=" col-4 col-sm-4 col-md-4 col-lg-4 mt-5">
-             <div id="t" class="item" style="margin-left:25%;"><img style=" width:100%; "src="{{asset('assets/oldsj.jpg')}}" /></div>
+           <div class=" col-4 col-sm-4 col-md-4 col-lg-4 mt-3">
+             <div id="t" class="item" style="margin-left:25%; border: 2px solid black; border-radius: 8px;"><img style=" width:100%; "src="{{asset('assets/oldsj.jpg')}}" /></div>
            </div>
          </div>
 
@@ -189,8 +189,8 @@ opacity: 1;
                       <p style=" font-weight: 500; margin-top: 15px;text-indent: 50px;line-height: 200%;">The present-day Pinaglabanan Street in San Juan marks the progress of the battle, which began at the intersection of the Marikina Road (now N. Domingo Street) and the Santolan Road (now Pinaglabanan), near which El Polvorin was located.</p>
                   </div>
                </div>
-               <div class=" col-4 col-sm-4 col-md-4 col-lg-4 mt-5">
-                 <div id="g" class="item" style="margin-left:25%;"><img style=" width:100%; "src="{{asset('assets/oldsj2.jpg')}}"/></div>
+               <div class=" col-4 col-sm-4 col-md-4 col-lg-4 mt-3">
+                 <div id="g" class="item" style="margin-left:25%; border: 2px solid black; border-radius: 8px;"><img style=" width:100%; "src="{{asset('assets/oldsj2.jpg')}}"/></div>
                </div>
               </div>
 
@@ -206,8 +206,8 @@ opacity: 1;
                       <p style=" font-weight: 500; margin-top: 15px;text-indent: 50px;line-height: 200%;">From a mere town under the Rizal Province, San Juan City has become a hub of history, culture, and heritage that shaped its identity. Today, the city has also cemented itself as a hub of economic progress and a historical tourist destination.</p>
                   </div>
                 </div>
-                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 mt-5">
-                  <div id="r" class="item" style="margin-left:25%;"><img style=" width:100%; "src="{{asset('assets/oldsj3.jpg')}}"/></div>
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 mt-3">
+                  <div id="r" class="item" style="margin-left:25%; border: 2px solid black; border-radius: 8px;"><img style=" width:100%; "src="{{asset('assets/oldsj3.jpg')}}"/></div>
                 </div>
               </div>
 
