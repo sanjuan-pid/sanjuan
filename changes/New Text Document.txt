@@ -1,5 +1,1 @@
-change 3/25/2021
-
-activity db:
-
-CREATE TABLE `pid`.`activity` ( `id` INT NOT NULL AUTO_INCREMENT , `filename` TEXT NOT NULL , `title` TEXT NOT NULL , `description` TEXT NOT NULL , `content_tag` TEXT NOT NULL , `show_` TEXT NOT NULL , `status` TEXT NOT NULL , `created_at` TEXT NOT NULL , `updated_at` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+awit
