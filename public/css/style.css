@@ -689,7 +689,14 @@ div#end_footer h3 {
 }
 /* for footer */
 @media screen and (max-width: 766px) and (min-width: 200px) {
-  #foot .col-sm-4 #tab3 #e{
+  #bulletin_bod .col-4.col-sm-4, #bulletin_bod .col-8.col-sm-8{
+    max-width:100% !important;
+    width: 100% !important;
+  }
+  div#gov-sites{
+      display:none;
+    }
+  #e{
     font-size: 16px !important;
     margin-left: -40% !important;
   }

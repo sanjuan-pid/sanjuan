@@ -19,7 +19,9 @@ Route::get('/', function () {
 
 
 Auth::routes();
-Route::get('/contactus_page','Pages@contactus')->name('contactus');
+Route::get('/contactus_page','Pages@contactus');
+Route::get('/contactus_page', 'EmailerContactUs@index')->name('contactus');
+Route::post('/contactus_page/send', 'EmailerContactUs@send');
 
 Route::get('/home', 'HomeController@index');
 Route::get('/news_article','Pages@index');
@@ -41,6 +43,8 @@ Route::get('ourcity/history_page','Pages@history')->name('history');
 
 Route::get('programsandprojects/current_page','Pages@current');
 Route::get('programsandprojects/archives_page','Pages@archives');
+
+
 
 
 Route::prefix('admin')->group(function(){
