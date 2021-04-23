@@ -93,6 +93,8 @@ table[class="fulltable"], td[class="fulltd"] {
                                         {{$data['contact']}}
                                         <br>
                                         {{$data['email']}} 
+                                        <br>
+                                        website: https://sanjuancity.gov.ph/
                                     </p>
                                 </td>
                             </tr>
