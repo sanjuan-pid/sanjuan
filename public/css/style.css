@@ -547,6 +547,9 @@ div#bulletin_sec, #news_card {
     .nav-link {
         font-size:12px;
     }
+    h1 {
+        font-size: 30px !important;
+    }
 }
 footer .container {
     border-top: 1px solid #274d78;
@@ -1206,6 +1209,15 @@ button.tablinks {
 div#Department {
     margin: 8% auto;
 }
+.display{
+    display: none;
+  
+  }
+  .lahat:hover + .display{
+      display: block;
+      color: blue !important;
+  
+  }
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
     .side_btn{
     left:-230px;
@@ -1227,6 +1239,10 @@ div#Department {
     left:-160px;
     position:absolute;
     width: 100%;
+    
+}
+h1 {
+    font-size: 30px !important;
 }
 }
 
