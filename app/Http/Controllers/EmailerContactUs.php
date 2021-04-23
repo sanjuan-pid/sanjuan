@@ -29,8 +29,7 @@ class EmailerContactUs extends Controller
             'email'    =>  $request->email ,  
             'contact'    =>  $request->contact
         );
-        Mail::to('sephriverajr@gmail.com')
-            ->cc(['clairerivera120901@gmail.com',$request->email])
+        Mail::to('publicinfo@sanjuancity.ph')
             ->send(new SendMail($data));
         return back()->with('Success', 'Thank you for contacting us!');
     }
