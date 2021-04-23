@@ -1,0 +1,1 @@
+Route::get('/directory_page','Pages@directory')->name('direct');

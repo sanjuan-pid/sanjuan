@@ -24,7 +24,7 @@
     </head>
     <body>
       <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <!-- <button type="button" class="btn btn-primary" >
           Launch demo modal
         </button> -->
 
@@ -120,70 +120,67 @@
                            </li>
 
                            <li class="nav-item" >
-                            <a class="nav-link" href="#"  id="navbarDropdownMenuLink" data-toggle="modal" data-target="#exampleModal">Departments</a>
+                            <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Departments</a>
                           </li>
                            <li class="nav-item dropdown" >
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Programs and Projects
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                              <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Current</a>
-                              </li>
-                              <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Archives</a></li>
+                              <li><a class="dropdown-item" href="{{route('current')}}">Current</a></li>
+                              <li><a class="dropdown-item" href="{{route('archives')}}">Archives</a></li>
                             </ul>
                           </li>
                           <li class="nav-item dropdown" >
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="modal" data-target="#exampleModal" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">e-Services</a></li>
-                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">SJMC</a></li>
-                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Quarantine Facilities</a></li>
-                             <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Downloadable Forms </a></li>
+                              <li><a class="dropdown-item" href="{{route('announce')}}">Announcements</a></li>
+                              <li><a class="dropdown-item" href="{{route('SJMC')}}">SJMC </a></li>
+                              <li><a class="dropdown-item" href="{{route('quarantine')}}">Quarantine Facilities</a></li>
+                              <li><a class="dropdown-item" href="{{route('downloadable')}}">Downloadable Forms</a></li>
                             </ul>
                           </li>
                           <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" data-toggle="modal" data-target="#exampleModal" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                              Events
                            </a>
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Tourism Festivities</a></li>
-                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Departmental project activities</a></li>
-                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal"> Barangay</a></li>
-                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Communities and CSOs'</a></li>
-                              </ul>
+                           <li><a class="dropdown-item" href="{{route('tourism')}}"> Tourism Festivities </a></li>
+                            <li><a class="dropdown-item" href="{{route('departmental')}}"> Departmental project activities </a></li>
+                            <li><a class="dropdown-item" href="{{route('brgy1')}}">Barangay </a></li>
+                            <li><a class="dropdown-item" href="{{route('community')}}">Communities and CSO's </a></li>
+                            </ul>
                          </li>
                          <li class="nav-item dropdown" >
-                          <a class="nav-link dropdown-toggle" href="#" data-toggle="modal" data-target="#exampleModal" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Public Notices
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Notice of Bids</a></li>
-                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Disclosures </a></li>
-                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" > Executive Orders</a></li>
-                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Ordinances</a></li>
-                           <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" >Announcements</a></li>
-                             </ul>
+                            <li><a class="dropdown-item" href="{{route('bids')}}">Notice of Bids</a></li>
+                            <li><a class="dropdown-item" href="{{route('disclosure')}}">Disclosures</a></li>
+                            <li><a class="dropdown-item" href="{{route('executive')}}">Exeutive Orders</a></li>
+                            <li><a class="dropdown-item" href="{{route('ordinance')}}">Ordinances</a></li>
+                            <li><a class="dropdown-item" href="{{route('announce1')}}">Announcements</a></li>
+                          </ul>
                         </li>
 
-                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Directory
-                        </a>
+                          <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('direct')}}">Directory</a>
 
                          <li class="nav-item" >
                           <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('contactus')}}">Contact Us</a>
                          
-                        </li>
+                          </li>
 
                            <li class="nav-item dropdown">
                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Login
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                               <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Employee</a></li>
-                               <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Residence</a></li>
-                               <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Visitors</a></li>
+                             <li><a class="dropdown-item" href="{{route('employee')}}">Employee</a></li>
+                               <li><a class="dropdown-item" href="{{route('residence')}}">Residence</a></li>
+                               <li><a class="dropdown-item" href="{{route('visitor')}}">Visitor</a></li>
                              </ul>
                            </li>
                          </ul>
@@ -220,17 +217,20 @@
                            <li><a class="dropdown-item" href="{{route('vice')}}">Vice Mayor's Desk</a></li>
                            <li><a class="dropdown-item" href="{{route('city')}}">City Council</a></li>
                            <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
-
-
                 </ul>
               </li>
+
+                <li class="nav-item" >
+                          <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('department')}}">Departments</a>
+                </li>
+
               <li class="nav-item dropdown" >
                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                Programs and Projects
                </a>
                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                 <li><a class="dropdown-item" href="/programsandprojects/current_page">Current</a></li>
-                 <li><a class="dropdown-item" href="/programsandprojects/archives_page">Archives</a></li>
+                 <li><a class="dropdown-item" href="{{route('current')}}">Current</a></li>
+                 <li><a class="dropdown-item" href="{{route('archives')}}">Archives</a></li>
                </ul>
              </li>
              <li class="nav-item dropdown" >
@@ -238,10 +238,10 @@
                Services
                </a>
                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                <li><a class="dropdown-item" href="#">e-Services</a></li>
-                <li><a class="dropdown-item" href="#">SJMC</a></li>
-                <li><a class="dropdown-item" href="#">Quarantine Facilities</a></li>
-                <li><a class="dropdown-item" href="#">Downloadable Forms </a></li>
+                <li><a class="dropdown-item" href="{{route('announce')}}">e-Services</a></li>
+                <li><a class="dropdown-item" href="{{route('SJMC')}}">SJMC</a></li>
+                <li><a class="dropdown-item" href="{{route('quarantine')}}">Quarantine Facilities</a></li>
+                <li><a class="dropdown-item" href="{{route('downloadable')}}">Downloadable Forms </a></li>
                   </ul>
              </li>
              <li class="nav-item dropdown">
@@ -249,10 +249,10 @@
                 Events
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-               <li><a class="dropdown-item" href="#">Tourism Festivities</a></li>
-               <li><a class="dropdown-item" href="#">Departmental project activities</a></li>
-               <li><a class="dropdown-item" href="#"> Barangay</a></li>
-               <li><a class="dropdown-item" href="#">Communities and CSOs'</a></li>
+               <li><a class="dropdown-item" href="{{route('tourism')}}">Tourism Festivities</a></li>
+               <li><a class="dropdown-item" href="{{route('departmental')}}">Departmental project activities</a></li>
+               <li><a class="dropdown-item" href="{{route('brgy1')}}"> Barangay</a></li>
+               <li><a class="dropdown-item" href="{{route('community')}}">Communities and CSOs'</a></li>
                  </ul>
             </li>
             <li class="nav-item dropdown" >
@@ -260,17 +260,18 @@
              Public Notices
              </a>
              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-              <li><a class="dropdown-item" href="#">Notice of Bids</a></li>
-              <li><a class="dropdown-item" href="#">Disclosures </a></li>
-              <li><a class="dropdown-item" href="#"> Executive Orders</a></li>
-              <li><a class="dropdown-item" href="#">Ordinances</a></li>
-              <li><a class="dropdown-item" href="#">Announcements</a></li>
+              <li><a class="dropdown-item" href="{{route('bids')}}">Notice of Bids</a></li>
+              <li><a class="dropdown-item" href="{{route('disclosure')}}">Disclosures </a></li>
+              <li><a class="dropdown-item" href="{{route('executive')}}"> Executive Orders</a></li>
+              <li><a class="dropdown-item" href="{{route('ordinance')}}">Ordinances</a></li>
+              <li><a class="dropdown-item" href="{{route('announce1')}}">Announcements</a></li>
                 </ul>
              </li>
-             <li class="nav-item dropdown" >
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Directory
-              </a>
+             <li class="nav-item" >
+                          <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('direct')}}">Directory</a>
+                         
+                        </li>
+
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                <li><a class="dropdown-item" href="#">Notice of Bids</a></li>
              </ul>
@@ -283,9 +284,9 @@
                 Login
              </a>
              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-               <li><a class="dropdown-item" href="#">Employee</a></li>
-               <li><a class="dropdown-item" href="#">Residence</a></li>
-               <li><a class="dropdown-item" href="#">Visitors</a></li>
+                <li><a class="dropdown-item" href="{{route('employee')}}">Employee</a></li>
+                <li><a class="dropdown-item" href="{{route('residence')}}">Residence</a></li>
+                <li><a class="dropdown-item" href="{{route('visitor')}}">Visitor</a></li>
              </ul>
            </li>
           </ul>

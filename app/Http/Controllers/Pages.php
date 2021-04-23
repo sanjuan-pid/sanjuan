@@ -127,13 +127,13 @@ class Pages extends Controller
   //programs and projects
   public function current()
   {
-      return view('programsandprojects/current_page');
+    return view('programsandprojects/current_page');
   }
   public function archives()
   {
       return view('programsandprojects/archives_page');
   }
-  
+
   public function brgy_contents($id)
   {
 
@@ -144,4 +144,100 @@ class Pages extends Controller
       return view('brgy.contents',compact('brgy'));
   }
 
+  //Services
+  public function announce()
+  {
+      return view('Services/Announcements1_page');
+  }
+
+  public function downloadable()
+  {
+      return view('Services/Downloadable_page');
+  }
+
+  public function quarantine()
+  {
+      return view('Services/QuarantineFacilities_page');
+  }
+
+  public function SJMC()
+  {
+      return view('Services/SJMC_page');
+  }
+
+    //Events
+    public function tourism()
+    {
+        return view('Events/TourismFestivities_page');
+    }
+  
+    public function departmental()
+    {
+        return view('Events/Departmental_page');
+    }
+  
+    public function brgy1()
+    {
+        return view('Events/Brgy_page');
+    }
+  
+    public function community()
+    {
+        return view('Events/Community_page');
+    }
+  //Public notice
+  public function bids()
+  {
+      return view('publicnotice/Bids_page');
+  }
+
+  public function disclosure()
+  {
+      return view('publicnotice/Disclosure_page');
+  }
+
+  public function executive()
+  {
+      return view('publicnotice/ExecutiveOrders');
+  }
+
+  public function ordinance()
+  {
+      return view('publicnotice/Ordinance_page');
+  }
+
+  public function announce1()
+  {
+      return view('publicnotice/Announcements_page');
+  }
+
+    //Directory
+  
+    //Login
+    public function employee()
+    {
+        return view('Login/employee_page');
+    }
+  
+    public function residence()
+    {
+        return view('Login/residence_page');
+    }
+  
+    public function visitor()
+    {
+        return view('Login/visitor_page');
+    }
+    public function department()
+    {
+        return view('deparment.department_page');
+    }
+    public function department_content()
+    {
+        return view('deparment.department_content');
+    }
+    public function directory()
+    {
+        return view('directory.directory_page');
+    }    
 }

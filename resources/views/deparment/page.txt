@@ -1,0 +1,7 @@
+  public function department()
+  {
+      return view('department_page');
+  }
+  public function department_content()
+  {
+      return view('department_content');

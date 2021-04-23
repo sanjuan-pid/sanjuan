@@ -151,7 +151,7 @@ opacity: 1;
               <div class=" col-6 col-sm-6 col-md-6 col-lg-6 mt-5" class="block">
                 <h1 class="t1" style=" font-weight:bold; color: #1f1c4b;">History of San Juan</h1>
                 <div id="prgph0">
-                  <p style=" font-weight: 500; margin-top: 15px;text-indent: 50px;line-height: 200%; text-align:justify;">Nestled in the heart of Metro Mania, between Manila, Pasig, Mandaluyong, and Quezon City is a city rich in history. With a land area of merely 5.94 square kilometers and the shape of a heart, San Juan City is the smallest city in Metro Manila, Philippines. It has 21 barangays and a population of over 122,000 based on the 2015 census. </p>
+                  <p style=" font-weight: 500; margin-top: 15px;text-indent: 50px;line-height: 200%; text-align:justify;">Nestled in the heart of Metro Manila, between Manila, Pasig, Mandaluyong, and Quezon City is a city rich in history. With a land area of merely 5.94 square kilometers and the shape of a heart, San Juan City is the smallest city in Metro Manila, Philippines. It has 21 barangays and a population of over 122,000 based on the 2015 census. </p>
                 </div>
               </div>
               <div class=" col-6 col-sm-6 col-md-6 col-lg-6 mt-5" class="block">

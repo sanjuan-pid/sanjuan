@@ -1,553 +1,564 @@
 <style>
-/* .m{
-  position : sticky;
-	top : 0;
-  width: 100%;
-} */
+@media screen and (max-width: 766px) and (min-width: 200px) {
+
+#map{
+  display: none;
+}
+
+}
+
 </style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <div class="container 1st_cont" id="map" style="box-shadow: 0px 3px 0px #cccccc; padding: 0;">
-
     <div class="row" style="">
-
-      <div class="col-sm-9 mapppy" style="margin-left:18%; ">
+      <div class="col-sm-9 mapppy" style="margin-left:18%;margin-top: -5%; ">
         <img class="m" src="{{asset('assets/sjcity2.png')}}" id="map" style="width: 100%;">
         <div class="brgy_links">
-            <button class="btn map_b crame" id="crame" style="right:10%;top:27%;position: absolute;">West Crame</button>
+            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 13px; right:22%;top:25%;position: absolute;">West Crame</a>
+            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:21%;top:31%;position: absolute;">West Crame</a>
+            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:20.5%;top:33%;position: absolute;">West Crame</a>
+            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:20%;top:36%;position: absolute;">West Crame</a>
+            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:19%;top:38%;position: absolute;">West Crame</a>
+            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 20px; right:9%;top:28%;position: absolute;">We  st Crame</a>
+            <h1 class="display" data-toggle="modal" data-target=".wcm" style="cursor: pointer; font-size: 20px !important; right:10%;top:28%;position: absolute;">West Crame</h1>
 
-            <button class="btn map_b gh" id="gh" style="right:24%;top:35%;position: absolute;">Greenhills</button>
-            <button class="btn map_b gh" id="gh" style="right:24%;top:45%;position: absolute;">Greenhills</button>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 30px;right:31%;top:31%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:33px;right:20%;top:44%;position: absolute; color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 25px;right:31%;top:64%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 26px;right:27%;top:58%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 29px;right:23%;top:51%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 25px; right:25%;top:36%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 21px; right:33%;top:27%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 31px; right:4%;top:42%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 21px;right: 35%; top: 40%; position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 21px;right: 24%; top: 40%; position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 9px;right:35%;top:74%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:25px;right:24%;top:44%;position: absolute; color: transparent;">Greenhills</a>
+            <h1 class="display" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 20px !important; right:24%;top:44%;position: absolute; ">Greenhills</h1>
 
-            <button class="btn map_b ah" id="ah" style="right:42%;top:81%;position: absolute;">Addition Hills</button>
-            <button class="btn map_b lb" id="lb" style="right:44%;top:45%;position: absolute;">Little <br>Baguio</button>
-            <button class="btn map_b lb" id="lb" style="right:52%;top:40%;position: absolute;">......</button>
-            <button class="btn map_b maytunas" id="maytunas" style="right:51%;top:74%;position: absolute;">Maytunas</button>
-            <button class="btn map_b sl" id="sl" style="right:52%;top:57%;position: absolute;">Sta. <br> Lucia</button>
-            <button class="btn map_b Onse" id="Onse" style="right:59%;top:51%;position: absolute;">Onse</button>
-            <button class="btn map_b stjo" id="stjo" style="right:53%;top:42%;position: absolute;">St. Joseph</button>
-            <button class="btn map_b isb" id="isb" style="right:63%;top:43%;position: absolute;">Isabelita</button>
-            <button class="btn map_b kab" id="kab" style="right:61%;top:65%;position: absolute;">Kabayanan</button>
-            <button class="btn map_b tib" id="tib" style="right:65%;top:51%;position: absolute;">Tibagan</button>
-            <button class="btn map_b bat" id="bat" style="right:74%;top:54%;position: absolute;">Batis</button>
-            <button class="btn map_b sp" id="sp" style="right:71%;top:41%;position: absolute;">San Perfecto</button>
-            <button class="btn map_b prog" id="prog" style="right:83%;top:38%;position: absolute;">Progreso</button>
-            <button class="btn map_b riv" id="riv" style="right:82%;top:31%;position: absolute;">Rivera</button>
-            <button class="btn map_b PC" id="PC" style="right:69%;top:34%;position: absolute;">Pedro Cruz</button>
-            <button class="btn map_b CDJ" id="CDJ" style="right:51%;top:30%;position: absolute;">Corazon De Jesus</button>
-            <button class="btn map_b Pas" id="Pas" style="right:51%;top:23%;position: absolute;">Pasadeña</button>
-            <button class="btn map_b BB" id="BB" style="right:69%;top:21%;position: absolute;">Balong-Bato</button>
-            <button class="btn map_b Sa" id="Sa" style="right:73%;top:11%;position: absolute;">Salapan</button>
-            <button class="btn map_b Erm" id="Erm" style="right:61%;top:11%;position: absolute;">Ermitaño</button>
+            <a class="lahat" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 41%; top: 74%; position: absolute;">Additon Hills</a>
+            <a class="lahat" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 41%; top: 78%; position: absolute;">Additon Hills</a>
+            <a class="lahat" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 22px; right: 43%; top: 82%; position: absolute;">Additon Hills</a>
+            <h1 class="display" data-toggle="modal" data-target=".bd-example-modal-lg" style="cursor: pointer; font-size: 20px !important; right: 43%; top: 82%; position: absolute;">Additon Hills</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".mtm" style="color:transparent; cursor: pointer; font-size: 23px; right:52%;top:74%;position: absolute;">Maytunas</a>
+            <h1  class="display" data-toggle="modal" data-target=".mtm" style="cursor: pointer; font-size: 20px !important;  right:52%;top:74%;position: absolute;">Maytunas</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer;  font-size: 18px; right:46.3%; top:45% ;position: absolute;">Little <br>Baguio</a>
+            <h1   class="display" data-toggle="modal" data-target=".lbm" style="cursor: pointer; font-size: 20px !important; right:46%; top:44% ;position: absolute; z-index:4;">Little <br>Baguio</h1>
+            <a   class="lahat" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 36px;right:51%; top:36% ;position: absolute;">..........</a>
+            <a   class="lahat" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 36px;right:43%; top:51% ;position: absolute;">..........</a>
+
+            <a  class="lahat" data-toggle="modal" data-target=".stm" style="color:transparent; cursor: pointer; font-size: 80px;right:52.6%;top:49%;position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".stm" style="cursor: pointer; font-size: 20px !important; right:53%;top:57%;position: absolute;">Sta. <br> Lucia</h1>
+
+
+            <a  class="lahat" data-toggle="modal" data-target=".kbm" style="color:transparent; cursor: pointer; font-size: 62px;right:65.5%;top:60%;position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".kbm" style=" cursor: pointer; font-size: 20px !important; right:63.5%;top:64%;position: absolute;z-index:4;">Kabayanan</h1>
+
+
+            <a class="lahat" data-toggle="modal" data-target=".om" style="color:transparent; cursor: pointer; font-size: 42px;right:62%;top:49%;position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".om" style=" cursor: pointer; font-size: 20px !important; right:61.5%;top:53%;position: absolute;z-index:4;">Onse</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".sjm" style="color:transparent; cursor: pointer; font-size: 27px;right:61%;top:42%;position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".sjm" style=" cursor: pointer;font-size: 20px !important; right:55%;top:43%;position: absolute;z-index:4;">St. Joseph</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".ism" style="color:transparent; cursor: pointer; font-size: 23px;right:64.8%;top:44%; position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".ism" style=" cursor: pointer; font-size: 20px !important; right:63%;top:45%; position: absolute;z-index:4;">Isabelita</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 11px; right:68%;top:51%; position: absolute;">Tibagan</a>
+            <a  class="lahat" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 47px; right:66.5%;top:52%; position: absolute;">O</a>
+            <a  class="lahat" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 49px; right:68.5%;top:41%; position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".tbm" style="cursor: pointer; font-size: 20px !important; right:66%;top:51%; position: absolute; z-index:4;">Tibagan</h1>
+
+
+            <a  class="lahat" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 90px; right:73%;top:45%; position: absolute; z-index:0;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".bm" style="cursor: pointer; font-size: 20px !important; right:75%;top:56%; position: absolute;">Batis</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".spm" style="color:transparent; cursor: pointer; font-size: 34px;right:82%;top:39%; position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".spm" style="cursor: pointer; font-size: 20px !important; right:73%;top:45%; position: absolute;">San Perfecto</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".pm" style="color:transparent; cursor: pointer; font-size: 35px; right:87.5%;top:40%; position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".pm" style=" cursor: pointer;font-size: 20px !important; right:86%;top:42%; position: absolute;">Progreso</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".rm" style="color:transparent; cursor: pointer; font-size: 10px; right:83.5%;top:34%; position: absolute;">Rivera</a>
+            <h1  class="display" data-toggle="modal" data-target=".rm" style="cursor: pointer; font-size: 20px !important; right:83%;top:34%; position: absolute;">Rivera</h1>
+
+
+            <a  class="lahat" data-toggle="modal" data-target=".pdm" style=" color:transparent; cursor: pointer; font-size: 69px; right:73%;top:28%; position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".pdm" style=" cursor: pointer; font-size: 20px !important; right:72%;top:34%; position: absolute;">Pedro Cruz</h1>
+
+            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 15px; right:72%;top:23%; position: absolute;">Balong-Bato</a>
+            <h1  class="display" data-toggle="modal" data-target=".bbm" style=" cursor: pointer; font-size: 20px !important; right:72%;top:23%; position: absolute;">Balong-Bato</h1>
+            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:79%;top:26%; position: absolute;">O</a>
+            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 39px; right:71%;top:15%; position: absolute;">O</a>
+            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:75%;top:17%; position: absolute;">O</a>
+            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 24px; right:78%;top:19%; position: absolute;">O</a>
+
+            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 13px; right:59%; top: 33%; position: absolute;">Corazon de Jesus</a>
+            <h1  class="display" data-toggle="modal" data-target=".cdm" style=" cursor: pointer; font-size: 20px !important; right:57%;top:30%; position: absolute;">Corazon de Jesus</h1>
+            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 55px; right:66%;top:20%; position: absolute;">O</a>
+            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:67%;top:37%; position: absolute;">O</a>
+            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:63%;top:36%; position: absolute;">O</a>
+
+            <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 61px; right:56%;top:18%; position: absolute;">O</a>
+            <h1  class="display" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 20px !important; right:54%;top:25%; position: absolute;z-index:4;">Pasadeña</h1>
+            <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color: transparent; cursor: pointer; font-size: 36px; right:53%;top:27%; position: absolute;">O</a>
+            <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 36px; right:62%;top:16%; position: absolute;">O</a>
+
+          <a  class="lahat" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 30px; right:81%;top:13%; position: absolute;">......</a>
+          <a  class="lahat" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 21px; right:73%;top:11%; position: absolute;">Salapan</a>
+          <h1  class="display" data-toggle="modal" data-target=".slpm" style="cursor: pointer; font-size: 20px !important;right:73%;top:11%; position: absolute;">Salapan</h1>
+
+          <a  class="lahat" data-toggle="modal" data-target=".ermm" style=" color:transparent; cursor: pointer; font-size: 13px; right:64%;top:14%; position: absolute;">Ermitaño</a>
+          <h1  class="display" data-toggle="modal" data-target=".ermm" style="cursor: pointer; font-size: 20px !important;right:64%;top:12%; position: absolute;">Ermitaño</h1>
+
+
         </div>
           <br>
       </div>
+
       <div class="col-sm-12" style="margin-top: -4%;">
-            <div id="sj" style="text-align:center; display:none;"  class="descriptionsss">
-                <br><h1>VISION</h1>
-                <br>
-                <div class="contentss">
-                </div>
-            </div>
-            <div id="crame_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>WEST CRAME</h1>
-                <br>
-                <div class="contentss">
-                    <img src="{{asset('assets/BRGY/WESTCRAME_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p><a href="#">West Crame Barangay Hall</a></p>
-                    <br>
-                </div>
-            </div>
-            <div id="gh_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>GREENHILLS</h1>
-                <br>
-             <div class="row">
-              <div class="col-sm-12">
-                <div class="contentss">
-                    <img src="{{asset('assets/BRGY/GREENHILLS_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p>BRGY. GREENHILLS</p>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                    <br>
-                </div>
+        <div class="modal fade wcm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="{{asset('assets/BRGY/WESTCRAME_updated.png')}}" style="display: block; margin-left: auto; margin-right:auto; width: 100px; height: 100px;">
+                <h1 style="text-align:center;">BRGY. WESTCRAME</h1>
+                <p style="text-align: justify;">WESTCRAME</p>
+                <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+                <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
               </div>
             </div>
           </div>
-            <div id="ah_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>ADDITION HILLS</h1>
-                <br>
-                <div class="contentss">
-                    <img src="{{asset('assets/BRGY/ADDITIONHILLS.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Our barangay was an agricultural land that belonged to the municipality of San Felipe Neri. In the 1930’s it was converted to a residential subdivision by a group of American businessmen. The majority of the original lot buyers were their friends. And up to 70’s many American families still resided in our barangay.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
+        </div>
+
+        <div class="modal fade ghm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="{{asset('assets/BRGY/GREENHILLS_updated.png')}}" style="display: block; margin-left: auto; margin-right:auto; width: 100px; height: 100px;">
+                <h1 style="text-align:center;">BRGY. GREENHILLS</h1>
+                <p style="text-align: justify;">Greenhills</p>
+                <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+                <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+              </div>
             </div>
-            <div id="lb_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>LITTLE BAGUIO</h1>
-                <br>
-                <div class="contentss">
-                    <img src="{{asset('assets/BRGY/little.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> In 1946, Ortigas Madrigal y Compania opened for sale the Sta. Lucia Subdivision. The area is about 40 hectares consisted mostly of rice paddies, bamboo groves and fruit trees. The road were of the macadam type. However, the original name Sta. Lucia Subdivision did not gain acceptance. When the people started populating the subdivision, they adopted the name Little Baguio, because of the road where similar to the zigzag road going to Baguio City. Likewise, the 240 feet above sea-level elevation and the greenery lent themselves to contributing to little Baguio being the little summer capital of San Juan.</p>
-                    <br>
-                    <div class="card" style="margin-top: -10%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="{{asset('assets/BRGY/ADDITIONHILLS.png')}}" style="display: block; margin-left: auto;   margin-right: auto; width: 100px; height: 100px;">
+                <h1 style="text-align:center;">ADDITION HILLS</h1>
+                <p style="text-align: justify;"> Our barangay was an agricultural land that belonged to the municipality of San Felipe Neri. In the 1930’s it was converted to a residential subdivision by a group of American businessmen. The majority of the original lot buyers were their friends. And up to 70’s many American families still resided in our barangay.</p>
+                <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+                <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+              </div>
             </div>
-            <div id="maytunas_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>MAYTUNAS</h1>
-                <br>
-                <div class="contentss">
-                    <img src="{{asset('assets/BRGY/MAYTUNAS_updated.png')}}" style="margin:0 auto; width: 130px; height: 100px;">
-                    <p></p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+
+
+      <div class="modal fade mtm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div id="sl_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>ST. LUCIA</h1>
-                <br>
-                <div class="slucia">
-                    <img src="{{asset('assets/BRGY/LUCIA.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> In the past, Sta. Lucia was the center of the town of San Juan. This place could be easily reached that time for there where many good roads leading to it. The place was also the center of business. A church, a market, and a school were built there. This was first inhabited by people from Mandaluyong.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/MAYTUNAS_updated.png')}}"style="display: block; margin-left: auto;   margin-right: auto; width: 18%;">
+              <h1 style="text-align:center;">MAYTUNAS</h1>
+              <p style="text-align: justify;">MAYTUNAS</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
             </div>
-            <div id="Onse_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>ONSE</h1>
-                <br>
-                <div class="Onse">
-                    <img src="{{asset('assets/BRGY/ONSE_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Barangay Onse was established in 1916. The name “ONSE” was derived from the concept that there were only eleven houses as far as they can remember. The people living in these houses were considered the first inhabitants of the place, and as one might have guessed it, Spanish term for eleven is “ONSE”. Now, the land area of Barangay Onse is 9.6684 hectares with a total population of 4,065 as of FY 2015 as per NSO record.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="mayt_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>MAYTUNAS</h1>
-                <br>
-                <div class="st joseph">
-                    <img src="{{asset('assets/img/city-hall.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> </p>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <div id="isb_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>ISABELITA</h1>
-                <br>
-                <div class="isbelita">
-                    <img src="{{asset('assets/BRGY/BARANGAYISABELITA_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> It used to be known as Isablita Heights Subdivision, 3.4 hectares lot area owned and developed by the Barredo family. The subdivision has all quick and easy access to San Juan’s public market, church and public schools.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="kab_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>KABAYANAN</h1>
-                <br>
-                <div class="kabayanan">
-                    <img src="{{asset('assets/BRGY/KABAYANAN_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> </p>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <div id="tib_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>TIBAGAN</h1>
-                <br>
-                <div class="tibagan">
-                    <img src="{{asset('assets/BRGY/TIBAGAN.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Barangay Tibagan is a small community bounded by A. Bonifacio st. , and J Arellano St., where Mini Park is located. The other streets comprising this Barangay are F. Roxas, T. Kalaw, Villamor, Jose Gil formerly Valenzuela St., Regidor, Dr. A J. Ejercito St., and reaching upward the next barangay are J.V Alvior formerly Florante St. and Laura Streets.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="bat_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>BATIS</h1>
-                <br>
-                <div class="batis">
-                    <img src="{{asset('assets/BRGY/BATIS_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p>Current Barangay residents are not aware of the any spring of clear water that can account for name of BATIS. According the old residents, the area had creeks and rivulets during their time, wherein clean water flowed. Actually bordering San Juan River as it does, it is not at all unlikely that the area had rivulets and creeks feeding in the water way. People neigh boring Barangay especially on high land are coming here because of the clear water.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sp_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>SAN PERFECTO</h1>
-                <br>
-                <div class="pecto">
-                    <img src="{{asset('assets/BRGY/SANPERFECTO_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Barangay San Perfecto is strategically located in the center Of Metro Manila. An almost perfect triangle in shape, it is bounded in the northwest by N. Domingo Street, in the northwest by F. Blumentritt Street, and in the south by Tuberias Street, also known as “ Tubo”, the pipeline of the Metropolitan Waterworks and Sewerage Authority.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="prog_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>PROGRESO</h1>
-                <br>
-                <div class="prog">
-                    <img src="{{asset('assets/BRGY/PROGRESONEW.png')}}"  style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> During the Spanish regime, this place was then called a “ balangay “ or “ barangay “ which was the headed by
-                       “cabeza de barangay “. However, when the Americans came I, this place was then change from “ Barangay” to “ barrio” and is headed by a “ Tenyente del Baryo “. During the Pre-Spanish times, Progreso and Rivera as one small village found in San Juan which became a small encomienda in 1950.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="riv_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>RIVERA</h1>
-                <br>
-                <div class="rivera">
-                    <img src="{{asset('assets/BRGY/RIVERA.png')}}"  style="margin:0 auto; width: 125px; height: 100px;">
-                    <p> </p>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <div id="PC_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>PEDRO CRUZ</h1>
-                <br>
-                <div class="pedro">
-                    <img src="{{asset('assets/BRGY/PEDROCRUZ_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p></p>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <div id="bb_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>BALONG-BATO</h1>
-                <br>
-                <div class="balongbato">
-                    <img src="{{asset('assets/BRGY/BALONGBATO_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Barangay Balong-Bato is strategically located at the center of Metro Manila. Bounded in the north of N. Domingo Street in the South of Aurora Blvd. Being situated in the center of Metro Manila, Barangay Balong –Bato streets are being utilized by motorists as alternative routes going to and from Quezon City, Mandaluyong City, Makati City and City of Manila. Barangay Balong-Bato has always been mabato. Old times residents recall, the area used to have many trees- bananas, mostly, below feet of soil adobe and more adobe. In some spots, there were natural wells, hence the name Balon na Bato.</p>
-                    <br>
-                    <div class="card" style="margin-top: -10%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="ermi_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>ERMITAÑO</h1>
-                <br>
-                <div class="ermitano">
-                    <img src="{{asset('assets/BRGY/ERMITAÑO_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, Pasadeña and Corazon de Jesus on the east.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="pas_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>PASADEÑA</h1>
-                <br>
-                <div class="Pasadeña">
-                    <img src="{{asset('assets/BRGY/PASADENA_updated.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> The word PASADENA came from the name of the flower Cadena de Amor. During the earlier times it has been said that the streets of Brgy. Pasadena were filled with cadena de amor, a certain Spanish person created the name for Pasadena which means “way of the cadena de amor” PASA is a Spanish word which means “daan” in Filipino language. PASA = Daan & DENA = short for the flower cadena de amor.The word PASADENA came from the name of the flower Cadena de Amor.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sa_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>SALAPAN</h1>
-                <br>
-                <div class="salapan">
-                    <img src="{{asset('assets/BRGY/SALAPAN.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Barangay Salapan was named after the word “Salapang”, a bamboo stick with pointed end in the bottom and tied like a cone. Use by early settlers to catch fish in the creek of Salapan with 16 inches in diameter at the bottom and 7 inches on top of enable the hand and arm of the fisherman to enter inside the salapang to get caught fish.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="cora_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>CORAZON DE JESUS</h1>
-                <br>
-                <div class="corazon">
-                    <img src="{{asset('assets/BRGY/CORAZON.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p> Barangay Corazon de Jesus was established in the early 1940’s. The former name of Corazon de Jesus was “EL DEPOSITO” because of a myth that there is a hidden treasure inside the tunnel. Behind the San Juan Post Office in Pinaglabanan St., is an opening that leads to a long tunnel going to different parts of Metro Manila.</p>
-                    <br>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="stjo_con" style="text-align:center;" class="descriptionsss">
-                <br><h1>ST. JOSEPH</h1>
-                <br>
-                <div class="stjoseph">
-                    <img src="{{asset('assets/BRGY/STJOSEPH.png')}}" style="margin:0 auto; width: 100px; height: 100px;">
-                    <p></p>
-                    <div class="card" style="margin-top: -12%;">
-                      <div class="card-body">
-                        <br>
-                          <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
-                          <!-- <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p> -->
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
-                      </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <a href="#" id="mayors_link" style="visibility:hidden;">Explore more</a>
+          </div>
+        </div>
       </div>
+
+      <div class="modal fade lbm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+           <img src="{{asset('assets/BRGY/little.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">LITTLE BAGUIO</h1>
+              <p style="text-align: justify;">LITTLE BAGUIO</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade stm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+          <img src="{{asset('assets/BRGY/LUCIA.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">STA. LUCIA</h1>
+              <p style="text-align: justify;">In the past, Sta. Lucia was the center of the town of San Juan. This place could be easily reached that time for there where many good roads leading to it. The place was also the center of business. A church, a market, and a school were built there. This was first inhabited by people from Mandaluyong.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade kbm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/KABAYANAN_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">KABAYANAN</h1>
+              <p style="text-align: justify;">KABAYANAN</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade om" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <img src="{{asset('assets/BRGY/ONSE_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">ONSE</h1>
+              <p style="text-align: justify;">Barangay Onse was established in 1916. The name “ONSE” was derived from the concept that there were only eleven houses as far as they can remember. The people living in these houses were considered the first inhabitants of the place, and as one might have guessed it, Spanish term for eleven is “ONSE”. Now, the land area of Barangay Onse is 9.6684 hectares with a total population of 4,065 as of FY 2015 as per NSO record.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade sjm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <img src="{{asset('assets/BRGY/STJOSEPH.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">ST. JOSEPH</h1>
+              <p style="text-align: justify;">st.joseph</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade ism" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/BARANGAYISABELITA_updated.png')}}"style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">ISABELITA</h1>
+              <p style="text-align: justify;">It used to be known as Isabilita Heights Subdivision, 3.4 hectares lot area owned and developed by the Barredo family. The subdivision has all quick and easy access to San Juan’s public market, church and public schools.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade tbm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+               <img src="{{asset('assets/BRGY/TIBAGAN.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">TIBAGAN</h1>
+              <p style="text-align: justify;">Barangay Tibagan is a small community bounded by A. Bonifacio st. , and J Arellano St., where Mini Park is located. The other streets comprising this Barangay are F. Roxas, T. Kalaw, Villamor, Jose Gil formerly Valenzuela St., Regidor, Dr. A J. Ejercito St., and reaching upward the next barangay are J.V Alvior formerly Florante St. and Laura Streets.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade bm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/BATIS_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">BATIS</h1>
+              <p style="text-align: justify;">Current Barangay residents are not aware of the any spring of clear water that can account for name of BATIS. According the old residents, the area had creeks and rivulets during their time, wherein clean water flowed. Actually bordering San Juan River as it does, it is not at all unlikely that the area had rivulets and creeks feeding in the water way. People neigh boring Barangay especially on high land are coming here because of the clear water.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade spm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/SANPERFECTO_updated.png')}}"  style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">SAN PERFECTO</h1>
+              <p style="text-align: justify;">Barangay San Perfecto is strategically located in the center Of Metro Manila. An almost perfect triangle in shape, it is bounded in the northwest by N. Domingo Street, in the northwest by F. Blumentritt Street, and in the south by Tuberias Street, also known as “ Tubo”, the pipeline of the Metropolitan Waterworks and Sewerage Authority.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade pm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/PROGRESONEW.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">PROGRESO</h1>
+              <p style="text-align: justify;">During the Spanish regime, this place was then called a “ balangay “ or “ barangay “ which was the headed by
+                       “cabeza de barangay “. However, when the Americans came I, this place was then change from “ Barangay” to “ barrio” and is headed by a “ Tenyente del Baryo “. During the Pre-Spanish times, Progreso and Rivera as one small village found in San Juan which became a small encomienda in 1950.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade rm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/RIVERA.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">Rivera</h1>
+              <p style="text-align: justify;">Brgy. Rivera</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade pdm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/PEDROCRUZ_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">Pedro Cruz</h1>
+              <p style="text-align: justify;">Brgy. Pedro Cruz</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade bbm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/BALONGBATO_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 125px; height: 100px;">
+              <h1 style="text-align:center;">BALONG-BATO</h1>
+              <p style="text-align: justify;">Barangay Balong-Bato is strategically located at the center of Metro Manila. Bounded in the north of N. Domingo Street in the South of Aurora Blvd. Being situated in the center of Metro Manila, Barangay Balong –Bato streets are being utilized by motorists as alternative routes going to and from Quezon City, Mandaluyong City, Makati City and City of Manila. Barangay Balong-Bato has always been mabato. Old times residents recall, the area used to have many trees- bananas, mostly, below feet of soil adobe and more adobe. In some spots, there were natural wells, hence the name Balon na Bato.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade cdm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/CORAZON.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">CORAZON DE JESUS</h1>
+              <p style="text-align: justify;">Barangay Corazon de Jesus was established in the early 1940’s. The former name of Corazon de Jesus was “EL DEPOSITO” because of a myth that there is a hidden treasure inside the tunnel. Behind the San Juan Post Office in Pinaglabanan St., is an opening that leads to a long tunnel going to different parts of Metro Manila.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade psdm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/PASADENA_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">PASADEÑA</h1>
+              <p style="text-align: justify;">The word PASADENA came from the name of the flower Cadena de Amor. During the earlier times it has been said that the streets of Brgy. Pasadena were filled with cadena de amor, a certain Spanish person created the name for Pasadena which means “way of the cadena de amor” PASA is a Spanish word which means “daan” in Filipino language. PASA = Daan & DENA = short for the flower cadena de amor.The word PASADENA came from the name of the flower Cadena de Amor.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade slpm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/SALAPAN.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">SALAPAN</h1>
+              <p style="text-align: justify;">Barangay Salapan was named after the word “Salapang”, a bamboo stick with pointed end in the bottom and tied like a cone. Use by early settlers to catch fish in the creek of Salapan with 16 inches in diameter at the bottom and 7 inches on top of enable the hand and arm of the fisherman to enter inside the salapang to get caught fish..</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade ermm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="{{asset('assets/BRGY/ERMITAÑO_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
+              <h1 style="text-align:center;">ERMITÑO</h1>
+              <p style="text-align: justify;">Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, Pasadeña and Corazon de Jesus on the east.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
+              <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

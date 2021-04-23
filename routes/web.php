@@ -41,11 +41,33 @@ Route::get('ourcity/citycouncil_page','Pages@city')->name('city');
 Route::get('ourcity/barangay_page','Pages@brgy')->name('brgy');
 Route::get('ourcity/history_page','Pages@history')->name('history');
 
-Route::get('programsandprojects/current_page','Pages@current');
-Route::get('programsandprojects/archives_page','Pages@archives');
+Route::get('programsandprojects/current_page','Pages@current')->name('current');
+Route::get('programsandprojects/archives_page','Pages@archives')->name('archives');
 
+Route::get('Services/Announcements1_page','Pages@announce')->name('announce');
+Route::get('Services/Downloadable_page','Pages@downloadable')->name('downloadable');
+Route::get('Services/QuarantineFacilities_page','Pages@quarantine')->name('quarantine');
+Route::get('Services/SJMC_page','Pages@SJMC')->name('SJMC');
 
+Route::get('Events/TourismFestivities_page','Pages@tourism')->name('tourism');
+Route::get('Events/Departmental_page','Pages@departmental')->name('departmental');
+Route::get('Events/Brgy_page','Pages@brgy1')->name('brgy1');
+Route::get('Events/Community_page','Pages@community')->name('community');
+Route::get('publicnotice/Bids_page','Pages@bids')->name('bids');
 
+Route::get('publicnotice/Disclosure_page','Pages@disclosure')->name('disclosure');
+Route::get('publicnotice/ExecutiveOrders','Pages@executive')->name('executive');
+Route::get('publicnotice/Ordinance_page','Pages@ordinance')->name('ordinance');
+Route::get('publicnotice/Announcements_page','Pages@announce1')->name('announce1');
+
+Route::get('/directory_page','Pages@directory')->name('direct');
+
+Route::get('/department_page','Pages@department')->name('department');
+Route::get('/department_content','Pages@department_content')->name('dept_cont');
+
+Route::get('Login/employee_page','Pages@employee')->name('employee');
+Route::get('Login/residence_page','Pages@residence')->name('residence');
+Route::get('Login/visitor_page','Pages@visitor')->name('visitor');
 
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

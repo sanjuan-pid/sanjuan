@@ -269,27 +269,27 @@ $(document).ready(function(){
     $("#profile_btn").click(function(){
         $("div#profile_row").css("display","flex");
         $("div#profile_row").fadeIn("slow");
-        $("div#achievement_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("slow");
+        $("div#achievement_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
     });
      $("a#achievement_btn").click(function(){
         $("div#achievement_row").css("display","flex");
-        $("div#profile_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("slow");
+        $("div#profile_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
-        $("div#achievement_row").fadeIn("slow");
+        $("div#achievement_row").fadeIn("fast");
     });
 
      $("a#programs_btn").click(function(){
         $("div#agenda_row").css("display","flex");
-        $("div#agenda_row").fadeIn("slow");
-        $("div#profile_row,.news_row, div#carousel_row,#achievement_row").fadeOut("slow");
+        $("div#agenda_row").fadeIn("fast");
+        $("div#profile_row,.news_row, div#carousel_row,#achievement_row").fadeOut("fast");
 
     });
 
        $("a#news_btn").click(function(){
         $("div.news_row").css("display","flex");
-        $("ddiv.news_row").fadeIn("slow");
-        $("div#profile_row,#agenda_row, div#carousel_row,#achievement_row").fadeOut("slow");
+        $("ddiv.news_row").fadeIn("fast");
+        $("div#profile_row,#agenda_row, div#carousel_row,#achievement_row").fadeOut("fast");
 
     });
 
@@ -297,14 +297,14 @@ $(document).ready(function(){
     //history_page
     $(document).ready(function(){
       $(".t1").click(function(){
-       $("div#prgph0").slideToggle( "slow" );
-       $("#h").slideToggle( "slow" );
+       $("div#prgph0").slideToggle( "fast" );
+       $("#h").slideToggle( "fast" );
        //  $("div#con1 h1").css("border-bottom","2px")
        // $(this).css("border-bottom"," 2px solid red")
       })
 
       $(".t2").click(function(){
-       $("div#prgph1").slideToggle( "slow" );
+       $("div#prgph1").slideToggle( "fast" );
         $("#t").slideToggle( "slow" );
        // $("div#con1 h1").css("border-bottom","0px")
        // $(this).css("border-bottom"," 2px solid red")

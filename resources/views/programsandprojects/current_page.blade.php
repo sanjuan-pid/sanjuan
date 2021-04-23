@@ -24,27 +24,13 @@
 
         </div>
     </div> --}}
-    <div class="container">
-      <div class="row">
-        <div class=" col-12 col-sm-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="sj">
-                <h1 style="font-size:40px; margin-top: 0; text-align: center;">Ongoing Projects</h1>
-              </div>
-            </div>
-          </div>
+
+    <div class="container 1st_cont" id="Department">
+        <br>
+        <div class="row">
+            <img src="{{asset('assets/advisory.gif')}}" style="width: 50%;margin: 0 auto;display: block;"/> 
         </div>
-        <div class=" col-12 col-sm-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="sj">
-                <h1 style="font-size:40px; margin-top: 0; text-align: center;">Upcoming Programs</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <br>
     </div>
 
 @endsection
