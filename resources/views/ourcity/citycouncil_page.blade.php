@@ -295,7 +295,7 @@ body {font-family: "Lato", sans-serif;}
               <br>
               <br>
               <img src="{{asset('assets/konsehal/ejercito.png')}}"style="width:50%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;"/>
-              <h1 style="text-align:center;">Coun. Jannah A. Ejerciton</h1>
+              <h1 style="text-align:center;">Coun. Jannah A. Ejercito</h1>
             </div>
             <div id="d" class="tabcontent">
               <br>

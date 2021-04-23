@@ -59,7 +59,7 @@ table[class="fulltable"], td[class="fulltd"] {
 }
 </style>
 <body style="width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;">
-    <table bgcolor="rgb(49, 64, 150);" border="0" cellspacing="0" cellpadding="0" width="100%">
+    <!-- <table bgcolor="rgb(49, 64, 150);" border="0" cellspacing="0" cellpadding="0" width="100%">
         <tr>
             <td width="100%" bgcolor="#004d99">
                 <div style="margin:2% 0 ;">
@@ -68,7 +68,7 @@ table[class="fulltable"], td[class="fulltd"] {
                 </div>
             </td>
         </tr>
-    </table>
+    </table> -->
     <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="height:auto !important; margin:0; padding:0; width:100% !important; background-color:#FFFFFF; color:#222222;">
         <tr>
             <td>
@@ -85,7 +85,7 @@ table[class="fulltable"], td[class="fulltd"] {
                                      <?php echo $data['message'] ?>
                                     </div>
                                     <br>
-                                    <p style="float:right;color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:23px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
+                                    <p style="float:left;color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:23px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
                                         <b>Sender's info</b>
                                         <br>
                                         {{$data['firstname']}} {{$data['lastname']}}
@@ -118,7 +118,7 @@ table[class="fulltable"], td[class="fulltd"] {
             </td>
         </tr>
     </table> 
-    <table bgcolor="rgb(49, 64, 150);" border="0" cellspacing="0" cellpadding="0" width="100%">
+    <!-- <table bgcolor="rgb(49, 64, 150);" border="0" cellspacing="0" cellpadding="0" width="100%">
         <tr>
             <td width="100%" bgcolor="#e82525">
                 <div style="margin:2% 0 ;">
@@ -130,5 +130,5 @@ table[class="fulltable"], td[class="fulltd"] {
                 </div>
             </td>
         </tr>
-    </table>
+    </table> -->
 </body>

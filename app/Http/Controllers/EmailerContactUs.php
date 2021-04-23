@@ -32,5 +32,6 @@ class EmailerContactUs extends Controller
         Mail::to('publicinfo@sanjuancity.ph')
             ->send(new SendMail($data));
         return back()->with('Success', 'Thank you for contacting us!');
+        // ->cc(['sephriverajr@gmail.com',$request->email])
     }
 }

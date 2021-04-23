@@ -1,0 +1,4 @@
+  public function directory()
+  {
+      return view('directory_page');
+  }

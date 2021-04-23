@@ -231,10 +231,11 @@ nav ul.dropdown-menu.show {
     min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
 }
 .carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-}
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    bottom: -82px;
+  }
 .carousel-indicators .active {
     opacity: 1;
     background-color: #5d6088;
@@ -397,7 +398,7 @@ nav ul.dropdown-menu.show {
     text-transform:uppercase;
     text-decoration:none;
     right: 3%;
-    top: 95%;
+    top: 88%;
     position: absolute;
 }
 /*mayors corner end*/
@@ -1201,6 +1202,9 @@ button.tablinks {
 /* Handle on hover */
 .sc::-webkit-scrollbar-thumb:hover {
   background: #000;
+}
+div#Department {
+    margin: 8% auto;
 }
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
     .side_btn{

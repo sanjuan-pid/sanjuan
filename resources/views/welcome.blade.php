@@ -147,10 +147,10 @@
                           @endforeach
                         </div>
                         <!-- Carousel controls -->
-                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" style="left:0 !important;">
+                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" style="left: -50px;">
                             <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;rotation: 180deg;transform: rotate(180deg);"/> </span>
                         </a>
-                        <a class="carousel-control-next" href="#myCarousel" data-slide="next" style="right:0 !important;">
+                        <a class="carousel-control-next" href="#myCarousel" data-slide="next" style="right:-30px;">
                           <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;"/> </span>
 
                         </a>
@@ -245,14 +245,13 @@
                   @endforeach
                 </div>
                 <!-- Carousel controls -->
-                <a class="carousel-control-prev" href="#myCarousel1" data-slide="prev">
-                    <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;rotation: 180deg;transform: rotate(180deg);"/> </span>
+                <a class="carousel-control-prev" href="#myCarousel1" data-slide="prev" style="left: -105px;">
+                    <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;rotation: 180deg;transform: rotate(180deg); "/> </span>
                 </a>
-                <a class="carousel-control-next" href="#myCarousel1" data-slide="next">
+                <a class="carousel-control-next" href="#myCarousel1" data-slide="next" style="right: -85px;">
                   <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;"/> </span>
 
                 </a>
-
 
             </div>
             <a href="mayors_page" id="mayors_link" >VISIT PAGE</a>
