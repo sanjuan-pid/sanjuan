@@ -573,7 +573,10 @@ footer .container {
 .carousel-indicators{
     margin:0 auto;
 }
-
+#Department img{
+  width:100% !important;
+  height: auto !important;
+}
 
 nav div#navbarNavDropdown {
     display: none !important;
