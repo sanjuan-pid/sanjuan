@@ -150,7 +150,7 @@
 
 </div>
 
- <div class="container" id="news_sec">
+ <div class="container mayor_" id="news_sec">
    @include('layouts.index.agenda')
       <div class="row news_row" style="margin-top: -18%;" >
 

@@ -51,7 +51,7 @@
           </div>
         </div>
 
-       <div class="container" style="max-width: 70%; z-index: 4; margin-top: -13.8%;">
+       <div class="container profile_" style="max-width: 70%; z-index: 4; margin-top: -13.8%;">
           <div class="row" id="profile_row">
 
             <div class="col-12">
@@ -260,7 +260,7 @@
          </div>
        </div -->
 
-        <div class="row news_row">
+        <div class="row news_row cong_">
           <div class=" col-12 col-sm-12 mt-2">
             <div class="row" >
               <div class="card mt-3 tab-card">
