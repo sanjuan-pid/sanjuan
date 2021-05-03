@@ -808,11 +808,11 @@ div#end_footer h3 {
 
     .recent_big {
         margin-top: 4%;
-        border: 1px solid #dfdfdf;
+        /*border: 1px solid #dfdfdf;*/
     }
     .recent_big img {
         padding: 1%;
-        border-radius: 10px 10px;
+        /*border-radius: 10px 10px;*/
     }
 
     #article_link{
@@ -1489,5 +1489,108 @@ section .container .contactform{
   }
   #konsiconus .contactform tbody .pula{
     font-size: 12px;
+  }
+}
+
+
+.newshead{
+       border-bottom: solid;
+        border-color:black;
+        font-size:40px !important;
+         margin-top: 0 !important;
+         text-align: center;
+    }
+
+.ann{
+       height:100%;
+}
+
+
+/* vice mayor's page */
+@media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+  div#vicempage {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+  #vicempage .col-sm-6 .newshead{
+    font-size: 40px !important;
+  }
+  #vicempage #vicesoc{
+    font-size: 30px !important;
+  }
+  #vicempage h2{
+    font-size: 40px !important;
+  }
+  #_viewmore a{
+    font-size: 18px !important;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 900px)  {
+  div#vicempage {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+
+  #vicempage .col-sm-6 .newshead{
+    font-size: 30px !important;
+  }
+  #vicempage #vicesoc{
+    font-size: 20px !important;
+  }
+  #vicempage h2{
+    font-size: 30px !important;
+  }
+  #_viewmore a{
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  div#vicempage {
+    max-width: 110% !important;
+    width: 110% !important;
+    margin-left: -3% !important;
+  }
+  #vicempage .news_row{
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+  #vicempage .col-sm-6 .newshead{
+    font-size: 30px !important;
+  }
+  #vicempage #vicesoc{
+    font-size: 18px !important;
+  }
+  #vicempage h2{
+    font-size: 30px !important;
+  }
+  #_viewmore a{
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 1280px)  {
+  div#vicempage {
+    max-width: 118% !important;
+    width: 118% !important;
+    margin-left: -8% !important;
+  }
+  #vicempage .news_row{
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+  #vicempage .col-sm-6 .newshead{
+    font-size: 30px !important;
+  }
+  #vicempage #vicesoc{
+    font-size: 18px !important;
+  }
+  #vicempage h2{
+    font-size: 30px !important;
+  }
+  #_viewmore a{
+    font-size: 12px !important;
   }
 }
