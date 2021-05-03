@@ -16,6 +16,7 @@
         <meta name="description" content="San Juan City Website">
         <meta name="keywords" content="San Juan City, City Hall, News">
         <meta name="author" content="San Juan City">
+        <title>San Juan City</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{asset('css/style.css')}}" rel="stylesheet">
         <style>

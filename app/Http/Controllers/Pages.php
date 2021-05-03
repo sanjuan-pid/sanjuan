@@ -113,7 +113,7 @@ class Pages extends Controller
     //ourcity
     public function city()
     {
-        return view('ourcity/citycouncil_page');
+        return view('Events/Brgy_page');
     }
     public function brgy()
     {
@@ -230,7 +230,8 @@ class Pages extends Controller
     }
     public function department()
     {
-        return view('deparment.department_page');
+      return view('Events/Brgy_page');
+        // return view('deparment.department_page');
     }
     public function department_content()
     {

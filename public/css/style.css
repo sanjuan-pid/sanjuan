@@ -588,6 +588,10 @@ nav.navbar.navbar-expand-lg.navbar-light img {
 button.navbar-toggler{
     margin-top:3% !important;
 }
+#Department img{
+  width:100% !important;
+  height: auto !important;
+}
 .mayor_ .col-4.col-sm-4 {
     width: 100% !important;
     flex: 0 0 100% !important;
@@ -608,6 +612,7 @@ button.navbar-toggler{
 
 .mayor_  .col-sm-4{
   margin-top:22%;
+
 }
 
 nav div#navbarNavDropdown {
