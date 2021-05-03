@@ -39,17 +39,45 @@
       font-weight: bolder;
       font-size: 22px;
       border-bottom: solid;
-      border-color: blue;
+      border-color: black;
     }
     .brgymobile{
       font-weight: bold;
     }
+    @media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+      div#brgypage {
+        max-width: 60% !important;
+        width: 60% !important;
+        flex: 0 0 100%;
+      }
+    }
+    @media only screen and (max-width: 1600px) and (min-width: 900px)  {
+      div#brgypage {
+        max-width: 60% !important;
+        width: 60% !important;
+        flex: 0 0 100%;
 
+      }
+      #brgypage p{
+        font-size: 15px !important;
+      }
+
+    }
+    @media only screen and (max-width: 1366px) {
+      div#brgypage {
+        max-width: 80% !important;
+        width: 80% !important;
+      }
+    }
     @media screen and (max-width: 766px) and (min-width: 200px) {
       #brgypage {
         max-width: 100% !important;
         width:100% !important;
         flex: 0 0 100%;
+      }
+      div#brgypage {
+        max-width: 100% !important;
+        width: 100% !important;
       }
       #brgypage #bsj{
         font-size: 25px !important;
@@ -69,6 +97,13 @@
       #mapmobile h3{
         font-size: 18px;
       }
+      #mapmobile a{
+        color:blue;
+        font-weight: 500;
+        border-bottom: solid;
+        border-color: blue;
+        border-width: thin;
+      }
 
     }
 
@@ -80,7 +115,7 @@
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         <h1 id="bsj">SAN JUAN CITY</h1>
-        <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">  <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">"San Juan City" is a contraction of the city's traditional name of "San Juan del Monte" (lit. 'Saint John of the Mountain'). As with numerous other places in the Philippines, the name combines a patron saint and a toponym; in this case Saint John the Baptist with the locale's hilly terrain and relatively higher elevation compared to surrounding areas. The city's official name is "Dakilang Lungsód ng San Juan" (lit. 'Great City of San Juan').</p>
+        <p style=" font-weight: 500; margin-top: 15px; text-align: justify; font-size:18px;">"San Juan City" is a contraction of the city's traditional name of "San Juan del Monte" (lit. 'Saint John of the Mountain'). As with numerous other places in the Philippines, the name combines a patron saint and a toponym; in this case Saint John the Baptist with the locale's hilly terrain and relatively higher elevation compared to surrounding areas. The city's official name is "Dakilang Lungsód ng San Juan" (lit. 'Great City of San Juan').</p>
       </div>
 
       <h1 id="the" style="">THE BARANGAYS</h1>

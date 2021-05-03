@@ -292,7 +292,32 @@ $(document).ready(function(){
         $("div#profile_row,#agenda_row, div#carousel_row,#achievement_row").fadeOut("fast");
 
     });
+    $("#profile_btn_mob").click(function(){
+        $("div#profile_row").css("display","flex");
+        $("div#profile_row").fadeIn("slow");
+        $("div#achievement_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
+    });
+     $("a#achievement_btn_mob").click(function(){
+        $("div#achievement_row").css("display","flex");
+        $("div#profile_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
+
+        $("div#achievement_row").fadeIn("fast");
+    });
+
+     $("a#programs_btn_mob").click(function(){
+        $("div#agenda_row").css("display","flex");
+        $("div#agenda_row").fadeIn("fast");
+        $("div#profile_row,.news_row, div#carousel_row,#achievement_row").fadeOut("fast");
+
+    });
+
+       $("a#news_btn_mob").click(function(){
+        $("div.news_row").css("display","flex");
+        $("ddiv.news_row").fadeIn("fast");
+        $("div#profile_row,#agenda_row, div#carousel_row,#achievement_row").fadeOut("fast");
+
+    });
 
     //history_page
     $(document).ready(function(){

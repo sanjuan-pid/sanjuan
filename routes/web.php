@@ -161,4 +161,10 @@ Route::prefix('admin')->group(function(){
     // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
     Route::resource('/activity','AchievementsController');
 
+    //Department
+    Route::get('/department/department-list', 'DeparmentController@index')->name('admin.department.deparment-list');
+    Route::post('/department/department-create', 'DeparmentController@create')->name('admin.department.deparment-create');
+    Route::resource('/department','DeparmentController');
+  
+    
 });

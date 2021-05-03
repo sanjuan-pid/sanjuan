@@ -21,7 +21,7 @@
                             <div id= officials style="text-align: center; font-weight:600;">
                                 <?php echo $row ->officials ?>
                             </div>
-                            <?php echo $row ->brgy_code ?>
+                            
                             <h1>SAP LIST</h1>
                              @if($row ->brgy_code  == "AD")
                                  @include('layouts.index.sap.ad') 

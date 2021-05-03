@@ -61,7 +61,7 @@
                   <img src="{{asset('assets/instagram.svg')}}" >
                 </a>
               </div> --}}
-              <div class="col-sm-12">
+              <div class="col-sm-12 head_">
 
                 <div class="datesss col-sm-4" style="float: right;">
                   <a href="https://time.is/Philippines" id="time_is_link" rel="nofollow"></a>
@@ -149,15 +149,11 @@
                            </a>
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                            <li><a class="dropdown-item" href="{{route('tourism')}}"> Tourism Festivities </a></li>
-                            <li><a class="dropdown-item" href="{{route('departmental')}}"> Departmental project activities </a></li>
                             <li><a class="dropdown-item" href="{{route('brgy1')}}">Barangay </a></li>
                             <li><a class="dropdown-item" href="{{route('community')}}">Communities and CSO's </a></li>
                             </ul>
                          </li>
                          <li class="nav-item dropdown" >
-                          <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Public Notices
-                          </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                             <li><a class="dropdown-item" href="{{route('bids')}}">Notice of Bids</a></li>
                             <li><a class="dropdown-item" href="{{route('disclosure')}}">Disclosures</a></li>
@@ -251,15 +247,11 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                <li><a class="dropdown-item" href="{{route('tourism')}}">Tourism Festivities</a></li>
-               <li><a class="dropdown-item" href="{{route('departmental')}}">Departmental project activities</a></li>
                <li><a class="dropdown-item" href="{{route('brgy1')}}"> Barangay</a></li>
                <li><a class="dropdown-item" href="{{route('community')}}">Communities and CSOs'</a></li>
                  </ul>
             </li>
             <li class="nav-item dropdown" >
-             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Public Notices
-             </a>
              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
               <li><a class="dropdown-item" href="{{route('bids')}}">Notice of Bids</a></li>
               <li><a class="dropdown-item" href="{{route('disclosure')}}">Disclosures </a></li>
@@ -305,7 +297,6 @@
                   <a id="sitelink" href="#"  style="color:#fff;">TERMS</a><br>
                   <a id="sitelink" href="#"  style="color:#fff; font-size:16px ">Terms of Use</a><br>
                   <a id="sitelink" href="#"  style="color:#fff; font-size:16px">Private Policy</a><br>
-                  <a id="sitelink" href="#"  style="color:#fff; font-size:16px">Site Map</a>
                 </div>
               </div>
               <div class="col-sm-4">

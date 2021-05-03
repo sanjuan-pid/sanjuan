@@ -1,4 +1,423 @@
 <style>
+@media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+  div#map {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 900px)  {
+  div#map {
+    max-width: 110% !important;
+    width: 110% !important;
+    flex: 0 0 100%;
+
+  }
+}
+@media only screen and (max-width: 1366px) {
+  div#map {
+    max-width: 80% !important;
+    width: 80% !important;
+  }
+  #map .riv_1{
+    font-size: 30px !important;
+   right:85% !important;
+   top:33% !important;
+  }
+  #map .prog_1{
+    font-size: 30px !important;
+    right:88.5% !important;
+    top:40% !important;
+  }
+  #map .sanper_1{
+      font-size: 28px !important;
+      right:83.5% !important;
+      top:40% !important;
+  }
+  #map .pedro_1{
+    font-size: 50px !important;
+     right:75%;
+     top:33%;
+  }
+  #map .batis_1{
+    font-size: 60px !important;
+    right:74% !important;
+    top:58% !important;
+  }
+  .batis_4{
+    font-size: 60px !important;
+    right:75% !important;
+    top:49% !important;
+  }
+  .batis_2{
+    font-size: 40px !important;
+     right:79% !important;
+     top:45% !important;
+  }
+  .batis_3{
+    font-size: 40px !important;
+    right:83% !important;
+    top:46% !important;
+  }
+  .tib_1{
+    font-size: 13px !important;
+     right:69% !important;
+     top:45% !important;
+  }
+  .tib_3{
+    font-size: 45px !important;
+     right:67% !important;
+     top:53% !important;
+  }
+  .tib_2{
+    font-size: 45px !important;
+     right:68.5% !important;
+     top:47% !important;
+  }
+  .onse_1{
+    font-size: 35px !important;
+    right:62% !important;
+    top:49% !important;
+  }
+  .kabayanan_1{
+    font-size: 30px !important;
+    right:63.5% !important;
+    top:60% !important;
+  }
+  .kabayanan_2{
+    font-size: 50px !important;
+    right:68% !important;
+    top:63% !important;
+  }
+  .lucia_1{
+    font-size: 70px !important;
+    right:53.5% !important;
+    top:52% !important;
+  }
+  .maytu_1{
+    font-size: 23px !important;
+     right:53% !important;
+     top:75% !important;
+  }
+  .adh_3{
+    font-size: 15px !important;
+    right: 45% !important;
+    top: 83% !important;
+  }
+  .baguio_1{
+    font-size: 20px !important;
+     right:43% !important;
+     top:49% !important;
+  }
+  .baguio_2{
+    font-size: 42px !important;
+    right:51% !important;
+    top:35% !important;
+  }
+  .baguio_3{
+    font-size: 15px !important;
+    right:47% !important;
+     top:62% !important;
+  }
+  .cora_1{
+    font-size: 12px !important;
+     right:60% !important;
+     top: 34% !important;
+  }
+  .cora_2{
+    font-size: 55px !important;
+     right:66% !important;
+     top:20% !important;
+  }
+  .salapan_3{
+    font-size: 30px !important;
+     right: 83% !important;
+     top: 14% !important;
+  }
+  .salapan_1{
+    font-size: 30px !important;
+    right:80.5% !important;
+    top:5% !important;
+  }
+  .salapan_4{
+    font-size: 40px !important;
+     right: 79% !important;
+     top: 10% !important;
+  }
+  .salapan_2{
+    font-size: 35px !important;
+    right:75% !important;
+    top:10% !important;
+  }
+  .ermi_1{
+    font-size: 15px !important;
+     right:64% !important;
+     top:14% !important;
+  }
+  .pasa_1{
+    font-size: 50px !important;
+     right:57% !important;
+     top:19% !important;
+  }
+  .balong_1{
+    font-size: 12px !important;
+     right:74% !important;
+     top:26% !important;
+  }
+  .gh_1{
+    font-size: 21px !important;
+    right:33% !important;
+    top:26% !important;
+  }
+  .gh_2{
+    font-size: 30px !important;
+    right:30% !important;
+    top:31% !important;
+  }
+  .gh_3{
+    font-size: 18px !important;
+    right: 35% !important;
+    top: 43% !important;
+  }
+  .gh_4{
+    font-size: 21px !important;
+    right: 38% !important;
+    top: 38% !important;
+  }
+  .gh_5{
+    font-size:12px !important;
+    right:34% !important;
+    top:72% !important;
+  }
+  .gh_6{
+    font-size:33px !important;
+    right:23% !important;
+    top:45% !important;
+  }
+  .gh_7{
+    font-size: 30px !important;
+    right:23% !important;
+    top:52% !important;
+  }
+  .gh_8{
+    font-size: 30px !important;
+    right:28% !important;
+    top:60% !important;
+  }
+  .gh_9{
+    font-size: 25px !important;
+    right:31% !important;
+    top:66% !important;
+  }
+  .gh_10{
+    font-size: 8px !important;
+    right:36% !important;
+    top:77% !important;
+  }
+
+}
+@media only screen and (max-width: 1280px){
+  div#map {
+    max-width: 80% !important;
+    width: 80% !important;
+  }
+  #map .riv_1{
+    font-size: 30px !important;
+   right:85% !important;
+   top:33% !important;
+  }
+  #map .prog_1{
+    font-size: 30px !important;
+    right:88.5% !important;
+    top:40% !important;
+  }
+  #map .sanper_1{
+      font-size: 28px !important;
+      right:83.5% !important;
+      top:40% !important;
+  }
+  #map .pedro_1{
+    font-size: 50px !important;
+     right:75%;
+     top:33%;
+  }
+  #map .batis_1{
+    font-size: 60px !important;
+    right:74% !important;
+    top:58% !important;
+  }
+  .batis_4{
+    font-size: 60px !important;
+    right:75% !important;
+    top:49% !important;
+  }
+  .batis_2{
+    font-size: 40px !important;
+     right:79% !important;
+     top:45% !important;
+  }
+  .batis_3{
+    font-size: 40px !important;
+    right:83% !important;
+    top:46% !important;
+  }
+  .tib_1{
+    font-size: 13px !important;
+     right:69% !important;
+     top:45% !important;
+  }
+  .tib_3{
+    font-size: 45px !important;
+     right:67% !important;
+     top:53% !important;
+  }
+  .tib_2{
+    font-size: 45px !important;
+     right:68.5% !important;
+     top:47% !important;
+  }
+  .onse_1{
+    font-size: 35px !important;
+    right:62% !important;
+    top:49% !important;
+  }
+  .kabayanan_1{
+    font-size: 30px !important;
+    right:63.5% !important;
+    top:60% !important;
+  }
+  .kabayanan_2{
+    font-size: 50px !important;
+    right:68% !important;
+    top:63% !important;
+  }
+  .lucia_1{
+    font-size: 70px !important;
+    right:53.5% !important;
+    top:52% !important;
+  }
+  .maytu_1{
+    font-size: 23px !important;
+     right:53% !important;
+     top:75% !important;
+  }
+  .adh_3{
+    font-size: 15px !important;
+    right: 45% !important;
+    top: 83% !important;
+  }
+  .baguio_1{
+    font-size: 20px !important;
+     right:43% !important;
+     top:49% !important;
+  }
+  .baguio_2{
+    font-size: 42px !important;
+    right:51% !important;
+    top:35% !important;
+  }
+  .baguio_3{
+    font-size: 15px !important;
+    right:47% !important;
+     top:62% !important;
+  }
+  .cora_1{
+    font-size: 12px !important;
+     right:60% !important;
+     top: 34% !important;
+  }
+  .cora_2{
+    font-size: 55px !important;
+     right:66% !important;
+     top:20% !important;
+  }
+  .salapan_3{
+    font-size: 30px !important;
+     right: 83% !important;
+     top: 14% !important;
+  }
+  .salapan_1{
+    font-size: 30px !important;
+    right:80.5% !important;
+    top:5% !important;
+  }
+  .salapan_4{
+    font-size: 40px !important;
+     right: 79% !important;
+     top: 10% !important;
+  }
+  .salapan_2{
+    font-size: 35px !important;
+    right:75% !important;
+    top:10% !important;
+  }
+  .ermi_1{
+    font-size: 15px !important;
+     right:64% !important;
+     top:14% !important;
+  }
+  .pasa_1{
+    font-size: 50px !important;
+     right:57% !important;
+     top:19% !important;
+  }
+  .balong_1{
+    font-size: 12px !important;
+     right:74% !important;
+     top:26% !important;
+  }
+  .gh_1{
+    font-size: 21px !important;
+    right:33% !important;
+    top:26% !important;
+  }
+  .gh_2{
+    font-size: 30px !important;
+    right:30% !important;
+    top:31% !important;
+  }
+  .gh_3{
+    font-size: 18px !important;
+    right: 35% !important;
+    top: 43% !important;
+  }
+  .gh_4{
+    font-size: 21px !important;
+    right: 38% !important;
+    top: 38% !important;
+  }
+  .gh_5{
+    font-size:12px !important;
+    right:34% !important;
+    top:72% !important;
+  }
+  .gh_6{
+    font-size:33px !important;
+    right:23% !important;
+    top:45% !important;
+  }
+  .gh_7{
+    font-size: 30px !important;
+    right:23% !important;
+    top:52% !important;
+  }
+  .gh_8{
+    font-size: 30px !important;
+    right:28% !important;
+    top:60% !important;
+  }
+  .gh_9{
+    font-size: 25px !important;
+    right:31% !important;
+    top:66% !important;
+  }
+  .gh_10{
+    font-size: 8px !important;
+    right:36% !important;
+    top:77% !important;
+  }
+}
+
 @media screen and (max-width: 766px) and (min-width: 200px) {
 
 #map{
@@ -13,107 +432,114 @@
 
 <div class="container 1st_cont" id="map" style="box-shadow: 0px 3px 0px #cccccc; padding: 0;">
     <div class="row" style="">
-      <div class="col-sm-9 mapppy" style="margin-left:18%;margin-top: -5%; ">
-        <img class="m" src="{{asset('assets/sjcity2.png')}}" id="map" style="width: 100%;">
+      <div class="col-sm-12 mapppy" style="margin-left:0; margin-top: -5%; ">
+        <img class="m" src="{{asset('assets/sjcity2.png')}}" id="mapsj" style="width: 100%;">
         <div class="brgy_links">
-            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 13px; right:22%;top:25%;position: absolute;">West Crame</a>
-            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:21%;top:31%;position: absolute;">West Crame</a>
-            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:20.5%;top:33%;position: absolute;">West Crame</a>
-            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:20%;top:36%;position: absolute;">West Crame</a>
-            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:19%;top:38%;position: absolute;">West Crame</a>
-            <a class="lahat" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 20px; right:9%;top:28%;position: absolute;">We  st Crame</a>
-            <h1 class="display" data-toggle="modal" data-target=".wcm" style="cursor: pointer; font-size: 20px !important; right:10%;top:28%;position: absolute;">West Crame</h1>
+            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 13px; right:22%;top:25%;position: absolute;">West Crame</a>
+            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:19%;top:40%;position: absolute;">West Crame</a>
+            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 8px; right:21%;top:30%;position: absolute;">West Crame</a>
+            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:20%;top:37%;position: absolute;">West Crame</a>
+            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:21%;top:34%;position: absolute;">West Crame</a>
+            <h1 class="display west_" data-toggle="modal" data-target=".wcm" style="cursor: pointer; font-size: 25px !important; right:15%;top:28%;position: absolute;">West Crame</h1>
 
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 30px;right:31%;top:31%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:33px;right:20%;top:44%;position: absolute; color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 25px;right:31%;top:64%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 26px;right:27%;top:58%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 29px;right:23%;top:51%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 25px; right:25%;top:36%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 21px; right:33%;top:27%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 31px; right:4%;top:42%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 21px;right: 35%; top: 40%; position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 21px;right: 24%; top: 40%; position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 9px;right:35%;top:74%;position: absolute;color: transparent;">Greenhills</a>
-            <a class="lahat" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:25px;right:24%;top:44%;position: absolute; color: transparent;">Greenhills</a>
-            <h1 class="display" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 20px !important; right:24%;top:44%;position: absolute; ">Greenhills</h1>
+            <a class="lahat gh_2" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 30px;right:35%;top:31%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_9" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 30px;right:33%;top:66%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_8" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 33px;right:28%;top:60%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_7" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 38px;right:23%;top:52%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 40px; right:6%;top:43%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 31px; right:25%;top:35%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 31px; right:25%;top:40%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_3" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 18px;right: 40%; top: 43%; position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_4" data-toggle="modal" data-target=".ghm" style="cursor: pointer;font-size: 21px;right: 40%; top: 38%; position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_10" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 10px;right:36%;top:77%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_1" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 21px;right:35%;top:26%;position: absolute;color: transparent;">Greenhills</a>
+            <a class="lahat gh_5" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:15px;right:34%;top:72%;position: absolute; color: transparent;">Greenhills</a>
+            <a class="lahat gh_6" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:33px;right:25%;top:45%;position: absolute; color: transparent;">Greenhills</a>
+            <h1 class="display gh_" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 25px !important; right:26%;top:44%;position: absolute; ">Greenhills</h1>
 
-            <a class="lahat" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 41%; top: 74%; position: absolute;">Additon Hills</a>
-            <a class="lahat" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 41%; top: 78%; position: absolute;">Additon Hills</a>
-            <a class="lahat" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 22px; right: 43%; top: 82%; position: absolute;">Additon Hills</a>
-            <h1 class="display" data-toggle="modal" data-target=".bd-example-modal-lg" style="cursor: pointer; font-size: 20px !important; right: 43%; top: 82%; position: absolute;">Additon Hills</h1>
+            <a class="lahat adh_1" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 42%; top: 74%; position: absolute;">Additon Hills</a>
+            <a class="lahat adh_2" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 42%; top: 78%; position: absolute;">Additon Hills</a>
+            <a class="lahat adh_3" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 22px; right: 45%; top: 84%; position: absolute;">Additon Hills</a>
+            <h1 class="display adh_" data-toggle="modal" data-target=".bd-example-modal-lg" style="cursor: pointer; font-size: 25px !important; right: 43%; top: 82%; position: absolute;">Additon Hills</h1>
 
-            <a  class="lahat" data-toggle="modal" data-target=".mtm" style="color:transparent; cursor: pointer; font-size: 23px; right:52%;top:74%;position: absolute;">Maytunas</a>
-            <h1  class="display" data-toggle="modal" data-target=".mtm" style="cursor: pointer; font-size: 20px !important;  right:52%;top:74%;position: absolute;">Maytunas</h1>
+            <a  class="lahat maytu_1" data-toggle="modal" data-target=".mtm" style="color:transparent; cursor: pointer; font-size: 23px; right:53%;top:77%;position: absolute;">Maytunas</a>
+            <h1  class="display maytu_" data-toggle="modal" data-target=".mtm" style="cursor: pointer; font-size: 25px !important;  right:52%;top:74%;position: absolute;">Maytunas</h1>
 
-            <a  class="lahat" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer;  font-size: 18px; right:46.3%; top:45% ;position: absolute;">Little <br>Baguio</a>
-            <h1   class="display" data-toggle="modal" data-target=".lbm" style="cursor: pointer; font-size: 20px !important; right:46%; top:44% ;position: absolute; z-index:4;">Little <br>Baguio</h1>
-            <a   class="lahat" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 36px;right:51%; top:36% ;position: absolute;">..........</a>
-            <a   class="lahat" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 36px;right:43%; top:51% ;position: absolute;">..........</a>
+            <a  class="lahat baguio_1" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer;  font-size: 24px; right:45%; top:49% ;position: absolute;">Little <br>Baguio</a>
+            <h1   class="display baguio_" data-toggle="modal" data-target=".lbm" style="cursor: pointer; font-size: 25px !important; right:45%; top:49% ;position: absolute; z-index:4;">Little <br>Baguio</h1>
+            <a   class="lahat baguio_2" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 47px;right:49%; top:40% ;position: absolute;">..........</a>
+            <a   class="lahat baguio_3" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 21px;right:47%; top:62% ;position: absolute;">..........</a>
 
-            <a  class="lahat" data-toggle="modal" data-target=".stm" style="color:transparent; cursor: pointer; font-size: 80px;right:52.6%;top:49%;position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".stm" style="cursor: pointer; font-size: 20px !important; right:53%;top:57%;position: absolute;">Sta. <br> Lucia</h1>
-
-
-            <a  class="lahat" data-toggle="modal" data-target=".kbm" style="color:transparent; cursor: pointer; font-size: 62px;right:65.5%;top:60%;position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".kbm" style=" cursor: pointer; font-size: 20px !important; right:63.5%;top:64%;position: absolute;z-index:4;">Kabayanan</h1>
+            <a  class="lahat lucia_1" data-toggle="modal" data-target=".stm" style="color:transparent; cursor: pointer; font-size: 80px;right:54.6%;top:55%;position: absolute;">O</a>
+            <h1  class="display lucia_" data-toggle="modal" data-target=".stm" style="cursor: pointer; font-size: 25px !important; right:55%;top:57%;position: absolute;">Sta. Lucia</h1>
 
 
-            <a class="lahat" data-toggle="modal" data-target=".om" style="color:transparent; cursor: pointer; font-size: 42px;right:62%;top:49%;position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".om" style=" cursor: pointer; font-size: 20px !important; right:61.5%;top:53%;position: absolute;z-index:4;">Onse</h1>
 
-            <a  class="lahat" data-toggle="modal" data-target=".sjm" style="color:transparent; cursor: pointer; font-size: 27px;right:61%;top:42%;position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".sjm" style=" cursor: pointer;font-size: 20px !important; right:55%;top:43%;position: absolute;z-index:4;">St. Joseph</h1>
+            <a  class="lahat kabayanan_1" data-toggle="modal" data-target=".kbm" style="color:transparent; cursor: pointer; font-size: 34px;right:63.5%;top:63%;position: absolute;">O</a>
+            <a  class="lahat kabayanan_2" data-toggle="modal" data-target=".kbm" style="color:transparent; cursor: pointer; font-size: 65px;right:66.5%;top:63%;position: absolute;">O</a>
+            <h1  class="display kabayanan_" data-toggle="modal" data-target=".kbm" style=" cursor: pointer; font-size: 25px !important; right:63.5%;top:64%;position: absolute;z-index:4;">Kabayanan</h1>
+
+
+            <a class="lahat onse_1" data-toggle="modal" data-target=".om" style="color:transparent; cursor: pointer; font-size: 42px;right:62.5%;top:51%;position: absolute;">O</a>
+            <h1  class="display onse_" data-toggle="modal" data-target=".om" style=" cursor: pointer; font-size: 25px !important; right:61.5%;top:53%;position: absolute;z-index:4;">Onse</h1>
+
+            <a  class="lahat joseph_" data-toggle="modal" data-target=".sjm" style="color:transparent; cursor: pointer; font-size: 26px;right:61.5%;top:44%;position: absolute;">O</a>
+            <h1  class="display joseph_" data-toggle="modal" data-target=".sjm" style=" cursor: pointer;font-size: 25px !important; right:55%;top:43%;position: absolute;z-index:4;">St. Joseph</h1>
 
             <a  class="lahat" data-toggle="modal" data-target=".ism" style="color:transparent; cursor: pointer; font-size: 23px;right:64.8%;top:44%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".ism" style=" cursor: pointer; font-size: 20px !important; right:63%;top:45%; position: absolute;z-index:4;">Isabelita</h1>
+            <h1  class="display" data-toggle="modal" data-target=".ism" style=" cursor: pointer; font-size: 25px !important; right:63%;top:45%; position: absolute;z-index:4;">Isabelita</h1>
 
-            <a  class="lahat" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 11px; right:68%;top:51%; position: absolute;">Tibagan</a>
-            <a  class="lahat" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 47px; right:66.5%;top:52%; position: absolute;">O</a>
-            <a  class="lahat" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 49px; right:68.5%;top:41%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".tbm" style="cursor: pointer; font-size: 20px !important; right:66%;top:51%; position: absolute; z-index:4;">Tibagan</h1>
+            <a  class="lahat tib_1" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 11px; right:70%;top:46%; position: absolute;">Tibagan</a>
+            <a  class="lahat tib_3" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 49px; right:67%;top:55%; position: absolute;">O</a>
+            <a  class="lahat tib_2" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 47px; right:69.5%;top:47%; position: absolute;">O</a>
+            <h1  class="display tib_" data-toggle="modal" data-target=".tbm" style="cursor: pointer; font-size: 25px !important; right:66%;top:51%; position: absolute; z-index:4;">Tibagan</h1>
+
+            <a  class="lahat batis_1" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 58px; right:74%;top:61%; position: absolute;">/</a>
+            <a  class="lahat batis_2" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 46px; right:81%;top:48%; position: absolute;">0</a>
+            <a  class="lahat batis_3" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 40px; right:85%;top:49%; position: absolute;">0</a>
+            <a  class="lahat batis_4" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 80px; right:75%;top:49%; position: absolute;">O</a>
+            <h1  class="display batis_" data-toggle="modal" data-target=".bm" style="cursor: pointer; font-size: 25px !important; right:75%;top:56%; position: absolute;">Batis</h1>
+
+            <a  class="lahat sanper_1" data-toggle="modal" data-target=".spm" style="color:transparent; cursor: pointer; font-size: 34px;right:83.5%;top:41%; position: absolute;">0</a>
+            <h1  class="display sanper_" data-toggle="modal" data-target=".spm" style="cursor: pointer; font-size: 25px !important; right:77%;top:45%; position: absolute;">San Perfecto</h1>
+
+            <a  class="lahat prog_1" data-toggle="modal" data-target=".pm" style="color:transparent; cursor: pointer; font-size:35px; right:88.5%;top:42%; position: absolute;">0</a>
+            <h1  class="display prog_" data-toggle="modal" data-target=".pm" style=" cursor: pointer;font-size: 25px !important; right:86%;top:42%; position: absolute;">Progreso</h1>
+
+            <a  class="lahat riv_1" data-toggle="modal" data-target=".rm" style="color:transparent; cursor: pointer; font-size: 34px; right:85.5%;top:34%; position: absolute;">0</a>
+            <h1  class="display riv_2" data-toggle="modal" data-target=".rm" style="cursor: pointer; font-size: 25px !important; right:85%;top:34%; position: absolute;">Rivera</h1>
 
 
-            <a  class="lahat" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 90px; right:73%;top:45%; position: absolute; z-index:0;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".bm" style="cursor: pointer; font-size: 20px !important; right:75%;top:56%; position: absolute;">Batis</h1>
+            <a  class="lahat pedro_1" data-toggle="modal" data-target=".pdm" style=" color:transparent; cursor: pointer; font-size: 69px; right:75%;top:31%; position: absolute;">O</a>
+            <h1  class="display pedro_" data-toggle="modal" data-target=".pdm" style=" cursor: pointer; font-size: 25px !important; right:72%;top:34%; position: absolute;">Pedro Cruz</h1>
 
-            <a  class="lahat" data-toggle="modal" data-target=".spm" style="color:transparent; cursor: pointer; font-size: 34px;right:82%;top:39%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".spm" style="cursor: pointer; font-size: 20px !important; right:73%;top:45%; position: absolute;">San Perfecto</h1>
+            <a  class="lahat balong_1" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 15px; right:74%;top:25%; position: absolute;">Balong-Bato</a>
+            <h1  class="display balong_" data-toggle="modal" data-target=".bbm" style=" cursor: pointer; font-size: 25px !important; right:72%;top:23%; position: absolute;">Balong-Bato</h1>
+            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:81%;top:28%; position: absolute;">O</a>
+            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 39px; right:71%;top:18%; position: absolute;">O</a>
+            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:79%;top:20%; position: absolute;">O</a>
+            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 28px; right:76%;top:19%; position: absolute;">O</a>
+            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 28px; right:83%;top:22%; position: absolute;">O</a>
 
-            <a  class="lahat" data-toggle="modal" data-target=".pm" style="color:transparent; cursor: pointer; font-size: 35px; right:87.5%;top:40%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".pm" style=" cursor: pointer;font-size: 20px !important; right:86%;top:42%; position: absolute;">Progreso</h1>
+            <a  class="lahat cora_1" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 13px; right:62%; top: 33%; position: absolute;">Corazon de Jesus</a>
+            <h1  class="display cora_" data-toggle="modal" data-target=".cdm" style=" cursor: pointer; font-size: 25px !important; right:57%;top:30%; position: absolute;">Corazon de Jesus</h1>
+            <a  class="lahat cora_2" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 55px; right:67%;top:22%; position: absolute;">O</a>
+            <a  class="lahat cora_3" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:67%;top:37%; position: absolute;">O</a>
+            <a  class="lahat cora_4" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:63%;top:36%; position: absolute;">O</a>
 
-            <a  class="lahat" data-toggle="modal" data-target=".rm" style="color:transparent; cursor: pointer; font-size: 10px; right:83.5%;top:34%; position: absolute;">Rivera</a>
-            <h1  class="display" data-toggle="modal" data-target=".rm" style="cursor: pointer; font-size: 20px !important; right:83%;top:34%; position: absolute;">Rivera</h1>
+            <a  class="lahat pasa_1" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 61px; right:58%;top:21%; position: absolute;">O</a>
+            <h1  class="display pasa_" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 25px !important; right:54%;top:25%; position: absolute;">Pasadeña</h1>
+            <a  class="lahat pasa_" data-toggle="modal" data-target=".psdm" style=" color: transparent; cursor: pointer; font-size: 36px; right:53%;top:27%; position: absolute;">O</a>
+            <a  class="lahat pasa_" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 36px; right:62%;top:16%; position: absolute;">O</a>
 
+          <a  class="lahat salapan_1" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 30px; right:81%;top:7%; position: absolute;">0</a>
+          <a  class="lahat salapan_2" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 30px; right:75%;top:11%; position: absolute;">0</a>
+          <a  class="lahat salapan_3" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 40px; right: 83%; top: 14%; position: absolute;">....</a>
+          <a  class="lahat salapan_4" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 40px; right: 80%; top: 10%; position: absolute;">0</a>
+          <h1  id="salapanmap" class="display salapan_" data-toggle="modal" data-target=".slpm" style="cursor: pointer; font-size: 25px !important;right:76%;top:14%; position: absolute;">Salapan</h1>
 
-            <a  class="lahat" data-toggle="modal" data-target=".pdm" style=" color:transparent; cursor: pointer; font-size: 69px; right:73%;top:28%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".pdm" style=" cursor: pointer; font-size: 20px !important; right:72%;top:34%; position: absolute;">Pedro Cruz</h1>
-
-            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 15px; right:72%;top:23%; position: absolute;">Balong-Bato</a>
-            <h1  class="display" data-toggle="modal" data-target=".bbm" style=" cursor: pointer; font-size: 20px !important; right:72%;top:23%; position: absolute;">Balong-Bato</h1>
-            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:79%;top:26%; position: absolute;">O</a>
-            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 39px; right:71%;top:15%; position: absolute;">O</a>
-            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:75%;top:17%; position: absolute;">O</a>
-            <a  class="lahat" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 24px; right:78%;top:19%; position: absolute;">O</a>
-
-            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 13px; right:59%; top: 33%; position: absolute;">Corazon de Jesus</a>
-            <h1  class="display" data-toggle="modal" data-target=".cdm" style=" cursor: pointer; font-size: 20px !important; right:57%;top:30%; position: absolute;">Corazon de Jesus</h1>
-            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 55px; right:66%;top:20%; position: absolute;">O</a>
-            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:67%;top:37%; position: absolute;">O</a>
-            <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:63%;top:36%; position: absolute;">O</a>
-
-            <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 61px; right:56%;top:18%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 20px !important; right:54%;top:25%; position: absolute;z-index:4;">Pasadeña</h1>
-            <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color: transparent; cursor: pointer; font-size: 36px; right:53%;top:27%; position: absolute;">O</a>
-            <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 36px; right:62%;top:16%; position: absolute;">O</a>
-
-          <a  class="lahat" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 30px; right:81%;top:13%; position: absolute;">......</a>
-          <a  class="lahat" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 21px; right:73%;top:11%; position: absolute;">Salapan</a>
-          <h1  class="display" data-toggle="modal" data-target=".slpm" style="cursor: pointer; font-size: 20px !important;right:73%;top:11%; position: absolute;">Salapan</h1>
-
-          <a  class="lahat" data-toggle="modal" data-target=".ermm" style=" color:transparent; cursor: pointer; font-size: 13px; right:64%;top:14%; position: absolute;">Ermitaño</a>
-          <h1  class="display" data-toggle="modal" data-target=".ermm" style="cursor: pointer; font-size: 20px !important;right:64%;top:12%; position: absolute;">Ermitaño</h1>
+          <a  class="lahat ermi_1" data-toggle="modal" data-target=".ermm" style=" color:transparent; cursor: pointer; font-size: 15px; right:65%;top:14%; position: absolute;">Ermitaño</a>
+          <h1  class="display ermi_" data-toggle="modal" data-target=".ermm" style="cursor: pointer; font-size: 25px !important;right:64%;top:12%; position: absolute;">Ermitaño</h1>
 
 
         </div>
@@ -604,7 +1030,7 @@
 }
 
 .jj {
-    color: transparent;
+    color: red;
 }
 .jj:active {
     color: #000;
@@ -637,7 +1063,7 @@ a:hover{
 color:black;
 }
 /*a{
-color: transparent;
+color: red;
 }*/
 h1{
   text-align: center;
@@ -781,7 +1207,7 @@ color: black;
 
 }
 .jj{
-color:transparent;
+color:red;
 }
 #CITYHALL {
     position: absolute;
