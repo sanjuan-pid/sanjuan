@@ -25,6 +25,83 @@
         </div>
     </div> --}}
     <br>
+    <style>
+    @media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+      div#congattypage{
+        max-width: 100%;
+    }
+      #congattypage .newshead {
+        font-size: 40px !important;
+    }
+
+      #congattypage h2{
+        font-size: 20px !important;
+      }
+      #_viewmore a{
+        font-size: 15px !important;
+      }
+    }
+    @media only screen and (max-width: 1600px) and (min-width: 900px)  {
+      div#congattypage {
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: 0 0 100%;
+      }
+
+      .newshead {
+        font-size: 40px !important;
+    }
+
+      #congattypage h2{
+        font-size: 20px !important;
+      }
+      #_viewmore a{
+        font-size: 15px !important;
+      }
+    }
+    @media only screen and (max-width: 1366px) {
+      div#congattypage {
+        max-width: 110% !important;
+        width: 110% !important;
+        margin-left: -3% !important;
+      }
+      #congattypage .news_row{
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: 0 0 100%;
+      }
+      .newshead {
+        font-size: 30px !important;
+    }
+
+
+      #_viewmore a{
+        font-size: 12px !important;
+      }
+    }
+    @media only screen and (max-width: 1280px)  {
+      div#congattypage {
+        max-width: 118% !important;
+        width: 118% !important;
+        margin-left: -8% !important;
+      }
+      #congattypage .news_row{
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: 0 0 100%;
+      }
+      .newshead {
+        font-size: 30px !important;
+    }
+
+      #congattypage h2{
+        font-size: 30px !important;
+      }
+      #_viewmore a{
+        font-size: 12px !important;
+      }
+   }
+    </style>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -42,10 +119,21 @@
         <a class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 13%; float: right;"/></a>
 
     </div>
+    
+    <div id="side_prof_mob" style="position: relative;margin-top: 5%; z-index: 1;">
+        <a class="btn side_btn" id="news_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS</a>
+    
+        <a class="btn side_btn" id="profile_btn_mob" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE </a>
+     
+    
+        <a class="btn side_btn" id="achievement_btn_mob"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS</a>
+        
+        <a class="btn side_btn" id="programs_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS</a>
+    </div>
         <div class="container" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
-            <img src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
+            <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
 
             </div>
           </div>

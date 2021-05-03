@@ -40,10 +40,22 @@
         <a class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 13%; float: right;"/></a>
 
     </div>
+
+    <div id="side_prof_mob" style="position: relative;margin-top: 5%; z-index: 1;">
+        <a class="btn side_btn" id="news_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS</a>
+    
+        <a class="btn side_btn" id="profile_btn_mob" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE </a>
+     
+    
+        <a class="btn side_btn" id="achievement_btn_mob"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS</a>
+        
+        <a class="btn side_btn" id="programs_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS</a>
+    </div>
+
         <div class="container" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
-              <img src="{{asset('assets/vice/vicemayor.jpg')}}"style="width:70%; position: relative; height:95% !important; z-index:-1; display: block; margin-left: auto; margin-right: auto;border-radius: 10px;"/>
+              <img id="vm_pic" src="{{asset('assets/vice/vicemayor.jpg')}}"style="width:70%; position: relative; height:95% !important; z-index:-1; display: block; margin-left: auto; margin-right: auto;border-radius: 10px;"/>
             </div>
           </div>
         </div>

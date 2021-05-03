@@ -362,7 +362,7 @@
               </div>
           </div>
            <div class=" col-sm-4">
-              <div class="card" style="height: 100%;">
+              <div class="card" style="height: 100%;" id="eser">
                       <div class="card-body" id="bulletin_sec" style="padding:0 !important;border: 3px solid #003471;">
                         <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">e-SERVICES</h2>
                          
@@ -512,9 +512,34 @@
                               </div>
                             </div>
                         </div>
-
-
-
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/not-permitted.svg')}}"style="width:70%; " />
+                                          </a>
+                                      </div>
+                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <br>                                            
+                                            <p style="margin: auto; position: absolute;">Building Permit
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
+                        <div class="card" style="margin: 2%;">
+                                  <div class="card-body" style="margin-top: -10%;">
+                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                          <a >
+                                              <img src="{{asset('assets/Eservices/old-man.svg')}}"style="width:70%; " />
+                                          </a>
+                                      </div>
+                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                            <br>                                            
+                                            <p style="margin: auto; position: absolute;">OSCA
+                                            </p>
+                                      </div>
+                                  </div>
+                        </div>
                          
                       </div>
 

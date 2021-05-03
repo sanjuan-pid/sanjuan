@@ -104,6 +104,8 @@ label{
 nav div#navbarNavDropdown {
   display: block !important;
   float: right;
+  margin-left: 100px;
+
 }
 /* nav a#navbarDropdownMenuLink {
   width: 25%;
@@ -234,7 +236,7 @@ nav ul.dropdown-menu.show {
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    bottom: -82px;
+    bottom: -34px;
   }
 .carousel-indicators .active {
     opacity: 1;
@@ -252,12 +254,12 @@ nav ul.dropdown-menu.show {
     width: 20%;
 }
 .carousel-inner .col-sm-6 {
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 /*carousel-end*/
 /*mayors-start*/
 #mayors_link{
-    margin: 5% 0;
+    margin: 1% 0;
     float: right;
     font-weight: 600;
     font-size: 1.5rem;
@@ -573,7 +575,19 @@ footer .container {
 .carousel-indicators{
     margin:0 auto;
 }
-
+div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec, #gov-sites{
+        max-width: 100% !important;
+}
+nav.navbar.navbar-expand-lg.navbar-light {
+    padding: 0 !important;
+}
+nav.navbar.navbar-expand-lg.navbar-light img {
+    width: 50px !important;
+    height: 50px !important;
+}
+button.navbar-toggler{
+    margin-top:3% !important;
+}
 .mayor_ .col-4.col-sm-4 {
     width: 100% !important;
     flex: 0 0 100% !important;
@@ -670,6 +684,10 @@ div#end_footer h3 {
     font-weight: 600;
 }
 @media screen and (min-device-width: 10px) and (max-device-width: 767px) {
+    .head_{
+        height: 25px !important;
+    }
+    
     #directory .card-title {
         font-size: 20px;
     }
@@ -703,13 +721,20 @@ div#end_footer h3 {
     }
     div#mobile_nav {
         width: 56% !important;
+        right: 0%;
         position:absolute;
         right:0;
         z-index:2;
         display:none;
     }
+    .navbar-nav li{
+        display:block;
+    }
     li.nav-item.dropdown {
         width: 100%;
+    }
+    .container {
+        max-width: 100% !important;
     }
 }
 /* for footer */
@@ -1232,13 +1257,19 @@ div#Department {
 }
 .display{
     display: none;
-  
-  }
-  .lahat:hover + .display{
-      display: block;
-      color: blue !important;
-  
-  }
+}
+.lahat:hover + .display{
+    display: block;
+    color: blue !important;
+
+}
+  div#Department img {
+    border-radius: 5% !important;
+}
+div#eser {
+    margin-top: 0 !important;
+}
+
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
     .side_btn{
     left:-230px;
@@ -1487,3 +1518,122 @@ section .container .contactform{
     font-size: 12px;
   }
 }
+#side_prof_mob{
+    display:none;
+}
+@media screen and (min-device-width: 10px) and (max-device-width: 767px) {
+    .col-sm-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 8%;
+    }
+    #_viewmore a {
+        font-size: 10px !important;
+    }
+    #achievement_row {
+        /* display: block; */
+        margin-top: 0% !important;
+    }
+    img#vm_pic {
+        width: 100% !important;
+        margin-bottom: 2%;
+    }
+    .card-header.tab-card-header {
+        padding: 0 !important;
+    }
+    .cong_ .col-12.col-sm-12.mt-2 , .cong_ .col-sm-6 {
+        padding: 0  !important;
+    }
+    h1{
+        font-size:25px !important;
+    }
+    #side_prof_mob{
+        display:block;
+    }
+    div#side_prof_mob {
+        padding: 2%;
+    }
+    
+    div#side_prof_mob a {
+        display: inline-block !important;
+        width: 24%;
+        text-align: center !important;
+        font-size: 8px;
+        position: relative;
+    }
+    div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec, #gov-sites{
+            max-width: 100% !important;
+    }
+    #covid_updates .card, #eser {
+        margin-top: 12%;
+    }
+    #news #_viewmore a{
+          top: 96.9%;
+    }
+    #news  .card {
+        margin-bottom: 8%;
+    }
+    div#act {
+        margin: 13% 0;
+    }
+    
+    body {
+        background: #fff !important;
+    }
+    .side_btn{
+        left:0
+      }
+      div#side_prof {
+          position: relative !important;
+          margin-top: 0 !important;
+          width: 100%;
+          padding-bottom: 15%;
+          padding-top: 7%;
+          z-index: 1 !important;
+      }
+      #side_prof{
+          display:none;
+      }
+}
+
+/* directory page */
+@media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+    div#dtpage {
+      max-width: 65% !important;
+      width: 65% !important;
+      flex: 0 0 100%;
+    }
+    .sidedirect{
+      height: 350px !important;
+    }
+    .catdirect{
+      font-size: 20px;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+  
+    }
+    .directbtn{
+      font-size: 15px;
+      color:#1b2560;
+      font-weight: 800;
+    }
+    #konsilaman{
+      font-size: 20px;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+    }
+    .ctus{
+      font-size: 15px;
+      color:black;
+      font-weight: 500;
+      text-align: left;
+    }
+    .pula{
+      font-size: 15px;
+      color:red;
+      font-weight: 700;
+    }
+  
+  }

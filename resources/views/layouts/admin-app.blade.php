@@ -49,6 +49,15 @@
                                 Home
                                 </a>
                         </li>
+                        <li class="nav-item dropdown" id="City">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             City
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                                <li><a class="dropdown-item" href="{{route('admin.activity.act-list')}}">Activity</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.department.deparment-list')}}">Department</a></li>
+                            </ul>
+                        </li>
                         {{-- <li class="nav-item">
                             <a  class="nav-link " href="{{route('admin.records_user.records')}}" >
                                 Users
