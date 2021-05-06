@@ -26,12 +26,12 @@
     </div> --}}
     <br>
     <style>
-    @media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+    @media only screen and (max-width: 1920px) and (min-width: 1601px)  {
       div#congattypage{
         max-width: 100%;
     }
       #congattypage .newshead {
-        font-size: 40px !important;
+        font-size: 35px !important;
     }
 
       #congattypage h2{
@@ -61,9 +61,9 @@
     }
     @media only screen and (max-width: 1366px) {
       div#congattypage {
-        max-width: 110% !important;
-        width: 110% !important;
-        margin-left: -3% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0% !important;
       }
       #congattypage .news_row{
         max-width: 100% !important;
@@ -71,7 +71,7 @@
         flex: 0 0 100%;
       }
       .newshead {
-        font-size: 30px !important;
+        font-size: 22px !important;
     }
 
 
@@ -81,9 +81,9 @@
     }
     @media only screen and (max-width: 1280px)  {
       div#congattypage {
-        max-width: 118% !important;
-        width: 118% !important;
-        margin-left: -8% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0% !important;
       }
       #congattypage .news_row{
         max-width: 100% !important;
@@ -91,7 +91,7 @@
         flex: 0 0 100%;
       }
       .newshead {
-        font-size: 30px !important;
+        font-size: 22 px !important;
     }
 
       #congattypage h2{
@@ -130,7 +130,9 @@
         
         <a class="btn side_btn" id="programs_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS</a>
     </div>
-        <div class="container" style="max-width: 100%;">
+
+    <div class="container" id="congattypage">
+        <div class="container congpic" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
             <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
@@ -369,7 +371,7 @@
                           <div class=" col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h2 class="card-title"> <h1 style="font-size:40px; margin-top: 0; text-align: center;">UPDATES</h1></h2>
+                                    <h2 class="card-title"> <h1 class="newshead" >UPDATES</h1></h2>
                                         <div class="recent_big">
                                             <?php $i=0; ?>
                                              @foreach ($updates as $update)
@@ -414,9 +416,9 @@
                                 </div>
                           </div>
                           <div class=" col-sm-6">
-                                <div class="card">
+                                <div class="card ann">
                                     <div class="card-body">
-                                        <h2 class="card-title"><h1 style="font-size:40px; margin-top: 0; text-align: center;">ANNOUNCEMENT</h1></h2>
+                                        <h2 class="card-title"><h1 class="newshead">ANNOUNCEMENT</h1></h2>
                                             @foreach ($ann as $row)
                                                @if($row->show == 1)
                                                  @if($row->content_tag == "cong")
@@ -463,7 +465,7 @@
                           <div class=" col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h2 class="card-title"> <h1 style="font-size:40px; margin-top: 0; text-align: center;">UPDATES</h1></h2>
+                                    <h2 class="card-title"> <h1 class="newshead">UPDATES</h1></h2>
                                         <div class="recent_big">
                                             <?php $i=0; ?>
                                              @foreach ($updates_atty as $update)
@@ -507,9 +509,9 @@
                                 </div>
                           </div>
                           <div class=" col-sm-6">
-                                <div class="card">
+                                <div class="card ann">
                                     <div class="card-body">
-                                        <h2 class="card-title"><h1 style="font-size:40px; margin-top: 0; text-align: center;">ANNOUNCEMENT</h1></h2>
+                                        <h2 class="card-title"><h1 class="newshead">ANNOUNCEMENT</h1></h2>
                                             @foreach ($ann_atty as $row)
                                                @if($row->show == 1)
                                                   <div class="recent_big">
@@ -553,5 +555,6 @@
           </div>
         </div>
       </div>
+   </div>
                   <br>
 @endsection

@@ -10,8 +10,11 @@
                     {{ session('status') }}
                 </div>
                 @endif
-                <div class="card-header">Activities
-                    <a href="{{action('ActivityController@create')}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a>
+                <div class="card-header">
+                    @foreach($dept as $row1)
+                        <label>{{$row1->title}} Deparment</label>
+                    @endforeach
+                    <a href="{{action('DeparmentController@create_child')}}?sector={{$id}}" class="btn btn-success" style="color:#fff; float:right;">Add New</a>
                 </div>
                 
                 @if(\Session::has('success'))
@@ -33,10 +36,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                         @foreach($act as $row)
+                         @foreach($dept_child as $row)
                                 <tr id={{$row->id}}>
-                                    <td >{{$row->title}}</td>
-                                    <td  id="desc"><?php echo $row->description ?></td>
+                                    <td > <?php echo $row->name ?></td>
+                                    <td  id="desc"><?php echo$row->description ?></td>
                                     <td>
                                     
                                         {{-- <form method="post" action="{{action('AnnouncementController@makefirst',$row->id')}}" style="display: inline;" >
@@ -45,12 +48,12 @@
                                             <input type="hidden" name="id" value="{{$row->id'}}">
                                             <button type="submit" class="btn btn-info" style="color:#fff;">Show First</button>
                                         </form> --}}
-                                        <a href="{{action('ActivityController@edit', $row->id)}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                        <form method="post" class="delete_form" action="{{action('ActivityController@destroy',$row->id)}}" >
+                                        <a href="{{action('DeparmentController@child_edit', $row->id)}}" class="btn btn-info" style="color:#fff;">Edit</a>
+                                        <!-- <form method="post" class="delete_form" action="{{action('AchievementsController@destroy',$row->id)}}" >
                                             {{csrf_field()}}
                                             <input type="hidden" name="_method" value="DELETE">
                                             <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
-                                        </form>
+                                        </form> -->
                                     </td>
                                 </tr>
                          @endforeach

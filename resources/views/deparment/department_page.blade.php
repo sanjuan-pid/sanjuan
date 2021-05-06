@@ -83,60 +83,23 @@
       </div>
       <div class="row">
         <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <a class="department"href="{{route('dept_cont')}}" onclick="deptcon(event, 'deptone')">
-            <div class="card" id="carddept">
-              <div class="card-body">
-                <h5 class="card-title" id="a1">Department 1</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        @foreach($dept as $row)
+          <div class="dept_card" style="margin-bottom:2%;">
+            <a class="department" href="{{route('dept_cont')}}" onclick="deptcon(event, 'deptone')">
+          
+              <div class="card" id="carddept">
+                <div class="card-body">
+                  <h5 class="card-title" id="a1">{{ $row->title }}</h5>
+                  <p>
+                    <?php echo $row->description ;?>
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+          @endforeach
         </div>
       </div>
       <br>
-      <div class="row">
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="card" id="carddept">
-            <div class="card-body">
-              <h5 class="card-title" id="a1">Department 2</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="card" id="carddept">
-            <div class="card-body">
-              <h5 class="card-title" id="a1">Department 3</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="card" id="carddept">
-            <div class="card-body">
-              <h5 class="card-title" id="a1">Department 4</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="card" id="carddept">
-            <div class="card-body">
-              <h5 class="card-title" id="a1">Department 5</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-<br>
 @endsection

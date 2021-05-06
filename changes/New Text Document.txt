@@ -1,2 +1,6 @@
-CREATE TABLE `pid`.`department` ( `id` INT(6) NOT NULL AUTO_INCREMENT , `title` TEXT NOT NULL , `description` TEXT NOT NULL , `status` INT(6) NOT NULL , `created_at` TEXT NOT NULL , `updated_at` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
-ALTER TABLE `department` ADD `category` TEXT NOT NULL AFTER `id`;
+ALTER TABLE `department` DROP `category`;
+ALTER TABLE `department` ADD `logo` TEXT NOT NULL AFTER `id`;
+
+CREATE TABLE `pid`.`department_child` ( `id` INT(6) NOT NULL AUTO_INCREMENT ,  `sector` TEXT NOT NULL ,  `name` TEXT NOT NULL ,  `status` TEXT NOT NULL ,  `created_at` TEXT NOT NULL ,  `updated_at` TEXT NOT NULL ,    PRIMARY KEY  (`id`)) ENGINE = InnoDB;
+ALTER TABLE `department_child` ADD `description` TEXT NOT NULL AFTER `name`;
+

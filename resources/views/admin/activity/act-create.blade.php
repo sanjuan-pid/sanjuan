@@ -7,7 +7,7 @@
             <div class="card">
         
                 <div class="card-body">
-                  <p>Add Department</p>
+                  <p>Add New Content</p>
                   @if (session('status'))
                   <div class="alert alert-success" role="alert">
                       {{ session('status') }}
@@ -24,20 +24,20 @@
                       </ul>
                   </div>
                   @endif
-                  <form method="post" action="{{action('DeparmentController@store')}}" enctype="multipart/form-data">
+                  <form method="post" action="{{action('ActivityController@store')}}" enctype="multipart/form-data">
                     
                     {{csrf_field()}}
         
-                    <!-- <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Logo</label>
-                        <div class="col-sm-10">
-                          <input type="file"   name ="filename" class="form-control" id="staticEmail" >
-                        </div>
-                    </div> -->
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Sector</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Image</label>
                         <div class="col-sm-10">
-                          <input type="text"  name ="sector" class="form-control" id="staticEmail" >
+                          <input type="text"   name ="filename" class="form-control" id="staticEmail" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
+                        <div class="col-sm-10">
+                          <input type="text"   name ="title" class="form-control" id="staticEmail" >
                         </div>
                     </div>
                     <div class="form-group row">

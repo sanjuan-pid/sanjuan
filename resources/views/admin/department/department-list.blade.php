@@ -35,8 +35,8 @@
                         <tbody>
                          @foreach($dept as $row)
                                 <tr id={{$row->id}}>
-                                    <td >{{$row->title}}</td>
-                                    <td  id="desc">{{$row->description}}</td>
+                                    <td ><a href="child_dept/<?php echo $row->id ?>" > <?php echo $row->title ?> </a></td>
+                                    <td  id="desc"><?php echo$row->description ?></td>
                                     <td>
                                     
                                         {{-- <form method="post" action="{{action('AnnouncementController@makefirst',$row->id')}}" style="display: inline;" >
@@ -45,12 +45,12 @@
                                             <input type="hidden" name="id" value="{{$row->id'}}">
                                             <button type="submit" class="btn btn-info" style="color:#fff;">Show First</button>
                                         </form> --}}
-                                        <a href="{{action('AchievementsController@edit', $row->id)}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                        <form method="post" class="delete_form" action="{{action('AchievementsController@destroy',$row->id)}}" >
+                                        <a href="{{action('DeparmentController@edit', $row->id)}}" class="btn btn-info" style="color:#fff;">Edit</a>
+                                        <!-- <form method="post" class="delete_form" action="{{action('AchievementsController@destroy',$row->id)}}" >
                                             {{csrf_field()}}
                                             <input type="hidden" name="_method" value="DELETE">
                                             <button type="submit" class="btn btn-danger delete_btn" id="delete_btn">Delete</button>
-                                        </form>
+                                        </form> -->
                                     </td>
                                 </tr>
                          @endforeach

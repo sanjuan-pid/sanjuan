@@ -24,7 +24,7 @@
                       </ul>
                   </div>
                   @endif
-                  <form method="post" action="{{action('DeparmentController@store')}}" enctype="multipart/form-data">
+                  <form method="post" action="{{action('DeparmentController@store_child')}}" enctype="multipart/form-data">
                     
                     {{csrf_field()}}
         
@@ -34,10 +34,12 @@
                           <input type="file"   name ="filename" class="form-control" id="staticEmail" >
                         </div>
                     </div> -->
+                  
+                    <input type="hide"  name ="sector" class="form-control" id="staticEmail" value ="  <?php echo $_GET['sector'] ?>">
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Sector</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Department</label>
                         <div class="col-sm-10">
-                          <input type="text"  name ="sector" class="form-control" id="staticEmail" >
+                          <input type="text"  name ="department" class="form-control" id="staticEmail" >
                         </div>
                     </div>
                     <div class="form-group row">
