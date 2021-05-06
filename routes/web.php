@@ -158,13 +158,20 @@ Route::prefix('admin')->group(function(){
 
     //Activity
     Route::get('/activity/act-list', 'ActivityController@index')->name('admin.activity.act-list');
+    Route::post('/activity/act-list', 'ActivityController@index');
     // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
-    Route::resource('/activity','AchievementsController');
+    Route::resource('/activity','ActivityController');
 
     //Department
     Route::get('/department/department-list', 'DeparmentController@index')->name('admin.department.deparment-list');
     Route::post('/department/department-create', 'DeparmentController@create')->name('admin.department.deparment-create');
+    //child
+    Route::get('/department/child_dept/{id}','DeparmentController@child')->name('admin.department.child_dept');
+    Route::get('/department/child_dept_edit/{id}', 'DeparmentController@child_edit')->name('admin.department.deparment-edit');
+    Route::get('/department/department-create-child', 'DeparmentController@create_child')->name('admin.department.deparment-creates');
+    Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
     Route::resource('/department','DeparmentController');
   
+
     
 });

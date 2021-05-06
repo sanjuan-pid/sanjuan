@@ -258,7 +258,7 @@
         </div>
     </div>
 </div>
-    <div class="container" id="covid_updates" style="padding: 0 !important;">
+    <div class="container" id="covid_updates" style="padding: 0 !important; display:none;">
         <div class="row justify-content-md-center" style="position:relative;">
             <div class=" col-sm-12" style="padding: 0 !important;">
                 <div class=" col-sm-4" style="float: left; ">

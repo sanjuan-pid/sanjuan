@@ -10,5 +10,6 @@ class Activity extends Model
     protected $fillable = [
         'title', 'description', 'content_tag'
     ];
+    
 }
-}
+
