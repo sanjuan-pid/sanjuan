@@ -50,12 +50,12 @@ div#agenda_row {
     margin-top: -23%;
 }
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 footer .container {
     border-top: 1px solid #274d78;
@@ -73,10 +73,10 @@ footer .container .row {
 }
 #news_sec , #mayors_corner, #news_sec, #directory , img , .cards{
     opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: .5s;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
 }
 
 #news1_sec , #mayors_corner, #news1_sec, #directory , img , .cards{
@@ -134,11 +134,11 @@ nav ul.dropdown-menu.show {
     margin-top:2%;
     color:#fff;
     padding: 0 1px;
-   	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1s;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
 
 }
 #directory .col-sm-10, #directory .col-sm-2{
