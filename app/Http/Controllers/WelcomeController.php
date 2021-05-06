@@ -38,7 +38,11 @@ class WelcomeController extends Controller
         $news2 = DB::select('select id , title, filename, date(created_at), DATE(NOW()) - INTERVAL 2 DAY from news 
                 where DATE(created_at) <= DATE(NOW()) - INTERVAL 2 DAY
                 and status = 1 and content_type = "News";', [1]);
-                
-        return view('/welcome', compact('mayors','news','announcement','events','brgy_announcement'),['news2' => $news2]);
+        $act = News::where('status', 1)
+                ->where('content_type', "Act")     
+                ->where('content_tag', 0)   
+                ->orderBy('created_at', 'desc')
+                ->get();
+        return view('/welcome', compact('mayors','news','announcement','events','brgy_announcement','act'),['news2' => $news2]);
     }
 }

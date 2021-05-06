@@ -556,7 +556,7 @@
                     <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
                         <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align:center;">ACTIVITY</h2>
                           <?php $i=0; ?>
-                              @foreach($news as $row)
+                              @foreach($act as $row)
                                 <?php $i++; ?>
                                 <div class="card" style="margin: 2%;">
                                     <div class="card-body" id="bulletin_bod">
