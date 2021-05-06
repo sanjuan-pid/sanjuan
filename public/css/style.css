@@ -572,6 +572,7 @@ footer .container {
     display:block;
 }
 @media screen and (min-device-width: 10px) and (max-device-width: 767px) {
+
 .carousel-indicators{
     margin:0 auto;
 }
@@ -1531,6 +1532,9 @@ section .container .contactform{
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 8%;
+    }
+    #eser1 {
+    margin-top: 10% !important;
     }
     #_viewmore a {
         font-size: 10px !important;

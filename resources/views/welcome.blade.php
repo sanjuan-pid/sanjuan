@@ -31,7 +31,7 @@
 
         <div class="container" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
            <div class="row justify-content-md-center" style="position:relative;">
-                <div class="col-sm-3" id="aanouncementss">
+                <div class="col-sm-3" id="aanouncementss" style="z-index: 10;">
                     <div class="card" id="news_card" style="border: 3px solid #003471;">
                         <h2 class="card-title blue" style="text-align:center;color:#fff !important;font-size:17pt; margin-bottom: 0!important;">ANNOUNCEMENT</h2>
                         <div class="card-body sc" style="overflow-y: scroll; direction:;">
@@ -235,7 +235,9 @@
                               <a  href="{{action( 'Pages@news_contents', $row['id'] )}}" style="color:#000;" >
                                 <h2 id="article_title">{{$row['title']}}</h2>
                               </a>
-                              <p id="article_contents">{{$row['desc']}}</p>
+                              <div id="article_contents">
+                                  <?php echo $row['desc'] ?>
+                              </div>
                               {{-- <a id="article_link"  href="news_article" style="margin-top:2%;color:#2b92b0; font-weight: 700; float: right;" >READ MORE</a> --}}
                             </div>
                           </div>
@@ -258,7 +260,7 @@
         </div>
     </div>
 </div>
-    <div class="container" id="covid_updates" style="padding: 0 !important;">
+    <div class="container" id="covid_updates" style="padding: 0 !important; display:none;">
         <div class="row justify-content-md-center" style="position:relative;">
             <div class=" col-sm-12" style="padding: 0 !important;">
                 <div class=" col-sm-4" style="float: left; ">
@@ -361,7 +363,7 @@
 
               </div>
           </div>
-           <div class=" col-sm-4">
+           <div class=" col-sm-4" id="eser1">
               <div class="card" style="height: 100%;" id="eser">
                       <div class="card-body" id="bulletin_sec" style="padding:0 !important;border: 3px solid #003471;">
                         <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">e-SERVICES</h2>
