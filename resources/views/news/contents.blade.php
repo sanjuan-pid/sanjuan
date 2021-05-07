@@ -19,7 +19,7 @@
             </div>
             <br><br>
         </div>
-        <div class="col-sm-3" >
+        <div class="col-sm-3"style="margin-bottom: 7%;" >
             <br><br>
             <div class="card" style="width: 18rem;">
                 <div class="card-header">

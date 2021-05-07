@@ -187,7 +187,7 @@
                             </div>
                         </div>
                         <div id="_viewmore">
-                          <a  href="/contents/list">view more articles</a>
+                          <a  href="{{action( 'Pages@news_list')}}" target="_blank" >view more articles</a>
                         </div>
                 </div>
 
