@@ -356,7 +356,7 @@
                                   @break
                               @endif
                           @endforeach
-                          <div id="_viewmore">
+                          <div id="_viewmore" style="position: relative;margin-bottom: 5%;">
                             <a  href="{{action( 'Pages@news_list')}}">view more articles</a>
                         </div>
                   </div>
