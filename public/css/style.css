@@ -1739,3 +1739,8 @@ section .container .contactform{
 .ann{
     height:100%;
 }
+
+div#Department img {
+    width: 100% !important;
+    height: 100% !important;
+}
