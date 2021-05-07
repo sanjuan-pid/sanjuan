@@ -1739,8 +1739,18 @@ section .container .contactform{
 .ann{
     height:100%;
 }
-
 div#Department img {
     width: 100% !important;
     height: 100% !important;
 }
+li.list-group-item.latest_news a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* margin-top: 5%; */
+    font-size: 14px;
+    line-height: 16px;
+}
+

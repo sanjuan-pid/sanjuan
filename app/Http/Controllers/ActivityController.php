@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Activity;
+use App\News;
 
 class ActivityController extends Controller
 {
@@ -23,10 +24,10 @@ class ActivityController extends Controller
     {
         // // $ann = Announcement::all()->toArray();
         // $redirectTo = $_GET["content_type"];
-        $act = DB::select('select * from activity
+        $act = DB::select('select * from news
             where status = 1 
+            and content_type = "Act"
             order by created_at desc;');
-        // return ($redirectTo);
         return view('admin.activity.act-list', compact('act'));
         //
     }
@@ -35,44 +36,76 @@ class ActivityController extends Controller
     }
     public function store(Request $request)
     {
-        //para marequire nya ung sa form
+
+        $hide = DB::table('news')
+        ->where('id', '!=', 0)
+        ->where('content_type', '=', "Act")
+        ->update(['show' => 0]);
+
+        
         $this->validate($request,[
-            'filename' => 'required',
             'title' => 'required',
             'description' => 'required',
+            'filename' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
         
-        $act = new activity();
-        $act->filename = $request->filename;
-        $act->title = $request->title;
-        $act->description = $request->description;
-        $act->show_ = "";
-        $act->content_tag = "";
-        $act->status = 1;
-        $act->save();
+        $cover = $request->file('filename');
+        $extension = $cover->getClientOriginalExtension();
+        Storage::disk('public')->put('Activity/'.$cover->getFilename().'.'.$extension,  File::get($cover));
+        //get values ng mga nasa form to save
+        $ann = new News();
+        $ann->title = $request->title;
+        $ann->desc = $request->description;
+        $ann->filename = $request->filename;
+        $ann->status = 1;
+        $ann->show = 1;
+        $ann->content_type = "Act";
+        $ann->content_tag = 0;
         
+        
+        $ann->filename = 'Activity/'.$cover->getFilename().'.'.$extension;
+        $ann->save();
         return redirect()->route('admin.activity.act-list')->with('success','Data Added');
     }
     public function edit($id)
     {
-        $act = activity::find($id); 
+        $act = news::find($id); 
         return view('admin.activity.act-edit',compact('act', 'id'));
        
     }
     public function update(Request $request, $id)
     {
+
         $this->validate($request,[
             'title' => 'required',
             'description' => 'required',
+           
         ]);
-        // dd($request->get('description'));
-        $act_update = activity::find($id);
-        $act_update->filename = $request->get('filename');
-        $act_update->title = $request->get('title');
-        $act_update->description = $request->get('description');
-        $act_update->save();
 
-        return redirect()->route('admin.activity.act-list')->with('success', 'Data inserted');
+        if($request->file('filename') != null){
+            $cover = $request->file('filename');
+            $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->put('Activity/'.$cover->getFilename().'.'.$extension,  File::get($cover));
+            //get values ng mga nasa form to save
+            $filename = 'Activity/'.$cover->getFilename().'.'.$extension;
+        }
+        else{
+            $filename= $request->get('filename_');
+        }
+        $update = News::find($id);
+        $update->title = $request->get('title');
+        $update->desc = $request->get('description');
+        $update->filename = $filename;
+
+        $update->save();
+        return redirect()->route('admin.activity.act-list')->with('success','Data Updated');
         
+    }
+    public function destroy($id)
+    {
+        $news = news::find($id);
+        $news->status = 0;
+        $news->save();
+        return redirect()->route('admin.activity.act-list')->with('success', 'Activity is already removed');
     }
 }

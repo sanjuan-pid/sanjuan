@@ -357,7 +357,7 @@
                               @endif
                           @endforeach
                           <div id="_viewmore">
-                            <a  href="/contents/list">view more articles</a>
+                            <a  href="{{action( 'Pages@news_list')}}">view more articles</a>
                         </div>
                   </div>
 

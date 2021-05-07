@@ -31,7 +31,7 @@
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Image</label>
                         <div class="col-sm-10">
-                          <input type="text"   name ="filename" class="form-control" id="staticEmail" >
+                          <input type="file"   name ="filename" class="form-control" id="staticEmail" >
                         </div>
                     </div>
                     <div class="form-group row">
