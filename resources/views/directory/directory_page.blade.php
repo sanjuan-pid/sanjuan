@@ -24,150 +24,31 @@
 
         </div>
     </div> --}}
-<style>
-.sidedirect {
-  background-color: #fff;
-  position: absolute !important;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius:5px;
-  margin-top: .2%;
-  width:190px;
-  height:400px;
 
-}
-.tb{
-  transition: 0.3s;
-}
-#sjch1{
-  font-size: 25px;
-  color:#1b2560;
-  font-weight: bolder;
-}
-#sjch2{
-  font-size: 25px;
-  color: red;
-  font-weight:700;
-}
-.catdirect{
-  font-size: 20px;
-  color:#1b2560;
-  font-weight: 900;
-  text-align: center;
-
-}
-#sjchaa{
-  font-size: 16px;
-  color:#1b2560;
-  font-weight: bolder;
-}
-
-.directbtn{
-  font-size: 15px;
-  color:#1b2560;
-  font-weight: 800;
-}
-#sjchbrgy{
-  font-size: 20px;
-  color:#1b2560;
-  font-weight: bolder;
-}
-#konsilaman{
-  font-size: 20px;
-  color:#1b2560;
-  font-weight: 900;
-  text-align: center;
-}
-.ctus{
-  font-size: 15px;
-  color:black;
-  font-weight: 500;
-  text-align: left;
-}
-.pula{
-  font-size: 15px;
-  color:red;
-  font-weight: 700;
-}
-.sjcat{
-  font-size: 20px;
-  color:red;
-  font-weight: 700;
-  text-align: center;
-}
-
-
-/* Create an active/current "tab button" class */
-.tb .active {
-  color: red;
-}
-.w3-bar-item:hover {
-  color: red;
-}
-@media screen and (max-width: 766px) and (min-width: 200px) {
-  #dtpapge{
-    max-width: 100% !important;
-    width: 100% !important;
-    flex: 0 0 100%;
-  }
-  #dtpage .col-sm-4 #tab3 #e{
-    font-size: 15px !important;
-    margin-left: -40% !important;
-  }
-    #dtpage h1{
-      font-size: 25px;
-    }
-    .pula{
-      font-size: 12px !important;
-    }
-    #dtpage .w3-container{
-      margin-top: 5%;
-    }
-    #dtpage .sidedirect{
-      width: 50% !important;
-      position:absolute;
-      left: :0;
-      z-index:2;
-      display:none;
-    }
-    /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    tr { border: 1px solid #ccc; }
-
-    td {
-        /* Behave  like a "row" */
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 50%;
-        font-size: 12px;
-    }
-
-    td:before {
-        /* Now like a table header */
-        position: absolute;
-        /* Top/left values mimic padding */
-        top: 6px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-    }
-}
-</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/dev_h.css">
+  <div class="container" id="conus">
+    <div class="contactform mt-5">
+      <div class="row">
+        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+          <p id="sjch1"> San Juan City Hotline:<span id="sjch2"> 137-135</span></p>
+        </div>
+        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+          <p id="sjch1"> Mayor's Office Hotline (Smart):<span id="sjch2"> 0961-680-5514</span></p>
+        </div>
+        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+          <p id="sjch1"> Mayor's Office Hotline (Globe):<span id="sjch2"> 0956-529-7286</span></p>
+        </div>
+        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+          <p id="sjch1"> City Heath Office (Covid-19):<span id="sjch2"> 7949 8358 / 8655 8683</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+<br>
 <div class="container mt-5" id="dtpage">
   <div class="w3-container" style=" box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); border-radius:5px; z-index: 100;">
     <h1 class="text-center" style="font-weight:800;">San Juan City Directory</h1>

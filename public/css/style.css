@@ -736,7 +736,7 @@ div#end_footer h3 {
         right: 0%;
         position:absolute;
         right:0;
-        z-index:2;
+        z-index:12;
         display:none;
     }
     .navbar-nav li{
@@ -800,7 +800,7 @@ div#end_footer h3 {
         width: 50%;
         position:fixed;
         right:0;
-        z-index:2;
+        z-index:12 !important;
         display:none;
     }
 
@@ -1596,6 +1596,13 @@ section .container .contactform{
       #side_prof{
           display:none;
       }
+      a.navbar-brand {
+        padding: 0;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light img {
+        width: 65px !important;
+        height: 65px !important;
+    }
 }
 
 /* directory page */

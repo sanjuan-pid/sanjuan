@@ -133,7 +133,7 @@
                   <br>
               <!-- <div class="q"><img src="{{asset('assets/gold.png')}}"  style="width: 540px; border-radius: 5px; z-index:-1"/></div> -->
                     <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b; border-bottom: 5px solid red;">VISION</h3>
-                    <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p>
+                    <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and eco-friendly environment.</p>
                     <br>
             </div>
             <div class=" col-6 col-sm-6 col-md-6 col-lg-6 vm">
@@ -141,7 +141,7 @@
               <!-- <div class="q"><img src="{{asset('assets/gold.png')}}"  style="width: 540px; border-radius: 5px; z-index:-1"/></div> -->
               <!-- <div class="vision" style="position: relative;top: auto;width: 80%;left: 11%;"> -->
               <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;border-bottom: 5px solid red;">MISSION</h3>
-              <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">To provide quality and effective asocial services, pursue sustainable, inclusive and equitable economic growth, and promote ecological balance through a responsive, transparent, efficient, and technologically advanced governance in partnership an empowered people towards achieving the city of excellence.</p>
+              <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">To provide quality and effective social services, pursue sustainable, inclusive and equitable economic growth, and promote ecological balance through a responsive, transparent, efficient, and technologically advanced governance in partnership an empowered people towards achieving the city of excellence.</p>
             <br>
           </div>
        </div>

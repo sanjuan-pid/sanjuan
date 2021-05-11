@@ -518,7 +518,7 @@
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
                                           <a >
-                                              <img src="{{asset('assets/Eservices/not-permitted.svg')}}"style="width:70%; " />
+                                              <img src="{{asset('assets/Eservices/buildingpermit.svg')}}"style="width:70%; " />
                                           </a>
                                       </div>
                         <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">

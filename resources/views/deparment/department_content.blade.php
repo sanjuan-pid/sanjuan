@@ -74,7 +74,7 @@
     }
 
     .buttondept:hover span {
-      padding-right: 25px;
+      padding-right: 0;
     }
 
     .buttondept:hover span:after {
@@ -108,16 +108,16 @@
       right: 0;
     }
     .dt .active span{
-      padding-right: 25px;
+      padding-right: 0px;
     }
     .dt .active{
       background-color: blue;
       color: white;
     }
-    @media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+    @media only screen and (max-width: 1920px) and (min-width: 1601px)  {
       div#dpcon {
-        max-width: 60% !important;
-        width: 60% !important;
+        max-width: 100% !important;
+        max-width: 100% !important;
         flex: 0 0 100%;
         padding-bottom: 225px;
       }
@@ -246,22 +246,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <div class="container" id="dpcon">
-      <div class="container mt-3" id="dtpage">
-        <h3 id="h3con" style="text-align: center; color: #1f1c4b; font-size: 50px; font-weight: 700;">DEPARTMENT'S NAME</h3>
+      <div class="container mt-4" id="dtpage">
+        <h3 id="h3con" style="text-align: center; color: #1f1c4b; font-size: 50px; font-weight: 700; text-transform:uppercase;">
+          @foreach($dept as $row)
+
+          <?php $selected = $_GET['id'] ;
+              if($selected == $row->id)
+              echo $row->title;
+          ?>
+          @endforeach
+        </h3>
 
       <div class="container mt-3">
         <div class="deptside  dt" id="mysb">
           <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-          <br>
-          <button class="buttondept deptlinks" onclick="deptcon(event, 'deptone')"id="defaultOpen"><span>Department 1</span></button>
-          <br>
-          <button class="buttondept deptlinks" onclick="deptcon(event, 'depttwo')"><span>Department 2</span></button>
+          @foreach($dept as $row)
+            @if($selected == $row->id)
+              <button class="buttondept deptlinks" onclick="deptcon(event, {{$row->id}})" id="defaultOpen"><span>{{$row->title}}</span></button>
+            <br>
+            @else
+              <button class="buttondept deptlinks" onclick="deptcon(event, {{$row->id}})" id=""><span>{{$row->title}}</span></button>
+              <br>
+            @endif
+          @endforeach
+          {{-- <button class="buttondept deptlinks" onclick="deptcon(event, 'depttwo')"><span>Department 2</span></button>
           <br>
           <button class="buttondept deptlinks" onclick="deptcon(event, 'deptthree')"><span>Department 3</span></button>
           <br>
           <button class="buttondept deptlinks" onclick="deptcon(event, 'deptfour')"><span>Department 4</span></button>
           <br>
-          <button class="buttondept deptlinks" onclick="deptcon(event, 'deptfive')"><span>Department 5</span></button>
+          <button class="buttondept deptlinks" onclick="deptcon(event, 'deptfive')"><span>Department 5</span></button> --}}
         </div>
       </div>
 
@@ -272,215 +286,32 @@
           <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
         </div>
         <br>
-          <div class="w3-container  ml-5 deptcontent" id="deptone">
-                  <div class="row">
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                      <a class="department"href="{{route('dept_cont')}}">
-                        <div class="card" id="carddept">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                <h5 class="card-title" id="a1">Department 1 Name</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                              <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="row">
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                      <a class="department"href="{{route('dept_cont')}}">
-                        <div class="card" id="carddept">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                <h5 class="card-title" id="a1">Department 1 Name</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                              <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
+        @foreach($dept as $row)
+          <div class="w3-container  ml-5 deptcontent" id="{{$row->id}}" >
+            @foreach($child as $row1)
+                @if($row->id == $row1->sector)
+                    <div class="row">
+                      <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+                        <a class="department"href="{{route('department_selected', 'id='.$row1->id )}}">
+                          <div class="card" id="carddept">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
+                                  <h5 class="card-title" id="a1">{{$row1->name}}</h5>
+                                  <div class="card-text"><?php echo $row1->description ?></div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-        </div>
 
-          <div class="w3-container ml-5 deptcontent" id="depttwo">
-                    <div class="row">
-                      <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="department"href="{{route('dept_cont')}}">
-                          <div class="card" id="carddept">
-                            <div class="card-body">
-                              <div class="row">
-                                <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                  <h5 class="card-title" id="a1">Department 2 Name</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                  <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
                     <br>
-                    <div class="row">
-                      <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="department"href="{{route('dept_cont')}}">
-                          <div class="card" id="carddept">
-                            <div class="card-body">
-                              <div class="row">
-                                <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                  <h5 class="card-title" id="a1">Department 2 Name</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                  <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
+                @endif
+            @endforeach
           </div>
-
-          <div class="w3-container ml-5 deptcontent" id="deptthree">
-                    <div class="row">
-                      <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="department"href="{{route('dept_cont')}}">
-                          <div class="card" id="carddept">
-                            <div class="card-body">
-                              <div class="row">
-                                <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                  <h5 class="card-title" id="a1">Department 3 Name</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                  <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                      <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                        <a class="department"href="{{route('dept_cont')}}">
-                          <div class="card" id="carddept">
-                            <div class="card-body">
-                              <div class="row">
-                                <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                  <h5 class="card-title" id="a1">Department 3 Name</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                  <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-        </div>
-
-        <div class="w3-container ml-5 deptcontent" id="deptfour">
-                  <div class="row">
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                      <a class="department"href="{{route('dept_cont')}}">
-                        <div class="card" id="carddept">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                <h5 class="card-title" id="a1">Department 4 Name</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                              <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="row">
-                    <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                      <a class="department"href="{{route('dept_cont')}}">
-                        <div class="card" id="carddept">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                <h5 class="card-title" id="a1">Department 4 Name</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                              <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                                <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-      </div>
-
-      <div class="w3-container ml-5 deptcontent" id="deptfive">
-                <div class="row">
-                  <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                    <a class="department"href="{{route('dept_cont')}}">
-                      <div class="card" id="carddept">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                              <h5 class="card-title" id="a1">Department 5 Name</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                            <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                              <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-                    <a class="department"href="{{route('dept_cont')}}">
-                      <div class="card" id="carddept">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                              <h5 class="card-title" id="a1">Department 5 Name</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                            <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
-                              <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-    </div>
+        @endforeach
     </div>
 
 
@@ -515,5 +346,11 @@ function deptcon(dp, deptname) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+$(document).ready(function(){
+  $( ".buttondept" ).click(function() {
+    var title = (this).html();
+    $("#h3con").html(title);
+  });
+});
 </script>
 @endsection

@@ -13,7 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @include('admin.inc.count')
+                    {{-- @include('admin.inc.count') --}}
+                    <p id="demo"></p>
                     <div class="row" style="display:none;">
                         <div class="col-md-12">
                             <h3>Add Data</h3>
@@ -69,4 +70,5 @@
         </div>
     </div>
 </div>
+
 @endsection

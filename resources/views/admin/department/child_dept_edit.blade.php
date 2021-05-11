@@ -28,17 +28,19 @@
                 @endif
 
                 <div class="card-body">
-                  <form method="post" action="{{action('DeparmentController@update', $id)}}" enctype="multipart/form-data">
+                  <form method="post" action="{{action('DeparmentController@update_child', $id)}}" enctype="multipart/form-data">
                     {{csrf_field()}}
+                    <input type="hidden" name="_method" value="POST" />
+                    
                     @foreach($dept_child as $row)
                        
                     
-                    <input type="hidden" name="_method" value="PATCH" />
+                    <input type="hidden" name ="sector" class="form-control" value="{{$row->sector}}">
                     <div class="form-group row">
 
                         <label for="staticEmail" class="col-sm-4 col-form-label"><b>Title</b></label>
                         <div class="col-sm-8">
-                          <input type="text" name ="title" class="form-control" value="{{$row->name}}">
+                          <input type="text" name ="name" class="form-control" value="{{$row->name}}">
                         </div>
                       </div>
                     <div class="form-group row">

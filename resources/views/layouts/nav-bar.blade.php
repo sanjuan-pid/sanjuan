@@ -19,6 +19,7 @@
         <title>San Juan City</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{asset('css/style.css')}}" rel="stylesheet">
+        <link href="{{asset('css/dev_h.css')}}" rel="stylesheet">
         <style>
 
         </style>
@@ -330,3 +331,33 @@
     </footer>
 </html>
 <script src="{{asset('js/script.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $.ajax({
+            
+           type: "GET",
+           url: "http://localhost/php-api-master/api/news/read.php",
+           dataType: "json",
+           contentType: "application/json",
+           success: function(res) {
+                console.log(res);
+                var text = "sss";
+                // $.each(myJSON , function(index, val) { 
+                //     console.log(index, val);
+                // });
+                                
+                document.getElementById("demo").innerHTML = text;
+            }
+       });
+    var datesBooking = [
+    {"date": "04\/24\/2018"},
+      {"date": "04\/25\/2018"}
+    ];
+    
+    datesBooking.forEach(function(data, index) {
+      console.log(index);
+    });
+});
+
+</script>

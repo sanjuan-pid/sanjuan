@@ -71,9 +71,10 @@ section .container .contactinfo{
   border-radius: 5px;
 }
 section .container .contactinfo h2{
-  color: #fff !important;
-  font-size: 24px;
-  font-weight: 500;
+  color:white !important;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
 }
 section .container .contactinfo .info{
   position: relative;
@@ -84,7 +85,7 @@ section .container .contactinfo .info li{
   position: relative;
   list-style: none;
   display: flex;
-  margin: 20px 0;
+  margin: 50px 0;
   cursor: pointer;
   align-items: flex-start;
 }
@@ -95,13 +96,12 @@ section .container .contactinfo .info li span:nth-child(1){
 section .container .contactinfo .info li span:nth-child(1) img{
   max-width: 100%;
   filter: invert(1);
-  opacity: 0.5;
 }
 section .container .contactinfo .info li span:nth-child(2){
-  color: #fff !important;
+  color:white !important;
   margin-left: 10px;
-  font-weight: 500;
-  opacity: 0.5;
+  font-weight: 600;
+  font-size: 17px;
 
 }
 section .container .contactinfo .info li:hover span:nth-child(1) img,

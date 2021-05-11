@@ -107,4 +107,20 @@ class DeparmentController extends Controller
         return redirect()->route('admin.department.child_dept', ['id' => $id])->with('success','Data Added');
     }
 
+    public function update_child(Request $request, $id)
+    {
+        $this->validate($request,[
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+        // dd($request->get('description'));
+        $dept_update = department_child::find($id);
+        $dept_update->name = $request->get('name');
+        $dept_update->sector = $request->get('sector');
+        $dept_update->description = $request->get('description');
+        $dept_update->save();
+
+        return redirect()->route('admin.department.child_dept', ['id' => $dept_update->sector])->with('success', 'Data Updated');
+        
+    }
 }
