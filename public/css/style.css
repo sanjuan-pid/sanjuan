@@ -736,7 +736,7 @@ div#end_footer h3 {
         right: 0%;
         position:absolute;
         right:0;
-        z-index:2;
+        z-index:12;
         display:none;
     }
     .navbar-nav li{
