@@ -239,7 +239,7 @@
               <img src="{{asset('assets/Events/Picture6.png')}}" style="width: 598px; height: 400px;">
               <div class="container">
                 <br>
-                <p style="text-align: justify;">Dancing to the beat of Watttah! Wattah! San Juan Festival’s official jingle which was composed, arranged and recorded by the renowned composer and musician, Vehnee Saturno and re-mixed with a modern dance hit of the year, the street dancers’ cheerful and energetic choreography is enough to entice the people to dance along while getting wet through the continuous water falls and splashes coming from a stand-by snorkel fire truck.  
+                <p style="text-align: justify;color:#000 !important;">Dancing to the beat of Watttah! Wattah! San Juan Festival’s official jingle which was composed, arranged and recorded by the renowned composer and musician, Vehnee Saturno and re-mixed with a modern dance hit of the year, the street dancers’ cheerful and energetic choreography is enough to entice the people to dance along while getting wet through the continuous water falls and splashes coming from a stand-by snorkel fire truck.  
                 </p> 
               </div>
             </div> 
