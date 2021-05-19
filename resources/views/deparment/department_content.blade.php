@@ -98,7 +98,7 @@
       text-align: center;
       font-size: 18px;
       padding: 15px;
-      width: 200px;
+      width: 195px;
       transition: all 0.5s;
       cursor: pointer;
       margin: 5px;
@@ -113,6 +113,9 @@
     .dt .active{
       background-color: blue;
       color: white;
+    }
+    footer {
+        margin-top: 7%;
     }
     @media only screen and (max-width: 1920px) and (min-width: 1601px)  {
       div#dpcon {
@@ -262,10 +265,10 @@
           <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
           @foreach($dept as $row)
             @if($selected == $row->id)
-              <button class="buttondept deptlinks" onclick="deptcon(event, {{$row->id}})" id="defaultOpen"><span>{{$row->title}}</span></button>
+              <button class="buttondept deptlinks" onclick="deptcon(event, {{$row->id}})" id="defaultOpen">{{$row->title}}</button>
             <br>
             @else
-              <button class="buttondept deptlinks" onclick="deptcon(event, {{$row->id}})" id=""><span>{{$row->title}}</span></button>
+              <button class="buttondept deptlinks" onclick="deptcon(event, {{$row->id}})" id="">{{$row->title}}</button>
               <br>
             @endif
           @endforeach
@@ -348,7 +351,7 @@ function deptcon(dp, deptname) {
 document.getElementById("defaultOpen").click();
 $(document).ready(function(){
   $( ".buttondept" ).click(function() {
-    var title = (this).html();
+    var title = $(this).html();
     $("#h3con").html(title);
   });
 });

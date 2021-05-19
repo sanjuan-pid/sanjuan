@@ -335,29 +335,25 @@
 <script>
 $(document).ready(function(){
     $.ajax({
-            
-           type: "GET",
+         
+           type: "POST",
            url: "http://localhost/php-api-master/api/news/read.php",
+           
            dataType: "json",
            contentType: "application/json",
-           success: function(res) {
-                console.log(res);
-                var text = "sss";
-                // $.each(myJSON , function(index, val) { 
-                //     console.log(index, val);
-                // });
-                                
-                document.getElementById("demo").innerHTML = text;
-            }
+           success: function(data){
+              console.log(data.table_news);
+              console.log(data.table_news[1][0].id);
+              console.log(data.table_news[2][0].id);
+              var count = data.table_news.length;
+              for (i = 0; i < count; i++) {
+                console.log(data.table_news[i][0].id + " : " +  data.table_news[i][1].title );
+                }
+              },
+                error: function(err) {
+                    console.log(err);
+                }
        });
-    var datesBooking = [
-    {"date": "04\/24\/2018"},
-      {"date": "04\/25\/2018"}
-    ];
-    
-    datesBooking.forEach(function(data, index) {
-      console.log(index);
-    });
-});
+  });
 
 </script>

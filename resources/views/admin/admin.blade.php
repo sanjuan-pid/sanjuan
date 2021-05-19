@@ -70,5 +70,29 @@
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $.ajax({
+            
+           type: "GET",
+           url: "http://localhost/php-api-master/api/news/read.php",
+           dataType: "json",
+           success: function(res) {
+                console.log(res);
+                var text = "sss";
+                var myJSON = JSON.stringify(res);
+                console.log(myJSON);
+                var obj = JSON.parse(myJSON);
+                console.log(myJSON);
+                // $.each(myJSON , function(index, val) { 
+                //     console.log(index, val);
+                // });
+                                
+                document.getElementById("demo").innerHTML = text;
+            }
+       });
+});
 
+</script>
 @endsection

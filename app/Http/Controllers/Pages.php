@@ -47,6 +47,7 @@ class Pages extends Controller
         $ann = DB::select('select * from news
                             where id='.$id, [1]);
         $news = News::where('status', 1)
+                    ->where('content_type', "news")
                     ->orderBy('created_at', 'desc')
                     ->get();
         $events = News::where('status', 1)

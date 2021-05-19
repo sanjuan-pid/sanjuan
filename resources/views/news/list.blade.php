@@ -14,7 +14,7 @@
                                     <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  style="color:#000; text-transform: uppercase;" >    
                                         <div class="col-sm-12">
                                             <h3>{{$row['title']}}</h3>
-                                            <p id="descriptions_">{{$row['desc']}}</p>
+                                            <p id="descriptions_"><?php echo $row['desc'] ?></p>
                                         </div>  
                                     </a>
                                 </li>
@@ -36,7 +36,7 @@
                                     <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  style="color:#000; text-transform: uppercase;" >     
                                         <div class="col-sm-12">
                                             <h3>{{$row['title']}}</h3>
-                                            <p id="descriptions_">{{$row['desc']}}</p>
+                                            <p id="descriptions_"><?php echo $row['desc'] ?></p>
                                         </div>  
                                     </a>
                                 </li>

@@ -100,7 +100,7 @@
                         <ol class="carousel-indicators">
                           <?php
                           $counter = 0;
-                          foreach ($news as $item) {
+                          foreach ($events as $item) {
                                 $counter++;
                                 // echo $counter;
                                 //  echo $counter-1;
