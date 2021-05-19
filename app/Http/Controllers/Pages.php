@@ -231,11 +231,11 @@ class Pages extends Controller
     }
     public function department()
     {
-       //return view('Events/Brgy_page');
+       return view('Events/Brgy_page');
     $dept = DB::select('select * from department
     where status= 1');
     // dd($dept);
-        return view('deparment.department_page',compact('dept'));
+        // return view('deparment.department_page',compact('dept'));
     //    return view('deparment.department_page',compact('dept'));
     }
     public function department_content()
