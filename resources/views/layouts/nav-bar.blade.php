@@ -30,25 +30,7 @@
           Launch demo modal
         </button> -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl" style="    max-width: fit-content;">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="{{asset('assets/advisory.gif')}}" />
-              </div>
-              <div class="modal-footer">
-         
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="container" id="nav">
             <div class="row" style="background:rgb(27, 37, 96); color:#fff; padding: 4px 0;">
               {{-- <div class="soc_med col-sm-6">
@@ -332,7 +314,7 @@
 </html>
 <script src="{{asset('js/script.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
+{{-- <script>
 $(document).ready(function(){
     $.ajax({
          
@@ -356,4 +338,4 @@ $(document).ready(function(){
        });
   });
 
-</script>
+</script> --}}

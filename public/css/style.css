@@ -1380,6 +1380,18 @@ section .container .contactform{
 #loc{
   width: 20%;
 }
+div#myCarousel img {
+    width: 50% !important;
+}
+.modal-backdrop.show {
+    opacity: 0;
+    z-index:-1;
+}
+.tourism p{
+    text-align: left;
+    color: white !important;
+    padding: 0 5%;
+}
 @media screen and (max-width: 766px) and (min-width: 200px) {
   #conus {
     max-width: 100% !important;
@@ -1523,6 +1535,12 @@ section .container .contactform{
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 8%;
+    }
+    div#aanouncementss{
+        display:none;
+    }
+    div#myCarousel img {
+        width: 100% !important;
     }
     #eser1 {
     margin-top: 10% !important;

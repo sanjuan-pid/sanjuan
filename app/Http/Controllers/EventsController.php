@@ -54,7 +54,7 @@ class EventsController extends Controller
         $ann->desc = $request->description;
         $ann->filename = $request->filename;
         $ann->status = 1;
-        $ann->show = 1;
+        $ann->show = 0;
         $ann->content_type = "Events";
         $ann->content_tag = 0;
         

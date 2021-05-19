@@ -199,7 +199,7 @@
 
 <br>
 
-<div class="container">
+<div class="container tourism" >
 
     <div class="row">
         <img src="{{asset('assets/Events/Tourism.gif')}}" style="width: 1090px; height: 200px; border-radius: 10px; ">
@@ -257,10 +257,10 @@
 
         <div class="col-sm">
             <div class="card1">
-              <img src="{{asset('assets/Events/Picture8.png')}}" style="width: 1060px; height: 700px;">
+              <img src="{{asset('assets/Events/Picture8.png')}}" style="width: 100%; height: 100%;">
               <div class="container">
                 <br>
-                <p style="text-align: justify;">Reviving The Tourism Industry
+                <p style="text-align: justify; color:#000 !important;">Reviving The Tourism Industry
                 Amidst the COVID-19 pandemic, San Juan City unveiled a Historical Bike Tour featuring the city’s most historic sites and landmarks. Stops include the Pinaglabanan Shrine, Museo ng Katipunan, El Deposito Museum, El Deposito Underground Tunnel, Pinaglabanan Church, the Marcos Mansion, the Iglesia ni Cristo former headquarters, the Kabayanan Church and Club Filipino.
                 <br>
                 <br>

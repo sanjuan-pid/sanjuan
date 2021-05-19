@@ -47,8 +47,15 @@
 
   margin-top: -140px;
 }
-
+div#med a {
+  font-size: 17px ;
+}
+div#sjmcpage {
+  margin-bottom: 10%;
+}
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
+
+ 
     div#sjmcpage {
       max-width: 70% !important;
       width: 70% !important;
@@ -188,11 +195,23 @@
         transform: scale(1.1);
       }
     }
+    .city_hall_front_mob{
+      display:none;
+    }
+    .city_hall_front_pc{
+      display:unset;
+    }
     @media screen and (max-width: 766px) and (min-width: 200px){
       div#sjmcpage {
         max-width: 100% !important;
         width: 100% !important;
         flex: 0 0 100%;
+      }
+      .city_hall_front_mob{
+        display:unset;
+      }
+      .city_hall_front_pc{
+        display:none;
       }
       #sjmcpage .unafirst h1{
         font-size: 23px !important;
@@ -705,7 +724,7 @@
     }
     .pula{
       font-size: 15px;
-      color:red;
+      color:#000 !important;
       font-weight: 700;
     }
     .sjcat{
