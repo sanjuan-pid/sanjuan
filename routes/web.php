@@ -64,6 +64,7 @@ Route::get('/directory_page','Pages@directory')->name('direct');
 
 Route::get('/department_page','Pages@department')->name('department');
 Route::get('/department_content','Pages@department_content')->name('dept_cont');
+Route::get('/department_selected','Pages@department_selected')->name('department_selected');
 
 Route::get('Login/employee_page','Pages@employee')->name('employee');
 Route::get('Login/residence_page','Pages@residence')->name('residence');
@@ -169,9 +170,10 @@ Route::prefix('admin')->group(function(){
     Route::get('/department/child_dept/{id}','DeparmentController@child')->name('admin.department.child_dept');
     Route::get('/department/child_dept_edit/{id}', 'DeparmentController@child_edit')->name('admin.department.deparment-edit');
     Route::get('/department/department-create-child', 'DeparmentController@create_child')->name('admin.department.deparment-creates');
+    Route::post('/department/child_dept_edit/{id}', 'DeparmentController@update_child')->name('admin.department.deparment-update');
     Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
     Route::resource('/department','DeparmentController');
-  
+    
 
     
 });

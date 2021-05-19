@@ -78,14 +78,14 @@
 
       <div class="row">
         <div class=" col-12 col-sm-12 col-md-12 col-lg-12 mt-2">
-          <h3  id="h3dept" style="text-align: center; color: #1f1c4b; font-size: 50px; font-weight: 700;">DEPARTMENTS</h3>
+          <h3  id="h3dept" style="text-align: center; color: #1f1c4b; font-size: 50px; font-weight: 700; margin:2% 0;">DEPARTMENTS</h3>
         </div>
       </div>
       <div class="row">
         <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
         @foreach($dept as $row)
           <div class="dept_card" style="margin-bottom:2%;">
-            <a class="department" href="{{route('dept_cont')}}" onclick="deptcon(event, 'deptone')">
+            <a class="department" href="{{action( 'Pages@department_content', 'id='.$row->id )}}"  onclick="deptcon(event, 'deptone')">
           
               <div class="card" id="carddept">
                 <div class="card-body">

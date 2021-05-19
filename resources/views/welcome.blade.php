@@ -36,13 +36,44 @@
                         <h2 class="card-title blue" style="text-align:center;color:#fff !important;font-size:17pt; margin-bottom: 0!important;">ANNOUNCEMENT</h2>
                         <div class="card-body sc" style="overflow-y: scroll; direction:;">
                           <br>
-                          <ul class="sap_list">
-                            <b>SAP Brgy List</b>
+{{--                           
+                          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                            SAP Brgy List
+                          </button> --}}
+                          {{-- <ul class="sap_list">
+                            <!-- Button trigger modal -->
+                              
                             @foreach($brgy_announcement as $row)
                               <li style="font-weight: 600;"><a href="{{action( 'Pages@brgy_contents', $row->id )}}" target="_blank" > <?php echo $row['name'] ?></a></li>
                             @endforeach
-                          </ul>
+                          </ul> --}}
+                                                    <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl" style="max-width: 30%; width: 100% !important;    margin-top: 8%;">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <center>
+                                    <h1>SAP LIST</h1>
+                                  </center>
+                                  <ul class="sap_list">
+                                    <!-- Button trigger modal -->
+                                    @foreach($brgy_announcement as $row)
+                                      <li style="font-weight: 600;"><a href="{{action( 'Pages@brgy_contents', $row->id )}}" target="_blank" > <?php echo $row['name'] ?></a></li>
+                                    @endforeach
+                                  </ul>
+                                </div>
+                                <div class="modal-footer">
                           
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                             @foreach($announcement as $row)
 
                                 @if($row['show'] == 1)
@@ -100,7 +131,7 @@
                         <ol class="carousel-indicators">
                           <?php
                           $counter = 0;
-                          foreach ($news as $item) {
+                          foreach ($events as $item) {
                                 $counter++;
                                 // echo $counter;
                                 //  echo $counter-1;
@@ -111,23 +142,25 @@
                         <!-- Wrapper for carousel items -->
 
                           <div class="carousel-inner">
-                          @foreach($events as $row)
-                            @if($row['show'] == 1)
+                          {{-- @foreach($events as $row)
+                            @if($row['show'] == 1) --}}
                               <div class="carousel-item active">
                                 <div class="container">
                                   <div class="row">
                                     <div class=" col-sm-12">
                                       <div id="img_slot">
-                                        <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                         <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width: 100%;" id="image_slide">
+                                        <a  href="#"  >
+                                         <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_pc" style=" width: 100% !important; ">
+                                         <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_mob" style=" margin-top: 7% !important;padding: 0  !important; width: 120% !important; margin-left: -10%  !important;">
+                                         
                                         </a>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            @endif
-                          @endforeach
+                            {{-- @endif
+                          @endforeach --}}
                           @foreach($events as $row)
                             @if($row['show'] != 1)
                               <div class="carousel-item">
@@ -518,7 +551,7 @@
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
                                           <a >
-                                              <img src="{{asset('assets/Eservices/not-permitted.svg')}}"style="width:70%; " />
+                                              <img src="{{asset('assets/Eservices/buildingpermit.svg')}}"style="width:70%; " />
                                           </a>
                                       </div>
                         <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">

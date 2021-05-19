@@ -19,6 +19,7 @@
         <title>San Juan City</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{asset('css/style.css')}}" rel="stylesheet">
+        <link href="{{asset('css/dev_h.css')}}" rel="stylesheet">
         <style>
 
         </style>
@@ -29,25 +30,7 @@
           Launch demo modal
         </button> -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl" style="    max-width: fit-content;">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="{{asset('assets/advisory.gif')}}" />
-              </div>
-              <div class="modal-footer">
-         
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="container" id="nav">
             <div class="row" style="background:rgb(27, 37, 96); color:#fff; padding: 4px 0;">
               {{-- <div class="soc_med col-sm-6">
@@ -330,3 +313,29 @@
     </footer>
 </html>
 <script src="{{asset('js/script.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{{-- <script>
+$(document).ready(function(){
+    $.ajax({
+         
+           type: "POST",
+           url: "http://localhost/php-api-master/api/news/read.php",
+           
+           dataType: "json",
+           contentType: "application/json",
+           success: function(data){
+              console.log(data.table_news);
+              console.log(data.table_news[1][0].id);
+              console.log(data.table_news[2][0].id);
+              var count = data.table_news.length;
+              for (i = 0; i < count; i++) {
+                console.log(data.table_news[i][0].id + " : " +  data.table_news[i][1].title );
+                }
+              },
+                error: function(err) {
+                    console.log(err);
+                }
+       });
+  });
+
+</script> --}}

@@ -1380,6 +1380,18 @@ section .container .contactform{
 #loc{
   width: 20%;
 }
+div#myCarousel img {
+    width: 50% !important;
+}
+.modal-backdrop.show {
+    opacity: 0;
+    z-index:-1;
+}
+.tourism p{
+    text-align: left;
+    color: white !important;
+    padding: 0 5%;
+}
 @media screen and (max-width: 766px) and (min-width: 200px) {
   #conus {
     max-width: 100% !important;
@@ -1524,6 +1536,12 @@ section .container .contactform{
         max-width: 100% !important;
         margin-bottom: 8%;
     }
+    div#aanouncementss{
+        display:none;
+    }
+    div#myCarousel img {
+        width: 100% !important;
+    }
     #eser1 {
     margin-top: 10% !important;
     }
@@ -1596,6 +1614,13 @@ section .container .contactform{
       #side_prof{
           display:none;
       }
+      a.navbar-brand {
+        padding: 0;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light img {
+        width: 65px !important;
+        height: 65px !important;
+    }
 }
 
 /* directory page */

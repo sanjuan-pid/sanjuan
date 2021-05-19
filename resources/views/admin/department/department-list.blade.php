@@ -35,10 +35,10 @@
                         <tbody>
                          @foreach($dept as $row)
                                 <tr id={{$row->id}}>
-                                    <td ><a href="child_dept/<?php echo $row->id ?>" > <?php echo $row->title ?> </a></td>
+                                    <td ><a href="{{action('DeparmentController@child', $row->id)}}" > <?php echo $row->title ?> </a></td>
                                     <td  id="desc"><?php echo$row->description ?></td>
                                     <td>
-                                    
+                                        
                                         {{-- <form method="post" action="{{action('AnnouncementController@makefirst',$row->id')}}" style="display: inline;" >
                                             {{csrf_field()}}
                                             <input type="hidden" name="_method" value="POST">

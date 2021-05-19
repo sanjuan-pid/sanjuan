@@ -47,6 +47,7 @@ class Pages extends Controller
         $ann = DB::select('select * from news
                             where id='.$id, [1]);
         $news = News::where('status', 1)
+                    ->where('content_type', "news")
                     ->orderBy('created_at', 'desc')
                     ->get();
         $events = News::where('status', 1)
@@ -230,19 +231,34 @@ class Pages extends Controller
     }
     public function department()
     {
-       return view('Events/Brgy_page');
+       //return view('Events/Brgy_page');
     $dept = DB::select('select * from department
     where status= 1');
     // dd($dept);
-    //return view('department.department_page',compact('dept'));
+        return view('deparment.department_page',compact('dept'));
     //    return view('deparment.department_page',compact('dept'));
     }
     public function department_content()
     {
-        return view('deparment.department_content');
+        $dept = DB::select('select * from department
+        where status= 1');
+        $child = DB::select('SELECT *
+                            FROM department
+                            JOIN department_child ON department.id=department_child.sector');
+        // dd($dept);
+            return view('deparment.department_content',compact('dept','child'));
     }
+    
     public function directory()
     {
         return view('directory.directory_page');
     }    
+    public function department_selected()
+    {
+        $child = DB::select('SELECT *
+                            FROM department_child
+                            WHERE status= 1');
+        //  dd($child);
+        return view('deparment.department_selected',compact('child'));
+    }
 }
