@@ -1029,7 +1029,7 @@ div#mayorqr {
 
     #bulletin_bod img {
         width: 100% !important;
-        height: 150px;
+        height: 100% !important;
     }
 
     .carousel-indicators li {

@@ -167,7 +167,7 @@
 
                     <div class="tab-content" id="myTabContent">
                       <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
-                        <h5 class="card-title">Congressman Ronaldo "Ronny" Bayan </h5>
+                        
                         <p class="card-text">Filipino lawyer and politician who currently serves as representative of the Lone District of San Juan City. He topped the bar exams in 1969 and was among the Ten Outstanding Young Men of the Philippines in 1972.
                         Zamora was first elected into public office in 1978 together with Imelda Marcos and 19 other candidates of the administration coalition Kilusang Bagong Lipunan as parliament members from Metro Manila. In 1984, when the constituency in the Batasang Pambansa was modified—to elect members by province and cities, instead of regions—Zamora ran for the parliamentary seat for San Juan–Mandaluyong but lost to opposition candidate Neptali Gonzales.
                         <br>
@@ -177,7 +177,7 @@
                         </p>      
                       </div>
                       <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
-                        <h5 class="card-title">Atty Bel Zamora</h5>
+                      
                         <p class="card-text">Profile</p>
                       </div>
                     </div>
@@ -468,7 +468,7 @@
                           </div>
                     </div>
                     <div class="tab-pane fade  p-3" id="seven1" role="tabpanel" aria-labelledby="seven1-tab">
-                      <h5 class="card-title">Atty Bel Zamora</h5>
+                  
                         <div class="row">
                           <div class=" col-sm-6">
                             <div class="card">
