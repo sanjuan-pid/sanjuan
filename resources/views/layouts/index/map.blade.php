@@ -528,7 +528,7 @@
             <a  class="lahat cora_4" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:63%;top:36%; position: absolute;">O</a>
 
             <a  class="lahat pasa_1" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 61px; right:58%;top:21%; position: absolute;">O</a>
-            <h1  class="display pasa_" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 25px !important; right:54%;top:25%; position: absolute;">Pasadeña</h1>
+            <h1  class="display pasa_" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 25px !important; right:54%;top:25%; position: absolute;">Pasadena</h1>
             <a  class="lahat pasa_" data-toggle="modal" data-target=".psdm" style=" color: transparent; cursor: pointer; font-size: 36px; right:53%;top:27%; position: absolute;">O</a>
             <a  class="lahat pasa_" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 36px; right:62%;top:16%; position: absolute;">O</a>
 
@@ -921,7 +921,7 @@
             </div>
             <div class="modal-body">
               <img src="{{asset('assets/BRGY/PASADENA_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
-              <h1 style="text-align:center;">PASADEÑA</h1>
+              <h1 style="text-align:center;">PASADENA</h1>
               <p style="text-align: justify;">The word PASADENA came from the name of the flower Cadena de Amor. During the earlier times it has been said that the streets of Brgy. Pasadena were filled with cadena de amor, a certain Spanish person created the name for Pasadena which means “way of the cadena de amor” PASA is a Spanish word which means “daan” in Filipino language. PASA = Daan & DENA = short for the flower cadena de amor.The word PASADENA came from the name of the flower Cadena de Amor.</p>
               <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
               <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>

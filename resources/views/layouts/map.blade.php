@@ -104,7 +104,7 @@
             <a  class="lahat" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:63%;top:36%; position: absolute;">O</a>
 
             <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 61px; right:56%;top:18%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 20px !important; right:54%;top:25%; position: absolute;z-index:4;">Pasadeña</h1>
+            <h1  class="display" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 20px !important; right:54%;top:25%; position: absolute;z-index:4;">PasadeNa</h1>
             <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color: transparent; cursor: pointer; font-size: 36px; right:53%;top:27%; position: absolute;">O</a>
             <a  class="lahat" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 36px; right:62%;top:16%; position: absolute;">O</a>
 
@@ -495,7 +495,7 @@
             </div>
             <div class="modal-body">
               <img src="{{asset('assets/BRGY/PASADENA_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
-              <h1 style="text-align:center;">PASADEÑA</h1>
+              <h1 style="text-align:center;">PASADENA</h1>
               <p style="text-align: justify;">The word PASADENA came from the name of the flower Cadena de Amor. During the earlier times it has been said that the streets of Brgy. Pasadena were filled with cadena de amor, a certain Spanish person created the name for Pasadena which means “way of the cadena de amor” PASA is a Spanish word which means “daan” in Filipino language. PASA = Daan & DENA = short for the flower cadena de amor.The word PASADENA came from the name of the flower Cadena de Amor.</p>
               <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
               <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
@@ -536,7 +536,7 @@
             <div class="modal-body">
               <img src="{{asset('assets/BRGY/ERMITAÑO_updated.png')}}" style="display: block; margin-left: auto; margin-right: auto;width: 100px; height: 100px;">
               <h1 style="text-align:center;">ERMITÑO</h1>
-              <p style="text-align: justify;">Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, Pasadeña and Corazon de Jesus on the east.</p>
+              <p style="text-align: justify;">Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, PasadeNa and Corazon de Jesus on the east.</p>
               <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Organization Chart</h3>
               <h5 style=" font-weight:bold; text-align:center; color: #1f1c4b;">Contact Info</h5>
             </div>
@@ -1076,10 +1076,10 @@ color:transparent;
             position: absolute;
             top: 28%;
             z-index: 2;
-            left: 38.8%;;">PASADEÑA
+            left: 38.8%;;">PASADENA
           </a>
-            <img id="PS" class="pasa_image_content"  src="{{asset('assets/img/pasadeÑa.png')}}" width="126px" height="=100px" style="">
-            <img id="PS_hover" src="{{asset('assets/img/pasadeÑa.png')}}" width="126px" height="=100px">
+            <img id="PS" class="pasa_image_content"  src="{{asset('assets/img/pasadeNa.png')}}" width="126px" height="=100px" style="">
+            <img id="PS_hover" src="{{asset('assets/img/pasadeNa.png')}}" width="126px" height="=100px">
       </div>
 
         <div id="pedro_content" class="img_map">
@@ -1328,7 +1328,7 @@ color:transparent;
             </div>
 
             <div id="PAS_description" style="display: none;" class="map_description">
-                 <br><h1>BRGY. PASADEÑA</h1>
+                 <br><h1>BRGY. PASADENA</h1>
                   <img src="{{asset('assets/BRGY/PASADENA_updated.png')}}" style="position:absolute;  left: 43.5%;  top:-15%; width:85px; height: 80px; z-index: -1;">
                  <div class="in">
                      <p>The word PASADENA came from the name of the flower Cadena de Amor. During the earlier times it has been said that the streets of Brgy. Pasadena were filled with cadena de amor, a certain Spanish person created the name for Pasadena which means “way of the cadena de amor” PASA is a Spanish word which means “daan” in Filipino language. PASA = Daan & DENA = short for the flower cadena de amor.The word PASADENA came from the name of the flower Cadena de Amor.</p>
@@ -1410,7 +1410,7 @@ color:transparent;
                <br><h1>BRGY. ERMITAÑO</h1>
                <img src="{{asset('assets/BRGY/ERMITAÑO_updated.png')}}" style="position:absolute;  left: 43.5%;  top: -15%; width:80px; height: 80px; z-index: -1;">
                <div class="in">
-                   <p>Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, Pasadeña and Corazon de Jesus on the east.</p>
+                   <p>Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, PasadeNa and Corazon de Jesus on the east.</p>
               </div>
               <div class="btnv">
                 <a href="#" id="BRGY">VISIT PAGE</a>
@@ -1422,7 +1422,7 @@ color:transparent;
                <br><h1>BRGY. ERMITAÑO</h1>
                <img src="{{asset('assets/BRGY/PASADENA_updated.png')}}" style="position:absolute;  left: 43.5%;  top: -15%; width:80px; height: 80px; z-index: -1;">
                <div class="in">
-                   <p>Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, Pasadeña and Corazon de Jesus on the east.</p>
+                   <p>Barangay Ermitaño is located in the north-eastern part of San Juan City. It is surrounded by Ermitaño creek in the east and south-east. It is bounded by Salapan on the north, Balong-bato on the north-west, PasadeNa and Corazon de Jesus on the east.</p>
               </div>
               <div class="btnv">
                 <a href="#" id="BRGY">VISIT PAGE</a>
