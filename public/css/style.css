@@ -290,6 +290,9 @@ nav ul.dropdown-menu.show {
 div#myCarousel1 div#img_slot {
     padding: 0 25%;
 }
+div#article_contents {
+    padding-right: 15%;
+}
 #article_title{
     height: 90px;
     margin: 0;
@@ -524,8 +527,14 @@ div#bulletin_sec, #news_card {
         right: -7%;
         width: 10%;
     }
+    div#myCarousel1 div#img_slot {
+        padding: 0 0% !important;
+    }
 }
 @media screen and (min-device-width: 1201px) and (max-device-width: 1366px) {
+        div#myCarousel1 div#img_slot {
+        padding: 0 0% !important;
+    }
     footer .container .row {
         margin: 0 9% !important;
     }
@@ -2004,8 +2013,14 @@ li.list-group-item.latest_news a{
         font-size: 18px  !important;
         width: 245px !important;
     }
+    div#myCarousel1 div#img_slot {
+        padding: 0 0% !important;
+    }
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1500px) {
+    div#myCarousel1 div#img_slot {
+        padding: 0 0% !important;
+    }
     #news_list a.btn.btn-info {
         font-size: 18px  !important;
         width: 245px !important;
@@ -2043,6 +2058,9 @@ li.list-group-item.latest_news a{
 @media screen and (min-device-width: 1201px) and (max-device-width: 1366px) {
     .side_me{
         position: relative !important;
+    }
+    div#myCarousel1 div#img_slot {
+        padding: 0 0% !important;
     }
 }
 .mobile_backtop{
