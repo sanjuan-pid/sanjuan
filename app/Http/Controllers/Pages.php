@@ -59,24 +59,25 @@ class Pages extends Controller
     }
     public function news_list()
     {
-        $news = News::where('status', 1)
-                    ->where('content_type', "Art")
-                    ->orWhere('content_type',"News" )
-                    ->orderBy('created_at', 'desc')
-                    ->get();
-        $events = News::where('status', 1)
-                    ->where('content_type', "Events")
-                    ->orderBy('created_at', 'desc')
-                    ->get();
-        $act = News::where('status', 1)
-                    ->where('content_type', "Act")
-                    ->orderBy('created_at', 'desc')
-                    ->get();
-        $ann = News::where('status', 1)
-                    ->where('content_type', "Announcement")
-                    ->orderBy('created_at', 'desc')
-                    ->get();
-        return view('news/list',compact('news','events','act','ann'));
+        return view('Events/Brgy_page');
+        // $news = News::where('status', 1)
+        //             ->where('content_type', "Art")
+        //             ->orWhere('content_type',"News" )
+        //             ->orderBy('created_at', 'desc')
+        //             ->get();
+        // $events = News::where('status', 1)
+        //             ->where('content_type', "Events")
+        //             ->orderBy('created_at', 'desc')
+        //             ->get();
+        // $act = News::where('status', 1)
+        //             ->where('content_type', "Act")
+        //             ->orderBy('created_at', 'desc')
+        //             ->get();
+        // $ann = News::where('status', 1)
+        //             ->where('content_type', "Announcement")
+        //             ->orderBy('created_at', 'desc')
+        //             ->get();
+        // return view('news/list',compact('news','events','act','ann'));
     }
 
     public function gov()

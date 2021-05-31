@@ -2088,3 +2088,14 @@ li.list-group-item.latest_news a{
         color: #ffffff !important;
     }
 }
+
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:focus, .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #000 !important;
+}
+.navbar-nav li{
+    display: block !important;
+}
+
+div#sjmcpage .col-lg-4{
+    margin: 3% 0;
+}
