@@ -288,7 +288,7 @@ nav ul.dropdown-menu.show {
     height: 400px;
 }
 #article_title{
-    height: 80px;
+    height: 90px;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -474,7 +474,7 @@ div#bulletin_sec, #news_card {
     }
     #article_title{
         font-size:32px;
-        height: 80px;
+        height: 75px !important;
         margin-bottom:5%;
     }
     #mayors_corner a{
