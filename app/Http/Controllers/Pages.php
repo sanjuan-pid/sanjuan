@@ -60,6 +60,7 @@ class Pages extends Controller
     public function news_list()
     {
 
+
       return view('Events/Brgy_page');
         $news = News::where('status', 1)
                     ->where('content_type', "Art")
@@ -78,7 +79,8 @@ class Pages extends Controller
                     ->where('content_type', "Announcement")
                     ->orderBy('created_at', 'desc')
                     ->get();
-        return view('news/list',compact('news','events','act','ann'));
+        //return view('news/list',compact('news','events','act','ann'));
+
     }
 
     public function gov()
