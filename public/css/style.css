@@ -1986,6 +1986,7 @@ li.list-group-item.latest_news a{
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     margin-bottom: 2%;
+    text-align: center;
 }
 #news_list .col-md-4.clearfix{
     margin-bottom: 2%;
