@@ -1154,7 +1154,7 @@ div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
 }
 #news #article_contents{
     margin-top: 0;
-    height: 90px !important;
+    height: 200px !important;
 }
 #mayorqr .recent_small {
     height: 12px !important;
