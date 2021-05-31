@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
       <meta charset="UTF-8">
-      <link rel="icon" href="http://example.com/favicon.png">
+ 
       <meta name="description" content="San Juan City Website">
       <meta name="keywords" content="San Juan City, City Hall, News">
       <meta name="author" content="San Juan City">
