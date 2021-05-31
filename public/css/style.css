@@ -906,7 +906,7 @@ div#bulletin_bod {
     float: unset !important;
 } */
 #nav .container {
-    margin: 0 14%;
+    margin: 0 2%;
 }
 .recent_small {
     margin-top: 5%;
@@ -997,7 +997,7 @@ button.map_b:hover{
 
 
 /*mayorqr -start*/
-div#mayorqr {
+div#mayorqr , .container{
     max-width: 100% !important;
 }
 
@@ -1106,7 +1106,7 @@ div#nav {
     padding: 0;
 }
 div#mayorqr,div#mayors_corner,div#covid_updates,div#news_sec,#gov-sites {
-    max-width: 70% !important;
+    max-width: 100% !important;
 }
 body {
     background: #f3f3f3;
