@@ -1975,7 +1975,7 @@ li.list-group-item.latest_news a{
 #news_list img {
     width: 350px !important;
     padding: 2%;
-    height: 350px !important;
+    height: auto !important;
 }
 .bottom p {
     padding: 0 5%;
