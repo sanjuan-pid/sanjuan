@@ -1956,7 +1956,7 @@ li.list-group-item.latest_news a{
         margin: 0% 8% !important;
     }
     img.card-img-top {
-        height: 500px !important;
+        height: auto !important;
     }
 }
 
@@ -2098,4 +2098,7 @@ li.list-group-item.latest_news a{
 
 div#sjmcpage .col-lg-4{
     margin: 3% 0;
+}
+.carousel-control-next, .carousel-control-prev{
+    width:10% !important;
 }

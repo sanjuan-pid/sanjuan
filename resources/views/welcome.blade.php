@@ -73,6 +73,34 @@
                                   </div>
                                 </div>
                               </div>
+                              <div class="carousel-item">
+                                <div class="container">
+                                  <div class="row">
+                                    <div class=" col-sm-12">
+                                      <div id="img_slot1">
+                                        <video width="1500" controls>
+                                          <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
+                                          Your browser does not support HTML video.
+                                        </video>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class="container">
+                                  <div class="row">
+                                    <div class=" col-sm-12">
+                                      <div id="img_slot1">
+                                        <video width="1500" controls>
+                                          <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
+                                          Your browser does not support HTML video.
+                                        </video>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>   
                             {{-- @endif
                           @endforeach --}}
                           @foreach($events as $row)

@@ -61,7 +61,7 @@ class Pages extends Controller
     {
 
 
-      return view('Events/Brgy_page');
+    //   return view('Events/Brgy_page');
         $news = News::where('status', 1)
                     ->where('content_type', "Art")
                     ->orWhere('content_type',"News" )
@@ -79,7 +79,7 @@ class Pages extends Controller
                     ->where('content_type', "Announcement")
                     ->orderBy('created_at', 'desc')
                     ->get();
-        //return view('news/list',compact('news','events','act','ann'));
+        return view('news/list',compact('news','events','act','ann'));
 
     }
 
