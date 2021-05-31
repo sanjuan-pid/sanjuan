@@ -8,7 +8,7 @@
                 <div class="card-body">
                         <br>
                         @foreach($ann as $row)
-                            <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%;" />
+                            <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 25%;  margin-bottom: 5%;" />
                             <h1>{{ $row->title }}</h1>
                             <br>
                             <p><?php echo $row->desc ?></p>
