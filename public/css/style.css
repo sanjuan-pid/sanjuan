@@ -1106,7 +1106,7 @@ div#nav {
     padding: 0;
 }
 div#mayorqr,div#mayors_corner,div#covid_updates,div#news_sec,#gov-sites {
-    max-width: 70% !important;
+    max-width: 100% !important;
 }
 body {
     background: #f3f3f3;
@@ -1154,7 +1154,7 @@ div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
 }
 #news #article_contents{
     margin-top: 0;
-    height: 90px !important;
+    height: 200px !important;
 }
 #mayorqr .recent_small {
     height: 12px !important;

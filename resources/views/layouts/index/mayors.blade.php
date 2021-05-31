@@ -63,7 +63,7 @@
                               <a  href="{{action( 'Pages@news_contents', $row['id'] )}}" style="color:#000;" >
                                 <h2 id="article_title">{{$row['title']}}</h2>
                               </a>
-                              <p id="article_contents">{{$row['desc']}}</p>
+                              <div id="article_contents"><?php $row['desc'] ?> </div>
                               {{-- <a id="article_link"  href="news_article" style="margin-top:2%;color:#2b92b0; font-weight: 700; float: right;" >READ MORE</a> --}}
                             </div>
                           </div>
