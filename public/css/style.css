@@ -1900,7 +1900,7 @@ li.list-group-item.latest_news a{
       }
     .my-4 .carousel-inner, div#news,div#act,div#history,#mayors_corner .row, .mayor_ #news_card {
         /* max-width: 80% !important; */
-        width: 80% !important;
+        width: 100% !important;
         margin: 0 auto !important;
     }
     div#social_med {
