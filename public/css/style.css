@@ -477,7 +477,10 @@ div#bulletin_sec, #news_card {
     #article_contents{
         font-size:20px;
         height: 178px;
-        margin-top:20% !important;
+        margin-top:20%;
+    }
+    div#myCarousel1 #article_contents {
+        margin-top: 0 !important;
     }
     #article_title{
         font-size:32px;
@@ -513,6 +516,7 @@ div#bulletin_sec, #news_card {
         font-size: 18px;
         width: 95.7%;
     }
+
 }
 
 /*#bulletin_sec .card {*/
@@ -1964,7 +1968,7 @@ li.list-group-item.latest_news a{
         text-align: right;
     }
     div#myCarousel img {
-        width: 30% !important;
+        width: 40% !important;
     }
     footer .container .row {
         margin: 0% 8% !important;
@@ -1972,6 +1976,7 @@ li.list-group-item.latest_news a{
     img.card-img-top {
         height: auto !important;
     }
+
 }
 
 #news_list a.btn.btn-info {
