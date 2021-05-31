@@ -143,7 +143,7 @@
         <div class="container congpic" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
-            <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
+            <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:100%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
 
             </div>
           </div>
@@ -374,7 +374,7 @@
                 </div>
                  <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active p-3" id="seven" role="tabpanel" aria-labelledby="seven-tab">
-                      <h5 class="card-title">Congressman Ronaldo "Ronny" Bayan </h5>
+                      {{-- <h5 class="card-title">Congressman Ronaldo "Ronny" Bayan </h5> --}}
                         <div class="row">
                           <div class=" col-sm-6">
                             <div class="card">

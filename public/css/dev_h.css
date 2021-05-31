@@ -55,10 +55,12 @@ div#sjmcpage {
 }
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
 
- 
+  .container.tourism {
+        max-width: 1140px !important;
+    }
     div#sjmcpage {
-      max-width: 70% !important;
-      width: 70% !important;
+      max-width: 100% !important;
+      width: 80% !important;
       flex: 0 0 100%;
     }
     #sjmcpage h1{
@@ -343,7 +345,7 @@ div#sjmcpage {
 
     /* Style the tab content */
     .tabcontent {
-      padding: 0px 12px;
+      padding: 0px 8%;
       width: 100%;
       height: 760px;
       display: block;
@@ -744,8 +746,8 @@ div#sjmcpage {
     }
       @media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
         div#dtpage {
-          max-width: 65% !important;
-          width: 65% !important;
+          max-width: 100% !important;
+          width: 80% !important;
           flex: 0 0 100%;
         }
         #conus{

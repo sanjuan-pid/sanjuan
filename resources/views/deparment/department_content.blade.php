@@ -126,12 +126,22 @@
       }
 
     }
-    @media only screen and (max-width: 1600px) and (min-width: 900px)  {
+    @media only screen and (max-width: 1600px) and (min-width: 1367px)  {
       div#dpcon {
         max-width: 70% !important;
         width: 70% !important;
         flex: 0 0 100%;
 
+      }
+    }
+    @media only screen and (max-width: 1200px) and (min-width: 900px)  {
+      h5#a1 {
+        font-size: 25px !important;
+      }
+      div#dpcon {
+          max-width: 100% !important;
+          width: 100% !important;
+          flex: 0 0 100%;
       }
     }
     @media screen and (max-width: 766px) and (min-width: 200px) {

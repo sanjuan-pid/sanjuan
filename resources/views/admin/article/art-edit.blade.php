@@ -11,9 +11,6 @@
                 </div>
                 @endif
                 <div class="card-header">
-                    <h3>
-                       
-                    </h3>
                  </div>
                 @if(count($errors) > 0)
                 <div class="alert alert-danger">
@@ -28,37 +25,35 @@
                 @endif
 
                 <div class="card-body">
-                  <form method="post" action="{{action('DeparmentController@update_child', $id)}}" enctype="multipart/form-data">
+                 <form method="post" action="{{action('ArticleController@update', $id)}}"" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    <input type="hidden" name="_method" value="POST" />
-                    
-                    @foreach($dept_child as $row)
-                       
-                    
-                    <input type="hidden" name ="sector" class="form-control" value="{{$row->sector}}">
+                    <input type="hidden" name="_method" value="PATCH" />
                     <div class="form-group row">
+
                         <label for="staticEmail" class="col-sm-4 col-form-label"><b>Title</b></label>
                         <div class="col-sm-8">
-                          <input type="text" name ="name" class="form-control" value="{{$row->name}}">
+                          <input type="text" name ="title" class="form-control" value="{{$act->title}}">
                         </div>
-                    </div>
+                      </div>
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Link</b></label>
+                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Article / Description</b></label>
                         <div class="col-sm-8">
-                          <input type="text" name ="link" class="form-control" value="{{$row->link}}">
+                            <div id="editor">
+                                <?php echo $act->desc; ?>
+                            </div>
+                            <textarea  rows="10" id="description" hidden name ="description" class="form-control">{{$act->desc}}</textarea>
                         </div>
                     </div>
+                    <br><br>
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Article / description</b></label>
+                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Image</b></label>
                         <div class="col-sm-8">
-                             <div id="editor">
-                                <?php echo $row->description; ?>
-                             </div>
-                              <textarea  rows="10" id="description" hidden name ="description" class="form-control">{{$row->description}}</textarea>
+                         <img src="{{asset("uploads/" . $act->filename) }}" width="200px"  height="140px"/>
+                         <input type="file" name ="filename" class="form-control" value="{{$act->filename}}">
+                         <input type="hidden" name ="filename_" class="form-control" value="{{$act->filename}}">
+                          
                         </div>
-                    </div>
-                    @endforeach
-                    <br> <br>                   
+                    </div>                    
                     <div class="form-group">
                       <input type="submit" class="btn btn-success" value="Submit" />
                     </div>

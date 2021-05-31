@@ -99,6 +99,7 @@ class DeparmentController extends Controller
         $dept = new department_child();
         $dept->sector = $request->sector;
         $dept->name = $request->department;
+        $dept->link = $request->link;
         $dept->description = $request->description;
         $dept->status = 1;
         $dept->save();
@@ -117,6 +118,7 @@ class DeparmentController extends Controller
         $dept_update = department_child::find($id);
         $dept_update->name = $request->get('name');
         $dept_update->sector = $request->get('sector');
+        $dept_update->link = $request->get('link');
         $dept_update->description = $request->get('description');
         $dept_update->save();
 

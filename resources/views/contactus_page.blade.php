@@ -48,6 +48,7 @@ section::before{
 
 }
 section .container{
+  width: 80%;
   position: relative;
   min-width: 1100px;
   min-height: 550px;

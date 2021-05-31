@@ -10,7 +10,12 @@
                     <div class="card-body">
                     {{-- <img  src="{{asset('assets/makabago.png')}}"  alt="" class="d-inline-block align-top"> --}}
                     <h5 class="card-title">  {{$row->name}}  </h5>
-                    <div class="card-text"><?php echo $row->description; ?></div>
+                    
+                    <div class="card-text">
+                        <a href="<?php echo $row->link; ?>" target="_blank" rel="noopener noreferrer"><?php echo $row->link; ?></a>
+                        <br>
+                        <?php echo $row->description; ?>
+                    </div>
                     </div>
                 </div>
              @endif

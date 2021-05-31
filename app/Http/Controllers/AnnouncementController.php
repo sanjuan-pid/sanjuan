@@ -57,7 +57,11 @@ class AnnouncementController extends Controller
             'description' => 'required',
             'filename' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        
+        $hide = DB::table('news')
+        ->where('id', '!=', 0)
+        ->where('content_type', '=', "Announcement")
+        ->update(['show' => 0]);
+
         $cover = $request->file('filename');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put('Announcement/'.$cover->getFilename().'.'.$extension,  File::get($cover));

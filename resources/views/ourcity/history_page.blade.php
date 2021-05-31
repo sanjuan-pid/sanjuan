@@ -65,8 +65,8 @@ opacity: 1;
 
 @media only screen and (max-width: 1920px) and (min-width: 1080px)  {
   div#history {
-    max-width: 70% !important;
-    width: 70% !important;
+    max-width: 100% !important;
+    width: 80% !important;
     flex: 0 0 100%;
     margin-top: 3%;
 
@@ -85,8 +85,8 @@ opacity: 1;
 }
 @media only screen and (max-width: 1600px) and (min-width: 900px)  {
   div#history {
-    max-width: 60% !important;
-    width: 60% !important;
+    max-width: 100% !important;
+    width: 80% !important;
     flex: 0 0 100%;
 
   }

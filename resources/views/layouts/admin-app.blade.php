@@ -55,6 +55,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                 <li><a class="dropdown-item" href="{{route('admin.activity.act-list')}}">Activity</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.article.art-list')}}">Articles</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.department.deparment-list')}}">Department</a></li>
                             </ul>
                         </li>

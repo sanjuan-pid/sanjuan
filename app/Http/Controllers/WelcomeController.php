@@ -20,6 +20,15 @@ class WelcomeController extends Controller
                 ->where('content_type', "Announcement")
                 ->where('content_tag', "0")
                 ->orderBy('created_at', 'desc')
+                ->skip(0)
+                ->take(4)
+                ->get();
+        $announcement3 = News::where('status', 1)
+                ->where('content_type', "Announcement")
+                ->where('content_tag', "0")
+                ->orderBy('created_at', 'desc')
+                ->skip(4)
+                ->take(4)
                 ->get();
         // echo $announcement;
         $news = News::where('status', 1)
@@ -43,6 +52,12 @@ class WelcomeController extends Controller
                 ->where('content_tag', 0)   
                 ->orderBy('created_at', 'desc')
                 ->get();
-        return view('/welcome', compact('mayors','news','announcement','events','brgy_announcement','act'),['news2' => $news2]);
+        $articles = News::where('status', 1)
+                ->where('content_type', "Art")     
+                ->orWhere('content_type',"News" ) 
+                ->where('content_tag', 0)   
+                ->orderBy('created_at', 'desc')
+                ->get();
+        return view('/welcome', compact('mayors','articles','news','announcement','events','brgy_announcement','act','announcement3'),['news2' => $news2]);
     }
 }

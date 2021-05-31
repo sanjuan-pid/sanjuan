@@ -29,6 +29,12 @@
         padding-top: 0;
         font-weight: 700;
       }
+      h5#a1 {
+          vertical-align: center !important;
+          /* vertical-align: top; */
+          font-size: 40px !important;
+          margin: 5% 0;
+      }
       #carddept{
         border-radius:5px !important;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -57,7 +63,7 @@
           font-size: 10px !important;
         }
       }
-      @media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+      @media only screen and (max-width: 1920px) and (min-width: 1601px)  {
         div#deptpage {
           max-width: 60% !important;
           width: 60% !important;
@@ -65,14 +71,24 @@
 
         }
       }
-      @media only screen and (max-width: 1600px) and (min-width: 900px)  {
+      @media only screen and (max-width: 1600px) and (min-width: 1500px)  {
         div#deptpage {
-          max-width: 60% !important;
-          width: 60% !important;
+          max-width: 80% !important;
+          width: 80% !important;
           flex: 0 0 100%;
 
         }
       }
+      @media only screen and (max-width: 1200px) and (min-width: 900px)  {
+      h5#a1 {
+        font-size: 25px !important;
+      }
+      div#dpcon {
+          max-width: 100% !important;
+          width: 100% !important;
+          flex: 0 0 100%;
+      }
+    }
     </style>
     <div class="container" id="deptpage" style="width:60%;">
 

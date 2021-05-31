@@ -31,13 +31,13 @@
         <div class="row">
           <div class="col-2">
             <div class="tab">
-                  <button class="tablinks button" onclick="openCity(event, 'two')"><img src="{{asset('assets/konsehal/AQUINO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important; margin-top:2%;"/></button>
-                  <button class="tablinks button" onclick="openCity(event, 'three')"><img src="{{asset('assets/konsehal/ARTADI.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important; margin-top:2%;"/></button>
-                  <button class="tablinks button" onclick="openCity(event, 'four')"><img src="{{asset('assets/konsehal/ATAD.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                  <button class="tablinks button" onclick="openCity(event, 'six')"><img src="{{asset('assets/konsehal/CHUA.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                  <button class="tablinks button" onclick="openCity(event, 'eight')"><img src="{{asset('assets/konsehal/PACHECO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                  <button class="tablinks button" onclick="openCity(event, 'nine')"><img src="{{asset('assets/konsehal/REYES.png')}}"style="width:100%;display: block; margin-left:auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                  <button class="tablinks button" onclick="openCity(event, 'ten')"><img src="{{asset('assets/konsehal/SUBIJANO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onmouseover="openCity(event, 'two')"><img src="{{asset('assets/konsehal/AQUINO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important; margin-top:2%;"/></button>
+                  <button class="tablinks button" onmouseover="openCity(event, 'three')"><img src="{{asset('assets/konsehal/ARTADI.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important; margin-top:2%;"/></button>
+                  <button class="tablinks button" onmouseover="openCity(event, 'four')"><img src="{{asset('assets/konsehal/ATAD.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onmouseover="openCity(event, 'six')"><img src="{{asset('assets/konsehal/CHUA.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onmouseover="openCity(event, 'eight')"><img src="{{asset('assets/konsehal/PACHECO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onmouseover="openCity(event, 'nine')"><img src="{{asset('assets/konsehal/REYES.png')}}"style="width:100%;display: block; margin-left:auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                  <button class="tablinks button" onmouseover="openCity(event, 'ten')"><img src="{{asset('assets/konsehal/SUBIJANO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
 
               </div>
             </div>
@@ -129,13 +129,13 @@
           </div>
           <div class="col-2">
             <div class="tab2">
-                <button class="tablinks button" onclick="openCity(event, 'a')" id="defaultOpen"> <img src="{{asset('assets/konsehal/bernardo.png')}}" style="width:100%;display: block; margin-left: auto; margin-right: auto; border-radius: 10px !important; "/></button>
-                <button class="tablinks button" onclick="openCity(event, 'b')"><img src="{{asset('assets/konsehal/deguzman.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                <button class="tablinks button"  onclick="openCity(event, 'c')"><img src="{{asset('assets/konsehal/ejercito.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                <button class="tablinks button" onclick="openCity(event, 'd')"><img src="{{asset('assets/konsehal/mathay.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                <button class="tablinks button" onclick="openCity(event, 'ee')"><img src="{{asset('assets/konsehal/mj.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                <button class="tablinks button" onclick="openCity(event, 'f')"><img src="{{asset('assets/konsehal/peralta.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
-                <button class="tablinks button" onclick="openCity(event, 'ele')"><img src="{{asset('assets/konsehal/VELASCO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onmouseover="openCity(event, 'a')" id="defaultOpen"> <img src="{{asset('assets/konsehal/bernardo.png')}}" style="width:100%;display: block; margin-left: auto; margin-right: auto; border-radius: 10px !important; "/></button>
+                <button class="tablinks button" onmouseover="openCity(event, 'b')"><img src="{{asset('assets/konsehal/deguzman.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button"  onmouseover="openCity(event, 'c')"><img src="{{asset('assets/konsehal/ejercito.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onmouseover="openCity(event, 'd')"><img src="{{asset('assets/konsehal/mathay.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onmouseover="openCity(event, 'ee')"><img src="{{asset('assets/konsehal/mj.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onmouseover="openCity(event, 'f')"><img src="{{asset('assets/konsehal/peralta.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
+                <button class="tablinks button" onmouseover="openCity(event, 'ele')"><img src="{{asset('assets/konsehal/VELASCO.png')}}"style="width:100%;display: block; margin-left: auto; margin-right: auto;border-radius: 10px !important;margin-top:2%;"/></button>
             </div>
           </div>
         </div>
@@ -157,7 +157,7 @@
             }
 
             // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
+            document.getElementById("defaultOpen").onmouseover();
        </script>
        <br>
 

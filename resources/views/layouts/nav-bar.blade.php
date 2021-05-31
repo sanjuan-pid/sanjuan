@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+      <meta charset="UTF-8">
+      <link rel="icon" href="http://example.com/favicon.png">
+      <meta name="description" content="San Juan City Website">
+      <meta name="keywords" content="San Juan City, City Hall, News">
+      <meta name="author" content="San Juan City">
+      <title>San Juan City</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="{{asset('css/style.css')}}" rel="stylesheet">
+      <link href="{{asset('css/dev_h.css')}}" rel="stylesheet">
         {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design Bootstrap -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
         <!-- Fonts -->
-        <meta charset="UTF-8">
-        <meta name="description" content="San Juan City Website">
-        <meta name="keywords" content="San Juan City, City Hall, News">
-        <meta name="author" content="San Juan City">
-        <title>San Juan City</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="{{asset('css/style.css')}}" rel="stylesheet">
-        <link href="{{asset('css/dev_h.css')}}" rel="stylesheet">
+
         <style>
 
         </style>

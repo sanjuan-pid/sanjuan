@@ -27,98 +27,12 @@
 
     {{-- @include('layouts.index.map-2') --}}
 
-   
+  
 
         <div class="container" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
            <div class="row justify-content-md-center" style="position:relative;">
-                <div class="col-sm-3" id="aanouncementss" style="z-index: 10;">
-                    <div class="card" id="news_card" style="border: 3px solid #003471;">
-                        <h2 class="card-title blue" style="text-align:center;color:#fff !important;font-size:17pt; margin-bottom: 0!important;">ANNOUNCEMENT</h2>
-                        <div class="card-body sc" style="overflow-y: scroll; direction:;">
-                          <br>
-{{--                           
-                          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
-                            SAP Brgy List
-                          </button> --}}
-                          {{-- <ul class="sap_list">
-                            <!-- Button trigger modal -->
-                              
-                            @foreach($brgy_announcement as $row)
-                              <li style="font-weight: 600;"><a href="{{action( 'Pages@brgy_contents', $row->id )}}" target="_blank" > <?php echo $row['name'] ?></a></li>
-                            @endforeach
-                          </ul> --}}
-                                                    <!-- Modal -->
-                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl" style="max-width: 30%; width: 100% !important;    margin-top: 8%;">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <center>
-                                    <h1>SAP LIST</h1>
-                                  </center>
-                                  <ul class="sap_list">
-                                    <!-- Button trigger modal -->
-                                    @foreach($brgy_announcement as $row)
-                                      <li style="font-weight: 600;"><a href="{{action( 'Pages@brgy_contents', $row->id )}}" target="_blank" > <?php echo $row['name'] ?></a></li>
-                                    @endforeach
-                                  </ul>
-                                </div>
-                                <div class="modal-footer">
-                          
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                            @foreach($announcement as $row)
-
-                                @if($row['show'] == 1)
-                                    <div class="recent_big">
-                                      <div class="col-12 col-sm-12">
-
-                                        <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%; height: auto !important; margin-bottom:2%;" />
-                                        <p class="recent_psmall">
-                                            <a href="{{action( 'Pages@news_contents', $row->id )}}" target="_blank" ><?php echo $row['title'] ?> </a>
-                                        </p>
-                                      </div>
-                                    </div>
-
-                                @endif
-                            @endforeach
-                                <br>
-
-                                <div class="recent_small">
-
-                                    <div class="row">
-                                        <?php $i=0; ?>
-                                        @foreach($announcement as $row)
-                                            @if($row['show'] != 1)
-                                                <?php $i++; ?>
-                                                <div class="col-12 col-sm-12">
-
-                                                    <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;  height: auto; margin-bottom:2%;" />
-                                                    <p class="recent_psmall">
-                                                        <a href="{{action( 'Pages@news_contents', $row->id )}}" target="_blank" ><?php echo $row['title'] ?> </a>
-                                                    </p>
-                                                    <br>
-                                                </div>
-                                                @if ($i == 3)
-                                                    @break
-                                                @endif
-                                            @endif
-                                        @endforeach
-
-                                    </div>
-                                </div>
-                        </div>
-
-                    </div>
-                 </div>
-                 <div class="col-sm-9" style="margin-bottom: 5%;">
+                
+                 <div class="col-sm-12" style="margin-bottom: 0%;">
                     {{-- <div class="card" id="qr" style="width: 100%; border: 0px solid;">
                         <br>
                         <img class="card-img-top" style="width:50%; height:70%; position: relative; margin:0 auto;" src="{{asset('assets/v.png')}}" alt="Card image cap">
@@ -150,7 +64,7 @@
                                     <div class=" col-sm-12">
                                       <div id="img_slot">
                                         <a  href="#"  >
-                                         <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_pc" style=" width: 100% !important; ">
+                                         <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_pc" style=" width: 80% !important; ">
                                          <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_mob" style=" margin-top: 7% !important;padding: 0  !important; width: 120% !important; margin-left: -10%  !important;">
                                          
                                         </a>
@@ -200,173 +114,152 @@
 
 
     {{-- @include('layouts.index.directory') --}}
-    {{-- @include('layouts.index.mayors') --}}
+    
 
-<div class="container" id="mayors_corner" style="box-shadow: 0px 3px 3px #cccccc; padding: 0;">
-    <img src="{{asset('assets/mayor.jpg')}}" width="100%" />
-    <br>
-    <br>
-    <div class="row">
-        <h1 style="text-align: center;">MAYOR'S CORNER</h1>
-        <div class="container-lg my-3">
-            <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="15000">
-                <!-- Carousel indicators -->
+<div class="class">
+  <div class="row">
 
-                <ol class="carousel-indicators">
-                  <?php
-                  $counter = 0;
-                  foreach ($news as $item) {
-                        $counter++;
-                        // echo $counter;
-                          // echo $counter-1;
-                        //  echo '<li data-target="#myCarousel1" data-slide-to="$counter-1"></li>';
-                    }
+    <div class="container my-4">
+      <!--Carousel Wrapper-->
+      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+        <!--Controls-->
+        <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700;">ANNOUNCEMENTS</h2>
+        <div class="controls-top" style="padding: 0 5%;">
+          
+          <a class="btn-floating" href="#multi-item-example" data-slide="prev">Previous</i></a>
+          <a class="btn-floating" href="#multi-item-example" data-slide="next" style="float: right;">Next</a>
+        </div>
+
+        <!--/.Controls-->
+
+        <!--Indicators-->
+        <!--/.Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+          <!--First slide-->
+      
+          <div class="carousel-item active">
+
+            <div class="row">
+              <?php $i=0; ?>
+              @foreach($announcement as $row22)
+                <?php $i++; 
                 ?>
-                </ol>
-                <!-- Wrapper for carousel items -->
-
-                  <div class="carousel-inner">
-                  @foreach($news as $row)
-                    @if($row['show'] == 1)
-                      <div class="carousel-item active">
-                        <div class="container">
-                          <div class="row">
-                            <div class=" col-sm-6">
-                              <div id="img_slot">
-                                <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                 <img src="{{asset("uploads/" . $row['filename']) }}"  id="image_slide">
-                                </a>
-                              </div>
-                            </div>
-                            <div class=" col-sm-6" style="text-align: left;">
-                              <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                <h2 id="article_title" style="color:#000; text-decoration:none !important;">{{$row['title']}}</h2>
-                              </a>
-                              <div id="article_contents" style="color:#000;text-decoration:none !important;">
-                                  <?php echo $row['desc'] ?>
-                              </div>
-                              {{-- <a id="article_link" href="https://www.facebook.com/CityofSanJuanNCRPhilippines/" style="margin-top:2%;color:#2b92b0; font-weight: 700; float: right;" >READ MORE</a> --}}
-                            </div>
-                          </div>
-                        </div>
+                @if($row22['status'] == 1)
+                  @if ($i == 1)
+                  <div class="col-md-3">
+                    <div class="card mb-2">
+                      <div class="card_img" style="padding:3%;">
+                          <img class="card-img-top"  src="{{asset("uploads/" . $row22['filename']) }}" alt="Card image cap"  />
                       </div>
-                    @endif
-                  @endforeach
-                  @foreach($news as $row)
-                    @if($row['show'] != 1)
-                      <div class="carousel-item">
-                        <div class="container">
-                          <div class="row">
-                            <div class=" col-sm-6">
-                              <div id="img_slot">
-                                <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                  <img src="{{asset("uploads/" . $row['filename']) }}"  id="image_slide">
-                                </a>
-                              </div>
-                            </div>
-                            <div class=" col-sm-6" style="text-align: left;">
-                              <a  href="{{action( 'Pages@news_contents', $row['id'] )}}" style="color:#000;" >
-                                <h2 id="article_title">{{$row['title']}}</h2>
-                              </a>
-                              <div id="article_contents">
-                                  <?php echo $row['desc'] ?>
-                              </div>
-                              {{-- <a id="article_link"  href="news_article" style="margin-top:2%;color:#2b92b0; font-weight: 700; float: right;" >READ MORE</a> --}}
-                            </div>
-                          </div>
-                        </div>
+                      
+                      <div class="card-body">
+                        <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span>
+     
+                        <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
                       </div>
-                    @endif
-                  @endforeach
                 </div>
-                <!-- Carousel controls -->
-                <a class="carousel-control-prev" href="#myCarousel1" data-slide="prev" style="left: -105px;">
-                    <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;rotation: 180deg;transform: rotate(180deg); "/> </span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel1" data-slide="next" style="right: -85px;">
-                  <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;"/> </span>
-
-                </a>
-
+                  @else 
+                  <div class="col-md-3 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                          <div class="card_img" style="padding:3%;">
+                              <img class="card-img-top"  src="{{asset("uploads/" . $row22['filename']) }}" alt="Card image cap"  />
+                          </div>
+                          
+                          <div class="card-body">
+                            <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span>
+ 
+                            <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
+                          </div>
+                    </div>
+                  @endif
+                  </div>
+                @if ($i == 4)
+                    @break
+                @endif
+                @endif
+              @endforeach
             </div>
-            <a href="mayors_page" id="mayors_link" >VISIT PAGE</a>
+
+          </div>
+          <!--/.First slide-->
+
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="row">
+              <?php $i=0; ?>
+              @foreach($announcement3 as $row33)
+                <?php $i++; 
+                ?>
+                @if($row33['status'] == 1)
+                  @if ($i == 1)
+                  <div class="col-md-3">
+                    <div class="card mb-2">
+                      <div class="card_img" style="padding:3%;">
+                          <img class="card-img-top"  src="{{asset("uploads/" . $row33['filename']) }}" alt="Card image cap"  />
+                      </div>
+                      
+                      <div class="card-body">
+                        <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row33->id )}}" target="_blank" ><?php echo $row33['title'] ?> </a></span>
+                        {{-- <p class="card-text">
+                      
+                        </p>// --}}
+                        <a class="btn btn-primary">View More</a>
+                      </div>
+                </div>
+                  @else 
+                  <div class="col-md-3 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                          <div class="card_img" style="padding:3%;">
+                              <img class="card-img-top"  src="{{asset("uploads/" . $row33['filename']) }}" alt="Card image cap"  />
+                          </div>
+                          
+                          <div class="card-body">
+                            <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row33->id )}}" target="_blank" ><?php echo $row33['title'] ?> </a></span>
+                            {{-- <p class="card-text">
+                          
+                            </p> --}}
+                            <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row33->id )}}" target="_blank" >View More</a>
+                          </div>
+                    </div>
+                  @endif
+                  </div>
+                @if ($i == 4)
+                    @break
+                @endif
+                @endif
+              @endforeach
+            </div>
+
+          </div>
+          <!--/.Second slide-->
+
+    
+
         </div>
+        <!--/.Slides-->
+
+      </div>
+      <!--/.Carousel Wrapper-->
     </div>
+
+  </div>
 </div>
-    <div class="container" id="covid_updates" style="padding: 0 !important; display:none;">
-        <div class="row justify-content-md-center" style="position:relative;">
-            <div class=" col-sm-12" style="padding: 0 !important;">
-                <div class=" col-sm-4" style="float: left; ">
-                    <div class="card">
-                        @foreach($mayors as $row)
-                            @if($row["type"] == 1)
-                                    <div class="card-body" id="bulletin_bod" style="padding-top:0px;padding-right:0px;padding-left:0px;height: 550px; overflow: hidden;border: 3px solid #003471;">
-                                        <div class="col-12 col-sm-12 covid_date" style="display: inline-block;    padding: 0;">
-                                                @if($row["type"] == 1)
-                                                    <a  id="bulletin_desc" href="#"  class="blue" style="text-align: center !important; color:white;"><h4>Daily Update</h4></a>
-                                                @endif
-                                        </div>
-                                        <div class="col-12 col-sm-12" style="float: left; display: inline-block;">
-                                            <img class="covid_img" src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;height: 500px !important;" />
-                                        </div>
-                                    </div>
-                            @endif
-
-                        @endforeach
-                    </div>
-                </div>
-                <div class=" col-sm-4" style="float: left;">
-                    <div class="card">
-                        @foreach($mayors as $row)
-                            @if($row["type"] == 2)
-                                    <div class="card-body" id="bulletin_bod" style="padding-top:0px;padding-right:0px;padding-left:0px;height: 550px; overflow: hidden;border: 3px solid #003471;">
-                                        <div class="col-12 col-sm-12 covid_date" style="display: inline-block;    padding: 0;">
-                                                @if($row["type"] == 2)
-                                                    <a  id="bulletin_desc" href="#" class="blue" style="text-align: center !important; color:white;"><h4>Vaccination Registration</h4></a>
-                                                @endif
-                                        </div>
-                                        <div class="col-12 col-sm-12" style="float: left; display: inline-block;">
-                                            <img class="covid_img" src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%; height: 500px !important;" />
-                                        </div>
-                                    </div>
-                            @endif
-
-                        @endforeach
-                    </div>
-                </div>
-                <div class=" col-sm-4" style="float: left;">
-                    <div class="card">
-                        @foreach($mayors as $row)
-                            @if($row["type"] == 3)
-                                    <div class="card-body" id="bulletin_bod" style="padding-top:0px;padding-right:0px;padding-left:0px;height: 550px; overflow: hidden;border: 3px solid #003471;">
-                                        <div class="col-12 col-sm-12 covid_date" style="display: inline-block;    padding: 0;">
-                                                @if($row["type"] == 3)
-                                                    <a  id="bulletin_desc" href="#" class="blue" style="text-align: center !important; color:white;"><h4>Vaccination Updates</h4></a>
-                                                @endif
-                                        </div>
-                                        <div class="col-12 col-sm-12" style="float: left; display: inline-block;">
-                                            <img class="covid_img" src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%; height: 500px !important;" />
-                                        </div>
-                                    </div>
-                            @endif
-
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+@include('layouts.index.mayors')
     {{-- @include('layouts.index.news') --}}
-    <div class="container" id="news_sec">
+  <div class="container" id="news_sec">
       <br>
       <br>
       <div class="row" id="news">
           <div class=" col-sm-8">
               <div class="card" id="news_card">
                   <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
-                      <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">NEWS</h2>
+                      <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">NEWS & ARTICLES</h2>
                         <?php $i=0; ?>
-                            @foreach($news as $row)
+                            @foreach($articles as $row)
                               <?php $i++; ?>
                               <div class="card" style="margin: 2%;">
                                   <div class="card-body" id="bulletin_bod">
@@ -385,7 +278,7 @@
                                       </div>
                                   </div>
                               </div>
-                              @if ($i == 4)
+                              @if ($i == 5)
                                   @break
                               @endif
                           @endforeach
@@ -661,4 +554,18 @@
 
       </div>
   </div>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+  <script>
+    wow = new WOW().init();
+  </script>
 @endsection

@@ -163,6 +163,13 @@ Route::prefix('admin')->group(function(){
     // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
     Route::resource('/activity','ActivityController');
 
+    //Activity
+    Route::get('/article/art-list', 'ArticleController@index')->name('admin.article.art-list');
+    Route::post('/article/art-list', 'ArticleController@index');
+    // Route::post('/achievement/congressman-list.blade', 'AchievementsController@store');
+    Route::resource('/article','ArticleController');
+
+
     //Department
     Route::get('/department/department-list', 'DeparmentController@index')->name('admin.department.deparment-list');
     Route::post('/department/department-create', 'DeparmentController@create')->name('admin.department.deparment-create');
