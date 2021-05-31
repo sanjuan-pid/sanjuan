@@ -59,6 +59,8 @@ class Pages extends Controller
     }
     public function news_list()
     {
+
+      return view('Events/Brgy_page');
         $news = News::where('status', 1)
                     ->where('content_type', "Art")
                     ->orWhere('content_type',"News" )
@@ -241,7 +243,7 @@ class Pages extends Controller
     }
     public function department()
     {
-    //    return view('Events/Brgy_page');
+      return view('Events/Brgy_page');
     $dept = DB::select('select * from department
     where status= 1');
     // dd($dept);

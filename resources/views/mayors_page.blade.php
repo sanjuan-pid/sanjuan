@@ -174,7 +174,7 @@
                                 @foreach($news as $row)
                                 <?php $i++; ?>
                                     <div class="col-4 col-sm-4">
-                                        <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;height: 80%!important;display: block;margin: 0 auto;" />
+                                        <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;height: auto!important;display: block;margin: 0 auto;" />
                                         <p class="recent_psmall">
                                             <br>
                                             <a href="{{action( 'Pages@news_contents', $row->id )}}"><?php echo $row['title'] ?></a>

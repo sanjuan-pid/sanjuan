@@ -39,7 +39,7 @@
                               <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
                                 <h2 id="article_title" style="color:#000; text-decoration:none !important;">{{$row['title']}}</h2>
                               </a>
-                              <p id="article_contents" style="color:#000;text-decoration:none !important;">{{$row['desc']}}</p>
+                              <div id="article_contents" style="color:#000;text-decoration:none !important;"><?php echo  $row['desc'] ?></div>
                               {{-- <a id="article_link" href="https://www.facebook.com/CityofSanJuanNCRPhilippines/" style="margin-top:2%;color:#2b92b0; font-weight: 700; float: right;" >READ MORE</a> --}}
                             </div>
                           </div>
@@ -63,7 +63,7 @@
                               <a  href="{{action( 'Pages@news_contents', $row['id'] )}}" style="color:#000;" >
                                 <h2 id="article_title">{{$row['title']}}</h2>
                               </a>
-                              <div id="article_contents"><?php $row['desc'] ?> </div>
+                              <div id="article_contents"><?php echo $row['desc'] ?></div>
                               {{-- <a id="article_link"  href="news_article" style="margin-top:2%;color:#2b92b0; font-weight: 700; float: right;" >READ MORE</a> --}}
                             </div>
                           </div>
