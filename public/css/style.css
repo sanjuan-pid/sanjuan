@@ -1300,7 +1300,7 @@ div#eser {
 
 @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
     .side_btn{
-    left:-152px;
+    left:-170px;
     position:absolute;
     width: 100%;
 }
@@ -2146,3 +2146,6 @@ div#sjmcpage .col-lg-4{
     padding: 0 5%;
 }
 
+div#achievement_row {
+    padding: 0 6%;
+}

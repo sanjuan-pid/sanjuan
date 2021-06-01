@@ -273,7 +273,7 @@ $(document).ready(function(){
 
     });
      $("a#achievement_btn").click(function(){
-        $("div#achievement_row").css("display","block");
+        $("div#achievement_row").css("display","flex");
         $("div#profile_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
         $("div#achievement_row").fadeIn("fast");

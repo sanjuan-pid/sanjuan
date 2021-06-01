@@ -1166,6 +1166,9 @@ div#sjmcpage {
       #vicempage .sj iframe{
         width: 100% !important;
       }
+      #side_prof a {
+        font-size: 20px !important;
+      }
     }
     @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
       div#vicempage {
@@ -1195,6 +1198,9 @@ div#sjmcpage {
       }
       #vicempage .sj iframe{
         width: 100% !important;
+      }
+      #side_prof a {
+        font-size: 17px !important;
       }
     }
 
@@ -1239,6 +1245,9 @@ div#sjmcpage {
         #_viewmore a{
           font-size: 12px !important;
         }
+        #side_prof a {
+          font-size: 17px !important;
+        }
       }
 
     @media screen and (max-width: 766px) and (min-width: 200px)  {
@@ -1246,6 +1255,17 @@ div#sjmcpage {
         max-width: 100% !important;
         width: 100% !important;
         margin-left: 0% !important;
+      }
+      #vicempage, #vicempage .col-12.col-sm-12, div#vicepic {
+        padding: 0 !important;
+      }
+      
+      ._2p3a {
+          min-width: 180px;
+          width: 350px !important;
+      }
+      #vicempage .sj, #vicempage .card-body , #vicempage .col-sm-6, #vicempage .row.news_row, #vicempage .container{
+          padding: 0 0% !important;
       }
       #vicempage .news_row{
         max-width: 100% !important;
