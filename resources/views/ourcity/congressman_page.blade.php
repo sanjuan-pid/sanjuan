@@ -35,13 +35,13 @@
     }
 
       #congattypage h2{
-        font-size: 20px !important;
+        font-size: 40px !important;
       }
       #_viewmore a{
         font-size: 15px !important;
       }
     }
-    @media only screen and (max-width: 1600px) and (min-width: 900px)  {
+  @media screen and (min-device-width: 1551px) and (max-device-width: 1600px)  {
       div#congattypage {
         max-width: 100% !important;
         width: 100% !important;
@@ -53,13 +53,53 @@
     }
 
       #congattypage h2{
-        font-size: 20px !important;
+        font-size: 35px !important;
       }
       #_viewmore a{
         font-size: 15px !important;
       }
     }
-    @media only screen and (max-width: 1366px) {
+    @media screen and (min-device-width: 1367px) and (max-device-width: 1500px)  {
+        div#congattypage {
+          max-width: 100% !important;
+          width: 100% !important;
+          flex: 0 0 100%;
+        }
+
+        .newshead {
+          font-size: 40px !important;
+      }
+
+        #congattypage h2{
+          font-size: 30px !important;
+        }
+        #_viewmore a{
+          font-size: 15px !important;
+        }
+      }
+      @media screen and (min-device-width: 1205px) and (max-device-width: 1366px) {
+      div#congattypage {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0% !important;
+      }
+      #congattypage .news_row{
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: 0 0 100%;
+      }
+      .newshead {
+        font-size: 22px !important;
+    }
+    #congattypage h2{
+      font-size: 30px !important;
+    }
+
+      #_viewmore a{
+        font-size: 12px !important;
+      }
+    }
+    @media screen and (max-width: 766px) and (min-width: 200px)  {
       div#congattypage {
         max-width: 100% !important;
         width: 100% !important;
@@ -74,28 +114,8 @@
         font-size: 22px !important;
     }
 
-
-      #_viewmore a{
-        font-size: 12px !important;
-      }
-    }
-    @media only screen and (max-width: 1280px)  {
-      div#congattypage {
-        max-width: 100% !important;
-        width: 100% !important;
-        margin-left: 0% !important;
-      }
-      #congattypage .news_row{
-        max-width: 100% !important;
-        width: 100% !important;
-        flex: 0 0 100%;
-      }
-      .newshead {
-        font-size: 22 px !important;
-    }
-
       #congattypage h2{
-        font-size: 30px !important;
+        font-size: 20px !important;
       }
       #_viewmore a{
         font-size: 12px !important;
@@ -114,28 +134,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <div id="side_prof" style="position: fixed;margin-top: 5%;">
-        <a class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 13%; float: right;"/></a>
+    <div id="side_prof" style="position: fixed;margin-top: 15%;">
+        <a class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 20%; float: right;"/></a>
         <br>
         <br>
-        <a class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 13%; float: right;"/></a>
+        <br>
+        <a class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 20%; float: right;"/></a>
         <br>
         <br>
-        <a class="btn side_btn" id="achievement_btn"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS<img src={{asset('assets/achievement.svg')}} style="width: 13%; float: right;"/></a>
+        <br>
+        <a class="btn side_btn" id="achievement_btn"  style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">ACHIEVEMENTS<img src={{asset('assets/achievement.svg')}} style="width: 20%; float: right;"/></a>
         <br>
         <br>
-        <a class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 13%; float: right;"/></a>
+        <br>
+        <a class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 20%; float: right;"/></a>
 
     </div>
-    
+
     <div id="side_prof_mob" style="position: relative;margin-top: 5%; z-index: 1;">
         <a class="btn side_btn" id="news_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS</a>
-    
+
         <a class="btn side_btn" id="profile_btn_mob" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE </a>
-     
-    
+
+
         <a class="btn side_btn" id="achievement_btn_mob"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS</a>
-        
+
         <a class="btn side_btn" id="programs_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS</a>
     </div>
 
@@ -143,7 +166,7 @@
         <div class="container congpic" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
-            <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:100%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
+            <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
 
             </div>
           </div>
@@ -167,17 +190,17 @@
 
                     <div class="tab-content" id="myTabContent">
                       <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
-                        
+
                         <p class="card-text">Filipino lawyer and politician who currently serves as representative of the Lone District of San Juan City. He topped the bar exams in 1969 and was among the Ten Outstanding Young Men of the Philippines in 1972.
                         Zamora was first elected into public office in 1978 together with Imelda Marcos and 19 other candidates of the administration coalition Kilusang Bagong Lipunan as parliament members from Metro Manila. In 1984, when the constituency in the Batasang Pambansa was modified—to elect members by province and cities, instead of regions—Zamora ran for the parliamentary seat for San Juan–Mandaluyong but lost to opposition candidate Neptali Gonzales.
                         <br>
                         When Congress was restored under a new constitution in 1987, he ran and was elected representative of the Lone district of San Juan–Mandaluyong in 1987 and 1992, and as representative of the Lone district of San Juan in 1995.
                         <br>
                         Barred from seeking another term in 1998, Zamora helped his long-time political ally and townsmate Joseph Estrada in his presidential bid in 1998. Estrada later appointed Zamora as his Executive Secretary. Zamora resigned from Estrada's cabinet at the height of Estrada's impeachment trial to run again as representative of San Juan in 2001 where he would be reelected again for three terms. In the 14th Congress, Zamora was also elected as Minority Floor Leader.
-                        </p>      
+                        </p>
                       </div>
                       <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
-                      
+
                         <p class="card-text">Profile</p>
                       </div>
                     </div>
@@ -186,14 +209,15 @@
            <div class=" col-12 col-sm-12">
             <div class="c">
               <div class="cbody">
-          
+
            </div>
          </div>
        </div>
 
         </div>
-        <div class="container">
-          <div class="row" id="achievement_row" style="margin-top: -18%;">
+        <div class="container"style="max-width:100%;">
+          <div class="row" id="achievement_row">
+              <div class="col-12">
                 <div class="card mt-3 tab-card">
                   <div class="card-header tab-card-header">
                       <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
@@ -211,7 +235,7 @@
                        <!--  <h5 class="card-title">Congressman Ronaldo "Ronny" Bayan </h5> -->
                         <h2 class="card-title" style="font-weight: 800; font-size: 200;"><img src={{asset('assets/achievement.svg')}} style="width: 5%; vertical-align: baseline;"/> Achievements </h2>
                           <div class="row">
-                              @foreach ($achievement as $ach) 
+                              @foreach ($achievement as $ach)
                                 @if($ach->content_tag=="congressman")
                                   <div class="col-sm-4" style="margin-top:2%;">
                                     <div class="card">
@@ -227,13 +251,13 @@
                                   </div>
                                 @endif
                              @endforeach
-                         </div>   
+                         </div>
                       </div>
                       <div class="tab-pane fade p-3" id="six" role="tabpanel" aria-labelledby="six-tab">
                        <!--  <h5 class="card-title">Atty Bel Zamora</h5> -->
-                        <h2 class="card-title" style="font-weight: 800; font-size: 200;"><img src={{asset('assets/achievement.svg')}} style="width: 5%; vertical-align: baseline;"/> Achievements </h2> 
+                        <h2 class="card-title" style="font-weight: 800; font-size: 200;"><img src={{asset('assets/achievement.svg')}} style="width: 5%; vertical-align: baseline;"/> Achievements </h2>
                           <div class="row">
-                            @foreach ($achievement as $ach) 
+                            @foreach ($achievement as $ach)
                               @if($ach->content_tag=="atty_b")
                                 <div class="col-sm-4" style="margin-top:2%;">
                                   <div class="card">
@@ -249,17 +273,16 @@
                                 </div>
                               @endif
                            @endforeach
-                         </div> 
+                         </div>
                       </div>
                     </div>
-                </div>    
-
+                </div>
+            </div>
           </div>
         </div>
 
         <div class="row" id="agenda_row">
             <div class="col-12">
-                <h1>Programs</h1>
                 <div class="card mt-3 tab-card">
                   <div class="card-header tab-card-header">
                       <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
@@ -271,10 +294,10 @@
                         </li>
                       </ul>
                   </div>
-
+                    <h2 class="card-title" style="font-weight: 800; font-size: 200;"><img src={{asset('assets/porfolio.svg')}} style="width: 5%; vertical-align: baseline;"/> Programs </h2>
                     <div class="tab-content" id="myTabContent">
                       <div class="tab-pane fade show active p-3" id="four" role="tabpanel" aria-labelledby="four-tab">
-                        <h5 class="card-title">                 
+                        <h5 class="card-title">
                          @foreach ($programs as $program)
                           @if($program->content_tag == "cong")
                            <div class=" col-12 col-sm-12">
@@ -282,10 +305,10 @@
                            </div>
                           @endif
                           @endforeach
-                        </p>      
+                        </p>
                       </div>
                       <div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
-                          <h5 class="card-title">                 
+                          <h5 class="card-title">
                            @foreach ($programs as $program)
                               @if($program->content_tag == "atty_b")
                                <div class=" col-12 col-sm-12">
@@ -293,7 +316,7 @@
                                </div>
                               @endif
                             @endforeach
-                          </p> 
+                          </p>
                       </div>
                     </div>
                 </div>
@@ -341,7 +364,7 @@
                         When Congress was restored under a new constitution in 1987, he ran and was elected representative of the Lone district of San Juan–Mandaluyong in 1987 and 1992, and as representative of the Lone district of San Juan in 1995.
                         <br>
                         Barred from seeking another term in 1998, Zamora helped his long-time political ally and townsmate Joseph Estrada in his presidential bid in 1998. Estrada later appointed Zamora as his Executive Secretary. Zamora resigned from Estrada's cabinet at the height of Estrada's impeachment trial to run again as representative of San Juan in 2001 where he would be reelected again for three terms. In the 14th Congress, Zamora was also elected as Minority Floor Leader.
-                        </p>      
+                        </p>
                       </div>
                       <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
                         <h5 class="card-title">Atty Bel Zamora</h5>
@@ -353,7 +376,7 @@
            <div class=" col-12 col-sm-12">
             <div class="c">
               <div class="cbody">
-          
+
            </div>
          </div>
        </div -->
@@ -451,8 +474,8 @@
                                                                   <a href="#"style="font-size:12px;">{{$row->content_tag}} {{$row->title}}  </a>
                                                               </p>
                                                           </div>
-                                                        @endif 
-                                                      @endif 
+                                                        @endif
+                                                      @endif
                                                       @if ($i == 3)
                                                           @break
                                                       @endif
@@ -468,7 +491,7 @@
                           </div>
                     </div>
                     <div class="tab-pane fade  p-3" id="seven1" role="tabpanel" aria-labelledby="seven1-tab">
-                  
+
                         <div class="row">
                           <div class=" col-sm-6">
                             <div class="card">
@@ -542,7 +565,7 @@
                                                               <a href="#"style="font-size:12px;">{{$row->title}} </a>
                                                           </p>
                                                       </div>
-                                                      @endif 
+                                                      @endif
                                                       @if ($i == 3)
                                                           @break
                                                       @endif

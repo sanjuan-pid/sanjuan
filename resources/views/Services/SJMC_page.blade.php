@@ -24,7 +24,7 @@
 
         </div>
     </div> --}}
-    
+
     <div class="container" id="sjmcpage">
         <br>
         <div class="row">
@@ -47,6 +47,7 @@
      <div class="row">
        <p class="para" style="text-align:justify; font-size:20px;font-weight: 400; color: black !important; background-color:#CADFF4; height:200px; border-radius:5px;"><br>Narito ang mga link ng Facebook page ng mga sangay ng ospital kung saan maaari kayong magpabook ng appointment mula alas-8 ng umaga (8AM) hanggang alas-12 ng tanghali (12NN).
      Ang pagpapalista o pagpapa-iskedyul ng pasyente ay dapat gawin isang araw o higit pa bago ang araw ng pagpapatingin sa kanilang mga doktor.<br><br></p>
+     <div class="row sjmccard">
        <div class="col-sm-4 col-m-4 col-lg-4 hospitalcard mobcard">
          <a href="https://www.facebook.com/internalmedicinedepartmentSJMC/">
          <div class="card" id="med">
@@ -65,7 +66,6 @@
            <div class="container">
              <h4 style="text-align: center;"><b style="color:black;border-bottom: 3px solid black;">SJMC Obstretrics & Gynecology</b></h4>
              <p>Facebook: <a style="font-size:12px; font-weight: 500;"href="https://www.facebook.com/sjmcobgyn">https://www.facebook.com/sjmcobgyn</a><br>Cellphone no.:  09228557728</p>
-
            </div>
          </div>
        </a>
@@ -81,6 +81,9 @@
          </div>
        </a>
        </div>
+     </div>
+
+     <div class="row">
        <div class="col-sm-4 col-m-4 col-lg-4 hospitalcard2">
          <a href="https://web.facebook.com/cirujanosdesanjuan/">
          <div class="card" id="med">
@@ -102,7 +105,7 @@
            </div>
          </div>
        </a>
-     </div>
+       </div>
        <div class="col-sm-4 col-m-4 col-lg-4 hospitalcard2">
          <a href="https://www.facebook.com/sanjuanmedicalcentereyeclinic/?__cft__[0]=AZUXB1LZ1l0Irk_1F0Vd_1OFXaXyjQ0gmVigh_r3LOnlOGRstT-uLG8r94vG_ePzz6Fjz_lwrIRLZo1wbhZ2SpwVi3QgIHPvb1m_8gr-vfzAF3W7xmlXCd7JcBobqpDQgKlOkEkLSJF5i_NoqE1DCodl&__tn__=-UK-R">
          <div class="card" id="med">
@@ -114,6 +117,8 @@
          </div>
        </a>
        </div>
+     </div>
+     <div class="row">
        <div class="col-sm-4 col-m-4 col-lg-4 hospitalcard2">
          <a href="https://www.facebook.com/SJMCDentalDepartment/?modal=admin_todo_tour">
          <div class="card" id="med">
@@ -147,7 +152,9 @@
          </div>
        </a>
        </div>
-       <div class="col-sm-4 col-m-4 col-lg-4 hospitalcard2" >
+     </div>
+     <div class="row">
+       <div class="col-sm-4 col-m-4 col-lg-4 hospitalcard2" style=" margin: 0 auto; margin-top:20px;">
          <a href="https://web.facebook.com/sjmcopd/?_rdc=1&_rdr">
          <div class="card" id="med">
            <img src="{{asset('assets/sjmclogos/opd.jpg')}}" alt="Avatar" style="width:25%;display: block; margin-left: auto; margin-right: auto; border-radius:50px !important;">
@@ -159,9 +166,11 @@
        </a>
        </div>
      </div>
+    </div>
      <br>
      <div class="row">
        <p class="para" style="text-align:justify; font-size:20px;font-weight: 400; color: black !important; background-color:#CADFF4; height:200px; border-radius:5px;"><br>Hindi po kailangan magpa-iskedyul sa mga sangay ng ospital na ito:<br><br></p>
+       <div class="row sjmccard2">
        <div class="col-sm-4 col-m-4 col-lg-4 hospitalcard3 mobcard2">
          <a href="https://www.facebook.com/sjmced2020">
          <div class="card" id="med">
@@ -196,6 +205,7 @@
      </a>
     </div>
   </div>
+</div>
         <br>
 </div>
 

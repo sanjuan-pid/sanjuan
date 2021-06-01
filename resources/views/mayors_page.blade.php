@@ -1,17 +1,20 @@
 @extends('layouts.nav-bar')
 
 @section('content')
-    <div id="side_prof" style="position: fixed;margin-top: 5%; z-index: 999;">
-        <a class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 13%; float: right;"/></a>
-        <br>
-        <br>
-        <a class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 13%; float: right;"/></a>
-        <br>
-        <br>
-        <a class="btn side_btn" id="achievement_btn"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS<img src={{asset('assets/achievement.svg')}} style="width: 13%; float: right;"/></a>
-        <br>
-        <br>
-        <a class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 13%; float: right;"/></a>
+    <div id="side_prof" style="position: fixed;margin-top: 18%; z-index: 999;">
+      <a class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 20%; float: right;"/></a>
+      <br>
+      <br>
+      <br>
+      <a class="btn side_btn" id="profile_btn" style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">PROFILE <img src={{asset('assets/cv.svg')}} style="width: 20%; float: right;"/></a>
+      <br>
+      <br>
+      <br>
+      <a class="btn side_btn" id="achievement_btn"  style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">ACHIEVEMENTS<img src={{asset('assets/achievement.svg')}} style="width: 20%; float: right;"/></a>
+      <br>
+      <br>
+      <br>
+      <a class="btn side_btn" id="programs_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">PROGRAMS<img src={{asset('assets/porfolio.svg')}} style="width: 20%; float: right;"/></a>
     </div>
 
     <div id="side_prof_mob" style="position: relative;margin-top: 5%; z-index: 1;">
@@ -174,11 +177,18 @@
                                 @foreach($news as $row)
                                 <?php $i++; ?>
                                     <div class="col-4 col-sm-4">
-                                        <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;height: auto!important;display: block;margin: 0 auto;" />
-                                        <p class="recent_psmall">
-                                            <br>
-                                            <a href="{{action( 'Pages@news_contents', $row->id )}}"><?php echo $row['title'] ?></a>
-                                        </p>
+                                    
+                                      <div class="card mb-2">
+                                        <div class="card_img" style="padding:3%;">
+                                          <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;height: auto!important;display: block;margin: 0 auto;" />
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                          {{-- <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> --}}
+              
+                                          <a href="{{action( 'Pages@news_contents', $row->id )}}"><?php echo $row['title'] ?></a>
+                                        </div>
+                                      </div>
                                     </div>
                                     @if ($i == 3)
                                         @break

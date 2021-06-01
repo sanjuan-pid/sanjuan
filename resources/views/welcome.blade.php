@@ -185,7 +185,7 @@
                       </div>
                       
                       <div class="card-body">
-                        <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span>
+                        {{-- <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> --}}
      
                         <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
                       </div>
@@ -198,7 +198,7 @@
                           </div>
                           
                           <div class="card-body">
-                            <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span>
+                            {{-- <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> --}}
  
                             <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
                           </div>

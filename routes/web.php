@@ -50,7 +50,8 @@ Route::get('Services/QuarantineFacilities_page','Pages@quarantine')->name('quara
 Route::get('Services/SJMC_page','Pages@SJMC')->name('SJMC');
 
 Route::get('Events/TourismFestivities_page','Pages@tourism')->name('tourism');
-Route::get('Events/Departmental_page','Pages@departmental')->name('departmental');
+Route::get('Events/majorcalendar_page','Pages@calendar')->name('calendar');
+Route::get('Events/lgu_page','Pages@lgu')->name('lgu');
 Route::get('Events/Brgy_page','Pages@brgy1')->name('brgy1');
 Route::get('Events/Community_page','Pages@community')->name('community');
 Route::get('publicnotice/Bids_page','Pages@bids')->name('bids');

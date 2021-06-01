@@ -54,14 +54,11 @@
   }
 
 }
-.vm{
-  border: 15px solid #B88846;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
-}
-@media only screen and (max-width: 1920px) and (min-width: 1080px)  {
+
+@media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
   div#gov {
-    max-width: 100% !important;
-    width: 100% !important;
+    max-width: 70% !important;
+    width: 70% !important;
     flex: 0 0 100%;
   }
   #gov p{
@@ -74,14 +71,61 @@
       font-size: 30px !important;
   }
 }
-@media only screen and (max-width: 1600px) and (min-width: 900px)  {
+@media screen and (min-device-width: 1551px) and (max-device-width: 1600px)  {
   div#gov {
-    max-width: 60% !important;
-    width: 60% !important;
+    max-width: 70% !important;
+    width: 70% !important;
     flex: 0 0 100%;
   }
   #gov p{
       font-size: 15px !important;
+  }
+  #img1{
+    width:  580px !important;
+    margin-top: -110px !important;
+    margin-left: 0 !important;
+  }
+  #gov h1{
+      font-size: 50px !important;
+  }
+  #gov h3{
+      font-size: 20px !important;
+  }
+}
+@media screen and (min-device-width: 1367px) and (max-device-width: 1500px)  {
+  div#gov {
+    max-width: 70% !important;
+    width: 70% !important;
+    flex: 0 0 100%;
+  }
+  #gov p{
+      font-size: 15px !important;
+  }
+  #img1{
+    width:  600px !important;
+    margin-top: -110px !important;
+    margin-left: 0 !important;
+  }
+  #gov h1{
+      font-size: 50px !important;
+  }
+  #gov h3{
+      font-size: 20px !important;
+  }
+}
+@media screen and (min-device-width: 1205px) and (max-device-width: 1366px)  {
+  div#gov {
+    max-width: 80% !important;
+    width: 80% !important;
+    flex: 0 0 100%;
+  }
+  #gov p{
+      font-size: 15px !important;
+  }
+  #img1{
+    width:  580px !important;
+    margin-top: -110px !important;
+    margin-left: 0 !important;
   }
   #gov h1{
       font-size: 50px !important;
@@ -91,20 +135,24 @@
   }
 }
 @media screen and (max-width: 766px) and (min-width: 200px) {
+
   div#gov {
     max-width: 100% !important;
     width:100% !important;
+    margin-top: -50px !important;
   }
    #gov .col-6.col-sm-6.col-md-6.col-lg-6, #gov .col-8.col-sm-8.col-md-8.col-lg-8{
     max-width: 100% !important;
     width:100% !important;
     flex: 0 0 100%;
+
   }
   #gov .col-4.col-sm-4.col-md-4.col-lg-4.mt-5{
    max-width: 100% !important;
     width:100% !important;
     flex: 0 0 100%;
   }
+
   #gov h1{
       font-size: 25px !important;
   }
@@ -114,37 +162,99 @@
   #gov p{
       font-size: 14px !important;
   }
+  #img1 {
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0  !important;
 }
+}
+#img1{
+  width:  866px;
+  margin-top: -160px;
+  margin-left: -90px;
+}
+.gp{
+  background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(255,255,255, 0.6); /* Black w/opacity/see-through */
+ color: white;
+ font-weight: bold;
 
+ position: absolute !important;
+ top: 50% !important;
+ left: 25% !important;
+ transform: translate(-50%, -50%);
+ z-index: 2 !important;
+ width: 35% !important;
+ height: 35% !important;
+ padding: 20px !important;
+ border-radius: 10px;
+ text-align: center !important;
+ text-shadow: 2px 2px white;
+}
+.gp2{
+  background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(255,255,225, 0.6); /* Black w/opacity/see-through */
+ color: white;
+
+ border-color: black;
+ position: absolute !important;
+ top: 50% !important;
+ left: 75% !important;
+ width: 35% !important;
+ height: 35% !important;
+ transform: translate(-50%, -50%);
+ z-index: 2 !important;
+ padding: 20px !important;
+ text-align: center !important;
+ text-shadow: 2px 2px white;
+}
 
 </style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <div class="container" id="gov" style="max-width: 60%; background-color:white;">
-          <div class="row">
-            <h1 style="margin-top: 25px; text-align: center; font-size:50px;">SAN JUAN CITY</h1>
+        <!-- <div class="ar" style="position: relative; text-align: center;  height: 150px;
+          width: 100%;
+          background-color: #000099">
+            <!-- <img src="{{asset('assets/bantitle.png')}}"  style="width: 100%;height: 350px; border-radius: 5px;"/> -->
+            <!-- <h3  id="h3dept" style="text-align: center; color: white; font-size: 60px; font-weight: 700; position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);">SAN JUAN CITY</h3>
+        </div> -->
+
+        <br>
+        <!-- <div class="hi" id="imahe" style="position: relative; text-align: center; color: white;">
+          <img src="{{asset('assets/SANJUAN2.png')}}"id="img1"/>
+          <div class="he"style="">
+            <!-- <h3 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight:600; font-size:100px;text-shadow: 2px 2px 5px red; ">VISION</h3> -->
+
+          <!-- </div>
+        </div> -->
+        <br>
+        <div class="container" id="gov">
+          <!-- <div class="row">
+
             <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-               <div class="as"><img src="{{asset('assets/SANJUAN.jpg')}}"  style="width: 100%; border-radius: 5px;"/></div>
+               <div class="as"><img src="{{asset('assets/SANJUAN2.jpg')}}"  style="width: 100%; border-radius: 5px;"/></div>
             </div>
-          </div>
+          </div> -->
           <br>
           <div class="row">
-            <div class=" col-6 col-sm-6 col-md-6 col-lg-6 vm">
-                  <br>
-              <!-- <div class="q"><img src="{{asset('assets/gold.png')}}"  style="width: 540px; border-radius: 5px; z-index:-1"/></div> -->
-                    <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b; border-bottom: 5px solid red;">VISION</h3>
-                    <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and eco-friendly environment.</p>
-                    <br>
+              <div class="col-sm-6 col-m-6 col-lg-6 ">
+              <h3 style=" font-weight:bold; text-align:center; color: black !important; border-bottom: 5px solid red;">VISION</h3>
+              <p style=" font-weight: 400; margin-top: 15px; text-align: justify; color:black !important;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p>
+              <h3 style=" font-weight:bold; text-align:center; color: black !important;border-bottom: 5px solid red;">MISSION</h3>
+              <p style=" font-weight: 400; margin-top: 15px; text-align: justify;  color:black !important;">To provide quality and effective social services, pursue sustainable, inclusive and equitable economic growth, and promote ecological balance through a responsive, transparent, efficient, and technologically advanced governance in partnership with an empowered people towards achieving the city of excellence.</p>
             </div>
-            <div class=" col-6 col-sm-6 col-md-6 col-lg-6 vm">
-              <br>
-              <!-- <div class="q"><img src="{{asset('assets/gold.png')}}"  style="width: 540px; border-radius: 5px; z-index:-1"/></div> -->
-              <!-- <div class="vision" style="position: relative;top: auto;width: 80%;left: 11%;"> -->
-              <h3 style=" font-weight:bold; text-align:center; color: #1f1c4b;border-bottom: 5px solid red;">MISSION</h3>
-              <p style=" font-weight: 500; margin-top: 15px; text-align: justify;">To provide quality and effective social services, pursue sustainable, inclusive and equitable economic growth, and promote ecological balance through a responsive, transparent, efficient, and technologically advanced governance in partnership an empowered people towards achieving the city of excellence.</p>
-            <br>
+            <div class="col-sm-6 col-m-6 col-lg-6">
+                <img src="{{asset('assets/aa-min.png')}}"id="img1"/>
+            </div>
           </div>
-       </div>
-     </div>
+
+        </div>
         <br>
+        <br>
+        <br>
+        <br>
+
 @endsection

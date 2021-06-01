@@ -47,7 +47,7 @@ font-size: 18px
     padding:0  !important;
 } */
 div#agenda_row {
-    margin-top: -23%;
+    margin-top: -8%;
 }
 div#congattypage div#agenda_row{
     margin-top:0% !important;
@@ -1286,10 +1286,13 @@ div#Department {
 div#eser {
     margin-top: 0 !important;
 }
-
+.table td, .table th{
+    color: #000!important;
+    font-weight: 700!important;
+}
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
     .side_btn{
-    left:-230px;
+    left:-212px;
     position:absolute;
     width: 100%;
 }
@@ -1297,7 +1300,7 @@ div#eser {
 
 @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
     .side_btn{
-    left:-170px;
+    left:-152px;
     position:absolute;
     width: 100%;
 }
@@ -2126,7 +2129,7 @@ li.list-group-item.latest_news a{
 }
 
 div#sjmcpage .col-lg-4{
-    margin: 3% 0;
+    margin: 1% 0;
 }
 .carousel-control-next, .carousel-control-prev{
     width:10% !important;

@@ -111,11 +111,13 @@
                                <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
                              </ul>
                            </li>
-
+                           <li class="nav-item" >
+                            <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Tourism</a>
+                          </li>
                            <li class="nav-item" >
                             <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Departments</a>
                           </li>
-                           <li class="nav-item dropdown" >
+                          <li class="nav-item dropdown" >
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Programs and Projects
                             </a>
@@ -136,15 +138,16 @@
                             </ul>
                           </li>
                           <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                             Events
-                           </a>
-                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                           <li><a class="dropdown-item" href="{{route('tourism')}}"> Tourism Festivities </a></li>
-                            <li><a class="dropdown-item" href="{{route('brgy1')}}">Barangay </a></li>
+                            <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Events
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                            <li><a class="dropdown-item" href="{{route('calendar')}}"> Major Calendar </a></li>
+                            <li><a class="dropdown-item" href="{{route('lgu')}}">LGU</a></li>
+                            <li><a class="dropdown-item" href="{{route('brgy1')}}">Barangays</a></li>
                             <li><a class="dropdown-item" href="{{route('community')}}">Communities and CSO's </a></li>
-                            </ul>
-                         </li>
+                             </ul>
+                          </li>
                          <li class="nav-item dropdown" >
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                             <li><a class="dropdown-item" href="{{route('bids')}}">Notice of Bids</a></li>
@@ -155,7 +158,7 @@
                           </ul>
                         </li>
 
-                          <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('direct')}}">Directory</a>
+                        <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('direct')}}">Directory</a>
 
                          <li class="nav-item" >
                           <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('contactus')}}">Contact Us</a>
@@ -208,6 +211,9 @@
                            <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
                 </ul>
               </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Tourism</a>
+              </li>
 
                 <li class="nav-item" >
                           <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('department')}}">Departments</a>
@@ -234,14 +240,15 @@
                   </ul>
              </li>
              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Events
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-               <li><a class="dropdown-item" href="{{route('tourism')}}">Tourism Festivities</a></li>
-               <li><a class="dropdown-item" href="{{route('brgy1')}}"> Barangay</a></li>
-               <li><a class="dropdown-item" href="{{route('community')}}">Communities and CSOs'</a></li>
-                 </ul>
+              <li><a class="dropdown-item" href="{{route('calendar')}}"> Major Calendar </a></li>
+              <li><a class="dropdown-item" href="{{route('lgu')}}">LGU</a></li>
+              <li><a class="dropdown-item" href="{{route('brgy1')}}">Barangays</a></li>
+              <li><a class="dropdown-item" href="{{route('community')}}">Communities and CSO's </a></li>
+               </ul>
             </li>
             <li class="nav-item dropdown" >
              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >

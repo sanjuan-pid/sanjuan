@@ -53,6 +53,9 @@ div#med a {
 div#sjmcpage {
   margin-bottom: 10%;
 }
+.container.profile_ {
+  padding: 0 5%;
+}
 @media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
 
   .container.tourism {
@@ -76,11 +79,17 @@ div#sjmcpage {
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
+    .row.sjmccard {
+        margin-top: -100px;
+    }
+    .row.sjmccard2 {
+      margin-top: -150px;
+    }
   }
   @media screen and (min-device-width: 1551px) and (max-device-width: 1600px) {
     div#sjmcpage {
-      max-width: 70% !important;
-      width: 70% !important;
+      max-width: 90% !important;
+      width: 90% !important;
       flex: 0 0 100%;
     }
     #sjmcpage h1{
@@ -110,11 +119,17 @@ div#sjmcpage {
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
+    .row.sjmccard {
+      margin-top: -100px;
+    }
+    .row.sjmccard2 {
+      margin-top: -150px;
+    }
   }
   @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
     div#sjmcpage {
-      max-width: 70% !important;
-      width: 70% !important;
+      max-width: 90% !important;
+      width: 90% !important;
       flex: 0 0 100%;
     }
     #sjmcpage h1{
@@ -144,12 +159,18 @@ div#sjmcpage {
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
+    .row.sjmccard {
+      margin-top: -100px;
+    }
+    .row.sjmccard2 {
+      margin-top: -150px;
+    }
   }
 
   @media screen and (min-device-width: 1205px) and (max-device-width: 1366px){
       div#sjmcpage {
-        max-width: 70% !important;
-        width: 70% !important;
+        max-width: 80% !important;
+        width: 80% !important;
         flex: 0 0 100%;
       }
       #sjmcpage h1{
@@ -195,6 +216,12 @@ div#sjmcpage {
         -ms-transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
+      }
+      .row.sjmccard {
+        margin-top: -100px;
+      }
+      .row.sjmccard2 {
+        margin-top: -150px;
       }
     }
     .city_hall_front_mob{
@@ -276,6 +303,12 @@ div#sjmcpage {
       .mobcard2{
         z-index:1;
          margin-top: -210px !important;
+      }
+      .row.sjmccard {
+        margin-top: 20px;
+      }
+      .row.sjmccard2 {
+        margin-top: 15px;
       }
     }
     /* for citycouncil page */
@@ -689,6 +722,12 @@ div#sjmcpage {
       font-weight:700;
       text-align: center;
     }
+    #sjch3{
+      font-size: 45px;
+      color: #fff !important;
+      font-weight:800;
+      text-align: center;
+    }
     .catdirect{
       font-size: 20px;
       color:#1b2560;
@@ -744,107 +783,7 @@ div#sjmcpage {
     .w3-bar-item:hover {
       color: red;
     }
-      @media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
-        div#dtpage {
-          max-width: 100% !important;
-          width: 80% !important;
-          flex: 0 0 100%;
-        }
-        #conus{
-          max-width: 70% !important;
-          width: 70% !important;
-        }
-        .sidedirect{
-          height: 350px !important;
-
-        }
-        .catdirect{
-          font-size: 20px;
-          color:#1b2560;
-          font-weight: 900;
-          text-align: center;
-
-        }
-
-        .directbtn{
-          font-size: 15px !important;
-          color:#1b2560;
-          font-weight: 800;
-        }
-        #konsilaman{
-          font-size: 20px;
-          color:#1b2560;
-          font-weight: 900;
-          text-align: center;
-        }
-        .ctus{
-          font-size: 18px;
-          color:black;
-          font-weight: 500;
-          text-align: left;
-        }
-        .pula{
-          font-size: 15px;
-          color:red;
-          font-weight: 700;
-        }
-
-      }
-    @media screen and (min-device-width: 1551px) and (max-device-width: 1600px) {
-      div#dtpage {
-        max-width: 60% !important;
-        width: 60% !important;
-        flex: 0 0 100%;
-      }
-      #conus{
-        max-width: 70% !important;
-        width: 70% !important;
-      }
-      #conus #sjch1{
-        font-size: 25px !important;
-      }
-      #conus #sjch2{
-        font-size: 30px !important;
-      }
-
-      .sidedirect{
-        height: 350px !important;
-
-      }
-      .catdirect{
-        font-size: 15px !important;
-        color:#1b2560;
-        font-weight: 900;
-        text-align: center;
-
-      }
-
-      .directbtn{
-        font-size: 15px !important;
-        color:#1b2560;
-        font-weight: 800;
-      }
-      #konsilaman{
-        font-size: 15px !important;
-        color:#1b2560;
-        font-weight: 900;
-        text-align: center;
-      }
-      .ctus{
-        font-size: 12px !important;
-        color:black;
-        font-weight: 500;
-        text-align: left;
-      }
-      .pula{
-        font-size: 12px !important;
-        color:red;
-        font-weight: 700;
-      }
-
-    }
-
-    @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
+    @media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
       div#dtpage {
         max-width: 70% !important;
         width: 70% !important;
@@ -854,19 +793,12 @@ div#sjmcpage {
         max-width: 80% !important;
         width: 80% !important;
       }
-      #conus #sjch1{
-        font-size: 25px !important;
-      }
-      #conus #sjch2{
-        font-size: 30px !important;
-      }
-
       .sidedirect{
         height: 350px !important;
 
       }
       .catdirect{
-        font-size: 15px !important;
+        font-size: 20px;
         color:#1b2560;
         font-weight: 900;
         text-align: center;
@@ -879,151 +811,275 @@ div#sjmcpage {
         font-weight: 800;
       }
       #konsilaman{
-        font-size: 15px !important;
+        font-size: 20px;
         color:#1b2560;
         font-weight: 900;
         text-align: center;
       }
       .ctus{
-        font-size: 12px !important;
+        font-size: 18px;
         color:black;
         font-weight: 500;
         text-align: left;
       }
       .pula{
-        font-size: 12px !important;
+        font-size: 15px;
         color:red;
         font-weight: 700;
       }
 
     }
+  @media screen and (min-device-width: 1551px) and (max-device-width: 1600px) {
+    div#dtpage {
+      max-width: 80% !important;
+      width: 80% !important;
+      flex: 0 0 100%;
+    }
+    #conus{
+      max-width: 90% !important;
+      width: 90% !important;
+    }
+    #conus #sjch1{
+      font-size: 25px !important;
+    }
+    #conus #sjch2{
+      font-size: 30px !important;
+    }
+    #conus #sjch3{
+      font-size: 35px !important;
+    }
 
-    @media screen and (min-device-width: 1205px) and (max-device-width: 1366px) {
-      div#dtpage {
-        max-width: 70% !important;
-        width: 70% !important;
-        flex: 0 0 100%;
-      }
-      #conus{
-        max-width: 80% !important;
-        width: 80% !important;
-      }
-      #conus #sjch1{
+    .sidedirect{
+      height: 350px !important;
+
+    }
+    .catdirect{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+
+    }
+
+    .directbtn{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 800;
+    }
+    #konsilaman{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+    }
+    .ctus{
+      font-size: 12px !important;
+      color:black;
+      font-weight: 500;
+      text-align: left;
+    }
+    .pula{
+      font-size: 12px !important;
+      color:red;
+      font-weight: 700;
+    }
+
+  }
+
+  @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
+    div#dtpage {
+      max-width: 90% !important;
+      width: 90% !important;
+      flex: 0 0 100%;
+    }
+    #conus{
+      max-width: 90% !important;
+      width: 90% !important;
+    }
+    #conus #sjch1{
+      font-size: 25px !important;
+    }
+    #conus #sjch2{
+      font-size: 30px !important;
+    }
+
+    .sidedirect{
+      height: 350px !important;
+
+    }
+    .catdirect{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+
+    }
+
+    .directbtn{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 800;
+    }
+    #konsilaman{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+    }
+    .ctus{
+      font-size: 12px !important;
+      color:black;
+      font-weight: 500;
+      text-align: left;
+    }
+    .pula{
+      font-size: 12px !important;
+      color:red;
+      font-weight: 700;
+    }
+
+  }
+
+  @media screen and (min-device-width: 1205px) and (max-device-width: 1366px) {
+    div#dtpage {
+      max-width: 90% !important;
+      width: 90% !important;
+      flex: 0 0 100%;
+    }
+    #conus{
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    #conus #sjch1{
+      font-size: 25px !important;
+    }
+    #conus #sjch2{
+      font-size: 30px !important;
+    }
+    #conus #sjch3{
+      font-size: 40px !important;
+    }
+
+    .sidedirect{
+      height: 350px !important;
+
+    }
+    .catdirect{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+
+    }
+
+    .directbtn{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 800;
+    }
+    #konsilaman{
+      font-size: 15px !important;
+      color:#1b2560;
+      font-weight: 900;
+      text-align: center;
+    }
+    .ctus{
+      font-size: 12px !important;
+      color:black;
+      font-weight: 500;
+      text-align: left;
+    }
+    .pula{
+      font-size: 12px !important;
+      color:red;
+      font-weight: 700;
+    }
+
+  }
+
+
+  @media screen and (max-width: 766px) and (min-width: 200px) {
+    #dtpapge{
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+    }
+    #mobdirect{
+      display: block !important;
+      width: 100% !important;
+    }
+
+    .contactform #directform{
+      display: none !important;
+    }
+    #conus{
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    #conus #sjch1{
+      font-size: 18px !important;
+    }
+    #conus #sjch2 {
+      font-size: 20px !important;
+    }
+    #conus #sjch3{
+      font-size: 25px !important;
+    }
+
+    #dtpage .col-sm-4 #tab3 #e{
+      font-size: 15px !important;
+      margin-left: -40% !important;
+    }
+      #dtpage h1{
         font-size: 25px !important;
       }
-      #conus #sjch2{
-        font-size: 30px !important;
-      }
-
-      .sidedirect{
-        height: 350px !important;
-
-      }
-      .catdirect{
-        font-size: 15px !important;
-        color:#1b2560;
-        font-weight: 900;
-        text-align: center;
-
-      }
-
-      .directbtn{
-        font-size: 15px !important;
-        color:#1b2560;
-        font-weight: 800;
-      }
-      #konsilaman{
-        font-size: 15px !important;
-        color:#1b2560;
-        font-weight: 900;
-        text-align: center;
-      }
-      .ctus{
-        font-size: 12px !important;
-        color:black;
-        font-weight: 500;
-        text-align: left;
-      }
       .pula{
         font-size: 12px !important;
-        color:red;
-        font-weight: 700;
+      }
+      #dtpage .w3-container{
+        margin-top: 5%;
+      }
+      #dtpage .sidedirect{
+        width: 50% !important;
+        position:absolute;
+        left: :0;
+        z-index:2;
+        display:none;
+      }
+      /* Force table to not be like tables anymore */
+      table, thead, tbody, th, td, tr {
+          display: block;
       }
 
-    }
-
-
-    @media screen and (max-width: 766px) and (min-width: 200px) {
-      #dtpapge{
-        max-width: 100% !important;
-        width: 100% !important;
-        flex: 0 0 100%;
-      }
-      #conus{
-        max-width: 100% !important;
-        width: 100% !important;
-      }
-      #conus #sjch1{
-        font-size: 18px !important;
-      }
-      #conus #sjch2{
-        font-size: 20px !important;
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
       }
 
-      #dtpage .col-sm-4 #tab3 #e{
-        font-size: 15px !important;
-        margin-left: -40% !important;
+      tr { border: 1px solid #ccc; }
+
+      td {
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%;
+          font-size: 12px;
       }
-        #dtpage h1{
-          font-size: 25px;
-        }
-        .pula{
-          font-size: 12px !important;
-        }
-        #dtpage .w3-container{
-          margin-top: 5%;
-        }
-        #dtpage .sidedirect{
-          width: 50% !important;
-          position:absolute;
-          left: :0;
-          z-index:2;
-          display:none;
-        }
-        /* Force table to not be like tables anymore */
-        table, thead, tbody, th, td, tr {
-            display: block;
-        }
 
-        /* Hide table headers (but not display: none;, for accessibility) */
-        thead tr {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
-
-        tr { border: 1px solid #ccc; }
-
-        td {
-            /* Behave  like a "row" */
-            border: none;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 50%;
-            font-size: 12px;
-        }
-
-        td:before {
-            /* Now like a table header */
-            position: absolute;
-            /* Top/left values mimic padding */
-            top: 6px;
-            left: 6px;
-            width: 45%;
-            padding-right: 10px;
-            white-space: nowrap;
-        }
-    }
+      td:before {
+          /* Now like a table header */
+          position: absolute;
+          /* Top/left values mimic padding */
+          top: 6px;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+      }
+  }
       .contactform {
       position: relative;
       padding: 10px 10px;
@@ -1037,6 +1093,9 @@ div#sjmcpage {
     }
 
     /* vice mayor's page */
+    #vicempage .sj {
+      padding: 0 7% !important;
+    }
   @media screen and (min-device-width: 1601px) and (max-device-width: 1920px)  {
       div#vicempage {
         max-width: 100% !important;
@@ -1108,7 +1167,7 @@ div#sjmcpage {
         width: 100% !important;
       }
     }
-  @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
+    @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
       div#vicempage {
         max-width: 100% !important;
         width: 100% !important;
@@ -1132,7 +1191,7 @@ div#sjmcpage {
         font-size: 30px !important;
       }
       #_viewmore a{
-        font-size: 12px !important;
+        font-size: 10px !important;
       }
       #vicempage .sj iframe{
         width: 100% !important;

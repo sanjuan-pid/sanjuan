@@ -186,20 +186,27 @@ class Pages extends Controller
         return view('Events/TourismFestivities_page');
     }
   
-    public function departmental()
+    public function calendar()
     {
-        return view('Events/Departmental_page');
+        return view('Events/majorcalendar_page');
     }
-  
+    public function lgu()
+    {
+        return view('Events/lgu_page');
+    }
+
     public function brgy1()
     {
         return view('Events/Brgy_page');
     }
-  
+
     public function community()
     {
         return view('Events/Community_page');
     }
+    
+    
+    
   //Public notice
   public function bids()
   {

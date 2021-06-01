@@ -267,53 +267,53 @@ $(document).ready(function(){
 
     $(document).ready(function(){
     $("#profile_btn").click(function(){
-        $("div#profile_row").css("display","flex");
+        $("div#profile_row").css("display","block");
         $("div#profile_row").fadeIn("slow");
         $("div#achievement_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
     });
      $("a#achievement_btn").click(function(){
-        $("div#achievement_row").css("display","flex");
+        $("div#achievement_row").css("display","block");
         $("div#profile_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
         $("div#achievement_row").fadeIn("fast");
     });
 
      $("a#programs_btn").click(function(){
-        $("div#agenda_row").css("display","flex");
+        $("div#agenda_row").css("display","block");
         $("div#agenda_row").fadeIn("fast");
         $("div#profile_row,.news_row, div#carousel_row,#achievement_row").fadeOut("fast");
 
     });
 
        $("a#news_btn").click(function(){
-        $("div.news_row").css("display","flex");
+        $("div.news_row").css("display","block");
         $("ddiv.news_row").fadeIn("fast");
         $("div#profile_row,#agenda_row, div#carousel_row,#achievement_row").fadeOut("fast");
 
     });
     $("#profile_btn_mob").click(function(){
-        $("div#profile_row").css("display","flex");
+        $("div#profile_row").css("display","block");
         $("div#profile_row").fadeIn("slow");
         $("div#achievement_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
     });
      $("a#achievement_btn_mob").click(function(){
-        $("div#achievement_row").css("display","flex");
+        $("div#achievement_row").css("display","block");
         $("div#profile_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 
         $("div#achievement_row").fadeIn("fast");
     });
 
      $("a#programs_btn_mob").click(function(){
-        $("div#agenda_row").css("display","flex");
+        $("div#agenda_row").css("display","block");
         $("div#agenda_row").fadeIn("fast");
         $("div#profile_row,.news_row, div#carousel_row,#achievement_row").fadeOut("fast");
 
     });
 
        $("a#news_btn_mob").click(function(){
-        $("div.news_row").css("display","flex");
+        $("div.news_row").css("display","block");
         $("ddiv.news_row").fadeIn("fast");
         $("div#profile_row,#agenda_row, div#carousel_row,#achievement_row").fadeOut("fast");
 

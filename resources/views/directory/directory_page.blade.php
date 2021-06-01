@@ -32,17 +32,50 @@
   <div class="container" id="conus">
     <div class="contactform mt-5">
       <div class="row">
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <p id="sjch1"> San Juan City Hotline:<span id="sjch2"> 137-135</span></p>
+          <div class=" col-12 col-sm-12 col-md-12 col-lg-12" id="directform">
+            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
+              <span id="sjch3" style="text-align:right !important;">SAN JUAN CITY HOTLINE:</span>
+            </div>
+            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
+                <span id="sjch3" style="text-align:center;"> 137-135</span>
+            </div>
+            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
+              <span id="sjch2" style="text-align:right !important;">Mayor's Office Hotline (Smart):</span>
+            </div>
+            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
+                <span id="sjch2" style="text-align:center;"> 0961-680-5514</span>
+            </div>
+            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
+              <span id="sjch2" style="text-align:right !important;">Mayor's Office Hotline (Globe):</span>
+            </div>
+            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
+                <span id="sjch2" style="text-align:center;"> 0956-529-7286</span>
+            </div>
+            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
+              <span id="sjch2" style="text-align:right !important;">City Heath Office (COVID-19):</span>
+            </div>
+            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
+                <span id="sjch2" style="text-align:center;"> 7949 8358 / 8655 8683</span>
+            </div>
+          </div>
         </div>
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <p id="sjch1"> Mayor's Office Hotline (Smart):<span id="sjch2"> 0961-680-5514</span></p>
-        </div>
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <p id="sjch1"> Mayor's Office Hotline (Globe):<span id="sjch2"> 0956-529-7286</span></p>
-        </div>
-        <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
-          <p id="sjch1"> City Heath Office (Covid-19):<span id="sjch2"> 7949 8358 / 8655 8683</span></p>
+        <div class="mobdirect"id="mobdirect" style=" display: none;">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+                <p id="sjch3"> San Juan City Hotline:<span id="sjch3"> 137-135</span></p>
+              </div>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+                <p id="sjch1"> Mayor's Office Hotline (Smart):<span id="sjch2"> 0961-680-5514</span></p>
+              </div>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+                <p id="sjch1"> Mayor's Office Hotline (Globe):<span id="sjch2"> 0956-529-7286</span></p>
+              </div>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12">
+                <p id="sjch1"> City Heath Office (Covid-19):<span id="sjch2"> 7949 8358 / 8655 8683</span></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
