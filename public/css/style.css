@@ -2134,3 +2134,15 @@ div#sjmcpage .col-lg-4{
 .carousel-control-next, .carousel-control-prev{
     width:10% !important;
 }
+.row.news_row a {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.row.news_row{
+    padding: 0 5%;
+}
+
