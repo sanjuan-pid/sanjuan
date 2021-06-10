@@ -78,7 +78,7 @@
                                   <div class="row">
                                     <div class=" col-sm-12">
                                       <div id="img_slot1">
-                                        <video width="1500" controls>
+                                        <video width="1250" id="first_vid" controls>
                                           <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
                                           Your browser does not support HTML video.
                                         </video>
@@ -92,7 +92,7 @@
                                   <div class="row">
                                     <div class=" col-sm-12">
                                       <div id="img_slot1">
-                                        <video width="1500" controls>
+                                        <video width="1250" id="second_vid" controls>
                                           <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
                                           Your browser does not support HTML video.
                                         </video>
@@ -155,8 +155,8 @@
         <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700;">ANNOUNCEMENTS</h2>
         <div class="controls-top" style="padding: 0 5%;">
           
-          <a class="btn-floating" href="#multi-item-example" data-slide="prev">Previous</i></a>
-          <a class="btn-floating" href="#multi-item-example" data-slide="next" style="float: right;">Next</a>
+          <a class="btn btn-outline-primary" href="#multi-item-example" data-slide="prev" style="color : #000; font-size: 20px;">Previous</i></a>
+          <a class="btn btn-outline-primary" href="#multi-item-example" data-slide="next" style="float: right;color : #000;font-size: 20px;">Next</a>
         </div>
 
         <!--/.Controls-->

@@ -249,6 +249,45 @@ $(document).ready(function(){
 
 
     $(document).ready(function(){
+        $("#optic_btn").click(function(){
+            $(".optic_").trigger('pause');
+            $(".anti_").trigger('pause'); 
+            setTimeout(function(){   
+                $(".optic_").trigger('play');
+            }, 800);
+        });
+        $("#dangling_btn").click(function(){
+            $(".optic_").trigger('pause');
+            $(".anti_").trigger('pause'); 
+            setTimeout(function(){   
+                $(".anti_").trigger('play');
+            }, 800);
+        });
+        $(".close_pause").click(function(){
+            setTimeout(function(){   
+                $(".optic_").trigger('pause');
+                $(".anti_").trigger('pause');
+            }, 500); 
+        });
+
+
+        var vid = document.getElementById("first_vid"); 
+        $("#myCarousel  a.carousel-control-prev ,#myCarousel  a.carousel-control-next").click(function(){
+            $("#myCarousel #first_vid").trigger('pause');
+            $("#myCarousel  #second_vid").trigger('pause'); 
+            setTimeout(function(){   
+                $("#myCarousel .active #first_vid").trigger('play');
+                $("#myCarousel .active #second_vid").trigger('play'); 
+            }, 800);
+           
+            // $("#first_vid").trigger('pause');
+            // $(".active #second_vid").trigger('play');
+        });
+        
+            
+            // alert("click");
+        
+        
         $(window).scroll(function() {
             var $height = $(window).scrollTop();
             $("nav.navbar.navbar-expand-lg.navbar-light").css("background","#fff");
@@ -256,6 +295,9 @@ $(document).ready(function(){
                 $("nav.navbar.navbar-expand-lg.navbar-light").css("background","#314096");
                 $("#nav a").css("color","#fff");
                 $(".dropdown-item").css("color","#000");
+            //    alert("pause"); 
+                $('video').get(0).pause();
+                $('video').get(1).pause();
             } else {
                 $("nav.navbar.navbar-expand-lg.navbar-light").css("background","#fff");
                 $("#nav a").css("color","#314096");

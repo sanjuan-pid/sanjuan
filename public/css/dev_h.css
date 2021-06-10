@@ -1256,7 +1256,7 @@ div#sjmcpage {
         width: 100% !important;
         margin-left: 0% !important;
       }
-      #vicempage, #vicempage .col-12.col-sm-12, div#vicepic {
+      #vicempage, #vicempage .col-12.col-sm-12, div#vicepic {  
         padding: 0 !important;
       }
       
@@ -1266,7 +1266,7 @@ div#sjmcpage {
       }
       #vicempage .sj, #vicempage .card-body , #vicempage .col-sm-6, #vicempage .row.news_row, #vicempage .container{
           padding: 0 0% !important;
-      }
+      }`
       #vicempage .news_row{
         max-width: 100% !important;
         width: 100% !important;

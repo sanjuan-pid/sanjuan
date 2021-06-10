@@ -71,6 +71,8 @@ Route::get('Login/employee_page','Pages@employee')->name('employee');
 Route::get('Login/residence_page','Pages@residence')->name('residence');
 Route::get('Login/visitor_page','Pages@visitor')->name('visitor');
 
+
+
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');

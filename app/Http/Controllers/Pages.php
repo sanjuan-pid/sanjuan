@@ -142,7 +142,12 @@ class Pages extends Controller
   //programs and projects
   public function current()
   {
-    return view('programsandprojects/current_page');
+    $act = News::where('status', 1)
+        ->where('content_type', "Act")
+        ->orderBy('created_at', 'desc')
+        ->get();
+    // return($act);
+    return view('programsandprojects/current_page',compact('act'));
   }
   public function archives()
   {
@@ -282,4 +287,6 @@ class Pages extends Controller
         //  dd($child);
         return view('deparment.department_selected',compact('child'));
     }
+
+    
 }

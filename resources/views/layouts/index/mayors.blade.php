@@ -3,7 +3,7 @@
     <img src="{{asset('assets/mayor.jpg')}}" width="100%" />
     <br>
     <br>
-    <div class="row">
+    <div class="row" style="height: 750px;">
         <h1 style="text-align: center;">MAYOR'S CORNER</h1>
         <div class="container-lg my-3">
             <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -83,7 +83,9 @@
                 
                 
             </div>
-            <a href="mayors_page" id="mayors_link" >VISIT PAGE</a>
+            
         </div>
+       
     </div>
+    <a href="mayors_page" id="mayors_link" >VISIT PAGE</a>
 </div>     
