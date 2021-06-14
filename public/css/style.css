@@ -2182,6 +2182,10 @@ div#agenda_row img {
     video.vid_contents.optic_, .vid_contents {
         width:100% !important;
     }
+    .modalss{
+        margin:0 !important;
+        margin-top:50% !important;  
+    }
     div#img_slot{
         padding: 0 0% !important;
     }

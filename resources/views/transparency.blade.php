@@ -29,7 +29,7 @@
     <div class="container 1st_cont" id="Transparency">
         <div class="modal fade" id="myModal" data-keyboard="false" data-backdrop="static">
 
-            <div class="modal-dialog modal-lg" style="width: 100%; max-width: 100%;">
+            <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
 
               <!-- Modal content-->
               <div class="modal-content">
@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="modal fade" id="myModal2" data-keyboard="false" data-backdrop="static">
-            <div class="modal-dialog modal-lg" style="width: 100%; max-width: 100%;">
+            <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
 
               <!-- Modal content-->
               <div class="modal-content">
@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="modal fade" id="myModal3" data-keyboard="false" data-backdrop="static">
-            <div class="modal-dialog modal-lg" style="width: 100%; max-width: 100%;">
+            <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
 
               <!-- Modal content-->
               <div class="modal-content">
