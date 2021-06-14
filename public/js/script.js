@@ -249,6 +249,7 @@ $(document).ready(function(){
 
 
     $(document).ready(function(){
+
         $("#optic_btn").click(function(){
             $(".optic_").trigger('pause');
             $(".anti_").trigger('pause'); 

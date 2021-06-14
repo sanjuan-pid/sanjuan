@@ -1,6 +1,7 @@
 @extends('layouts.nav-bar')
 
 @section('content')
+
     {{-- <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
@@ -244,15 +245,14 @@
               
                 </div>
                 <!--/.Carousel Wrapper-->
-                <div id="multi-item-example1" class="carousel slide carousel-multi-item" data-ride="carousel" style="margin: 5% 0;">
+                <div id="multi-item-example1" class="carousel slide carousel-multi-item  d-sm-block d-md-none" data-ride="carousel" style="margin: 5% 0;">
               
                   <!--Controls-->
                   <div class="controls-top">
-                    <h2 class="card-title " style="color:#000 !important; padding: 0%  0 !important; text-align: center; color: #1f1c4b;font-weight: 700;margin-bottom: 5%;">
+                    <h3 class="card-title " style="color:#000 !important; padding: 0%  0 !important; text-align: center; color: #1f1c4b;font-weight: 700;margin-bottom: 0%;">
                         <a style="float:left;" class="btn-floating" href="#multi-item-example1" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                        10 PT AGENDA
                         <a style="float:right;"  class="btn-floating" href="#multi-item-example1" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-                    </h2>
+                    </h3>
                   </div>
                   <!--Slides-->
                   <div class="carousel-inner" role="listbox">
@@ -262,6 +262,123 @@
                         <div class="col">
                           <div class="card mb-2">
                             <img class="card-img-top" src="{{asset('assets/Agenda/1.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/2.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/3.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/4.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/5.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/6.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/7.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/8.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/9.png')}}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="card mb-2">
+                            <img class="card-img-top" src="{{asset('assets/Agenda/10.png')}}"
                                  alt="Card image cap">
                             <div class="card-body">
                             </div>

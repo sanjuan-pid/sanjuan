@@ -2174,3 +2174,32 @@ div#agenda_row img {
     margin:0 auto;
     display: block;
 }
+
+@media screen and (min-device-width: 319px) and (max-device-width: 767px) {
+    video.vid_contents.optic_, .vid_contents {
+        width:100% !important;
+    }
+    #current_program .modal-dialog.modal-lg {
+        max-width: 100%;
+        width: 100%  !important;
+        margin:40% 0 !important;
+    }
+    .controls-top{
+        padding: 0% !important;
+    }
+    div#news {
+        width: 100% !important;
+    }
+    div#news .mt-2, .my-2 {
+        margin-top: 1.5rem !important;
+    }
+    video#first_vid,video#second_vid {
+        width: 100% !important;
+    }
+    #mayors_corner h1, ol.carousel-indicators{
+        display: none;
+    }
+    #mayors_corner .row {
+        height: 600px !important;
+    }
+}
