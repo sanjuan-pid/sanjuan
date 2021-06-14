@@ -101,7 +101,7 @@
                       <img class="card-img-top" src="{{asset('assets/transparency/Bayanihan Grant 1 of 2.jpg')}}"
                            alt="Card image cap">
                       <div class="card-body">
-                        <h4>BAYANIHAN GRANT 1 OF 2</h4>
+                        <h4>BAYANIHAN GRANT</h4>
                         <br>
                         <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal2" style="float: right; font-size:18px;" >VIEW</button>
                         {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
