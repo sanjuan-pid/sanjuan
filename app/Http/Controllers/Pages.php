@@ -287,6 +287,9 @@ class Pages extends Controller
         //  dd($child);
         return view('deparment.department_selected',compact('child'));
     }
-
+    public function transparency()
+    {
+        return view('transparency');
+    }    
     
 }

@@ -111,6 +111,11 @@
                                <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
                              </ul>
                            </li>
+                           
+                          <li class="nav-item" >
+                            <a class="nav-link" href="{{route('transparency')}}"  id="navbarDropdownMenuLink" >Transparency</a>
+                          </li>
+
                            <li class="nav-item" >
                             <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Tourism</a>
                           </li>
@@ -210,6 +215,9 @@
                            <li><a class="dropdown-item" href="{{route('city')}}">City Council</a></li>
                            <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
                 </ul>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="{{route('transparency')}}"  id="navbarDropdownMenuLink" >Transparency</a>
               </li>
               <li class="nav-item" >
                 <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Tourism</a>

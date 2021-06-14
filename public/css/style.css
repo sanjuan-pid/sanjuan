@@ -2176,6 +2176,9 @@ div#agenda_row img {
 }
 
 @media screen and (min-device-width: 319px) and (max-device-width: 767px) {
+    #sjmcpage b{
+        line-height: 2;
+    }
     video.vid_contents.optic_, .vid_contents {
         width:100% !important;
     }
