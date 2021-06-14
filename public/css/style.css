@@ -2180,7 +2180,7 @@ div#agenda_row img {
         width:100% !important;
     }
     div#img_slot{
-        padding: 0 10% !important;
+        padding: 0 0% !important;
     }
     #current_program .modal-dialog.modal-lg {
         max-width: 100%;
