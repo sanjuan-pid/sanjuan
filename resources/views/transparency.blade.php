@@ -52,6 +52,7 @@
                 <div class="modal-body">
                     <h2>BAYANIHAN GRANT 1 OF 2</h2>
                     <img class="card-img-top" src="{{asset('assets/transparency/BAYANIHAN GRANT 1 OF 2.jpg')}}" />
+                    <img class="card-img-top" src="{{asset('assets/transparency/BAYANIHAN GRANT 2 OF 2.jpg')}}" />
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default close_pause"  data-dismiss="modal">Close</button>
@@ -83,7 +84,7 @@
                 <h1 style="margin:2% 0; ">Transparency</h1>
             </center>
             <div class="row" style="margin-bottom: 5%;">
-                <div class="col-md-4 clearfix d-md-block">
+                <div class="col-md-6 clearfix d-md-block">
                     <div class="card mb-2">
                       <img class="card-img-top" src="{{asset('assets/transparency/Financial Assistance.jpg')}}"
                            alt="Card image cap">
@@ -95,7 +96,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4 clearfix d-md-block">
+                  <div class="col-md-6 clearfix d-md-block">
                     <div class="card mb-2">
                       <img class="card-img-top" src="{{asset('assets/transparency/Bayanihan Grant 1 of 2.jpg')}}"
                            alt="Card image cap">
@@ -107,7 +108,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4 clearfix d-md-block">
+                  {{-- <div class="col-md-4 clearfix d-md-block">
                       <div class="card mb-2">
                         <img class="card-img-top" src="{{asset('assets/transparency/Bayanihan Grant 2 of 2.jpg')}}"
                              alt="Card image cap" />
@@ -117,7 +118,7 @@
                             <button type="button" class="btn btn-info btn-lg" id="dangling_btn" data-toggle="modal" data-target="#myModal3" style="float: right; font-size:18px;" >VIEW</button>
                         </div>
                       </div>
-                    </div>
+                    </div> --}}
             </div>
         </div>
     </div>
