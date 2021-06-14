@@ -2188,6 +2188,9 @@ div#agenda_row img {
     #article_title{
         height: 75px !important;
     }
+    div#article_contents {
+        margin-top: 3px;
+    }
     #current_program .modal-dialog.modal-lg {
         max-width: 100%;
         width: 100%  !important;
