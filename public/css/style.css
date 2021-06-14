@@ -2182,6 +2182,9 @@ div#agenda_row img {
     div#img_slot{
         padding: 0 0% !important;
     }
+    div#news_contents_row img {
+        padding: 0 !important;
+    }
     #current_program .modal-dialog.modal-lg {
         max-width: 100%;
         width: 100%  !important;
