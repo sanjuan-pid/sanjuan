@@ -2179,7 +2179,7 @@ div#agenda_row img {
     video.vid_contents.optic_, .vid_contents {
         width:100% !important;
     }
-    div#myCarousel1 div#img_slot{
+    div#img_slot{
         padding: 0 10% !important;
     }
     #current_program .modal-dialog.modal-lg {
