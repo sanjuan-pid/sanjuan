@@ -2,6 +2,12 @@
 
 @section('content')
 <div class="container">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.jqueryui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -34,7 +40,7 @@
                         <tbody>
                          @foreach($ann as $row)
                             <tr id={{$row['id']}}>
-                                <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="80px"/></td>
+                                <td ><img src="{{asset("uploads/" . $row['filename']) }}" width="120px"  height="180px"/></td>
                               
                                 <td >{{$row['title']}}</td>
                                 <td  id="desc" ><?php echo $row['desc'] ?></td>
@@ -76,5 +82,5 @@ $(document).ready(function() {
         }
     });
 } );
-</script>
+
 @endsection
