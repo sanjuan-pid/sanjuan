@@ -1,6 +1,1 @@
-<<<<<<< HEAD
-asdadadasd
-=======
-asd
-123
->>>>>>> a4e4d43e173a80535921889466644ec1f60a40d5
+asdad
