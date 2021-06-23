@@ -40,7 +40,7 @@
                   <div class="modal-content">
                     <div class="modal-body">
                           <video width="1200" class="vid_contents optic_" controls>
-                            <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
+                            <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
                             Your browser does not support HTML video.
                           </video>
                     </div>
@@ -58,7 +58,7 @@
                   <div class="modal-content">
                     <div class="modal-body">
                         <video width="1200" class="vid_contents anti_" controls>
-                          <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
+                          <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
                           Your browser does not support HTML video.
                         </video>
                     </div>
