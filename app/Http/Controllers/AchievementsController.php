@@ -112,7 +112,6 @@ class AchievementsController extends Controller
         $ann_update->save();
         return redirect()->route('admin.achievement.mayors-list')->with('success', 'Article is already removed');
     }
-    
     public function vm()
     {
         // $ann = Announcement::all()->toArray();
