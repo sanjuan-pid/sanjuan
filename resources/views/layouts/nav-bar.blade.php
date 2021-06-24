@@ -176,7 +176,7 @@
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                              <li><a class="dropdown-item" href="{{route('employee')}}">Employee</a></li>
-                               <li><a class="dropdown-item" href="{{route('residence')}}">Residence</a></li>
+                               <li><a class="dropdown-item" href="{{route('residence')}}">Resident</a></li>
                                <li><a class="dropdown-item" href="{{route('visitor')}}">Visitor</a></li>
                              </ul>
                            </li>
@@ -285,7 +285,7 @@
              </a>
              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="{{route('employee')}}">Employee</a></li>
-                <li><a class="dropdown-item" href="{{route('residence')}}">Residence</a></li>
+                <li><a class="dropdown-item" href="{{route('residence')}}">Resident</a></li>
                 <li><a class="dropdown-item" href="{{route('visitor')}}">Visitor</a></li>
              </ul>
            </li>

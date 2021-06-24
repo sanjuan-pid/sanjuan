@@ -1139,7 +1139,10 @@ div#sjmcpage {
       #vicempage .news_row{
         margin-top: 250px !important;
       }
-      
+      #side_prof {
+        margin-top: 12% !important;
+      }
+
     }
     @media screen and (min-device-width: 1551px) and (max-device-width: 1600px)  {
       div#vicempage {
@@ -1167,7 +1170,14 @@ div#sjmcpage {
         width: 100% !important;
       }
       #side_prof a {
-        font-size: 20px !important;
+        font-size: 18px !important;
+      }
+      #side_prof a img{
+        width: 25% !important;
+      }
+      #side_prof {
+        margin-left: 1% !important;
+        margin-top: 10% !important;
       }
     }
     @media screen and (min-device-width: 1367px) and (max-device-width: 1500px) {
@@ -1201,6 +1211,16 @@ div#sjmcpage {
       }
       #side_prof a {
         font-size: 17px !important;
+      }
+      #side_prof a {
+        font-size: 18px !important;
+      }
+      #side_prof a img{
+        width: 25% !important;
+      }
+      #side_prof {
+        margin-left: 1% !important;
+        margin-top: 10% !important;
       }
     }
 
@@ -1245,8 +1265,17 @@ div#sjmcpage {
         #_viewmore a{
           font-size: 12px !important;
         }
+
         #side_prof a {
-          font-size: 17px !important;
+          font-size: 15px !important;
+        }
+        #side_prof a img{
+          width: 25% !important;
+        }
+        #side_prof {
+          margin-left: 1% !important;
+          margin-top: 10% !important;
+          height: 30% !important
         }
       }
 
@@ -1256,10 +1285,10 @@ div#sjmcpage {
         width: 100% !important;
         margin-left: 0% !important;
       }
-      #vicempage, #vicempage .col-12.col-sm-12, div#vicepic {  
+      #vicempage, #vicempage .col-12.col-sm-12, div#vicepic {
         padding: 0 !important;
       }
-      
+
       ._2p3a {
           min-width: 180px;
           width: 350px !important;
@@ -1326,3 +1355,87 @@ div#sjmcpage {
   .ann{
       height:100%;
   }
+  /* majorcalendar */
+
+
+  .btn-des {
+  position: relative;
+  background-color: blue !important;
+  border: none;
+  font-size: 25px !important;
+  color: #FFFFFF !important;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+}
+  .btn-des:after {
+  content: "";
+  background: red;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.btn-des:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.tabcalendar {
+      padding: 0px 12px;
+      width: 100%;
+      height: 760px;
+      display: block;
+      margin-left: auto;
+      margin-right:auto;
+      border-style: solid;
+      border-width: 2px;
+      border-color: black;
+      border-radius: 10px;
+    }
+    /* majorcalendar */
+
+    .calendardirect{
+      height: 630px !important;
+    }
+    .calendarbtn{
+      font-size: 24px;
+      color:#1b2560;
+      font-weight: 800;
+    }
+    .calendardirect {
+      background-color: #fff;
+      position: absolute !important;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      border-radius:5px;
+      margin-top: .2%;
+      width:190px;
+      height:400px;
+      z-index: 10;
+      margin-top: 50px;
+    }
+    a.w3-button.clinks.calendarbtnactive {
+    color: red;
+    font-size: 25px;
+    font-weight: 700;
+  }
+   .calendarbtn:hover{
+    color: blue !important;
+  }
+
+/* @media screen and (min-device-width: 1601px) and (max-device-width: 1920px){
+  .container div#mayors_corner #insta{
+    margin-left: 15% !important;
+  }
+} */

@@ -27,9 +27,9 @@
     </div> --}}
 
     <div class="container" id="current_program" style="padding:0 !important;">
-            <div class="container my-4">     
+            <div class="container my-4">
               <!-- Trigger the modal with a button -->
-            
+
 
               <!-- Modal -->
                 <div class="modal fade" id="myModal" data-keyboard="false" data-backdrop="static">
@@ -40,7 +40,7 @@
                   <div class="modal-content">
                     <div class="modal-body">
                           <video width="1200" class="vid_contents optic_" controls>
-                            <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
+                            <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
                             Your browser does not support HTML video.
                           </video>
                     </div>
@@ -58,7 +58,24 @@
                   <div class="modal-content">
                     <div class="modal-body">
                         <video width="1200" class="vid_contents anti_" controls>
-                          <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
+                          <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
+                          Your browser does not support HTML video.
+                        </video>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default close_pause"  data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="myModal3" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <video width="1200" class="vid_contents bike_" controls>
+                          <source src="{{asset('assets/vid3.mp4')}}" type="video/mp4">
                           Your browser does not support HTML video.
                         </video>
                     </div>
@@ -93,10 +110,22 @@
                             </div>
                           </div>
                         </div>
+
+                        <div class="col-md-6 clearfix d-md-block mt-3" style=" margin: auto;">
+                            <div class="card mb-2">
+                              <img class="card-img-top" src="{{asset('assets/Agenda/bike.jpg')}}"
+                                   alt="Card image cap" />
+                              <div class="card-body">
+                                  <h4>SAN JUAN CITY LAUNCHES POP-UP BIKE LANES</h4>
+                                  <br>
+                                  <button type="button" class="btn btn-info btn-lg" id="bike_btn" data-toggle="modal" data-target="#myModal3" style="float: right; font-size:18px;" >Play Video</button>
+                              </div>
+                            </div>
+                          </div>
                 </div>
                 <!--Carousel Wrapper-->
                 <div id="multi-item-example" class="carousel slide carousel-multi-item  d-none d-md-block" data-ride="carousel" style="margin: 5% 0;">
-              
+
                   <!--Controls-->
                   <div class="controls-top">
                     <h2 class="card-title " style="color:#000 !important; padding: 0%  0 !important; text-align: center; color: #1f1c4b;font-weight: 700;margin-bottom: 5%;">
@@ -106,20 +135,20 @@
                     </h2>
                   </div>
                   <!--/.Controls-->
-              
+
                   <!--Indicators-->
                   <ol class="carousel-indicators">
                     <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
                     <li data-target="#multi-item-example" data-slide-to="1"></li>
                   </ol>
                   <!--/.Indicators-->
-              
+
                   <!--Slides-->
                   <div class="carousel-inner" role="listbox">
-              
+
                     <!--First slide-->
                     <div class="carousel-item active">
-              
+
                       <div class="row">
                         <div class="col">
                           <div class="card mb-2">
@@ -127,29 +156,29 @@
                                  alt="Card image cap">
                             <div class="card-body">
 
-                              
+
                             </div>
                           </div>
                         </div>
-              
+
                         <div class="col clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="{{asset('assets/Agenda/2.png')}}"
                                  alt="Card image cap">
                             <div class="card-body">
 
-                              
+
                             </div>
                           </div>
                         </div>
-              
+
                         <div class="col clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="{{asset('assets/Agenda/3.png')}}"
                                  alt="Card image cap">
                             <div class="card-body">
 
-                              
+
                             </div>
                           </div>
                         </div>
@@ -160,7 +189,7 @@
                                    alt="Card image cap">
                               <div class="card-body">
 
-                                
+
                               </div>
                             </div>
                           </div>
@@ -171,16 +200,16 @@
                                    alt="Card image cap">
                               <div class="card-body">
 
-                                
+
                               </div>
                             </div>
                           </div>
                       </div>
-              
+
                     </div>
                     <!--/.First slide-->
                     <div class="carousel-item">
-              
+
                         <div class="row">
                           <div class="col">
                             <div class="card mb-2">
@@ -188,65 +217,65 @@
                                    alt="Card image cap">
                               <div class="card-body">
 
-                                
+
                               </div>
                             </div>
                           </div>
-                
+
                           <div class="col clearfix d-none d-md-block">
                             <div class="card mb-2">
                                 <img class="card-img-top" src="{{asset('assets/Agenda/7.png')}}"
                                    alt="Card image cap">
                               <div class="card-body">
 
-                                
+
                               </div>
                             </div>
                           </div>
-                
+
                           <div class="col clearfix d-none d-md-block">
                             <div class="card mb-2">
                                 <img class="card-img-top" src="{{asset('assets/Agenda/8.png')}}"
                                    alt="Card image cap">
                               <div class="card-body">
 
-                                
+
                               </div>
                             </div>
                           </div>
-  
+
                           <div class="col clearfix d-none d-md-block">
                               <div class="card mb-2">
                                 <img class="card-img-top" src="{{asset('assets/Agenda/9.png')}}"
                                      alt="Card image cap">
                                 <div class="card-body">
-                                
-                                  
+
+
                                 </div>
                               </div>
                             </div>
-  
+
                           <div class="col clearfix d-none d-md-block">
                               <div class="card mb-2">
                                 <img class="card-img-top" src="{{asset('assets/Agenda/10.png')}}"
                                      alt="Card image cap">
                                 <div class="card-body">
-                                
-                                  
+
+
                                 </div>
                               </div>
                             </div>
                         </div>
-                
+
                       </div>
-              
+
                   </div>
                   <!--/.Slides-->
-              
+
                 </div>
                 <!--/.Carousel Wrapper-->
                 <div id="multi-item-example1" class="carousel slide carousel-multi-item  d-sm-block d-md-none" data-ride="carousel" style="margin: 5% 0;">
-              
+
                   <!--Controls-->
                   <div class="controls-top">
                     <h3 class="card-title " style="color:#000 !important; padding: 0%  0 !important; text-align: center; color: #1f1c4b;font-weight: 700;margin-bottom: 0%;">
@@ -268,7 +297,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -281,7 +310,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -294,7 +323,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -307,7 +336,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -320,7 +349,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -333,7 +362,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -346,7 +375,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -359,7 +388,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -372,7 +401,7 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <div class="carousel-item">
                       <div class="row">
@@ -385,13 +414,13 @@
                           </div>
                         </div>
                       </div>
-              
+
                     </div>
                     <!--/.First slide-->
                       </div>
                   </div>
                   <!--/.Slides-->
-              
+
                 </div>
                 <br>
                 <div class="row" id="act">
@@ -424,7 +453,7 @@
                                       @endif
                                   @endforeach
                           </div>
-        
+
                       </div>
                   </div>
                 </div>

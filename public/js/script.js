@@ -248,38 +248,54 @@ $(document).ready(function(){
 
 
 
+   
     $(document).ready(function(){
 
         $("#optic_btn").click(function(){
             $(".optic_").trigger('pause');
-            $(".anti_").trigger('pause'); 
-            setTimeout(function(){   
+            $(".anti_").trigger('pause');
+            $(".bike_").trigger('pause')
+            setTimeout(function(){
                 $(".optic_").trigger('play');
             }, 800);
         });
         $("#dangling_btn").click(function(){
             $(".optic_").trigger('pause');
-            $(".anti_").trigger('pause'); 
-            setTimeout(function(){   
+            $(".anti_").trigger('pause');
+            $(".bike_").trigger('pause')
+            setTimeout(function(){
                 $(".anti_").trigger('play');
             }, 800);
         });
+        $("#bike_btn").click(function(){
+            $(".optic_").trigger('pause');
+            $(".anti_").trigger('pause');
+            $(".bike_").trigger('pause')
+            setTimeout(function(){
+                $(".bike_").trigger('play');
+            }, 800);
+        });
         $(".close_pause").click(function(){
-            setTimeout(function(){   
+            setTimeout(function(){
                 $(".optic_").trigger('pause');
                 $(".anti_").trigger('pause');
-            }, 500); 
+                $(".bike_").trigger('pause')
+            }, 500);
         });
 
 
-        var vid = document.getElementById("first_vid"); 
+        var vid = document.getElementById("first_vid");
         $("#myCarousel  a.carousel-control-prev ,#myCarousel  a.carousel-control-next").click(function(){
             $("#myCarousel #first_vid").trigger('pause');
-            $("#myCarousel  #second_vid").trigger('pause'); 
-            setTimeout(function(){   
+            $("#myCarousel  #second_vid").trigger('pause');
+            $("#myCarousel  #third_vid").trigger('pause');
+            setTimeout(function(){
                 $("#myCarousel .active #first_vid").trigger('play');
-                $("#myCarousel .active #second_vid").trigger('play'); 
+                $("#myCarousel .active #second_vid").trigger('play');
+                $("#myCarousel .active #third_vid").trigger('play');
             }, 800);
+
+          
            
             // $("#first_vid").trigger('pause');
             // $(".active #second_vid").trigger('play');
@@ -310,7 +326,7 @@ $(document).ready(function(){
 
     $(document).ready(function(){
     $("#profile_btn").click(function(){
-        $("div#profile_row").css("display","block");
+        $("div#profile_row").css("display","flex");
         $("div#profile_row").fadeIn("slow");
         $("div#achievement_row,.news_row, div#carousel_row,div#agenda_row").fadeOut("fast");
 

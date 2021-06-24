@@ -104,6 +104,14 @@ class AchievementsController extends Controller
         return view('admin.achievement.mayors-list', compact('achievement'));
         //
     }
+    public function destroy($id)
+    {
+        //
+        $ann_update = Achievement::find($id);
+        $ann_update->status = 0;
+        $ann_update->save();
+        return redirect()->route('admin.achievement.mayors-list')->with('success', 'Article is already removed');
+    }
     
     public function vm()
     {

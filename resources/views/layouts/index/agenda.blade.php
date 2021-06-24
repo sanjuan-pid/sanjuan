@@ -48,7 +48,7 @@ body {font-family: "Lato", sans-serif;}
 }
 </style>
 
-        <div class="container" id="agenda_row" >
+        <div class="container" id="agenda_row" style="margin-top: -22%; width:90%" >
 
           <br>
           <div class="row">

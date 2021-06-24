@@ -109,7 +109,7 @@
  </div>
 
  <div class="container ag"style=" max-width: 100%; margin-top:230px;">
-     <div class=" col-12 col-sm-12" id="agenda_row">
+     <div class=" col-12 col-sm-12" id="agenda_row" style="padding: 0 6%; max-width: 100%;">
      <div class="card">
        <div class="card-body">
          <div class="sj">

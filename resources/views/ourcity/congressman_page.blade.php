@@ -40,6 +40,33 @@
       #_viewmore a{
         font-size: 15px !important;
       }
+      #side_prof {
+        margin-top: 12% !important;
+      }
+      #one-tab{
+        font-size: 23px;
+      }
+      #two-tab{
+        font-size: 23px;
+      }
+      #seven-tab{
+        font-size: 23px;
+      }
+      #seven1-tab{
+        font-size: 23px;
+      }
+      #three-tab{
+        font-size: 23px;
+      }
+      #four-tab{
+        font-size: 23px;
+      }
+      #five-tab{
+        font-size: 23px;
+      }
+      #six-tab{
+        font-size: 23px;
+      }
     }
   @media screen and (min-device-width: 1551px) and (max-device-width: 1600px)  {
       div#congattypage {
@@ -57,6 +84,15 @@
       }
       #_viewmore a{
         font-size: 15px !important;
+      }
+      #side_prof a {
+        font-size: 18px !important;
+      }
+      #side_prof a img{
+        width: 25% !important;
+      }
+      #side_prof {
+        margin-left: 1% !important;
       }
     }
     @media screen and (min-device-width: 1367px) and (max-device-width: 1500px)  {
@@ -129,6 +165,8 @@
           width: 50%;
           display: inline-block;
       }
+
+
     </style>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -166,13 +204,13 @@
         <div class="container congpic" style="max-width: 100%;">
           <div class="row">
             <div class=" col-12 col-sm-12">
-            <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:70%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
+            <img id="vm_pic" src="{{asset('assets/congronny/congressman.jpg')}}"style="width:100%; height:90%; z-index:-1; display: block; margin-left: auto; margin-right: auto; border-radius: 10px;"/>
 
             </div>
           </div>
         </div>
 
-       <div class="container profile_" style="max-width: 70%; z-index: 4; margin-top: -13.8%;">
+       <div class="container profile_" style="max-width: 100% !important; z-index: 4; margin-top: -20%;">
           <div class="row" id="profile_row">
 
             <div class="col-12">
@@ -381,7 +419,7 @@
          </div>
        </div -->
 
-        <div class="row news_row cong_">
+        <div class="row news_row cong_" style="padding: 0% 0% !important;">
           <div class=" col-12 col-sm-12 mt-2">
             <div class="row" >
               <div class="card mt-3 tab-card">

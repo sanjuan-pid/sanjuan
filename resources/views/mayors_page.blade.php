@@ -1,7 +1,7 @@
 @extends('layouts.nav-bar')
 
 @section('content')
-    <div id="side_prof" style="position: fixed;margin-top: 18%; z-index: 999;">
+    <div id="side_prof" style="position: fixed;margin-top: 13%; z-index: 999;">
       <a class="btn side_btn" id="news_btn"   style="background: rgb(49, 64, 150); color:#fff;display: block;height:33%;font-size:22px;">NEWS<img src={{asset('assets/newspaper.svg')}} style="width: 20%; float: right;"/></a>
       <br>
       <br>
@@ -19,22 +19,22 @@
 
     <div id="side_prof_mob" style="position: relative;margin-top: 5%; z-index: 1;">
         <a class="btn side_btn" id="news_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">NEWS</a>
-    
+
         <a class="btn side_btn" id="profile_btn_mob" style="background: rgb(49, 64, 150); color:#fff;display: block;">PROFILE </a>
-     
-    
+
+
         <a class="btn side_btn" id="achievement_btn_mob"  style="background: rgb(49, 64, 150); color:#fff;display: block;">ACHIEVEMENTS</a>
-        
+
         <a class="btn side_btn" id="programs_btn_mob"   style="background: rgb(49, 64, 150); color:#fff;display: block;">PROGRAMS</a>
     </div>
 
 
     <div class="container" id="mayors_corner" style="box-shadow: 0px 3px 3px #cccccc; padding: 0;">
     <br>
-    <img src="{{asset('assets/mayor/mayorzamora.jpg')}}" width="100%" />
-    <div class="row" id="profile_row"style="margin-top: -19% !important;">
+    <img src="{{asset('assets/mayor/mayorzamora.jpg')}}" width="100%" style="padding: 0 1%;"/>
 
-      <div class="col-sm-6" style="margin-top:2%;">
+    <div class="row" id="profile_row" style="margin-top: -17% !important;">
+      <div class="col-sm-6">
          <div class="card">
                 <div class="card-body">
                     <h2 class="card-title" style="font-weight: 800; font-size: 200;"><img src={{asset('assets/cv.svg')}} style="width: 15%; "/> BIOGRAPHY </h2>
@@ -46,7 +46,8 @@
                 </div>
           </div>
       </div>
-      <div class="col-sm-6" style="margin-top:2%;">
+      <br>
+      <div class="col-sm-6" >
           <div class="card">
                 <div class="card-body">
                     <h2 class="card-title" style="font-weight: 800; font-size: 200;"> <img src={{asset('assets/book.svg')}} style="width: 15%; "/> EDUCATION </h2>
@@ -62,13 +63,15 @@
                 </div>
           </div>
       </div>
+
     </div>
+
     <br>
-    <div class="row" id="achievement_row" style="margin-top: -28%;">
+    <div class="row" id="achievement_row" style="margin-top: -25% !important;">
       <h2 class="card-title" style="font-weight: 800; font-size: 200;"><img src={{asset('assets/achievement.svg')}} style="width: 5%; vertical-align: baseline;"/> Achievements </h2>
-      
-      @foreach ($achievement as $ach) 
-        <div class="col-sm-4" style="margin-top:2%;">
+
+      @foreach ($achievement as $ach)
+        <div class="col-sm-4">
           <div class="card">
                   <div class="card-body">
                       <h5 class="card-title" style="font-weight: 800; font-size: 200;">{{$ach->title}}</h5>
@@ -164,28 +167,28 @@
 
  <div class="container mayor_" id="news_sec">
    @include('layouts.index.agenda')
-      <div class="row news_row" style="margin-top: -18%!important;" >
+      <div class="row news_row" style="margin-top: -25% !important;" >
 
         <h1 style="text-align: center;">NEWS</h1>
         <div class="col-sm-12">
             <div class="card" id="news_card">
                 <div class="card-body">
                     <h2 class="card-title" style="font-weight: 800; font-size: 200;"></h2>
-                        <div class="recent_small" style="margin-top: -5%; !important">
+                        <div class="recent_small" style="margin-top: -3%; !important">
                             <div class="row">
                                 <?php $i=0; ?>
                                 @foreach($news as $row)
                                 <?php $i++; ?>
                                     <div class="col-4 col-sm-4">
-                                    
+
                                       <div class="card mb-2">
                                         <div class="card_img" style="padding:3%;">
                                           <img src="{{asset("uploads/" . $row['filename']) }}"  style="width: 100%;height: auto!important;display: block;margin: 0 auto;" />
                                         </div>
-                                        
+
                                         <div class="card-body">
                                           {{-- <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> --}}
-              
+
                                           <a href="{{action( 'Pages@news_contents', $row->id )}}"><?php echo $row['title'] ?></a>
                                         </div>
                                       </div>
@@ -257,8 +260,8 @@
                       </div>
                 </div>
                 </div>
-              
-              
+
+
               </div>
             </div>
       </div>

@@ -1926,6 +1926,12 @@ li.list-group-item.latest_news a{
         width: 100% !important;
         margin: 0 auto !important;
     }
+    #profile_row{
+      max-width: 90% !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
+    
     div#social_med {
         width: 80% !important;
         margin: 5% auto !important;
