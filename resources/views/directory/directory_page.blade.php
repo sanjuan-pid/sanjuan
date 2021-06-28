@@ -614,7 +614,7 @@
           </tr>
           <tr class="ctus">
             <td>CORAZON DE JESUS</td>
-            <td class="pula">8393 5398 / <br>8254 9102</td>
+            <td class="pula">09253551035</td>
             <td>brgycdj@gmail.com</td>
           </tr>
           <tr class="ctus">
