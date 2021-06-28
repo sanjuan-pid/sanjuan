@@ -70,6 +70,9 @@
   #gov h3{
       font-size: 30px !important;
   }
+  #img1{
+      margin-top: -130px !important;
+  }
 }
 @media screen and (min-device-width: 1551px) and (max-device-width: 1600px)  {
   div#gov {
@@ -81,8 +84,8 @@
       font-size: 15px !important;
   }
   #img1{
-    width:  580px !important;
-    margin-top: -110px !important;
+    width:  600px !important;
+    margin-top: -90px !important;
     margin-left: 0 !important;
   }
   #gov h1{
@@ -103,7 +106,7 @@
   }
   #img1{
     width:  600px !important;
-    margin-top: -110px !important;
+    margin-top: -80px !important;
     margin-left: 0 !important;
   }
   #gov h1{
@@ -124,7 +127,7 @@
   }
   #img1{
     width:  580px !important;
-    margin-top: -110px !important;
+    margin-top: -85px !important;
     margin-left: 0 !important;
   }
   #gov h1{
@@ -240,11 +243,11 @@
           </div> -->
           <br>
           <div class="row">
-              <div class="col-sm-6 col-m-6 col-lg-6 ">
+              <div class="col-sm-6 col-m-6 col-lg-6">
               <h3 style=" font-weight:bold; text-align:center; color: black !important; border-bottom: 5px solid red;">VISION</h3>
-              <p style=" font-weight: 400; margin-top: 15px; text-align: justify; color:black !important;">A globally competitive communinity of dynamic, productive and empowered citizenry inspired by their rich historical and cultural heritage propelled by a sustainable and progressive economy in a healthy, peaceful, disaster-resilient and Eco-friendly environment.</p>
+              <p style=" font-weight: 400; margin-top: 15px; text-align: center; color:black !important;">San Juan City: a leader in integrity and excellence in local governance <br> A safe, inclusive, progressive, sustainable, and resilient community of civic-minded and law-abiding citizens, as defenders of democracy inspired by its historical significance in the fight for freedom, through efficient and transparent leadership towards a "Makabagong San Juan" </p>
               <h3 style=" font-weight:bold; text-align:center; color: black !important;border-bottom: 5px solid red;">MISSION</h3>
-              <p style=" font-weight: 400; margin-top: 15px; text-align: justify;  color:black !important;">To provide quality and effective social services, pursue sustainable, inclusive and equitable economic growth, and promote ecological balance through a responsive, transparent, efficient, and technologically advanced governance in partnership with an empowered people towards achieving the city of excellence.</p>
+              <p style=" font-weight: 400; margin-top: 15px; text-align: center;  color:black !important;">To provide quality and effective social services, pursue sustainable, inclusive and equitable economic growth, and promote ecological balance through a responsive, transparent, efficient, and technologically-advanced governance in partnership with an empowered people towards achieving the city of excellence.</p>
             </div>
             <div class="col-sm-6 col-m-6 col-lg-6">
                 <img src="{{asset('assets/aa-min.png')}}"id="img1"/>
