@@ -1009,9 +1009,10 @@ div#sjmcpage {
       width: 100% !important;
     }
 
-    .contactform #directform{
+    .contactform img{
       display: none !important;
     }
+
     #conus{
       max-width: 100% !important;
       width: 100% !important;
