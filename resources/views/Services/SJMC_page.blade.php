@@ -39,7 +39,7 @@
             <a href="https://www.facebook.com/sanjuanmed/" class="fa fa-facebook"></a>
           </div>
           <div class="col-sm-7 col-m-7 col-lg-7 mt-4 larawan">
-            <img src="{{asset('assets/sjmc.jpg')}}" style="width: 100%; height:350px; border-radius:10px !important;"/>
+            <img src="{{asset('assets/SJMC_facade.jpg')}}" style="width: 100%; height:450px; border-radius:10px !important;"/>
         </div>
      </div>
      <br>
