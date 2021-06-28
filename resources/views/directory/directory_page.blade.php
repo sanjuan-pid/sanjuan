@@ -31,7 +31,7 @@
 <link rel="stylesheet" type="text/css" href="/css/dev_h.css">
   <div class="container" id="conus">
     <div class="contactform mt-5">
-      <div class="row">
+      <!-- <div class="row">
           <div class=" col-12 col-sm-12 col-md-12 col-lg-12" id="directform">
             <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
               <span id="sjch3" style="text-align:right !important;">SAN JUAN CITY HOTLINE:</span>
@@ -58,7 +58,8 @@
                 <span id="sjch2" style="text-align:center;"> 7949 8358 / 8655 8683</span>
             </div>
           </div>
-        </div>
+
+        </div> --> <img src="{{asset('assets/direct.png')}}"style="width:100%; position: relative; height:90% !important; z-index:10; display: block; margin-left: auto; margin-right: auto;border-radius: 10px;"/>
         <div class="mobdirect"id="mobdirect" style=" display: none;">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
