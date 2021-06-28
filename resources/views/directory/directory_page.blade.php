@@ -243,7 +243,7 @@
             </tr>
             <tr class="ctus">
               <td>SANGGUNIANG PANLUNGSOD</td>
-              <td class="pula">8655 8394 /<br> 8477 0295</td>
+              <td class="pula">8655 8394 /<br> 8477 0295 /<br>(02) 7728 9779</td>
               <td>sanjuancitycouncil@gmail.com</td>
             </tr>
           </tbody>
@@ -669,7 +669,7 @@
           </tr>
           <tr class="ctus">
             <td>RIVERA</td>
-            <td class="pula">8942 2543</td>
+            <td class="pula">8942 2543 /<br> 09178636334</td>
             <td>rivera.sanjuan15@gmail.com</td>
           </tr>
           <tr class="ctus">
@@ -771,7 +771,7 @@
           </tr>
           <tr class="ctus">
             <td>COUN. MICHAEL CHRISTOPHER R. MATHAY </td>
-            <td class="pula">7625-5769</td>
+            <td class="pula">7625-5759</td>
 
           </tr>
           <tr class="ctus">
