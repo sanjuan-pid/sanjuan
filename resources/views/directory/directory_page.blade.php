@@ -212,7 +212,7 @@
               <td>citylegal.sanjuancity@yahoo.com</td>
             </tr>
             <tr class="ctus">
-              <td>COMMISSION <br>OF AUDIT</td>
+              <td>COMMISSION <br>ON AUDIT</td>
               <td class="pula">7750 1602 /<br> 7625 5846 / <br>8477 3545</td>
               <td></td>
             </tr>
