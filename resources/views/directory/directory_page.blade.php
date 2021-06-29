@@ -121,7 +121,7 @@
           <tr class="ctus">
             <td>OFFICE OF THE CITY MAYOR</td>
             <td class="pula">8477 0064 / <br> FAX 8477 3457</td>
-            <td>mayorfranciszamora.sanjuancity@gmail.com</td>
+            <td style="font-size:12px;">mayorfranciszamora.sanjuancity@gmail.com</td>
           </tr>
         </tbody>
       </table>
@@ -284,7 +284,7 @@
           <tr class="ctus">
             <td>CITY CIVIL REGISTRY <br> DEPARTMENT</td>
             <td class="pula">7625 5842</td>
-            <td>jalviormagno@yahoo.com /<br> Facebook: San Juan City Civil Registry Dept.</td>
+            <td>jalviormagno@yahoo.com /<br> Facebook: @sjCCRD</td>
           </tr>
           <tr class="ctus">
             <td>CITY HEALTH & NUTRITION OFFICE</td>
@@ -294,7 +294,7 @@
           <tr class="ctus">
             <td>CITY INVESTMENT PROMOTION CENTER</td>
             <td class="pula">8255 3736</td>
-            <td>ken.lsgh@yahoo.com</td>
+            <td>cipcsj@gmail.com </td>
           </tr>
           <tr class="ctus">
             <td>CITY POPULATION <br>DEVELOPMENT OFFICE </td>
@@ -609,7 +609,7 @@
           </tr>
           <tr class="ctus">
             <td>BATIS   </td>
-            <td class="pula">7744 0737</td>
+            <td class="pula">(02) 7744 0737 /<br>(02) 8295-6220 / <br> 09688548301</td>
             <td>batis.sanjuan@gmail.com</td>
           </tr>
           <tr class="ctus">
@@ -644,7 +644,7 @@
           </tr>
           <tr class="ctus">
             <td>MAYTUNAS</td>
-            <td class="pula">8722 7848</td>
+            <td class="pula">8722 7848 / <br>09270163219</td>
             <td>maytunassanjuan@gmail.com</td>
           </tr>
           <tr class="ctus">
@@ -689,7 +689,7 @@
           </tr>
           <tr class="ctus">
             <td>ST. JOSEPH</td>
-            <td class="pula">7968 2186</td>
+            <td class="pula">09338165334 / <br> 09175149765</td>
             <td></td>
           </tr>
           <tr class="ctus">
