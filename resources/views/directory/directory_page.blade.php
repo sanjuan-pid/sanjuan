@@ -212,7 +212,7 @@
               <td>citylegal.sanjuancity@yahoo.com</td>
             </tr>
             <tr class="ctus">
-              <td>COMMISSION <br>ON AUDIT</td>
+              <td>COMMISSION <br>OF AUDIT</td>
               <td class="pula">7750 1602 /<br> 7625 5846 / <br>8477 3545</td>
               <td></td>
             </tr>
@@ -245,6 +245,11 @@
               <td>SANGGUNIANG PANLUNGSOD</td>
               <td class="pula">8655 8394 /<br> 8477 0295 /<br>(02) 7728 9779</td>
               <td>sanjuancitycouncil@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>COOPERATIVE DEVELOPMENT OFFICE </td>
+              <td class="pula">7728 7906</td>
+              <td>coopdevtofc@sanjuancity.gov.ph</td>
             </tr>
           </tbody>
         </table>
@@ -315,11 +320,6 @@
             <td>CITY TREASURY DEPARTMENT</td>
             <td class="pula">ADMIN:7576 4477 <br>CASH:8655 8509<br>REAL PROPERTY TAX:8655 8050<br>LICENSE:7728 9835 </td>
             <td>sjc_treasurydept@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>COOPERATIVE DEVELOPMENT OFFICE </td>
-            <td class="pula">7728 7906</td>
-            <td>sjcoopdevtofc@gmail.com</td>
           </tr>
           <tr class="ctus">
             <td>OFFICE OF THE <br>SENIOR CITIZEN AFFAIRS </td>
