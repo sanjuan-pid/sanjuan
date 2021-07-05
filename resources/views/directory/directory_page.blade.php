@@ -1268,7 +1268,7 @@ color: darkblue !important;
                 </tr>
                 <tr class="ctus">
                   <td>COOPERATIVE DEVELOPMENT OFFICE </td>
-                  <td class="pula">7728 7906</td>
+                  <td class="pula">09674772690</td>
                   <td>sjcoopdevtofc@gmail.com</td>
                 </tr>
                 <tr class="ctus">
