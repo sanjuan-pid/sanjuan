@@ -218,7 +218,7 @@
             </tr>
             <tr class="ctus">
               <td>CITY SOCIAL WELFARE & <br>DEVELOPMENT DEPARTMENT </td>
-              <td class="pula">7729 0120 /<br> 0956 429 7998</td>
+              <td class="pula">7729 0120 /<br> 0956 429 7998 / <br> 09608205236</td>
               <td>sjccswdo2017@gmail.com / <br>cswdd@sanjuancity.gov.ph</td>
             </tr>
             <tr class="ctus">
