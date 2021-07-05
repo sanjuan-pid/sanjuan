@@ -278,7 +278,7 @@
           </tr>
           <tr class="ctus">
             <td>CITY ASSESSOR'S OFFICE</td>
-            <td class="pula">8477 4572</td>
+            <td class="pula">09674699655</td>
             <td>sanjuancityassessor@gmail.com</td>
           </tr>
           <tr class="ctus">
