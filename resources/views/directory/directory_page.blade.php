@@ -248,7 +248,7 @@
             </tr>
             <tr class="ctus">
               <td>COOPERATIVE DEVELOPMENT OFFICE </td>
-              <td class="pula">7728 7906</td>
+              <td class="pula">09674772690</td>
               <td>coopdevtofc@sanjuancity.gov.ph</td>
             </tr>
           </tbody>
@@ -1178,7 +1178,7 @@ color: darkblue !important;
                 </tr>
                 <tr class="ctus">
                   <td>CITY SOCIAL WELFARE & DEVELOPMENT DEPARTMENT </td>
-                  <td class="pula">7729 0120 / 0956 429 7998</td>
+                  <td class="pula">7729 0120 / 0956 429 7998 / 0960 820 5236</td>
                   <td>sjccswdo2017@gmail.com/cswdd@sanjuancity.gov.ph</td>
                 </tr>
                 <tr class="ctus">
@@ -1223,7 +1223,7 @@ color: darkblue !important;
                 </tr>
                 <tr class="ctus">
                   <td>CITY ASSESSOR'S OFFICE</td>
-                  <td class="pula">8477 4572</td>
+                  <td class="pula">8477 4572 /<br> 09674699655 </td>
                   <td>sanjuancityassessor@gmail.com</td>
                 </tr>
                 <tr class="ctus">
