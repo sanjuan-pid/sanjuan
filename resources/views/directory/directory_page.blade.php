@@ -1178,7 +1178,7 @@ color: darkblue !important;
                 </tr>
                 <tr class="ctus">
                   <td>CITY SOCIAL WELFARE & DEVELOPMENT DEPARTMENT </td>
-                  <td class="pula">7729 0120 / 0956 429 7998 / 0960 820 5236</td>
+                  <td class="pula">7729 0120 / 0956 429 7998 / 09608205236</td>
                   <td>sjccswdo2017@gmail.com/cswdd@sanjuancity.gov.ph</td>
                 </tr>
                 <tr class="ctus">
