@@ -24,42 +24,27 @@
 
         </div>
     </div> --}}
-
+<style>
+#myInput {
+  background-image: url('/assets/icn.png');
+  background-position: 12px 8px;
+  background-repeat: no-repeat;
+  width: 95%;
+  font-size: 16px;
+  padding: 12px 20px 12px 60px;
+  border: 3px solid #ddd;
+  margin-bottom: 12px;
+  background-size: 40px;
+  border-radius: 10px;
+}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/css/dev_h.css">
-  <div class="container" id="conus">
-    <div class="contactform mt-5">
-      <!-- <div class="row">
-          <div class=" col-12 col-sm-12 col-md-12 col-lg-12" id="directform">
-            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
-              <span id="sjch3" style="text-align:right !important;">SAN JUAN CITY HOTLINE:</span>
-            </div>
-            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
-                <span id="sjch3" style="text-align:center;"> 137-135</span>
-            </div>
-            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
-              <span id="sjch2" style="text-align:right !important;">Mayor's Office Hotline (Smart):</span>
-            </div>
-            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
-                <span id="sjch2" style="text-align:center;"> 0961-680-5514</span>
-            </div>
-            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
-              <span id="sjch2" style="text-align:right !important;">Mayor's Office Hotline (Globe):</span>
-            </div>
-            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
-                <span id="sjch2" style="text-align:center;"> 0956-529-7286</span>
-            </div>
-            <div class=" col-7 col-sm-7 col-md-7 col-lg-7" style="display: inline-block;">
-              <span id="sjch2" style="text-align:right !important;">City Heath Office (COVID-19):</span>
-            </div>
-            <div class=" col-4 col-sm-4 col-md-4 col-lg-4" style="display: inline;">
-                <span id="sjch2" style="text-align:center;"> 7949 8358 / 8655 8683</span>
-            </div>
-          </div>
-
-        </div> --> <img src="{{asset('assets/direct.png')}}"style="width:100%; position: relative; height:90% !important; z-index:10; display: block; margin-left: auto; margin-right: auto;border-radius: 10px;"/>
+  <div class="container" id="conus" style="padding:0;">
+    <div class="contactform mt-2">
+    <img src="{{asset('assets/direct.png')}}"style="width:70%; position: relative; height:100% !important; z-index:10; display: block; margin-left: auto; margin-right: auto;border-radius: 10px;"/>
         <div class="mobdirect"id="mobdirect" style=" display: none;">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -83,22 +68,27 @@
   </div>
 
 <br>
-<div class="container mt-5" id="dtpage">
+<div class="container mt-5" style="width:70%;">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="    Search name here..." title="Type in a name">
+</div>
+
+<div class="container mt-3" id="dtpage">
   <div class="w3-container" style=" box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); border-radius:5px; z-index: 100;">
     <h1 class="text-center" style="font-weight:800;">San Juan City Directory</h1>
   </div>
 
 <div class="sidedirect  tb" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()" style="width:100%;">Close &times;</button>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, '4th')"id="defaultOpen">4th Floor</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, '3rd')">3rd Floor</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, '2nd')">2nd Floor</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'upf')">Upperground Floor</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'lgf')">Lowerground Floor</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'out')">Outside</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'no')">National Offices</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'bdirect')">Barangay Directory</a>
-  <a href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'coffice')">Councilor's Office</a>
+  <a style="width: 100%;text-align: left;" href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'all')"id="defaultOpen">All</a><br>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, '4th')">4th Floor</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, '3rd')">3rd Floor</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, '2nd')">2nd Floor</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'upf')">Upperground Floor</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'lgf')">Lowerground Floor</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'out')">Outside</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'no')">National Offices</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'bdirect')">Barangay Directory</a>
+  <a style="width: 100%;text-align: left;"href="#" class=" w3-button tblinks directbtn" onclick="directpage(event, 'coffice')">Councilor's Office</a>
 </div>
 
 
@@ -108,85 +98,57 @@
   </div>
 
 
-    <div class="w3-container direcontent" id="4th" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table"style="transition: .5s;">
-        <thead>
-          <tr class="catdirect">
-            <th>OFFICES</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="ctus">
-            <td>OFFICE OF THE CITY MAYOR</td>
-            <td class="pula">8477 0064 / <br> FAX 8477 3457</td>
-            <td style="font-size:12px;">mayorfranciszamora.sanjuancity@gmail.com</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="w3-container direcontent" id="3rd" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table"style="transition: .5s; ">
-        <thead>
-          <tr class="catdirect">
-            <th>OFFICES</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="ctus">
-            <td>CITY ADMINISTRATOR </td>
-            <td class="pula">8470 6496</td>
-            <td>dennisalbertpamintuan@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>BIDS & AWARDS <br>COMMITTEE</td>
-            <td class="pula">7621 9226</td>
-            <td>bacsanjuancity@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY ACCOUNTING <br> DEPARTMENT</td>
-            <td class="pula">7750 1686  /<br> 7625 8711</td>
-            <td>accounting_sj2017@yahoo.com /<br>r.a.rizada@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY BUDGET DEPARTMENT </td>
-            <td class="pula">8477 9048 /<br> 7750 1409</td>
-            <td>sanjuancity.budgetdepartment19@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY HUMAN RESOURCE <br>DEVELOPMENT OFFICE</td>
-            <td class="pula">8477 3127 / <br> 7750 1454</td>
-            <td>sanjuanchrdd@yahoo.com /<br>hrdd@sanjuancity.ph</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY PLANNING & <br>DEVELOPMENT DEPARTMENT </td>
-            <td class="pula">7728 9946 /<br> FAX 7750 1485</td>
-            <td>sjcpdo2013@yahoo.com.ph</td>
-          </tr>
-          <tr class="ctus">
-            <td>INFORMATION & <br>COMMUNICATIONS <br> TECHNOLOGY OFFICE</td>
-            <td class="pula">7625 5841</td>
-            <td>ictosanjuan@gmail.com</td>
-          </tr>
-          </tbody>
-        </table>
-    </div>
-
-    <div class="w3-container direcontent" id="2nd" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table"style="transition: .5s; height:5%;">
-        <thead>
-          <tr class="catdirect">
-            <th>OFFICES</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-          <tbody>
-            <tr class="ctus">
+  <div class="w3-container direcontent" id="all" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+    <table class="table" id="all" style="transition: .5s;">
+      <thead>
+        <tr class="catdirect">
+          <th>Name</th>
+          <th>CONTACT NUMBER</th>
+          <th>EMAIL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="ctus">
+          <td>OFFICE OF THE CITY MAYOR</td>
+          <td class="pula">8477 0064 / <br> FAX 8477 3457</td>
+          <td style="font-size:12px;">mayorfranciszamora.sanjuancity@gmail.com</td>
+        </tr>
+        <tr class="ctus">
+          <td>CITY ADMINISTRATOR </td>
+          <td class="pula">8470 6496</td>
+          <td>dennisalbertpamintuan@yahoo.com</td>
+        </tr>
+        <tr class="ctus">
+          <td>BIDS & AWARDS <br>COMMITTEE</td>
+          <td class="pula">7621 9226</td>
+          <td>bacsanjuancity@gmail.com</td>
+        </tr>
+        <tr class="ctus">
+          <td>CITY ACCOUNTING <br> DEPARTMENT</td>
+          <td class="pula">7750 1686  /<br> 7625 8711</td>
+          <td>accounting_sj2017@yahoo.com /<br>r.a.rizada@gmail.com</td>
+        </tr>
+        <tr class="ctus">
+          <td>CITY BUDGET DEPARTMENT </td>
+          <td class="pula">8477 9048 /<br> 7750 1409</td>
+          <td>sanjuancity.budgetdepartment19@gmail.com</td>
+        </tr>
+        <tr class="ctus">
+          <td>CITY HUMAN RESOURCE <br>DEVELOPMENT OFFICE</td>
+          <td class="pula">8477 3127 / <br> 7750 1454</td>
+          <td>sanjuanchrdd@yahoo.com /<br>hrdd@sanjuancity.ph</td>
+        </tr>
+        <tr class="ctus">
+          <td>CITY PLANNING & <br>DEVELOPMENT DEPARTMENT </td>
+          <td class="pula">7728 9946 /<br> FAX 7750 1485</td>
+          <td>sjcpdo2013@yahoo.com.ph</td>
+        </tr>
+        <tr class="ctus">
+          <td>INFORMATION & <br>COMMUNICATIONS <br> TECHNOLOGY OFFICE</td>
+          <td class="pula">7625 5841</td>
+          <td>ictosanjuan@gmail.com</td>
+        </tr>
+        <tr class="ctus">
               <td>OFFICE OF THE <br>CITY VICE  MAYOR</td>
               <td class="pula">7625 5848</td>
               <td>vmwarrenvilla@gmail.com</td>
@@ -251,540 +213,1136 @@
               <td class="pula">09674772690</td>
               <td>coopdevtofc@sanjuancity.gov.ph</td>
             </tr>
+            <tr class="ctus">
+              <td>CITY PUBLIC INFORMATION DEPARTMENT</td>
+              <td class="pula">7729 0005</td>
+              <td>publicinfo.sjc@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>BUSINESS PERMIT & <br> LICENSE OFFICE </td>
+              <td class="pula">8655 9697</td>
+              <td>bplo_csj@yahoo.com / <br> bplo@sanjuancity.gov.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY ASSESSOR'S OFFICE</td>
+              <td class="pula">09674699655</td>
+              <td>sanjuancityassessor@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY BUILDING OFFICIAL</td>
+              <td class="pula">8654 0747 / <br>7750 1537</td>
+              <td>sanjuan_buildingofficial@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY CIVIL REGISTRY <br> DEPARTMENT</td>
+              <td class="pula">7625 5842</td>
+              <td>jalviormagno@yahoo.com /<br> Facebook: @sjCCRD</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY HEALTH & NUTRITION OFFICE</td>
+              <td class="pula">7625 5845</td>
+              <td>healthoffice.sjc@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY INVESTMENT PROMOTION CENTER</td>
+              <td class="pula">8255 3736</td>
+              <td>cipcsj@gmail.com </td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY POPULATION <br>DEVELOPMENT OFFICE </td>
+              <td class="pula">8470 9921 / <br>7750 1680</td>
+              <td>popdevsanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY SPORTS OFFICE</td>
+              <td class="pula">7750 1407</td>
+              <td>sportofficesanjuan@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY TOURISM & <br>CULTURAL AFFAIRS OFFICE</td>
+              <td class="pula">7728 9818</td>
+              <td>ctcaosj@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY TREASURY DEPARTMENT</td>
+              <td class="pula">ADMIN:7576 4477 <br>CASH:8655 8509<br>REAL PROPERTY TAX:8655 8050<br>LICENSE:7728 9835 </td>
+              <td>sjc_treasurydept@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>OFFICE OF THE <br>SENIOR CITIZEN AFFAIRS </td>
+              <td class="pula">7625 5843</td>
+              <td>oscasanjuancity@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>ORDINANCE VIOLATION CITATION TICKET</td>
+              <td class="pula">7750 1697</td>
+              <td>vantopacio@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>PERSON WITH DISABILITY<br> AFFAIRS OFFICE</td>
+              <td class="pula">7621 1508</td>
+              <td>jewelpage03@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>PUBLIC ASSISTANCE CENTER</td>
+              <td class="pula">7750 1697</td>
+              <td>vantopacio@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>URBAN POOR AFFAIRS OFFICE</td>
+              <td class="pula">8477 9043 / <br>7754 8006</td>
+              <td>upao.sanjuancity@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY DISASTER<br> RISK REDUCTION & <br> MANAGEMENT OFFICE </td>
+              <td class="pula">7238 4333</td>
+              <td>sjcdrrmo2011@gmail.com / <br>cdrrmo.sanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY ENGINEERING <br>DEPARTMENT</td>
+              <td class="pula">8997 8182 / <br>7728 9917</td>
+              <td>sanjuanengineering@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY ENVIRONMENT AND <br>NATURAL RESOURCES</td>
+              <td class="pula">0917 387 0508 / <br>0961 078 8935</td>
+              <td>cenrosanjuancity@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY LIBRARY</td>
+              <td class="pula">7744 2695</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>GENERAL SERVICES <br>DEPARTMENT </td>
+              <td class="pula">8477 4010 / <br>7728 7426</td>
+              <td>arevalorizalina@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>OFFICE OF<br> VETERINARY <br>SERVICES </td>
+              <td class="pula">77289780</td>
+              <td>veterinaryoffice27@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>PUBLIC ORDER & SAFETY OFFICE </td>
+              <td class="pula">8477 5887</td>
+              <td>tpmopososanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>TASK FORCE DISIPLINA</td>
+              <td class="pula">8477 5887</td>
+              <td>tfdsanjuancity@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>TRAFFIC PARKING & <br>MANAGEMENT OFFICE </td>
+              <td class="pula">8655 8364 / <br>7625 5844</td>
+              <td>tpmopososanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>TRICYCLE REGULATORY BOARD</td>
+              <td class="pula">8477 5887</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY HEALTH DEPARTMENT I</td>
+              <td class="pula">7625 5845</td>
+              <td>healthoffice.sjc@gmail.com /<br> cho@sanjuancity.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY HEALTH DEPARTMENT II</td>
+              <td class="pula">7728 9715</td>
+              <td>cho@sanjuancity.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>ONSE HEALTH CENTER</td>
+              <td class="pula">7750 9034</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>MARKET ADMINISTRATION</td>
+              <td class="pula">7508 9562</td>
+              <td>sjagoramarket@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>SAN JUAN CEMETERY</td>
+              <td class="pula">8556 6117</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SAN JUAN MEDICAL CENTER </td>
+              <td class="pula">8725 9764 /<br> 8724 3266 / <br>8725 9247 / <br>8725 9804 / <br>8725 9804 / <br>8725 9412</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SKILLS & LIVELIHOOD <br>TRAINING CENTER</td>
+              <td class="pula">8693 9464</td>
+              <td>sltcsanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>POLYTECHNIC UNIVERSITY <br> OF THE PHILIPPINES </td>
+              <td class="pula">7246 322 /<br>497 4460 /<br>632 7738 / <br>738 5071</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SCHOOLS DIVISION <br>OFFICE </td>
+              <td class="pula">8451-26994512383 / <br>4512699/9387269 / <br>6617899</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>PHILIPPINE NATIONAL POLICE</td>
+              <td class="pula">8724 2515 /<br>8724 3744 / <br>8298 7603 / <br>8724 8854</td>
+              <td>opas.sanjuancps@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>POST OFFICE GREENHILLS</td>
+              <td class="pula">8727 5881</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>BUREAU OF FIRE PROTECTION</td>
+              <td class="pula">8725 2079 / <br>8725 8044</td>
+              <td>sanjuanfire@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>BUREAU OF JAIL MANAGEMENT <br> AND PENOLOGY (MALE)</td>
+              <td class="pula">8534 1828</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>BUREAU OF JAIL MANAGEMENT <br>AND PENOLOGY (FEMALE)</td>
+              <td class="pula">8705 1764</td>
+              <td>sanjuancityjailfemale@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>MUSEO EL DEPOSITO</td>
+              <td class="pula">7753 5439 / <br>0998 247 0042</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>COMELEC</td>
+              <td class="pula">8693 7504</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>LANDBANK SAN JUAN <br>BRANCH</td>
+              <td class="pula">7799-5003 /<br> 8726-0227 / <br>0917-551-5001 /<br> 0929-672-25-08</td>
+              <td>rdo_42@bir.gov.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>BIR SAN JUAN </td>
+              <td class="pula">8723-8183</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>OFFICE OF THE<br> CLERK OF COURT</td>
+              <td class="pula">7750-5132</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>MTC 57</td>
+              <td class="pula">7750-6127</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>MTC 58</td>
+              <td class="pula">7750-5169</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>Public Attorney's Office</td>
+              <td class="pula">8654-6386</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>Prosecutor's Office - DOJ San Juan</td>
+              <td class="pula">8693-2117</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 68</td>
+              <td class="pula">7949-7586</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 160</td>
+              <td class="pula">7949-7588</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 162</td>
+              <td class="pula">0949-992-3070 / <br>7949-7559</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 264</td>
+              <td class="pula">7949-7587</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SSS San Juan</td>
+              <td class="pula">8721-5195 / <br>FAX 8721-8686</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>Filoil Flying V Centre</td>
+              <td class="pula">8477 7644 /<br>8654 0772</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+             <td>ADDITION HILLS</td>
+             <td class="pula">8352 0211</td>
+             <td>additionhills@yahoo.com.ph</td>
+           </tr>
+           <tr class="ctus">
+             <td>BALONG BATO   </td>
+             <td class="pula">8723 9561</td>
+             <td>balongbatosanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>BATIS   </td>
+             <td class="pula">(02) 7744 0737 /<br>(02) 8295-6220 / <br> 09688548301</td>
+             <td>batis.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>CORAZON DE JESUS</td>
+             <td class="pula">09253551035</td>
+             <td>brgycdj@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ERMITANO</td>
+             <td class="pula">7919 4885</td>
+             <td>ermitano.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>GREENHILLS</td>
+             <td class="pula">8724 5163</td>
+             <td>greenhills.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ISABELITA</td>
+             <td class="pula">8722 6948</td>
+             <td>brgy.isabelita@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>KABAYANAN</td>
+             <td class="pula">8726 4952</td>
+             <td>brgy.kabayanan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>LITTLE BAGUIO</td>
+             <td class="pula">8725 4484</td>
+             <td>littlebaguiosanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>MAYTUNAS</td>
+             <td class="pula">8722 7848 / <br>09270163219</td>
+             <td>maytunassanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ONSE</td>
+             <td class="pula">7744 0740</td>
+             <td>onse.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>PASADENA</td>
+             <td class="pula">7745 3451</td>
+             <td>barangaypasadena2018@gmail.com /<br> website: barangaypasadena.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>PEDRO CRUZ</td>
+             <td class="pula">8288 6467</td>
+             <td>brgypedrocruz.sanjuancity@yahoo.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>PROGRESO</td>
+             <td class="pula">8727 5635</td>
+             <td>barangayprogreso@yahoo.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>RIVERA</td>
+             <td class="pula">8942 2543 /<br> 09178636334</td>
+             <td>rivera.sanjuan15@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>SALAPAN</td>
+             <td class="pula">8251 3116</td>
+             <td>franciabarbon@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>SAN PERFECTO</td>
+             <td class="pula">8633 3596</td>
+             <td>sanperfecto.barangay@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>STA LUCIA</td>
+             <td class="pula">7726 5385</td>
+             <td>sta.lucia.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ST. JOSEPH</td>
+             <td class="pula">09338165334 / <br> 09175149765</td>
+             <td></td>
+           </tr>
+           <tr class="ctus">
+             <td>TIBAGAN</td>
+             <td class="pula">8723 9837</td>
+             <td>tibaganbarangaycouncil@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>WEST CRAME</td>
+             <td class="pula">8635 0169</td>
+             <td>westcramebrgy@gmail.com</td>
+           </tr>
+           <tr class="sjcat">
+             <td>Distict I</td>
+             <td class="pula"></td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. VINCENT RAINIER M. PACHECO</td>
+             <td class="pula">7625-5768</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. PAUL ANTHONY D. ARTADI </td>
+             <td class="pula">7625-5767</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. MA. ANTONIA RAISSA DAWN H. LAUREL</td>
+             <td class="pula">7625-5771</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. VICTOR JOSE L. REYES</td>
+             <td class="pula">7625-5762</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. FRANCHESCO PAUL R. VELASCO </td>
+             <td class="pula">7625-5769</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. ARTHUR ALFRED E. AQUINO</td>
+             <td class="pula">7625-5760</td>
+
+           </tr>
+           <tr class="sjcat">
+             <td>Distict II</td>
+             <td class="pula"></td>
+             <td></td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. JANNAH A .EJERCITO</td>
+             <td class="pula">7625-5763</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. BEA CELINE D. DE GUZMAN </td>
+             <td class="pula">7625-5770</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. ROLANDO M. BERNARDO</td>
+             <td class="pula">7625-5764</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. MICHAEL CHRISTOPHER R. MATHAY </td>
+             <td class="pula">7625-5759</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. MARY JOY A. IBUNA-LEOY</td>
+             <td class="pula">7625-5765</td>
+
+           </tr>
+           <tr class="ctus">
+             <td>COUN. FRANCIS KEITH R. PERALTA</td>
+             <td class="pula">7625-5761</td>
+           </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <div class="w3-container direcontent" id="4th" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+      <table class="table"style="transition: .5s;">
+        <thead>
+          <tr class="catdirect">
+            <th>OFFICES</th>
+            <th>CONTACT NUMBER</th>
+            <th>EMAIL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ctus">
+            <td>OFFICE OF THE CITY MAYOR</td>
+            <td class="pula">8477 0064 / <br> FAX 8477 3457</td>
+            <td style="font-size:12px;">mayorfranciszamora.sanjuancity@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="w3-container direcontent" id="3rd" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+      <table class="table" id="myTable" style="transition: .5s; ">
+        <thead>
+          <tr class="catdirect">
+            <th>OFFICES</th>
+            <th>CONTACT NUMBER</th>
+            <th>EMAIL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ctus">
+            <td>CITY ADMINISTRATOR </td>
+            <td class="pula">8470 6496</td>
+            <td>dennisalbertpamintuan@yahoo.com</td>
+          </tr>
+          <tr class="ctus">
+            <td>BIDS & AWARDS <br>COMMITTEE</td>
+            <td class="pula">7621 9226</td>
+            <td>bacsanjuancity@gmail.com</td>
+          </tr>
+          <tr class="ctus">
+            <td>CITY ACCOUNTING <br> DEPARTMENT</td>
+            <td class="pula">7750 1686  /<br> 7625 8711</td>
+            <td>accounting_sj2017@yahoo.com /<br>r.a.rizada@gmail.com</td>
+          </tr>
+          <tr class="ctus">
+            <td>CITY BUDGET DEPARTMENT </td>
+            <td class="pula">8477 9048 /<br> 7750 1409</td>
+            <td>sanjuancity.budgetdepartment19@gmail.com</td>
+          </tr>
+          <tr class="ctus">
+            <td>CITY HUMAN RESOURCE <br>DEVELOPMENT OFFICE</td>
+            <td class="pula">8477 3127 / <br> 7750 1454</td>
+            <td>sanjuanchrdd@yahoo.com /<br>hrdd@sanjuancity.ph</td>
+          </tr>
+          <tr class="ctus">
+            <td>CITY PLANNING & <br>DEVELOPMENT DEPARTMENT </td>
+            <td class="pula">7728 9946 /<br> FAX 7750 1485</td>
+            <td>sjcpdo2013@yahoo.com.ph</td>
+          </tr>
+          <tr class="ctus">
+            <td>INFORMATION & <br>COMMUNICATIONS <br> TECHNOLOGY OFFICE</td>
+            <td class="pula">7625 5841</td>
+            <td>ictosanjuan@gmail.com</td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <div class="w3-container direcontent" id="2nd" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+      <table class="table" id="myTable2" style="transition: .5s; height:5%;">
+        <thead>
+          <tr class="catdirect">
+            <th>OFFICES</th>
+            <th>CONTACT NUMBER</th>
+            <th>EMAIL</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr class="ctus">
+             <td>OFFICE OF THE <br>CITY VICE  MAYOR</td>
+             <td class="pula">7625 5848</td>
+             <td>vmwarrenvilla@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>BARANGAY OPERATION <br>CENTER</td>
+             <td class="pula">7728 9937</td>
+             <td>bocsanjuancity@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>LIGA NG MGA <br>BARANGAY</td>
+             <td class="pula">7750 1539</td>
+             <td>lnb.sanjuancitychapter@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>CITY HEALTH <br>OFFICE (COVID-19)</td>
+             <td class="pula">7949 8358 / <br>8655 8683</td>
+             <td>cho@sanjuancity.ph</td>
+           </tr>
+           <tr class="ctus">
+             <td>CITY LEGAL<br> DEPARTMENT</td>
+             <td class="pula">7728 9807 /<br> 8656 3258</td>
+             <td>citylegal.sanjuancity@yahoo.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>COMMISSION <br>ON AUDIT</td>
+             <td class="pula">7750 1602 /<br> 7625 5846 / <br>8477 3545</td>
+             <td></td>
+           </tr>
+           <tr class="ctus">
+             <td>CITY SOCIAL WELFARE & <br>DEVELOPMENT DEPARTMENT </td>
+             <td class="pula">7729 0120 /<br> 0956 429 7998 / <br> 09608205236</td>
+             <td>sjccswdo2017@gmail.com / <br>cswdd@sanjuancity.gov.ph</td>
+           </tr>
+           <tr class="ctus">
+             <td>DEPARTMENT OF THE INTERIOR &<br> LOCAL GOVERNMENT </td>
+             <td class="pula">7750 5422</td>
+             <td>sanjuan.dilg@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>METROPOLITAN MANILA <br>DEVELOPMENT AUTHORITY</td>
+             <td class="pula">7750 1618</td>
+             <td></td>
+           </tr>
+           <tr class="ctus">
+             <td>PAROLE AND PROBATION</td>
+             <td class="pula">7728 9708</td>
+             <td>sanjuanppo@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>PUBLIC EMPLOYMENT <br>SERVICES OFFICE</td>
+             <td class="pula">7728 9746</td>
+             <td>pesosanjuan20@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>SANGGUNIANG PANLUNGSOD</td>
+             <td class="pula">8655 8394 /<br> 8477 0295 /<br>(02) 7728 9779</td>
+             <td>sanjuancitycouncil@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>COOPERATIVE DEVELOPMENT OFFICE </td>
+             <td class="pula">09674772690</td>
+             <td>coopdevtofc@sanjuancity.gov.ph</td>
+           </tr>
           </tbody>
         </table>
       </div>
 
 
-    <div class="w3-container direcontent" id="upf" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table aa"style="transition: .5s;">
-        <thead>
-          <tr class="catdirect">
-            <th>OFFICES</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="ctus">
-            <td>CITY PUBLIC INFORMATION DEPARTMENT</td>
-            <td class="pula">7729 0005</td>
-            <td>publicinfo.sjc@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>BUSINESS PERMIT & <br> LICENSE OFFICE </td>
-            <td class="pula">8655 9697</td>
-            <td>bplo_csj@yahoo.com / <br> bplo@sanjuancity.gov.ph</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY ASSESSOR'S OFFICE</td>
-            <td class="pula">09674699655</td>
-            <td>sanjuancityassessor@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY BUILDING OFFICIAL</td>
-            <td class="pula">8654 0747 / <br>7750 1537</td>
-            <td>sanjuan_buildingofficial@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY CIVIL REGISTRY <br> DEPARTMENT</td>
-            <td class="pula">7625 5842</td>
-            <td>jalviormagno@yahoo.com /<br> Facebook: @sjCCRD</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY HEALTH & NUTRITION OFFICE</td>
-            <td class="pula">7625 5845</td>
-            <td>healthoffice.sjc@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY INVESTMENT PROMOTION CENTER</td>
-            <td class="pula">8255 3736</td>
-            <td>cipcsj@gmail.com </td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY POPULATION <br>DEVELOPMENT OFFICE </td>
-            <td class="pula">8470 9921 / <br>7750 1680</td>
-            <td>popdevsanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY SPORTS OFFICE</td>
-            <td class="pula">7750 1407</td>
-            <td>sportofficesanjuan@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY TOURISM & <br>CULTURAL AFFAIRS OFFICE</td>
-            <td class="pula">7728 9818</td>
-            <td>ctcaosj@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY TREASURY DEPARTMENT</td>
-            <td class="pula">ADMIN:7576 4477 <br>CASH:8655 8509<br>REAL PROPERTY TAX:8655 8050<br>LICENSE:7728 9835 </td>
-            <td>sjc_treasurydept@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>OFFICE OF THE <br>SENIOR CITIZEN AFFAIRS </td>
-            <td class="pula">7625 5843</td>
-            <td>oscasanjuancity@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>ORDINANCE VIOLATION CITATION TICKET</td>
-            <td class="pula">7750 1697</td>
-            <td>vantopacio@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>PERSON WITH DISABILITY<br> AFFAIRS OFFICE</td>
-            <td class="pula">7621 1508</td>
-            <td>jewelpage03@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>PUBLIC ASSISTANCE CENTER</td>
-            <td class="pula">7750 1697</td>
-            <td>vantopacio@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>URBAN POOR AFFAIRS OFFICE</td>
-            <td class="pula">8477 9043 / <br>7754 8006</td>
-            <td>upao.sanjuancity@gmail.com</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="w3-container direcontent" id="upf" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+        <table class="table aa" id="myTable3" style="transition: .5s;">
+          <thead>
+            <tr class="catdirect">
+              <th>OFFICES</th>
+              <th>CONTACT NUMBER</th>
+              <th>EMAIL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ctus">
+              <td>CITY PUBLIC INFORMATION DEPARTMENT</td>
+              <td class="pula">7729 0005</td>
+              <td>publicinfo.sjc@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>BUSINESS PERMIT & <br> LICENSE OFFICE </td>
+              <td class="pula">8655 9697</td>
+              <td>bplo_csj@yahoo.com / <br> bplo@sanjuancity.gov.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY ASSESSOR'S OFFICE</td>
+              <td class="pula">09674699655</td>
+              <td>sanjuancityassessor@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY BUILDING OFFICIAL</td>
+              <td class="pula">8654 0747 / <br>7750 1537</td>
+              <td>sanjuan_buildingofficial@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY CIVIL REGISTRY <br> DEPARTMENT</td>
+              <td class="pula">7625 5842</td>
+              <td>jalviormagno@yahoo.com /<br> Facebook: @sjCCRD</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY HEALTH & NUTRITION OFFICE</td>
+              <td class="pula">7625 5845</td>
+              <td>healthoffice.sjc@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY INVESTMENT PROMOTION CENTER</td>
+              <td class="pula">8255 3736</td>
+              <td>cipcsj@gmail.com </td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY POPULATION <br>DEVELOPMENT OFFICE </td>
+              <td class="pula">8470 9921 / <br>7750 1680</td>
+              <td>popdevsanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY SPORTS OFFICE</td>
+              <td class="pula">7750 1407</td>
+              <td>sportofficesanjuan@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY TOURISM & <br>CULTURAL AFFAIRS OFFICE</td>
+              <td class="pula">7728 9818</td>
+              <td>ctcaosj@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY TREASURY DEPARTMENT</td>
+              <td class="pula">ADMIN:7576 4477 <br>CASH:8655 8509<br>REAL PROPERTY TAX:8655 8050<br>LICENSE:7728 9835 </td>
+              <td>sjc_treasurydept@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>OFFICE OF THE <br>SENIOR CITIZEN AFFAIRS </td>
+              <td class="pula">7625 5843</td>
+              <td>oscasanjuancity@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>ORDINANCE VIOLATION CITATION TICKET</td>
+              <td class="pula">7750 1697</td>
+              <td>vantopacio@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>PERSON WITH DISABILITY<br> AFFAIRS OFFICE</td>
+              <td class="pula">7621 1508</td>
+              <td>jewelpage03@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>PUBLIC ASSISTANCE CENTER</td>
+              <td class="pula">7750 1697</td>
+              <td>vantopacio@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>URBAN POOR AFFAIRS OFFICE</td>
+              <td class="pula">8477 9043 / <br>7754 8006</td>
+              <td>upao.sanjuancity@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="w3-container direcontent" id="lgf" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table aa"style="transition: .5s;">
-        <thead>
-          <tr class="catdirect">
-            <th>OFFICES</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="ctus">
-            <td>CITY DISASTER<br> RISK REDUCTION & <br> MANAGEMENT OFFICE </td>
-            <td class="pula">7238 4333</td>
-            <td>sjcdrrmo2011@gmail.com / <br>cdrrmo.sanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY ENGINEERING <br>DEPARTMENT</td>
-            <td class="pula">8997 8182 / <br>7728 9917</td>
-            <td>sanjuanengineering@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY ENVIRONMENT AND <br>NATURAL RESOURCES</td>
-            <td class="pula">0917 387 0508 / <br>0961 078 8935</td>
-            <td>cenrosanjuancity@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY LIBRARY</td>
-            <td class="pula">7744 2695</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>GENERAL SERVICES <br>DEPARTMENT </td>
-            <td class="pula">8477 4010 / <br>7728 7426</td>
-            <td>arevalorizalina@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>OFFICE OF<br> VETERINARY <br>SERVICES </td>
-            <td class="pula">77289780</td>
-            <td>veterinaryoffice27@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>PUBLIC ORDER & SAFETY OFFICE </td>
-            <td class="pula">8477 5887</td>
-            <td>tpmopososanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>TASK FORCE DISIPLINA</td>
-            <td class="pula">8477 5887</td>
-            <td>tfdsanjuancity@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>TRAFFIC PARKING & <br>MANAGEMENT OFFICE </td>
-            <td class="pula">8655 8364 / <br>7625 5844</td>
-            <td>tpmopososanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>TRICYCLE REGULATORY BOARD</td>
-            <td class="pula">8477 5887</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="w3-container direcontent" id="lgf" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+        <table class="table aa" id="myTable4" style="transition: .5s;">
+          <thead>
+            <tr class="catdirect">
+              <th>OFFICES</th>
+              <th>CONTACT NUMBER</th>
+              <th>EMAIL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ctus">
+              <td>CITY DISASTER<br> RISK REDUCTION & <br> MANAGEMENT OFFICE </td>
+              <td class="pula">7238 4333</td>
+              <td>sjcdrrmo2011@gmail.com / <br>cdrrmo.sanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY ENGINEERING <br>DEPARTMENT</td>
+              <td class="pula">8997 8182 / <br>7728 9917</td>
+              <td>sanjuanengineering@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY ENVIRONMENT AND <br>NATURAL RESOURCES</td>
+              <td class="pula">0917 387 0508 / <br>0961 078 8935</td>
+              <td>cenrosanjuancity@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY LIBRARY</td>
+              <td class="pula">7744 2695</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>GENERAL SERVICES <br>DEPARTMENT </td>
+              <td class="pula">8477 4010 / <br>7728 7426</td>
+              <td>arevalorizalina@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>OFFICE OF<br> VETERINARY <br>SERVICES </td>
+              <td class="pula">77289780</td>
+              <td>veterinaryoffice27@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>PUBLIC ORDER & SAFETY OFFICE </td>
+              <td class="pula">8477 5887</td>
+              <td>tpmopososanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>TASK FORCE DISIPLINA</td>
+              <td class="pula">8477 5887</td>
+              <td>tfdsanjuancity@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>TRAFFIC PARKING & <br>MANAGEMENT OFFICE </td>
+              <td class="pula">8655 8364 / <br>7625 5844</td>
+              <td>tpmopososanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>TRICYCLE REGULATORY BOARD</td>
+              <td class="pula">8477 5887</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="w3-container direcontent" id="out" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table aa"style="transition: .5s;">
-        <thead>
-          <tr class="catdirect">
-            <th>OFFICES</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="ctus">
-            <td>CITY HEALTH DEPARTMENT I</td>
-            <td class="pula">7625 5845</td>
-            <td>healthoffice.sjc@gmail.com /<br> cho@sanjuancity.ph</td>
-          </tr>
-          <tr class="ctus">
-            <td>CITY HEALTH DEPARTMENT II</td>
-            <td class="pula">7728 9715</td>
-            <td>cho@sanjuancity.ph</td>
-          </tr>
-          <tr class="ctus">
-            <td>ONSE HEALTH CENTER</td>
-            <td class="pula">7750 9034</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>MARKET ADMINISTRATION</td>
-            <td class="pula">7508 9562</td>
-            <td>sjagoramarket@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>SAN JUAN CEMETERY</td>
-            <td class="pula">8556 6117</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>SAN JUAN MEDICAL CENTER </td>
-            <td class="pula">8725 9764 /<br> 8724 3266 / <br>8725 9247 / <br>8725 9804 / <br>8725 9804 / <br>8725 9412</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>SKILLS & LIVELIHOOD <br>TRAINING CENTER</td>
-            <td class="pula">8693 9464</td>
-            <td>sltcsanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>POLYTECHNIC UNIVERSITY <br> OF THE PHILIPPINES </td>
-            <td class="pula">7246 322 /<br>497 4460 /<br>632 7738 / <br>738 5071</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>SCHOOLS DIVISION <br>OFFICE </td>
-            <td class="pula">8451-26994512383 / <br>4512699/9387269 / <br>6617899</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="w3-container direcontent" id="out" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+        <table class="table aa" id="myTable5" style="transition: .5s;">
+          <thead>
+            <tr class="catdirect">
+              <th>OFFICES</th>
+              <th>CONTACT NUMBER</th>
+              <th>EMAIL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ctus">
+              <td>CITY HEALTH DEPARTMENT I</td>
+              <td class="pula">7625 5845</td>
+              <td>healthoffice.sjc@gmail.com /<br> cho@sanjuancity.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>CITY HEALTH DEPARTMENT II</td>
+              <td class="pula">7728 9715</td>
+              <td>cho@sanjuancity.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>ONSE HEALTH CENTER</td>
+              <td class="pula">7750 9034</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>MARKET ADMINISTRATION</td>
+              <td class="pula">7508 9562</td>
+              <td>sjagoramarket@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>SAN JUAN CEMETERY</td>
+              <td class="pula">8556 6117</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SAN JUAN MEDICAL CENTER </td>
+              <td class="pula">8725 9764 /<br> 8724 3266 / <br>8725 9247 / <br>8725 9804 / <br>8725 9804 / <br>8725 9412</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SKILLS & LIVELIHOOD <br>TRAINING CENTER</td>
+              <td class="pula">8693 9464</td>
+              <td>sltcsanjuan@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>POLYTECHNIC UNIVERSITY <br> OF THE PHILIPPINES </td>
+              <td class="pula">7246 322 /<br>497 4460 /<br>632 7738 / <br>738 5071</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SCHOOLS DIVISION <br>OFFICE </td>
+              <td class="pula">8451-26994512383 / <br>4512699/9387269 / <br>6617899</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="w3-container direcontent" id="no" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table aa"style="transition: .5s;">
-        <thead>
-          <tr class="catdirect">
-            <th>OFFICES</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="ctus">
-            <td>PHILIPPINE NATIONAL POLICE</td>
-            <td class="pula">8724 2515 /<br>8724 3744 / <br>8298 7603 / <br>8724 8854</td>
-            <td>opas.sanjuancps@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>POST OFFICE GREENHILLS</td>
-            <td class="pula">8727 5881</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>BUREAU OF FIRE PROTECTION</td>
-            <td class="pula">8725 2079 / <br>8725 8044</td>
-            <td>sanjuanfire@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>BUREAU OF JAIL MANAGEMENT <br> AND PENOLOGY (MALE)</td>
-            <td class="pula">8534 1828</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>BUREAU OF JAIL MANAGEMENT <br>AND PENOLOGY (FEMALE)</td>
-            <td class="pula">8705 1764</td>
-            <td>sanjuancityjailfemale@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>MUSEO EL DEPOSITO</td>
-            <td class="pula">7753 5439 / <br>0998 247 0042</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>COMELEC</td>
-            <td class="pula">8693 7504</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>LANDBANK SAN JUAN <br>BRANCH</td>
-            <td class="pula">7799-5003 /<br> 8726-0227 / <br>0917-551-5001 /<br> 0929-672-25-08</td>
-            <td>rdo_42@bir.gov.ph</td>
-          </tr>
-          <tr class="ctus">
-            <td>BIR SAN JUAN </td>
-            <td class="pula">8723-8183</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>OFFICE OF THE<br> CLERK OF COURT</td>
-            <td class="pula">7750-5132</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>MTC 57</td>
-            <td class="pula">7750-6127</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>MTC 58</td>
-            <td class="pula">7750-5169</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>Public Attorney's Office</td>
-            <td class="pula">8654-6386</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>Prosecutor's Office - DOJ San Juan</td>
-            <td class="pula">8693-2117</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>RTC 68</td>
-            <td class="pula">7949-7586</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>RTC 160</td>
-            <td class="pula">7949-7588</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>RTC 162</td>
-            <td class="pula">0949-992-3070 / <br>7949-7559</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>RTC 264</td>
-            <td class="pula">7949-7587</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>SSS San Juan</td>
-            <td class="pula">8721-5195 / <br>FAX 8721-8686</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>Filoil Flying V Centre</td>
-            <td class="pula">8477 7644 /<br>8654 0772</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="w3-container direcontent" id="no" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+        <table class="table aa" id="myTable6" style="transition: .5s;">
+          <thead>
+            <tr class="catdirect">
+              <th>OFFICES</th>
+              <th>CONTACT NUMBER</th>
+              <th>EMAIL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ctus">
+              <td>PHILIPPINE NATIONAL POLICE</td>
+              <td class="pula">8724 2515 /<br>8724 3744 / <br>8298 7603 / <br>8724 8854</td>
+              <td>opas.sanjuancps@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>POST OFFICE GREENHILLS</td>
+              <td class="pula">8727 5881</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>BUREAU OF FIRE PROTECTION</td>
+              <td class="pula">8725 2079 / <br>8725 8044</td>
+              <td>sanjuanfire@yahoo.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>BUREAU OF JAIL MANAGEMENT <br> AND PENOLOGY (MALE)</td>
+              <td class="pula">8534 1828</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>BUREAU OF JAIL MANAGEMENT <br>AND PENOLOGY (FEMALE)</td>
+              <td class="pula">8705 1764</td>
+              <td>sanjuancityjailfemale@gmail.com</td>
+            </tr>
+            <tr class="ctus">
+              <td>MUSEO EL DEPOSITO</td>
+              <td class="pula">7753 5439 / <br>0998 247 0042</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>COMELEC</td>
+              <td class="pula">8693 7504</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>LANDBANK SAN JUAN <br>BRANCH</td>
+              <td class="pula">7799-5003 /<br> 8726-0227 / <br>0917-551-5001 /<br> 0929-672-25-08</td>
+              <td>rdo_42@bir.gov.ph</td>
+            </tr>
+            <tr class="ctus">
+              <td>BIR SAN JUAN </td>
+              <td class="pula">8723-8183</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>OFFICE OF THE<br> CLERK OF COURT</td>
+              <td class="pula">7750-5132</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>MTC 57</td>
+              <td class="pula">7750-6127</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>MTC 58</td>
+              <td class="pula">7750-5169</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>Public Attorney's Office</td>
+              <td class="pula">8654-6386</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>Prosecutor's Office - DOJ San Juan</td>
+              <td class="pula">8693-2117</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 68</td>
+              <td class="pula">7949-7586</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 160</td>
+              <td class="pula">7949-7588</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 162</td>
+              <td class="pula">0949-992-3070 / <br>7949-7559</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>RTC 264</td>
+              <td class="pula">7949-7587</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>SSS San Juan</td>
+              <td class="pula">8721-5195 / <br>FAX 8721-8686</td>
+              <td></td>
+            </tr>
+            <tr class="ctus">
+              <td>Filoil Flying V Centre</td>
+              <td class="pula">8477 7644 /<br>8654 0772</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="w3-container direcontent" id="bdirect" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table aa"style="transition: .5s;">
-        <thead>
-          <tr class="catdirect">
-            <th>BARANGAY</th>
-            <th>CONTACT NUMBER</th>
-            <th>EMAIL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="ctus">
-            <td>ADDITION HILLS</td>
-            <td class="pula">8352 0211</td>
-            <td>additionhills@yahoo.com.ph</td>
-          </tr>
-          <tr class="ctus">
-            <td>BALONG BATO   </td>
-            <td class="pula">8723 9561</td>
-            <td>balongbatosanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>BATIS   </td>
-            <td class="pula">(02) 7744 0737 /<br>(02) 8295-6220 / <br> 09688548301</td>
-            <td>batis.sanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>CORAZON DE JESUS</td>
-            <td class="pula">09253551035</td>
-            <td>brgycdj@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>ERMITANO</td>
-            <td class="pula">7919 4885</td>
-            <td>ermitano.sanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>GREENHILLS</td>
-            <td class="pula">8724 5163</td>
-            <td>greenhills.sanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>ISABELITA</td>
-            <td class="pula">8722 6948</td>
-            <td>brgy.isabelita@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>KABAYANAN</td>
-            <td class="pula">8726 4952</td>
-            <td>brgy.kabayanan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>LITTLE BAGUIO</td>
-            <td class="pula">8725 4484</td>
-            <td>littlebaguiosanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>MAYTUNAS</td>
-            <td class="pula">8722 7848 / <br>09270163219</td>
-            <td>maytunassanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>ONSE</td>
-            <td class="pula">7744 0740</td>
-            <td>onse.sanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>PASADENA</td>
-            <td class="pula">7745 3451</td>
-            <td>barangaypasadena2018@gmail.com /<br> website: barangaypasadena.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>PEDRO CRUZ</td>
-            <td class="pula">8288 6467</td>
-            <td>brgypedrocruz.sanjuancity@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>PROGRESO</td>
-            <td class="pula">8727 5635</td>
-            <td>barangayprogreso@yahoo.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>RIVERA</td>
-            <td class="pula">8942 2543 /<br> 09178636334</td>
-            <td>rivera.sanjuan15@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>SALAPAN</td>
-            <td class="pula">8251 3116</td>
-            <td>franciabarbon@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>SAN PERFECTO</td>
-            <td class="pula">8633 3596</td>
-            <td>sanperfecto.barangay@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>STA LUCIA</td>
-            <td class="pula">7726 5385</td>
-            <td>sta.lucia.sanjuan@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>ST. JOSEPH</td>
-            <td class="pula">09338165334 / <br> 09175149765</td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>TIBAGAN</td>
-            <td class="pula">8723 9837</td>
-            <td>tibaganbarangaycouncil@gmail.com</td>
-          </tr>
-          <tr class="ctus">
-            <td>WEST CRAME</td>
-            <td class="pula">8635 0169</td>
-            <td>westcramebrgy@gmail.com</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="w3-container direcontent" id="bdirect" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+       <table class="table aa" id="myTable7" style="transition: .5s;">
+         <thead>
+           <tr class="catdirect">
+             <th>BARANGAY</th>
+             <th>CONTACT NUMBER</th>
+             <th>EMAIL</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr class="ctus">
+             <td>ADDITION HILLS</td>
+             <td class="pula">8352 0211</td>
+             <td>additionhills@yahoo.com.ph</td>
+           </tr>
+           <tr class="ctus">
+             <td>BALONG BATO   </td>
+             <td class="pula">8723 9561</td>
+             <td>balongbatosanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>BATIS   </td>
+             <td class="pula">(02) 7744 0737 /<br>(02) 8295-6220 / <br> 09688548301</td>
+             <td>batis.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>CORAZON DE JESUS</td>
+             <td class="pula">09253551035</td>
+             <td>brgycdj@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ERMITANO</td>
+             <td class="pula">7919 4885</td>
+             <td>ermitano.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>GREENHILLS</td>
+             <td class="pula">8724 5163</td>
+             <td>greenhills.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ISABELITA</td>
+             <td class="pula">8722 6948</td>
+             <td>brgy.isabelita@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>KABAYANAN</td>
+             <td class="pula">8726 4952</td>
+             <td>brgy.kabayanan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>LITTLE BAGUIO</td>
+             <td class="pula">8725 4484</td>
+             <td>littlebaguiosanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>MAYTUNAS</td>
+             <td class="pula">8722 7848 / <br>09270163219</td>
+             <td>maytunassanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ONSE</td>
+             <td class="pula">7744 0740</td>
+             <td>onse.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>PASADENA</td>
+             <td class="pula">7745 3451</td>
+             <td>barangaypasadena2018@gmail.com /<br> website: barangaypasadena.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>PEDRO CRUZ</td>
+             <td class="pula">8288 6467</td>
+             <td>brgypedrocruz.sanjuancity@yahoo.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>PROGRESO</td>
+             <td class="pula">8727 5635</td>
+             <td>barangayprogreso@yahoo.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>RIVERA</td>
+             <td class="pula">8942 2543 /<br> 09178636334</td>
+             <td>rivera.sanjuan15@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>SALAPAN</td>
+             <td class="pula">8251 3116</td>
+             <td>franciabarbon@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>SAN PERFECTO</td>
+             <td class="pula">8633 3596</td>
+             <td>sanperfecto.barangay@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>STA LUCIA</td>
+             <td class="pula">7726 5385</td>
+             <td>sta.lucia.sanjuan@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>ST. JOSEPH</td>
+             <td class="pula">09338165334 / <br> 09175149765</td>
+             <td></td>
+           </tr>
+           <tr class="ctus">
+             <td>TIBAGAN</td>
+             <td class="pula">8723 9837</td>
+             <td>tibaganbarangaycouncil@gmail.com</td>
+           </tr>
+           <tr class="ctus">
+             <td>WEST CRAME</td>
+             <td class="pula">8635 0169</td>
+             <td>westcramebrgy@gmail.com</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
 
-    <div class="w3-container direcontent" id="coffice" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
-      <table class="table"style="transition: .5s;">
-        <thead>
-          <tr id="konsilaman">
-            <th>COUNCILOR</th>
-            <th>CONTACT NUMBER</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="sjcat">
-            <td>Distict I</td>
-            <td class="pula"></td>
+     <div class="w3-container direcontent" id="coffice" style="box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); border-radius:5px;">
+       <table class="table" id="myTable8" style="transition: .5s;">
+         <thead>
+           <tr id="konsilaman">
+             <th>COUNCILOR</th>
+             <th>CONTACT NUMBER</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr class="sjcat">
+             <td>Distict I</td>
+             <td class="pula"></td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. VINCENT RAINIER M. PACHECO</td>
-            <td class="pula">7625-5768</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. VINCENT RAINIER M. PACHECO</td>
+             <td class="pula">7625-5768</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. PAUL ANTHONY D. ARTADI </td>
-            <td class="pula">7625-5767</td>
-          </tr>
-          <tr class="ctus">
-            <td>COUN. MA. ANTONIA RAISSA DAWN H. LAUREL</td>
-            <td class="pula">7625-5771</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. PAUL ANTHONY D. ARTADI </td>
+             <td class="pula">7625-5767</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. MA. ANTONIA RAISSA DAWN H. LAUREL</td>
+             <td class="pula">7625-5771</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. VICTOR JOSE L. REYES</td>
-            <td class="pula">7625-5762</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. VICTOR JOSE L. REYES</td>
+             <td class="pula">7625-5762</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. FRANCHESCO PAUL R. VELASCO </td>
-            <td class="pula">7625-5769</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. FRANCHESCO PAUL R. VELASCO </td>
+             <td class="pula">7625-5769</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. ARTHUR ALFRED E. AQUINO</td>
-            <td class="pula">7625-5760</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. ARTHUR ALFRED E. AQUINO</td>
+             <td class="pula">7625-5760</td>
 
-          </tr>
-          <tr class="sjcat">
-            <td>Distict II</td>
-            <td class="pula"></td>
-            <td></td>
-          </tr>
-          <tr class="ctus">
-            <td>COUN. JANNAH A .EJERCITO</td>
-            <td class="pula">7625-5763</td>
+           </tr>
+           <tr class="sjcat">
+             <td>Distict II</td>
+             <td class="pula"></td>
+             <td></td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. JANNAH A .EJERCITO</td>
+             <td class="pula">7625-5763</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. BEA CELINE D. DE GUZMAN </td>
-            <td class="pula">7625-5770</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. BEA CELINE D. DE GUZMAN </td>
+             <td class="pula">7625-5770</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. ROLANDO M. BERNARDO</td>
-            <td class="pula">7625-5764</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. ROLANDO M. BERNARDO</td>
+             <td class="pula">7625-5764</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. MICHAEL CHRISTOPHER R. MATHAY </td>
-            <td class="pula">7625-5759</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. MICHAEL CHRISTOPHER R. MATHAY </td>
+             <td class="pula">7625-5759</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. MARY JOY A. IBUNA-LEOY</td>
-            <td class="pula">7625-5765</td>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. MARY JOY A. IBUNA-LEOY</td>
+             <td class="pula">7625-5765</td>
 
-          </tr>
-          <tr class="ctus">
-            <td>COUN. FRANCIS KEITH R. PERALTA</td>
-            <td class="pula">7625-5761</td>
-          </tr>
-      </table>
-    </div>
+           </tr>
+           <tr class="ctus">
+             <td>COUN. FRANCIS KEITH R. PERALTA</td>
+             <td class="pula">7625-5761</td>
+           </tr>
+       </table>
+     </div>
+
 
 
 
@@ -815,6 +1373,160 @@ function directpage(dt, floor) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+  var input2, filter2, table2, tr2, td2, q, txtValue2;
+  input2 = document.getElementById("myInput");
+  filter2 = input.value.toUpperCase();
+  table2 = document.getElementById("myTable2");
+  tr2 = table2.getElementsByTagName("tr");
+  for (q = 0; q < tr2.length; q++) {
+    td2 = tr2[q].getElementsByTagName("td")[0];
+    if (td2) {
+      txtValue2 = td2.textContent || td2.innerText;
+      if (txtValue2.toUpperCase().indexOf(filter2) > -1) {
+        tr2[q].style.display = "";
+      } else {
+        tr2[q].style.display = "none";
+      }
+    }
+  }
+  var input3, filter3, table3, tr3, td3, w, txtValue3;
+  input3 = document.getElementById("myInput");
+  filter3 = input.value.toUpperCase();
+  table3 = document.getElementById("myTable3");
+  tr3 = table3.getElementsByTagName("tr");
+  for (w = 0; w < tr3.length; w++) {
+    td3 = tr3[w].getElementsByTagName("td")[0];
+    if (td3) {
+      txtValue3 = td3.textContent || td3.innerText;
+      if (txtValue3.toUpperCase().indexOf(filter3) > -1) {
+        tr3[w].style.display = "";
+      } else {
+        tr3[w].style.display = "none";
+      }
+    }
+  }
+
+  var input4, filter4, table4, tr4, td4, e, txtValue4;
+  input4 = document.getElementById("myInput");
+  filter4 = input.value.toUpperCase();
+  table4 = document.getElementById("myTable4");
+  tr4 = table4.getElementsByTagName("tr");
+  for (e = 0; e < tr4.length; e++) {
+    td4 = tr4[e].getElementsByTagName("td")[0];
+    if (td4) {
+      txtValue4 = td4.textContent || td4.innerText;
+      if (txtValue4.toUpperCase().indexOf(filter4) > -1) {
+        tr4[e].style.display = "";
+      } else {
+        tr4[e].style.display = "none";
+      }
+    }
+  }
+
+  var input5, filter5, table5, tr5, td5, r, txtValue5;
+  input5 = document.getElementById("myInput");
+  filter5 = input.value.toUpperCase();
+  table5 = document.getElementById("myTable5");
+  tr5 = table5.getElementsByTagName("tr");
+  for (r = 0; r < tr5.length; r++) {
+    td5 = tr5[r].getElementsByTagName("td")[0];
+    if (td5) {
+      txtValue5 = td5.textContent || td5.innerText;
+      if (txtValue5.toUpperCase().indexOf(filter5) > -1) {
+        tr5[r].style.display = "";
+      } else {
+        tr5[r].style.display = "none";
+      }
+    }
+  }
+
+  var input6, filter6, table6, tr6, td6, y, txtValue6;
+  input6 = document.getElementById("myInput");
+  filter6 = input.value.toUpperCase();
+  table6 = document.getElementById("myTable6");
+  tr6 = table6.getElementsByTagName("tr");
+  for (y = 0; y < tr6.length; y++) {
+    td6 = tr6[y].getElementsByTagName("td")[0];
+    if (td6) {
+      txtValue6 = td6.textContent || td6.innerText;
+      if (txtValue6.toUpperCase().indexOf(filter6) > -1) {
+        tr6[y].style.display = "";
+      } else {
+        tr6[y].style.display = "none";
+      }
+    }
+  }
+
+  var input7, filter7, table7, tr7, td7, u, txtValue7;
+  input7 = document.getElementById("myInput");
+  filter7 = input.value.toUpperCase();
+  table7 = document.getElementById("myTable7");
+  tr7 = table7.getElementsByTagName("tr");
+  for (u = 0; u < tr7.length; u++) {
+    td7 = tr7[u].getElementsByTagName("td")[0];
+    if (td7) {
+      txtValue7 = td7.textContent || td7.innerText;
+      if (txtValue7.toUpperCase().indexOf(filter7) > -1) {
+        tr7[u].style.display = "";
+      } else {
+        tr7[u].style.display = "none";
+      }
+    }
+  }
+
+  var input8, filter8, table8, tr8, td8, p, txtValue8;
+  input8 = document.getElementById("myInput");
+  filter8 = input.value.toUpperCase();
+  table8 = document.getElementById("myTable8");
+  tr8 = table8.getElementsByTagName("tr");
+  for (p = 0; p < tr8.length; p++) {
+    td8 = tr8[p].getElementsByTagName("td")[0];
+    if (td8) {
+      txtValue8 = td8.textContent || td8.innerText;
+      if (txtValue8.toUpperCase().indexOf(filter8) > -1) {
+        tr8[p].style.display = "";
+      } else {
+        tr8[p].style.display = "none";
+      }
+    }
+  }
+  var input9, filter9, table9, tr9, td9, g, txtValue9;
+  input9 = document.getElementById("myInput");
+  filter9 = input.value.toUpperCase();
+  table9 = document.getElementById("all");
+  tr9 = table9.getElementsByTagName("tr");
+  for (g = 0; g < tr9.length; g++) {
+    td9 = tr9[g].getElementsByTagName("td")[0];
+    if (td9) {
+      txtValue9 = td9.textContent || td9.innerText;
+      if (txtValue9.toUpperCase().indexOf(filter9) > -1) {
+        tr9[g].style.display = "";
+      } else {
+        tr9[g].style.display = "none";
+      }
+    }
+  }
+
+}
+
 </script>
 
 </div>
@@ -1178,7 +1890,7 @@ color: darkblue !important;
                 </tr>
                 <tr class="ctus">
                   <td>CITY SOCIAL WELFARE & DEVELOPMENT DEPARTMENT </td>
-                  <td class="pula">7729 0120 / 0956 429 7998 / 09608205236</td>
+                  <td class="pula">7729 0120 / 0956 429 7998</td>
                   <td>sjccswdo2017@gmail.com/cswdd@sanjuancity.gov.ph</td>
                 </tr>
                 <tr class="ctus">
@@ -1223,7 +1935,7 @@ color: darkblue !important;
                 </tr>
                 <tr class="ctus">
                   <td>CITY ASSESSOR'S OFFICE</td>
-                  <td class="pula">8477 4572 /<br> 09674699655 </td>
+                  <td class="pula">8477 4572</td>
                   <td>sanjuancityassessor@gmail.com</td>
                 </tr>
                 <tr class="ctus">
@@ -1268,7 +1980,7 @@ color: darkblue !important;
                 </tr>
                 <tr class="ctus">
                   <td>COOPERATIVE DEVELOPMENT OFFICE </td>
-                  <td class="pula">09674772690</td>
+                  <td class="pula">7728 7906</td>
                   <td>sjcoopdevtofc@gmail.com</td>
                 </tr>
                 <tr class="ctus">
