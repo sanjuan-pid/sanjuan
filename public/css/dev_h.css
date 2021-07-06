@@ -695,7 +695,7 @@ div#sjmcpage {
       }
 
     }
-    /* for directory page */
+   /* for directory page */
     .sidedirect {
       background-color: #fff;
       position: absolute !important;
@@ -789,12 +789,13 @@ div#sjmcpage {
         width: 70% !important;
         flex: 0 0 100%;
       }
-      #conus{
-        max-width: 80% !important;
-        width: 80% !important;
+      div#conus{
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: 0 0 100%;
       }
       .sidedirect{
-        height: 350px !important;
+        height: 390px !important;
 
       }
       .catdirect{
@@ -836,9 +837,10 @@ div#sjmcpage {
       flex: 0 0 100%;
     }
     #conus{
-      max-width: 90% !important;
-      width: 90% !important;
+      max-width: 100% !important;
+      width: 100% !important;
     }
+
     #conus #sjch1{
       font-size: 25px !important;
     }
@@ -850,7 +852,7 @@ div#sjmcpage {
     }
 
     .sidedirect{
-      height: 350px !important;
+      height: 390px !important;
 
     }
     .catdirect{
@@ -893,8 +895,8 @@ div#sjmcpage {
       flex: 0 0 100%;
     }
     #conus{
-      max-width: 90% !important;
-      width: 90% !important;
+      max-width: 100% !important;
+      width: 100% !important;
     }
     #conus #sjch1{
       font-size: 25px !important;
@@ -904,7 +906,7 @@ div#sjmcpage {
     }
 
     .sidedirect{
-      height: 350px !important;
+      height: 390px !important;
 
     }
     .catdirect{
@@ -961,7 +963,7 @@ div#sjmcpage {
     }
 
     .sidedirect{
-      height: 350px !important;
+      height: 390px !important;
 
     }
     .catdirect{
@@ -1008,7 +1010,9 @@ div#sjmcpage {
       display: block !important;
       width: 100% !important;
     }
-
+   #myInput{
+     width: 295px !important;
+   }
     .contactform img{
       display: none !important;
     }
@@ -1084,13 +1088,10 @@ div#sjmcpage {
       .contactform {
       position: relative;
       padding: 10px 10px;
-      background: #fff;
-      width: calc(100% - 150px);
       height: 50%;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-      border-radius: 25px;
       margin: auto;
-      background-color: #e60000;
+      background-color: #cc0000;
     }
 
     /* vice mayor's page */
