@@ -1011,7 +1011,8 @@ div#sjmcpage {
       width: 100% !important;
     }
    #myInput{
-     width: 295px !important;
+     width: 100% !important;
+     margin-left: 12px;
    }
     .contactform img{
       display: none !important;
