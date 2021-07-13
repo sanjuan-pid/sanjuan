@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
       <meta charset="UTF-8">
- 
+
       <meta name="description" content="San Juan City Website">
       <meta name="keywords" content="San Juan City, City Hall, News">
       <meta name="author" content="San Juan City">
@@ -15,7 +15,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -23,10 +23,10 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
       <!-- Material Design Bootstrap -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
-  
+
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
         <!-- Fonts -->
 
         <style>
@@ -93,8 +93,8 @@
                          <span class="navbar-toggler-icon"></span>
                        </button>
                      </div>
-                     <div class="col-sm-10" id="nav_mob" style="padding: 0;"> 
-                       
+                     <div class="col-sm-10" id="nav_mob" style="padding: 0;">
+
                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
                          <ul class="navbar-nav">
                            <li class="nav-item dropdown" id="ourcity">
@@ -111,13 +111,23 @@
                                <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
                              </ul>
                            </li>
-                           
-                          <li class="nav-item" >
+
+                           <li class="nav-item dropdown" >
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Transparency
+                             </a>
+                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                               <li><a class="dropdown-item" href="{{route('announce')}}">Bids and Awards</a></li>
+                               <li><a class="dropdown-item" href="{{route('transparency')}}">Reports</a></li>
+                             </ul>
+                           </li>
+
+                          <!-- <li class="nav-item" >
                             <a class="nav-link" href="{{route('transparency')}}"  id="navbarDropdownMenuLink" >Transparency</a>
-                          </li>
+                          </li> -->
 
                            <li class="nav-item" >
-                            <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Tourism</a>
+                            <a class="nav-link"  href="{{route('announce')}}"  id="navbarDropdownMenuLink" >Tourism</a>
                           </li>
                            <li class="nav-item" >
                             <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Departments</a>
@@ -167,7 +177,7 @@
 
                          <li class="nav-item" >
                           <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('contactus')}}">Contact Us</a>
-                         
+
                           </li>
 
                            <li class="nav-item dropdown">
@@ -176,7 +186,7 @@
                              </a>
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                              <li><a class="dropdown-item" href="{{route('employee')}}">Employee</a></li>
-                               <li><a class="dropdown-item" href="{{route('residence')}}">Resident</a></li>
+                               <li><a class="dropdown-item" href="{{route('residence')}}">Residence</a></li>
                                <li><a class="dropdown-item" href="{{route('visitor')}}">Visitor</a></li>
                              </ul>
                            </li>
@@ -216,11 +226,20 @@
                            <li><a class="dropdown-item" href="{{route('brgy')}}">Barangay</a></li>
                 </ul>
               </li>
-              <li class="nav-item" >
+              <!-- <li class="nav-item" >
                 <a class="nav-link" href="{{route('transparency')}}"  id="navbarDropdownMenuLink" >Transparency</a>
+              </li> -->
+              <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Transparency
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                  <li><a class="dropdown-item" href="{{route('announce')}}">Bids and Awards</a></li>
+                  <li><a class="dropdown-item" href="{{route('transparency')}}">Reports</a></li>
+                </ul>
               </li>
               <li class="nav-item" >
-                <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Tourism</a>
+                <a class="nav-link"  href="{{route('announce')}}"  id="navbarDropdownMenuLink" >Tourism</a>
               </li>
 
                 <li class="nav-item" >
@@ -269,7 +288,7 @@
              </li>
              <li class="nav-item" >
                           <a class="nav-link"  id="navbarDropdownMenuLink" href="{{route('direct')}}">Directory</a>
-                         
+
                         </li>
 
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
@@ -285,7 +304,7 @@
              </a>
              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="{{route('employee')}}">Employee</a></li>
-                <li><a class="dropdown-item" href="{{route('residence')}}">Resident</a></li>
+                <li><a class="dropdown-item" href="{{route('residence')}}">Residence</a></li>
                 <li><a class="dropdown-item" href="{{route('visitor')}}">Visitor</a></li>
              </ul>
            </li>
@@ -338,13 +357,51 @@
 </html>
 <script src="{{asset('js/script.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+function w3_open() {
+  document.getElementById("mysb").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mysb").style.display = "none";
+}
+function deptcon(dp, deptname) {
+  var d, deptcontent, deptlinks;
+  deptcontent = document.getElementsByClassName("deptcontent");
+  for (d = 0; d < deptcontent.length; d++) {
+    deptcontent[d].style.display = "none";
+  }
+  deptlinks = document.getElementsByClassName("deptlinks");
+  for (d = 0; d < deptlinks.length; d++) {
+    deptlinks[d].className = deptlinks[d].className.replace(" active", "");
+  }
+  document.getElementById(deptname).style.display = "block";
+  dp.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+  // var button1 = document.getElementById("btn1");
+  // var button1 = document.getElementsByClassName("defaultOpen1");
+  document.getElementById("defaultOpen1").click();
+//   var button2 = document.getElementById("btn2");
+//
+//   if (button1.clicked == true) {
+//   // document.getElementById("defaultOpen1").click();
+//   alert("hehe");
+// } else (button2.clicked == true) {
+//   document.getElementById("defaultOpen2").click();
+// }
+
+</script>
+
 {{-- <script>
 $(document).ready(function(){
     $.ajax({
-         
+
            type: "POST",
            url: "http://localhost/php-api-master/api/news/read.php",
-           
+
            dataType: "json",
            contentType: "application/json",
            success: function(data){
