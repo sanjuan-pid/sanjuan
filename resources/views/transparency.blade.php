@@ -81,7 +81,7 @@
             {{-- <img src="{{asset('assets/mock/SKILLS.jpg')}}" style="width: 100%;margin: 0 auto;display: block;"/>  --}}
             <br>
             <center>
-                <h1 style="margin:2% 0; ">Transparency</h1>
+                <h1 style="margin:2% 0; ">Reports</h1>
             </center>
             <div class="row" style="margin-bottom: 5%;">
                 <div class="col-md-6 clearfix d-md-block">
