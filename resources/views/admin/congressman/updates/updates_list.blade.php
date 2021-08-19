@@ -63,7 +63,7 @@ span#descriptions_{
                                     <td  id="desc" ><span id="descriptions_"><?php echo $row['desc'] ?></span></td>
                                     <td>
                                         <a href="{{action('UpdatesCongressman@edit', $row['id'])}}" class="btn btn-info" style="color:#fff;">Edit</a>
-                                        @if($row['show'] != 1)
+                                        @if($row['show'] == 1)
                                             <form method="post" class="delete_form" action="{{action('UpdatesCongressman@destroy',$row['id'])}}" >
                                                 {{csrf_field()}}
                                                 <input type="hidden" name="_method" value="DELETE">

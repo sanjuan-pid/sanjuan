@@ -26,7 +26,7 @@
     </div> --}}
 <style>
 #myInput {
-  background-image: url('/assets/icn.png');
+  background-image: url('assets/hanap.png');
   background-position: 12px 8px;
   background-repeat: no-repeat;
   width: 95%;
