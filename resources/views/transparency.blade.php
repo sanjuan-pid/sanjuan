@@ -50,9 +50,58 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-body">
-                    <h2>BAYANIHAN GRANT 1 OF 2</h2>
+                    <h2>BAYANIHAN GRANT FOR THE MONTH OF NOVEMBER 2020</h2>
                     <img class="card-img-top" src="{{asset('assets/transparency/BAYANIHAN GRANT 1 OF 2.jpg')}}" />
                     <img class="card-img-top" src="{{asset('assets/transparency/BAYANIHAN GRANT 2 OF 2.jpg')}}" />
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default close_pause"  data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal fade" id="myModal3" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                    <h2>BAYANIHAN GRANT FOR THE MONTH OF DECEMBER 2020</h2>
+                    <img class="card-img-top" src="{{asset('assets/reports/dec1.jpg')}}" />
+                    <img class="card-img-top" src="{{asset('assets/reports/dec2.jpg')}}" />
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default close_pause"  data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal fade" id="myModal4" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                    <h2>FINANCIAL ASSISTANCE FOR THE MONTH OF MAY 2021</h2>
+                    <img class="card-img-top" src="{{asset('assets/reports/may.jpg')}}" />
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default close_pause"  data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal fade" id="myModal5" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                    <h2>FINANCIAL ASSISTANCE FOR THE MONTH OF JUNE 2021</h2>
+                    <img class="card-img-top" src="{{asset('assets/reports/june.jpg')}}" />
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default close_pause"  data-dismiss="modal">Close</button>
@@ -84,41 +133,55 @@
                 <h1 style="margin:2% 0; ">Reports</h1>
             </center>
             <div class="row" style="margin-bottom: 5%;">
-                <div class="col-md-6 clearfix d-md-block">
-                    <div class="card mb-2">
-                      <img class="card-img-top" src="{{asset('assets/transparency/Financial Assistance.jpg')}}"
-                           alt="Card image cap">
-                      <div class="card-body">
-                        <h4>FINANCIAL ASSISTANCE</h4>
-                        <br>
-                        <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal" style="float: right; font-size:18px;" >VIEW</button>
-                        {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
-                      </div>
-                    </div>
-                  </div>
+               <!-- 7 -->
                   <div class="col-md-6 clearfix d-md-block">
                     <div class="card mb-2">
                       <img class="card-img-top" src="{{asset('assets/transparency/Bayanihan Grant 1 of 2.jpg')}}"
                            alt="Card image cap">
                       <div class="card-body">
-                        <h4>BAYANIHAN GRANT</h4>
+                        <h4>BAYANIHAN GRANT FOR THE MONTH OF NOVEMBER 2020</h4>
                         <br>
                         <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal2" style="float: right; font-size:18px;" >VIEW</button>
                         {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
                       </div>
                     </div>
                   </div>
-                  {{-- <div class="col-md-4 clearfix d-md-block">
+                 <div class="col-md-6 clearfix d-md-block">
                       <div class="card mb-2">
-                        <img class="card-img-top" src="{{asset('assets/transparency/Bayanihan Grant 2 of 2.jpg')}}"
-                             alt="Card image cap" />
+                        <img class="card-img-top" src="{{asset('assets/reports/dec1.jpg')}}"
+                             alt="Card image cap">
                         <div class="card-body">
-                            <h4>BAYANIHAN GRANT 2 OF 2</h4>
-                            <br>
-                            <button type="button" class="btn btn-info btn-lg" id="dangling_btn" data-toggle="modal" data-target="#myModal3" style="float: right; font-size:18px;" >VIEW</button>
+                          <h4>BAYANIHAN GRANT FOR THE MONTH OF DECEMBER 2020</h4>
+                          <br>
+                          <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal3" style="float: right; font-size:18px;" >VIEW</button>
+                          {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
                         </div>
                       </div>
-                    </div> --}}
+                    </div>
+                    <div class="col-md-6 clearfix d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="{{asset('assets/reports/may.jpg')}}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                          <h4>FINANCIAL ASSISTANCE FOR THE MONTH OF MAY 2021</h4>
+                          <br>
+                          <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal4" style="float: right; font-size:18px;" >VIEW</button>
+                          {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 clearfix d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="{{asset('assets/reports/june.jpg')}}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                          <h4>FINANCIAL ASSISTANCE FOR THE MONTH OF JUNE 2021</h4>
+                          <br>
+                          <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal5" style="float: right; font-size:18px;" >VIEW</button>
+                          {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
+                        </div>
+                      </div>
+                    </div>
             </div>
         </div>
     </div>
