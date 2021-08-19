@@ -134,7 +134,7 @@
             </center>
             <div class="row" style="margin-bottom: 5%;">
                <!-- 7 -->
-                  <div class="col-md-6 clearfix d-md-block">
+                  <div class="col-md-3 clearfix d-md-block">
                     <div class="card mb-2">
                       <img class="card-img-top" src="{{asset('assets/transparency/Bayanihan Grant 1 of 2.jpg')}}"
                            alt="Card image cap">
@@ -146,7 +146,7 @@
                       </div>
                     </div>
                   </div>
-                 <div class="col-md-6 clearfix d-md-block">
+                 <div class="col-md-3 clearfix d-md-block">
                       <div class="card mb-2">
                         <img class="card-img-top" src="{{asset('assets/reports/dec1.jpg')}}"
                              alt="Card image cap">
@@ -158,7 +158,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 clearfix d-md-block">
+                    <div class="col-md-3 clearfix d-md-block">
                       <div class="card mb-2">
                         <img class="card-img-top" src="{{asset('assets/reports/may.jpg')}}"
                              alt="Card image cap">
@@ -170,7 +170,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 clearfix d-md-block">
+                    <div class="col-md-3 clearfix d-md-block">
                       <div class="card mb-2">
                         <img class="card-img-top" src="{{asset('assets/reports/june.jpg')}}"
                              alt="Card image cap">
