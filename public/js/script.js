@@ -286,13 +286,13 @@ $(document).ready(function(){
 
         var vid = document.getElementById("first_vid");
         $("#myCarousel  a.carousel-control-prev ,#myCarousel  a.carousel-control-next").click(function(){
-            $("#myCarousel #first_vid").trigger('pause');
-            $("#myCarousel  #second_vid").trigger('pause');
-            $("#myCarousel  #third_vid").trigger('pause');
+            $("#myCarousel #first_vid").trigger('paused');
+            $("#myCarousel  #second_vid").trigger('paused');
+            $("#myCarousel  #third_vid").trigger('paused');
             setTimeout(function(){
-                $("#myCarousel .active #first_vid").trigger('play');
-                $("#myCarousel .active #second_vid").trigger('play');
-                $("#myCarousel .active #third_vid").trigger('play');
+                $("#myCarousel .active #first_vid").trigger('playe');
+                $("#myCarousel .active #second_vid").trigger('playe');
+                $("#myCarousel .active #third_vid").trigger('playe');
             }, 800);
 
           
