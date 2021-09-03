@@ -1048,7 +1048,7 @@ div#sjmcpage {
       #dtpage .sidedirect{
         width: 50% !important;
         position:absolute;
-        left: :0;
+        left: 0;
         z-index:2;
         display:none;
       }
@@ -1298,7 +1298,7 @@ div#sjmcpage {
       }
       #vicempage .sj, #vicempage .card-body , #vicempage .col-sm-6, #vicempage .row.news_row, #vicempage .container{
           padding: 0 0% !important;
-      }`
+      }
       #vicempage .news_row{
         max-width: 100% !important;
         width: 100% !important;
