@@ -122,7 +122,11 @@
                                 <li><a class="dropdown-item" href="{{route('admin.vice-mayor.announcements.announcement_list')}}" >Announcements</a></li>
                             </ul>
                         </li>
-
+                        <li class="nav-item">
+                            <a  class="nav-link " href="{{route('admin.vip.vip_list')}}" >
+                                VIP
+                                </a>
+                        </li>
                         </div>
                     </li>
                     </ul>

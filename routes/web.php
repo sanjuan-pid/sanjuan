@@ -185,6 +185,8 @@ Route::prefix('admin')->group(function(){
     Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
     Route::resource('/department','DeparmentController');
     
-
+    //VIP Stores
+    Route::get('/vip_list', 'Admin_VIPController@index')->name('admin.vip.vip_list');
+    Route::resource('/vip', 'Admin_VIPController');
     
 });
