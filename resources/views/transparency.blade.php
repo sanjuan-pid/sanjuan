@@ -26,7 +26,7 @@
         </div>
     </div> --}}
 
-    <div class="container 1st_cont" id="Transparency">
+    <div class="container 1st_cont" id="Transparency" style="padding-right: 0 !important; padding-left: 0 !important;">
         <div class="modal fade" id="myModal" data-keyboard="false" data-backdrop="static">
 
             <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
@@ -129,10 +129,11 @@
         <div class="row">
             {{-- <img src="{{asset('assets/mock/SKILLS.jpg')}}" style="width: 100%;margin: 0 auto;display: block;"/>  --}}
             <br>
-            <center>
-                <h1 style="margin:2% 0; ">Reports</h1>
-            </center>
-            <div class="row" style="margin-bottom: 5%;">
+            <div class="col-12 mt-2" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
+              <h1 style="position: absolute; top: 50%; left: 35%;transform: translate(-50%, -50%); color:white !important; font-size:50px; text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;">REPORTS</h1>
+              <img style=" width: 100%;" src="{{asset('assets/bandept2.png')}}" />
+            </div>
+            <div class="row mt-4" style="margin-bottom: 5%;">
                <!-- 7 -->
                   <div class="col-md-3 clearfix d-md-block">
                     <div class="card mb-2">

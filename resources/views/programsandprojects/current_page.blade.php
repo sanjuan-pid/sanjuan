@@ -25,9 +25,23 @@
 
         </div>
     </div> --}}
-
+    <style>
+    @media screen and (max-width: 766px) and (min-width: 200px) {
+      #concurr .curr h1{
+        font-size: 20px !important;
+      }
+      div #concurr .curr{
+      margin-top: 0.5rem !important;
+      }
+      .current {
+        max-width: 100% !important;
+        width:100% !important;
+        flex: 0 0 100%;
+      }
+    }
+    </style>
     <div class="container" id="current_program" style="padding:0 !important;">
-            <div class="container my-4">
+            <div class="container my-2" id="concurr" style="padding-right: 0 !important; padding-left: 0 !important;">
               <!-- Trigger the modal with a button -->
 
 
@@ -86,6 +100,12 @@
 
                 </div>
               </div>
+
+              <div class="col-12 mt-2 curr" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
+                <h1 style=" font-weight: 650; position: absolute; top: 50%; left: 35%;transform: translate(-50%, -50%); color:white !important; font-size:50px; text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;">CURRENT PROGRAMS</h1>
+                <img style=" width: 100%;" src="{{asset('assets/bandept2.png')}}" />
+              </div>
+              <div class="container current" style="width:90%;">
                 <div class="row" style="margin-bottom: 5%;">
                     <div class="col-md-6 clearfix d-md-block">
                         <div class="card mb-2">
@@ -460,5 +480,6 @@
             </div>
         <br>
     </div>
+  </div>
 
 @endsection
