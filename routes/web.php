@@ -34,6 +34,7 @@ Route::get('/contents/list','Pages@news_list');
 Route::get('/brgy/contents/{id}','Pages@brgy_contents');
 
 Route::get('/transparency','Pages@transparency')->name('transparency');
+Route::get('/ExecutiveOrder2021','Pages@exeorder2021')->name('exeorder2021');
 
 Route::get('ourcity/government_page','Pages@gov')->name('gov');
 Route::get('ourcity/congressman_page','Pages@cong')->name('cong');
@@ -185,6 +186,10 @@ Route::prefix('admin')->group(function(){
     Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
     Route::resource('/department','DeparmentController');
     
+    //Department - Org Chart
+    Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
+    Route::resource('/org', 'Department_OrgChartController');
+
     //VIP Stores
     Route::get('/vip_list', 'Admin_VIPController@index')->name('admin.vip.vip_list');
     Route::resource('/vip', 'Admin_VIPController');

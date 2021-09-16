@@ -237,6 +237,10 @@ class Pages extends Controller
   {
       return view('publicnotice/Announcements_page');
   }
+  public function exeorder2021()
+  {
+      return view('ExecutiveOrder2021');
+  }
 
     //Directory
   

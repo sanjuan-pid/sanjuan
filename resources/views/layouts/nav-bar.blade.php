@@ -29,9 +29,6 @@
 
         <!-- Fonts -->
 
-        <style>
-
-        </style>
     </head>
     <body>
       <!-- Button trigger modal -->
@@ -122,6 +119,16 @@
                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                <li><a class="dropdown-item" href="{{route('announce')}}">Bids and Awards</a></li>
                                <li><a class="dropdown-item" href="{{route('transparency')}}">Reports</a></li>
+                               <li>
+                                 <div class="dropdownto">
+                                  <button class="dropbtn">Executive Orders</button>
+                                  <div class="dropdown-content">
+                                    <a class="exe2021" href="{{route('exeorder2021')}}">2021</a>
+                                  </div>
+                                </div>
+                               </li>
+                               <li><a class="dropdown-item" href="{{route('announce')}}">City Ordinances</a></li>
+                               <li><a class="dropdown-item" href="{{route('announce')}}">City Resolutions</a></li>
                              </ul>
                            </li>
 
@@ -239,6 +246,16 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                   <li><a class="dropdown-item" href="{{route('announce')}}">Bids and Awards</a></li>
                   <li><a class="dropdown-item" href="{{route('transparency')}}">Reports</a></li>
+                  <li>
+                    <div class="dropdownto">
+                     <button class="dropbtn">Executive Orders</button>
+                     <div class="dropdown-content">
+                       <a class="exe2021" href="{{route('exeorder2021')}}">2021</a>
+                     </div>
+                   </div>
+                  </li>
+                  <li><a class="dropdown-item" href="{{route('announce')}}">City Ordinances</a></li>
+                  <li><a class="dropdown-item" href="{{route('announce')}}">City Resolutions</a></li>
                 </ul>
               </li>
               <li class="nav-item" >
