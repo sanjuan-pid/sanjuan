@@ -1472,3 +1472,57 @@ div#sjmcpage {
     border-radius: 5px;
     height: 35px;
 }
+.dropbtn {
+  color: black;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  font-weight: 300;
+  }
+  
+  .dropdownto {
+  position: relative;
+  display: inline-block;
+  }
+  
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  margin-left: 100%;
+  margin-top: -23%;
+  z-index: 1;
+  }
+  
+  .dropdown-content .exe2021 {
+  color: black !important;
+  text-decoration: none;
+  display: block;
+  }
+  
+  .dropdown-content .exe2021:hover {background-color: gray;}
+  
+  .dropdownto:hover .dropdown-content {display: block; color: black !important;}
+  
+  .dropdownto:hover .dropbtn {background-color: #f7f7f9;}
+
+  @media screen and (max-width: 766px) and (min-width: 200px){
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      font-weight: 600;
+      background-color: #f1f1f1;
+      min-width: 140px;
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+      margin-left: -100% !important;
+      margin-top: -18% !important;
+      z-index: 1;
+      text-align: center !important;
+    }
+  .dropdownto:hover .dropdown-content {display: block; color: black !important;}
+  .dropdownto{
+    padding-left: 10%;
+  }
+  }
