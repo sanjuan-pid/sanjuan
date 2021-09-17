@@ -25,7 +25,34 @@
 
         </div>
     </div> --}}
-
+    <style>
+    @media screen and (min-device-width: 1205px) and (max-device-width: 1366px){
+      #Transparency{
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: 0 0 100%;
+      }
+      #Transparency img.card-img-top{
+        height: 100% !important;
+      }
+      #Transparency .card-body h4{
+        font-size: 15px !important;
+      }
+      #Transparency .card-body button{
+        font-size: 10px !important;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 3%;
+        padding-right: 3%;
+      }
+      .navbar-nav li {
+          list-style: none;
+          display: inline-block;
+          margin: 0px -4px;
+          position: relative;
+      }
+    }
+    </style>
     <div class="container 1st_cont" id="Transparency" style="padding-right: 0 !important; padding-left: 0 !important;">
         <div class="modal fade" id="myModal" data-keyboard="false" data-backdrop="static">
 
