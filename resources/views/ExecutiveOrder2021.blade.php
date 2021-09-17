@@ -35,6 +35,12 @@
       font-size: 15px !important;
     }
     }
+    @media screen and (max-width: 1366px) and (min-width: 200px) {
+    #mac{
+    height: 1300px !important;
+    }
+    }
+
     </style>
     <div class="container 1st_cont" id="executive" style="padding-right: 0 !important; padding-left: 0 !important;">
           <div class="modal fade" id="fmz091" data-keyboard="false" data-backdrop="static">
@@ -43,12 +49,12 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-body">
-                    <img class="card-img-top" src="{{asset('assets/transparency/executiveorder2021/fmz091a.png')}}"/>
-                    <img class="card-img-top" src="{{asset('assets/transparency/executiveorder2021/fmz091b.png')}}"/>
-                    <img class="card-img-top" src="{{asset('assets/transparency/executiveorder2021/fmz091c.png')}}"/>
-                    <img class="card-img-top" src="{{asset('assets/transparency/executiveorder2021/fmz091d.png')}}"/>
-                    <img class="card-img-top" src="{{asset('assets/transparency/executiveorder2021/fmz091e.png')}}"/>
-                    <img class="card-img-top" src="{{asset('assets/transparency/executiveorder2021/fmz091f.png')}}"/>
+                    <img class="card-img-top mac" src="{{asset('assets/transparency/executiveorder2021/fmz091a.png')}}"/>
+                    <img class="card-img-top mac" src="{{asset('assets/transparency/executiveorder2021/fmz091b.png')}}"/>
+                    <img class="card-img-top mac" src="{{asset('assets/transparency/executiveorder2021/fmz091c.png')}}"/>
+                    <img class="card-img-top mac" src="{{asset('assets/transparency/executiveorder2021/fmz091d.png')}}"/>
+                    <img class="card-img-top mac" src="{{asset('assets/transparency/executiveorder2021/fmz091e.png')}}"/>
+                    <img class="card-img-top mac" src="{{asset('assets/transparency/executiveorder2021/fmz091f.png')}}"/>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default close_pause"  data-dismiss="modal" style="background-color:red;">Close</button>

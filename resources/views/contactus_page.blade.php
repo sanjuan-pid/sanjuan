@@ -293,7 +293,7 @@ section .container .contactinfo {
                 <ul class="info">
                   <li>
                     <span><img src="{{asset('assets/location.png')}}" style="width:100%;"></span>
-                      <span>Pinaglabanan Street, cor Dr.P.A.Narciso, Street, San Juan, Metro Manila</span>
+                      <span>Pinaglabanan Street, cor Dr.P. A. Narciso, Street, San Juan, Metro Manila</span>
                   </li>
                   <li>
                     <span><img src="{{asset('assets/email.png')}}"></span>

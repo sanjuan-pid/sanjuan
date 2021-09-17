@@ -281,7 +281,7 @@
             <tr class="ctus">
               <td>PERSON WITH DISABILITY<br> AFFAIRS OFFICE</td>
               <td class="pula">7621 1508</td>
-              <td>jewelpage03@yahoo.com</td>
+              <td>pdaosanjuan@gmail.com </td>
             </tr>
             <tr class="ctus">
               <td>PUBLIC ASSISTANCE CENTER</td>
