@@ -248,7 +248,7 @@ $(document).ready(function(){
 
 
 
-   
+
     $(document).ready(function(){
 
         $("#optic_btn").click(function(){
@@ -295,16 +295,16 @@ $(document).ready(function(){
                 $("#myCarousel .active #third_vid").trigger('playe');
             }, 800);
 
-          
-           
+
+
             // $("#first_vid").trigger('pause');
             // $(".active #second_vid").trigger('play');
         });
-        
-            
+
+
             // alert("click");
-        
-        
+
+
         $(window).scroll(function() {
             var $height = $(window).scrollTop();
             $("nav.navbar.navbar-expand-lg.navbar-light").css("background","#fff");
@@ -312,7 +312,7 @@ $(document).ready(function(){
                 $("nav.navbar.navbar-expand-lg.navbar-light").css("background","#314096");
                 $("#nav a").css("color","#fff");
                 $(".dropdown-item").css("color","#000");
-            //    alert("pause"); 
+            //    alert("pause");
                 $('video').get(0).pause();
                 $('video').get(1).pause();
             } else {
@@ -432,4 +432,23 @@ $(document).ready(function(){
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+  }
+
+  //mobile view of excutiveorder in nav
+  function mydropfunction() {
+    document.getElementById("myDfunct").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dbtndown')) {
+      var ddowns = document.getElementsByClassName("drop_content");
+      var y;
+      for (y = 0; y < ddowns.length; y++) {
+        var openDropdown = ddowns[y];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
   }
