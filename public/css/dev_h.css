@@ -1479,12 +1479,15 @@ div#sjmcpage {
   background-color: white;
   font-weight: 300;
   }
-  
+
   .dropdownto {
   position: relative;
   display: inline-block;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  margin-top: 5%;
   }
-  
+
   .dropdown-content {
   display: none;
   position: absolute;
@@ -1495,17 +1498,17 @@ div#sjmcpage {
   margin-top: -23%;
   z-index: 1;
   }
-  
+
   .dropdown-content .exe2021 {
   color: black !important;
   text-decoration: none;
   display: block;
   }
-  
+
   .dropdown-content .exe2021:hover {background-color: gray;}
-  
+
   .dropdownto:hover .dropdown-content {display: block; color: black !important;}
-  
+
   .dropdownto:hover .dropbtn {background-color: #f7f7f9;}
 
   @media screen and (max-width: 766px) and (min-width: 200px){
