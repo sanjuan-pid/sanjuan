@@ -246,14 +246,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                   <li><a class="dropdown-item" href="{{route('announce')}}">Bids and Awards</a></li>
                   <li><a class="dropdown-item" href="{{route('transparency')}}">Reports</a></li>
-                  <li>
-                    <div class="dropdownnumber2">
-                      <button onclick="mydropfunction()" class="dbtndown">Executive Order > </button>
-                      <div id="myDfunct" class="drop_content">
-                        <a href="{{route('exeorder2021')}}">2021</a>
-                      </div>
-                    </div>
-                  </li>
+                  <li><a class="dropdown-item" href="{{route('exeorder2021')}}">Executive Orders</a></li>
                   <li><a class="dropdown-item" href="{{route('announce')}}">City Ordinances</a></li>
                   <li><a class="dropdown-item" href="{{route('announce')}}">City Resolutions</a></li>
                 </ul>
