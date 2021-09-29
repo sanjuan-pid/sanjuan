@@ -20,8 +20,8 @@ class Admin_VIPController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $vips = DB::SELECT('select * from vip_stores where status = 1');
+    {   
+        $vips = DB::table('vip_stores')->where('status','1')->get();
         return view('admin.VIPstores.vip_list', compact('vips'));
     }
 

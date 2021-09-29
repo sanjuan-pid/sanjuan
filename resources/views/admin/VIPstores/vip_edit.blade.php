@@ -25,7 +25,7 @@
                 @endif
 
                 <div class="card-body">
-                 <form method="post" action="{{action('Admin_VIPController@update', $id)}}"" enctype="multipart/form-data">
+                 <form method="post" action="{{action('Admin_VIPController@update', $id)}}" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <input type="hidden" name="_method" value="PATCH" />
                     <div class="form-group row">
@@ -79,7 +79,7 @@
                         </div>
                     </div>             
                     <div class="form-group">
-                      <input type="submit" class="btn btn-success" value="Submit" />
+                      <input type="submit" class="btn btn-success btn-block" value="SUBMIT" />
                     </div>
                   </form>
                 </div>
