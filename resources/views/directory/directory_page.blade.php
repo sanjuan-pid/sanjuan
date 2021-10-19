@@ -295,7 +295,7 @@
             </tr>
             <tr class="ctus">
               <td>CITY DISASTER<br> RISK REDUCTION & <br> MANAGEMENT OFFICE </td>
-              <td class="pula">7238 4333</td>
+              <td class="pula">7915 1130</td>
               <td>sjcdrrmo2011@gmail.com / <br>cdrrmo.sanjuan@gmail.com</td>
             </tr>
             <tr class="ctus">
