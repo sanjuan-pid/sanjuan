@@ -56,7 +56,16 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                 <li><a class="dropdown-item" href="{{route('admin.activity.act-list')}}">Activity</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.article.art-list')}}">Articles</a></li>
-                                <li><a class="dropdown-item" href="{{route('admin.department.deparment-list')}}">Department</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.magazine.magazine_list')}}">Magazines</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" id="City">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Departments
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                                <li><a class="dropdown-item" href="{{route('admin.dept.dept_list')}}">List</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.org.org_list')}}">Organizational Charts</a></li>
                             </ul>
                         </li>
                         {{-- <li class="nav-item">
