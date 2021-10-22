@@ -56,18 +56,11 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                 <li><a class="dropdown-item" href="{{route('admin.activity.act-list')}}">Activity</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.article.art-list')}}">Articles</a></li>
-                                <li><a class="dropdown-item" href="{{route('admin.magazine.magazine_list')}}">Magazines</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.department.deparment-list')}}">Department</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown" id="City">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                             Departments
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                                <li><a class="dropdown-item" href="{{route('admin.dept.dept_list')}}">List</a></li>
-                                <li><a class="dropdown-item" href="{{route('admin.org.org_list')}}">Organizational Charts</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item" ><a class="nav-link " href="{{route('admin.transparency.trans_list')}}">Transparency</a></li>
+
                         {{-- <li class="nav-item">
                             <a  class="nav-link " href="{{route('admin.records_user.records')}}" >
                                 Users
@@ -131,11 +124,7 @@
                                 <li><a class="dropdown-item" href="{{route('admin.vice-mayor.announcements.announcement_list')}}" >Announcements</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a  class="nav-link " href="{{route('admin.vip.vip_list')}}" >
-                                VIP
-                                </a>
-                        </li>
+
                         </div>
                     </li>
                     </ul>
@@ -182,7 +171,7 @@
                             {{-- </li> --}}
                             <li class="nav-item dropdown" id="News">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{ Auth::user()->name }} 
+                                    {{ Auth::user()->name }}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                     <li class="nav-item dropdown">
@@ -226,19 +215,19 @@
   	toolbar: tools
   },
   theme: 'snow'
-}); 
+});
  $(document).ready(function(){
     $("#editor").keyup(function(){
         var test= $(".ql-editor").html();
         $("#description").val(test)
-        
+
      })
     $(".ql-toolbar.ql-snow").click(function(){
         var test= $(".ql-editor").html();
         $("#description").val(test)
-        
-     }) 
-     
+
+     })
+
     });
 
 </script>

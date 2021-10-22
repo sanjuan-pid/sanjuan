@@ -185,7 +185,7 @@ Route::prefix('admin')->group(function(){
     Route::post('/department/child_dept_edit/{id}', 'DeparmentController@update_child')->name('admin.department.deparment-update');
     Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
     Route::resource('/department','DeparmentController');
-    
+
     //Department - Org Chart
     Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
     Route::resource('/org', 'Department_OrgChartController');
@@ -193,5 +193,7 @@ Route::prefix('admin')->group(function(){
     //VIP Stores
     Route::get('/vip_list', 'Admin_VIPController@index')->name('admin.vip.vip_list');
     Route::resource('/vip', 'Admin_VIPController');
-    
+    //Transprency
+    Route::get('/transparency/trans_list', 'transparencyController@index')->name('admin.transparency.trans_list');
+    Route::resource('/transparency','transparencyController');
 });
