@@ -52,7 +52,7 @@
                                     <td >{{$row->magz_year}}</td>
                                     <td >{{$row->magz_tag}}</td>
                                     <td >
-                                        <a href="{{action('MagazineController@show', $row->id)}}" class="btn btn-outline-secondary font-weight-bold">View</a>
+                                        <a href="{{action('MagazineController@show', $row->id)}}" class="btn btn-outline-secondary font-weight-bold" target="_blank">View</a>
                                         <a href="{{action('MagazineController@edit', $row->id)}}" class="btn btn-outline-primary font-weight-bold">Edit</a>
                                     </td>
                                 </tr>

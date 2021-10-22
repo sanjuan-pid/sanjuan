@@ -109,7 +109,47 @@ class MagazineController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'month' => 'required',
+            'year' => 'required',
+            'tag' => 'required',
+        ]);
+
+        if($request->file('filename') != null){
+            $cover_img = $request->file('filename');
+            $extension_img = $cover_img->getClientOriginalExtension();
+            Storage::disk('public')->put('Magazine/'.$cover_img->getFilename().'.'.$extension_img,  File::get($cover_img));
+            //get values ng mga nasa form to save
+            $filename_img = 'Magazine/'.$cover_img->getFilename().'.'.$extension_img;
+
+        }
+        else{
+            $filename_img= $request->get('filename_');
+            
+        }
+        if($request->file('pdf_filename') != null){
+            $cover = $request->file('pdf_filename');
+            $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->put('Magazine/'.$cover->getFilename().'.'.$extension,  File::get($cover));
+            //get values ng mga nasa form to save
+            $filename = 'Magazine/'.$cover->getFilename().'.'.$extension;
+
+        }
+        else{
+            $filename= $request->get('pdf_filename_');
+        }
+    
+        $magz_update = Magazine::find($id);
+        $magz_update->magz_name = $request->get('name');
+        $magz_update->magz_month = $request->get('month');
+        $magz_update->magz_year = $request->get('year');
+        $magz_update->magz_tag = $request->get('tag');
+        $magz_update->magz_pdf = $filename;
+        $magz_update->magz_filename = $filename_img;
+
+        $magz_update->save();
+        return redirect()->route('admin.magazine.magazine_list')->with('success','Data Updated');
     }
 
     /**

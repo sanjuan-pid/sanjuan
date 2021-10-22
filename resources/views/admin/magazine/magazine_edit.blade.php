@@ -42,15 +42,17 @@
                         <label for="staticEmail" class="col-sm-2 col-form-label">Thumbnail</label>
                         <div class="col-sm-10">
                           <input type="file"   name ="filename" class="form-control" id="staticEmail" value="{{$magz->magz_filename}}">
+                          <input type="hidden"   name ="filename_" id="staticEmail" value="{{$magz->magz_filename}}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">PDF File</label>
                         <div class="col-sm-8">
                           <input type="file"   name ="pdf_filename" class="form-control" id="staticEmail" value="{{$magz->magz_pdf}}">
+                          <input type="hidden"   name ="pdf_filename_" id="staticEmail" value="{{$magz->magz_pdf}}">
                         </div>
                         <div class="col-sm-2">
-                            <a href="{{action('MagazineController@show', $id)}}" class="btn btn-primary btn-block font-weight-bold">View PDF</a>
+                            <a href="{{action('MagazineController@show', $id)}}" class="btn btn-primary btn-block font-weight-bold" target="_blank">View PDF</a>
                             
                           </div>
                         
