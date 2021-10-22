@@ -633,7 +633,7 @@
              <td></td>
            </tr>
            <tr class="ctus">
-             <td>COUN. JANNAH A .EJERCITO</td>
+             <td>COUN. JANNAH A. EJERCITO</td>
              <td class="pula">7625-5763</td>
 
            </tr>
