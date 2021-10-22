@@ -25,9 +25,9 @@ class Pages extends Controller
                             where DATE(created_at) <= DATE(NOW()) - INTERVAL 2 DAY
                             and status = 1 and content_type = "news";', [1]);
         $achievement = DB::select('select * from achievement
-                            where status = 1 and content_tag = "mayors";', [1]);  
+                            where status = 1 and content_tag = "mayors";', [1]);
 
-        // return($achievement)   ;             
+        // return($achievement)   ;
          return view('/mayors_page', compact('news','achievement'),['news2' => $news2]);
     }
     public function skills()
@@ -88,7 +88,7 @@ class Pages extends Controller
         return view('ourcity/government_page');
     }
     public function cong()
-    {   
+    {
         $updates_atty = DB::select('select * from news
             where content_type="Updates" and status = 1 and content_tag ="atty_b" ;');
         $ann_atty = DB::select('select * from news
@@ -96,12 +96,12 @@ class Pages extends Controller
         $ann = DB::select('select * from news
             where content_type="Announcement" and status = 1 and content_tag = "cong";');
         $programs = DB::select('select * from news
-            where content_type="Programs" and status = 1 and (content_tag = "cong" || content_tag ="atty_b");'); 
+            where content_type="Programs" and status = 1 and (content_tag = "cong" || content_tag ="atty_b");');
         $updates = DB::select('select * from news
             where content_type="Updates" and status = 1 and content_tag = "cong" ;');
         // return view('');
         $achievement = DB::select('select * from achievement
-            where status = 1 and content_tag = "congressman" || content_tag ="atty_b";');  
+            where status = 1 and content_tag = "congressman" || content_tag ="atty_b";');
         return view('ourcity/congressman_page',compact('programs','updates','achievement','ann','updates_atty','ann_atty'));
     }
     public function vice()
@@ -122,7 +122,7 @@ class Pages extends Controller
             ->get();
         // return view('');
         $achievement = DB::select('select * from achievement
-            where status = 1 and content_tag = "vm";', [1]);  
+            where status = 1 and content_tag = "vm";', [1]);
         return view('ourcity/vicemayor_page',compact('programs','updates','achievement'),['ann' => $ann]);
     }
     //ourcity
@@ -138,7 +138,7 @@ class Pages extends Controller
   {
       return view('ourcity/history_page');
   }
-  
+
   //programs and projects
   public function current()
   {
@@ -190,7 +190,7 @@ class Pages extends Controller
     {
         return view('Events/TourismFestivities_page');
     }
-  
+
     public function calendar()
     {
         return view('Events/majorcalendar_page');
@@ -209,9 +209,9 @@ class Pages extends Controller
     {
         return view('Events/Community_page');
     }
-    
-    
-    
+
+
+
   //Public notice
   public function bids()
   {
@@ -239,22 +239,23 @@ class Pages extends Controller
   }
   public function exeorder2021()
   {
-      return view('ExecutiveOrder2021');
+    $trans = DB::table('transparency')->where('trans_tag','show')->get();
+    return view('ExecutiveOrder2021', compact('trans'));
   }
 
     //Directory
-  
+
     //Login
     public function employee()
     {
         return view('Login/employee_page');
     }
-  
+
     public function residence()
     {
         return view('Login/residence_page');
     }
-  
+
     public function visitor()
     {
         return view('Login/visitor_page');
@@ -278,11 +279,11 @@ class Pages extends Controller
         // dd($dept);
             return view('deparment.department_content',compact('dept','child'));
     }
-    
+
     public function directory()
     {
         return view('directory.directory_page');
-    }    
+    }
     public function department_selected()
     {
         $child = DB::select('SELECT *
@@ -294,6 +295,6 @@ class Pages extends Controller
     public function transparency()
     {
         return view('transparency');
-    }    
-    
+    }
+
 }
