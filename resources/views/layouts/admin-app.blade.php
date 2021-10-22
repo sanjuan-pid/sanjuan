@@ -56,10 +56,21 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                 <li><a class="dropdown-item" href="{{route('admin.activity.act-list')}}">Activity</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.article.art-list')}}">Articles</a></li>
-                                <li><a class="dropdown-item" href="{{route('admin.department.deparment-list')}}">Department</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.magazine.magazine_list')}}">Magazine</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.transparency.trans_list')}}">Transparency</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.vip.vip_list')}}">VIP Stores</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item" ><a class="nav-link " href="{{route('admin.transparency.trans_list')}}">Transparency</a></li>
+                        <li class="nav-item dropdown" id="Departments">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Departments
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                                <li><a class="dropdown-item" href="{{route('admin.dept.dept_list')}}">List</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.org.org_list')}}">Organizational Chart</a></li>
+                            </ul>
+                        </li>
+                        
 
                         {{-- <li class="nav-item">
                             <a  class="nav-link " href="{{route('admin.records_user.records')}}" >
