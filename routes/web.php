@@ -73,6 +73,7 @@ Route::get('Login/employee_page','Pages@employee')->name('employee');
 Route::get('Login/residence_page','Pages@residence')->name('residence');
 Route::get('Login/visitor_page','Pages@visitor')->name('visitor');
 
+Route::get('Tourism/vip_page','Pages@vip')->name('vip');
 
 
 Route::prefix('admin')->group(function(){
@@ -186,14 +187,30 @@ Route::prefix('admin')->group(function(){
     Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
     Route::resource('/department','DeparmentController');
 
+<<<<<<< Updated upstream
+=======
+    //Department - Main
+    Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
+    Route::resource('/dept', 'Department_MainController');
+    
+>>>>>>> Stashed changes
     //Department - Org Chart
     Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
+    Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
     Route::resource('/org', 'Department_OrgChartController');
 
     //VIP Stores
     Route::get('/vip_list', 'Admin_VIPController@index')->name('admin.vip.vip_list');
     Route::resource('/vip', 'Admin_VIPController');
+<<<<<<< Updated upstream
     //Transprency
     Route::get('/transparency/trans_list', 'transparencyController@index')->name('admin.transparency.trans_list');
     Route::resource('/transparency','transparencyController');
+=======
+
+
+    Route::get('/magazine_list', 'MagazineController@index')->name('admin.magazine.magazine_list');
+    Route::resource('/magazine', 'MagazineController');
+    
+>>>>>>> Stashed changes
 });
