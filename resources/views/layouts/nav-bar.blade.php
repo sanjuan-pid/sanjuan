@@ -129,8 +129,7 @@
                                </li>
                                <li><a class="dropdown-item" href="{{route('announce')}}">City Ordinances</a></li>
                                <li><a class="dropdown-item" href="{{route('announce')}}">City Resolutions</a></li>
-                               <li><a class="dropdown-item" href="{{route('announce')}}">Press Releases</a></li>
-                               <li><a class="dropdown-item" href="{{route('announce')}}">Media Advisories</a></li>
+                               <li><a class="dropdown-item" href="{{route('announce')}}">Press Releases / Media Advisories</a></li>
                              </ul>
                            </li>
 
@@ -251,8 +250,7 @@
                   <li><a class="dropdown-item" href="{{route('exeorder2021')}}">Executive Orders</a></li>
                   <li><a class="dropdown-item" href="{{route('announce')}}">City Ordinances</a></li>
                   <li><a class="dropdown-item" href="{{route('announce')}}">City Resolutions</a></li>
-                  <li><a class="dropdown-item" href="{{route('announce')}}">Press Releases</a></li>
-                  <li><a class="dropdown-item" href="{{route('announce')}}">Media Advisories</a></li>
+                  <li><a class="dropdown-item" href="{{route('announce')}}">Press Releases / Media Advisories</a></li>
                 </ul>
               </li>
               <li class="nav-item" >
