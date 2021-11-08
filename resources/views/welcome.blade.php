@@ -1,6 +1,50 @@
 @extends('layouts.nav-bar')
 
 @section('content')
+<style>
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  #text{
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+
+  .thmb:hover{
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 50%) !important;
+    -ms-transform: scale(1.1); /* IE 9 /
+    -webkit-transform: scale(1.1); / Safari 3-8 */
+    transform: scale(1.1);
+  }
+    @media screen and (max-width: 766px) and (min-width: 200px){
+    div#overlay {
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+    }
+    div#text {
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+    }
+  }
+  </style>
     {{-- <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
@@ -27,7 +71,24 @@
 
     {{-- @include('layouts.index.map-2') --}}
 
-  
+    <div id="overlay">
+      <div id="text" class="">
+          <div class="card shadow-none" style="border-style: solid; border-width: 3px;">
+            <div class="card-body text-center" style="padding:15px; padding-bottom:40px;">
+              <div class="row">
+                <div class="col-12">
+                  <button type="button" class="btn btn-default close_pause"  onclick="off()" style="background-color:red; float:right; font-weight:900; font-size:20px; margin-top: 0;">X</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                  <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
 
         <div class="container" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
            <div class="row justify-content-md-center" style="position:relative;">
@@ -583,6 +644,9 @@
       </div>
   </div>
 
+  <!-- MAGAZINE POPUP-->
+
+
   <!-- SCRIPTS -->
   <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -596,4 +660,14 @@
   <script>
     wow = new WOW().init();
   </script>
+  <script>
+    window.onload = on();
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+    
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+    </script>
 @endsection

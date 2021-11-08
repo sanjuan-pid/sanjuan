@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Mayors;
 use App\News;
+use App\Magazine;
 use App\brgy;
 
 class WelcomeController extends Controller
@@ -58,6 +59,10 @@ class WelcomeController extends Controller
                 ->where('content_tag', 0)   
                 ->orderBy('created_at', 'desc')
                 ->get();
-        return view('/welcome', compact('mayors','articles','news','announcement','events','brgy_announcement','act','announcement3'),['news2' => $news2]);
-    }
+        $thumbnail = Magazine::where('magz_tag', 'Publish')
+                ->orderBy('created_at', 'desc')
+                ->first(); 
+        
+        return view('/welcome', compact('mayors','articles','news','announcement','events','brgy_announcement','act','announcement3','thumbnail'),['news2' => $news2]);
+}
 }

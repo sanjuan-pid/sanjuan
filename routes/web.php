@@ -56,6 +56,7 @@ Route::get('Events/majorcalendar_page','Pages@calendar')->name('calendar');
 Route::get('Events/lgu_page','Pages@lgu')->name('lgu');
 Route::get('Events/Brgy_page','Pages@brgy1')->name('brgy1');
 Route::get('Events/Community_page','Pages@community')->name('community');
+Route::get('Events/XmasBazaar_page','Pages@XmasBazaar')->name('XmasBazaar');
 Route::get('publicnotice/Bids_page','Pages@bids')->name('bids');
 
 Route::get('publicnotice/Disclosure_page','Pages@disclosure')->name('disclosure');
@@ -74,6 +75,8 @@ Route::get('Login/residence_page','Pages@residence')->name('residence');
 Route::get('Login/visitor_page','Pages@visitor')->name('visitor');
 
 Route::get('Tourism/vip_page','Pages@vip')->name('vip');
+
+Route::get('/magazine_view/{id}', 'Pages@magazine_view')->name('magazine_view');
 
 
 Route::prefix('admin')->group(function(){
@@ -207,5 +210,9 @@ Route::prefix('admin')->group(function(){
     //Magazine
     Route::get('/magazine_list', 'MagazineController@index')->name('admin.magazine.magazine_list');
     Route::resource('/magazine', 'MagazineController');
+
+    //Events - Bazaar
+    Route::get('/eve_xbazaar_list', 'Events_XBazaar_Controller@index')->name('admin.eve_xbazaar.eve_xbazaar_list');
+    Route::resource('/eve_xbazaar', 'Events_XBazaar_Controller');
     
 });

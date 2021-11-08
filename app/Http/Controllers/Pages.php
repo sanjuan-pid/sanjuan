@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Mayors;
 use App\News;
+use App\Magazine;
 use App\Achievement;
+use App\View;
 
 class Pages extends Controller
 {
@@ -209,7 +211,10 @@ class Pages extends Controller
     {
         return view('Events/Community_page');
     }
-
+    public function XmasBazaar()
+    {
+        return view('Events/XmasBazaar_page');
+    }
 
 
   //Public notice
@@ -241,6 +246,11 @@ class Pages extends Controller
   {
     $trans = DB::table('transparency')->where('trans_tag','show')->get();
     return view('ExecutiveOrder2021', compact('trans'));
+  }
+  public function vip()
+  {
+      $vips = DB::table('vip_stores')->where('status','1')->get();
+      return view('Tourism/vip_page', compact('vips'));
   }
 
     //Directory
@@ -297,4 +307,9 @@ class Pages extends Controller
         return view('transparency');
     }
 
+    public function magazine_view($id)
+    {
+        $magz = Magazine::find($id); 
+        return view('admin.magazine.magazine_show' ,compact('magz', 'id'));
+    }
 }
