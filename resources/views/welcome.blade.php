@@ -77,7 +77,7 @@
             <div class="card-body text-center" style="padding:15px; padding-bottom:40px;">
               <div class="row">
                 <div class="col-12">
-                  <button type="button" class="btn btn-default close_pause"  onclick="off()" style="background-color:red; float:right; font-weight:900; font-size:20px; margin-top: 0;">X</button>
+                  <button type="button" class="btn btn-default close_pause" id="off" style="background-color:red; float:right; font-weight:900; font-size:20px; margin-top: 0;">X</button>
                 </div>
               </div>
               <div class="row">
@@ -659,15 +659,19 @@
 
   <script>
     wow = new WOW().init();
-  </script>
-  <script>
+
     window.onload = on();
+
     function on() {
       document.getElementById("overlay").style.display = "block";
     }
     
-    function off() {
-      document.getElementById("overlay").style.display = "none";
-    }
-    </script>
+    $(document).ready(function(){
+     $("#off").click(function(){
+       var div = $("#overlay");
+       div.animate({opacity: '0'}, "slow");
+       div.hide(0);
+        });
+      });
+  </script> 
 @endsection
