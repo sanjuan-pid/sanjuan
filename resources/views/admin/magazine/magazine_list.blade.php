@@ -46,14 +46,14 @@
                         <tbody id="search-show">
                          @foreach($magz as $row)
                                 <tr id={{$row->id}} class="search-group">
-                                    <td ><img src="{{asset("uploads/" . $row->magz_filename) }}" alt="{{$row->magz_filename}}" class="img-thumbnail w-25"></td>
+                                    <td class="p-3 w-25"><img src="{{asset("uploads/" . $row->magz_filename) }}" alt="{{$row->magz_filename}}" class="img-thumbnail" width="50%;"></td>
                                     <td >{{$row->magz_name}}</td>
                                     <td >{{$row->magz_month}}</td>
                                     <td >{{$row->magz_year}}</td>
                                     <td >{{$row->magz_tag}}</td>
                                     <td >
-                                        <a href="{{action('MagazineController@show', $row->id)}}" class="btn btn-outline-secondary font-weight-bold" target="_blank">View</a>
-                                        <a href="{{action('MagazineController@edit', $row->id)}}" class="btn btn-outline-primary font-weight-bold">Edit</a>
+                                        <a href="{{action('MagazineController@show', $row->id)}}" class="btn btn-outline-secondary font-weight-bold btn-block" target="_blank">View</a>
+                                        <a href="{{action('MagazineController@edit', $row->id)}}" class="btn btn-outline-primary font-weight-bold btn-block">Edit</a>
                                     </td>
                                 </tr>
                          @endforeach
