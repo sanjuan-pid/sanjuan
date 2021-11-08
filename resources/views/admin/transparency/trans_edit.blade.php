@@ -31,7 +31,29 @@
                   <form method="post" action="{{action('transparencyController@update',$id)}}" enctype="multipart/form-data">
 
                     {{csrf_field()}}
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Thumbnail</label>
+                        <div class="col-sm-10">
+                          <input type="file"   name ="transimg" class="form-control" id="staticEmail" >
+                          <input type="hidden"   name ="transimg_" class="form-control" id="staticEmail" value="{{$trans->trans_pdf}}">
+                        </div>
+                    </div>
                     <input type="hidden" name="_method" value="PATCH" />
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Category</label>
+                        <div class="col-sm-10">
+                            <select name ="category" class="form-control" id="staticEmail">
+                                <option disabled selected>--Select--</option>
+                                <option selected value="{{$trans->trans_tag}}">{{$trans->trans_tag}} (Selected)</option>
+                                <option value="Bids and Awards">Bids and Awards</option>
+                                <option value="Reports">Reports</option>
+                                <option value="Executive Orders">Executive Orders</option>
+                                <option value="City Ordinance">City Ordinance</option>
+                                <option value="City Resolution">City Resolution</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">PDF File</label>
                         <div class="col-sm-8">

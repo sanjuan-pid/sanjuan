@@ -44,6 +44,8 @@ class transparencyController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
+            'category' => 'required',
+            'transimg' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'title' => 'required',
             'pdf_filename' => '  required|file|mimes:pdf',
             'year' => 'required',
@@ -54,16 +56,22 @@ class transparencyController extends Controller
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put('transparency/'.$cover->getFilename().'.'.$extension,  File::get($cover));
 
+        $cover_image = $request->file('transimg');
+        $extension_image = $cover_image->getClientOriginalExtension();
+        Storage::disk('public')->put('transparency/'.$cover_image->getFilename().'.'.$extension_image,  File::get($cover_image));
 
 
         //get values ng mga nasa form to save
         $trans_new = new transparency();
         $trans_new->trans_pdf = $request->pdf_filename;
+        $trans_new->trans_category = $request->category;
+        $trans_new->trans_image = $request->transimg;
         $trans_new->trans_title = $request->title;
         $trans_new->trans_year = $request->year;
         $trans_new->trans_tag = $request->tag;
 
         $trans_new->trans_pdf = 'transparency/'.$cover->getFilename().'.'.$extension;
+        $trans_new->trans_image = 'transparency/'.$cover_image->getFilename().'.'.$extension_image;
         $trans_new->save();
         return redirect()->route('admin.transparency.trans_list')->with('success','File Uploaded');
     }
@@ -103,6 +111,8 @@ class transparencyController extends Controller
     public function update(Request $request, $id)
     {
       $this->validate($request,[
+        'category' => 'required',
+        'transimg' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         'title' => 'required',
         'pdf_filename' => '  required|file|mimes:pdf',
         'year' => 'required',
@@ -120,9 +130,22 @@ class transparencyController extends Controller
           $filename= $request->get('pdf_filename_');
       }
 
+      if($request->file('transimg') != null){
+          $cover_image = $request->file('transimg');
+          $extension_image = $cover_image->getClientOriginalExtension();
+          Storage::disk('public')->put('transparency/'.$cover_image->getFilename().'.'.$extension_image,  File::get($cover_image));
+          //get values ng mga nasa form to save
+          $filename_image = 'transparency/'.$cover_image->getFilename().'.'.$extension_image;
+      }
+      else{
+          $filename_image= $request->get('transimg');
+      }
+
       $trans_update = transparency::find($id);
+      $trans_update->trans_category = $request->get('category');
       $trans_update->trans_title = $request->get('title');
       $trans_update->trans_pdf = $filename;
+      $trans_update->trans_image = $filename_image;
       $trans_update->trans_year = $request->get('year');
       $trans_update->trans_tag = $request->get('tag');
 

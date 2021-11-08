@@ -35,6 +35,8 @@
                     <table class="table" id="example">
                         <thead>
                             <tr>
+                                <th>Category</th>
+                                <th>Image</th>
                                 <th>Title</th>
                                 <th>PDF</th>
                                 <th>Year Issued</th>
@@ -45,6 +47,8 @@
                         <tbody id="search-show">
                          @foreach($trans as $row)
                                 <tr id={{$row->id}} class="search-group">
+                                    <td >{{$row->trans_category}}</td>
+                                  <td class="text-center"><img class="img-thumbnail w-50" src="{{asset("uploads/" . $row->trans_image) }}"/></td>
                                     <td >{{$row->trans_title}}</td>
                                     <td >{{$row->trans_pdf}}</td>
                                     <td >{{$row->trans_year}}</td>
