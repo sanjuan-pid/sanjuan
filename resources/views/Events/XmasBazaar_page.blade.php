@@ -39,7 +39,7 @@
             @endif
             <h3 class="card-title font-weight-bold">REGISTER NOW!</h3>
             <p class="card-text">Fill all the required information below:</p>
-            <form method="post" action="{{action('Events_XBazaar_Controller@store')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{url('Events/XmasBazaarReg')}}">
               {{csrf_field()}}
                 <div class="row text-center">
                     <div class="col">

@@ -8,6 +8,6 @@ class Events_XBazaar extends Model
 {
     protected $table = 'events_xbazaar';
     protected $fillable = [
-        'category', 'name', 'email', 'contact_no', 'contact_person'
+        'category', 'name', 'product_desc', 'email', 'contact_no', 'contact_person'
     ];
 }

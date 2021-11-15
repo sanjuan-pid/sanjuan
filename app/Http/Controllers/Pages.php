@@ -10,6 +10,7 @@ use App\News;
 use App\Magazine;
 use App\Achievement;
 use App\View;
+use App\Events_XBazaar;
 
 class Pages extends Controller
 {
@@ -211,11 +212,37 @@ class Pages extends Controller
     {
         return view('Events/Community_page');
     }
+
     public function XmasBazaar()
     {
         return view('Events/XmasBazaar_page');
     }
 
+    public function storeXmasBazaar(Request $request)
+    {
+        $this->validate($request,[
+            'name' => 'required',
+            'contact_no' => 'required',
+            'category' => 'required',
+            'contact_email' => 'required',
+            'contact_person' => 'required',
+            'products_desc' => 'required',
+        ]);
+        
+        //get values ng mga nasa form to save
+        $events_xbazaar_new = new Events_XBazaar();
+        $events_xbazaar_new->name = $request->name;
+        $events_xbazaar_new->category = $request->category;
+        $events_xbazaar_new->email = $request->contact_email;
+        $events_xbazaar_new->contact_no = $request->contact_no;
+        $events_xbazaar_new->contact_person = $request->contact_person;
+        $events_xbazaar_new->product_desc = $request->products_desc;
+        $events_xbazaar_new->reason = "PENDING FOR APPROVAL";
+        $events_xbazaar_new->status = "PENDING";
+        
+        $events_xbazaar_new->save();
+        return redirect()->route('XmasBazaar')->with('success','Registration Successful, please wait for the confirmation. Thank you!');
+    }
 
   //Public notice
   public function bids()

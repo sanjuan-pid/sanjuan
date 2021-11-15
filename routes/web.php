@@ -57,6 +57,7 @@ Route::get('Events/lgu_page','Pages@lgu')->name('lgu');
 Route::get('Events/Brgy_page','Pages@brgy1')->name('brgy1');
 Route::get('Events/Community_page','Pages@community')->name('community');
 Route::get('Events/XmasBazaar_page','Pages@XmasBazaar')->name('XmasBazaar');
+Route::post('/Events/XmasBazaarReg', 'Pages@storeXmasBazaar');
 Route::get('publicnotice/Bids_page','Pages@bids')->name('bids');
 
 Route::get('publicnotice/Disclosure_page','Pages@disclosure')->name('disclosure');
