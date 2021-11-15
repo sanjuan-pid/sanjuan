@@ -70,6 +70,15 @@
                                 <li><a class="dropdown-item" href="{{route('admin.org.org_list')}}">Organizational Chart</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown" id="Events">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Events
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                                <li><a class="dropdown-item" href="{{route('admin.events.events_list')}}" >List</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.eve_xbazaar.eve_xbazaar_list')}}">Christmas Bazaar</a></li>
+                            </ul>
+                        </li>
                         
 
                         {{-- <li class="nav-item">
@@ -101,7 +110,6 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
 
                                 <li><a class="dropdown-item" href="{{route('admin.announcment.announcement')}}">Announcement</a></li>
-                                <li><a class="dropdown-item" href="{{route('admin.events.events_list')}}" >Events</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.covid_update.list_MC')}}" >Covid Upload</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.news.index')}}" >News</a></li>
                                 <!-- <li><a class="dropdown-item" href="{{route('admin.qr.list_qr')}}" >Upload QR</a></li> -->
@@ -136,6 +144,17 @@
                             </ul>
                         </li>
 
+                        <li class="nav-item dropdown" id="News">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Year
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                                @foreach ($Transparency_Year as $Transparency_Year)
+                                <li><a class="dropdown-item" href="" >{{$Transparency_Year[0]->trans_year}}</a></li>
+                                @endforeach
+                                
+                            </ul>
+                        </li>
                         </div>
                     </li>
                     </ul>
