@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Providers;
-
+use View;
+use DB;
+use App\transparency;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $Transparency_Year = DB::table('transparency')
+        ->get()
+        ->groupBy('trans_year');
+        View::share(compact('Transparency_Year'));
     }
 }
