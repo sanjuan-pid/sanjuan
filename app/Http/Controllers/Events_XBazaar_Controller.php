@@ -63,7 +63,7 @@ class Events_XBazaar_Controller extends Controller
         $events_xbazaar_new->status = "PENDING";
         
         $events_xbazaar_new->save();
-        return redirect()->route('XmasBazaar')->with('success','Registration Successful, please wait for the confirmation. Thank you!');
+        return redirect()->route('XmasBazaar')->with('success','Registration Successful, please wait for the confirmation via email/text. Thank you!');
     }
 
     /**

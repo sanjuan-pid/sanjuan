@@ -9,10 +9,11 @@
             @if(\Session::has('success'))
             {{-- session ung nilagay mo sa return ng controller --}}
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Success!</strong> {{ \Session::get('success')}}
+                <strong>Success!</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
+                {{ \Session::get('success')}}
               </div>
             @endif
             @if (session('status'))
@@ -85,12 +86,11 @@
                     </div>
                   </div>
               </form>
-            
           </div>
         </div>
         <div class="card shadow-none">
           <div class="card-body text-center">
-            <img class="w-100" src="{{asset('assets/Bazaar_BG1.png')}}" alt="Card image cap">
+            <img class="w-100 mt-4" src="{{asset('assets/Bazaar_BG1.png')}}" alt="Card image cap">
           </div>
         </div>
       </div>
