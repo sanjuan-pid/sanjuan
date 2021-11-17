@@ -54,7 +54,7 @@
                         <div class="col-sm-10">
                           <select name ="category" class="form-control" id="staticEmail">
                               <option selected value="{{$vips->category}}">{{$vips->category}} (Selected)</option>
-                              <option value="Fast Food">Fast Food</option>
+                              <option value="Fastfood">Fastfood</option>
                               <option value="Restaurant">Restaurant</option>
                               <option value="Others">Others</option>
                           </select>
