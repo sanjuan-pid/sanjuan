@@ -44,6 +44,25 @@
       flex: 0 0 100%;
     }
   }
+  @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
+        .karosel #img_slot img{
+
+          width: 100% !important;
+
+        }
+      }
+      @media screen and (min-device-width: 1551px) and (max-device-width: 1600px){
+        .karosel img{
+
+          width: 80% !important;
+
+        }
+        .karosel #img_slot img{
+
+          width: 100% !important;
+
+        }
+      }
   </style>
     {{-- <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
@@ -70,7 +89,6 @@
     </div> --}}
 
     {{-- @include('layouts.index.map-2') --}}
-
     <div id="overlay">
       <div id="text" class="">
           <div class="card shadow-none" style="border-style: solid; border-width: 3px;">
@@ -90,115 +108,121 @@
           </div>
       </div>
 
-        <div class="container" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
-           <div class="row justify-content-md-center" style="position:relative;">
-                
-                 <div class="col-sm-12" style="margin-bottom: 0%;">
-                    {{-- <div class="card" id="qr" style="width: 100%; border: 0px solid;">
-                        <br>
-                        <img class="card-img-top" style="width:50%; height:70%; position: relative; margin:0 auto;" src="{{asset('assets/v.png')}}" alt="Card image cap">
-                        <div class="card-body">
-                        </div>
-                    </div> --}}
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="15000">
-                        <!-- Carousel indicators -->
+      <br>
+      <div class="container karosel" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
+        <div class="row justify-content-md-center" style="position:relative;">
 
-                        <ol class="carousel-indicators">
-                          <?php
-                          $counter = 0;
-                          foreach ($events as $item) {
-                                $counter++;
-                                // echo $counter;
-                                //  echo $counter-1;
-                                 echo '<li data-target="#myCarousel" data-slide-to="$counter-1"></li>';
-                            }
-                        ?>
-                        </ol>
-                        <!-- Wrapper for carousel items -->
+              <div class="col-sm-8" style="margin-bottom: 0%;">
+                 {{-- <div class="card" id="qr" style="width: 100%; border: 0px solid;">
+                     <br>
+                     <img class="card-img-top" style="width:50%; height:70%; position: relative; margin:0 auto;" src="{{asset('assets/v.png')}}" alt="Card image cap">
+                     <div class="card-body">
+                     </div>
+                 </div> --}}
+                 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="15000">
+                     <!-- Carousel indicators -->
 
-                          <div class="carousel-inner">
-                          {{-- @foreach($events as $row)
-                            @if($row['show'] == 1) --}}
-                              <div class="carousel-item active">
-                                <div class="container">
-                                  <div class="row">
-                                    <div class=" col-sm-12">
-                                      <div id="img_slot">
-                                        <a  href="#"  >
-                                         <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_pc" style=" width: 80% !important; ">
-                                         <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_mob" style=" margin-top: 7% !important;padding: 0  !important; width: 120% !important; margin-left: -10%  !important;">
-                                         
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <div class="container">
-                                  <div class="row">
-                                    <div class=" col-sm-12">
-                                      <div id="img_slot1">
-                                        <video width="1250" id="first_vid" controls>
-                                          <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
-                                          Your browser does not support HTML video.
-                                        </video>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <div class="container">
-                                  <div class="row">
-                                    <div class=" col-sm-12">
-                                      <div id="img_slot1">
-                                        <video width="1250" id="second_vid" controls>
-                                          <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
-                                          Your browser does not support HTML video.
-                                        </video>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>   
-                            {{-- @endif
-                          @endforeach --}}
-                          @foreach($events as $row)
-                            @if($row['show'] != 1)
-                              <div class="carousel-item">
-                                <div class="container">
-                                  <div class="row">
-                                    <div class=" col-sm-12">
-                                      <div id="img_slot">
-                                        <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                          <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width: 100%;"  id="image_slide">
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            @endif
-                          @endforeach
-                        </div>
-                        <!-- Carousel controls -->
-                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" style="left: -50px;">
-                            <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;rotation: 180deg;transform: rotate(180deg);"/> </span>
-                        </a>
-                        <a class="carousel-control-next" href="#myCarousel" data-slide="next" style="right:-30px;">
-                          <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;"/> </span>
+                     <ol class="carousel-indicators">
+                       <?php
+                       $counter = 0;
+                       foreach ($events as $item) {
+                             $counter++;
+                             // echo $counter;
+                             //  echo $counter-1;
+                              echo '<li data-target="#myCarousel" data-slide-to="$counter-1"></li>';
+                         }
+                     ?>
+                     </ol>
+                     <!-- Wrapper for carousel items -->
 
-                        </a>
+                       <div class="carousel-inner">
+                       {{-- @foreach($events as $row)
+                         @if($row['show'] == 1) --}}
+                           <div class="carousel-item active">
+                             <div class="container">
+                               <div class="row">
+                                 <div class=" col-sm-12">
+                                   <div id="img_slot">
+                                     <a  href="#"  >
+                                      <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_pc" style=" width: 100% !important; ">
+                                      <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_mob" style=" margin-top: 7% !important;padding: 0  !important; width: 120% !important; margin-left: -10%  !important;">
+
+                                     </a>
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="carousel-item">
+                             <div class="container">
+                               <div class="row">
+                                 <div class=" col-sm-12">
+                                   <div id="img_slot1">
+                                     <video width="1250" id="first_vid" controls>
+                                       <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
+                                       Your browser does not support HTML video.
+                                     </video>
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="carousel-item">
+                             <div class="container">
+                               <div class="row">
+                                 <div class=" col-sm-12">
+                                   <div id="img_slot1">
+                                     <video width="1250" id="second_vid" controls>
+                                       <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
+                                       Your browser does not support HTML video.
+                                     </video>
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         {{-- @endif
+                       @endforeach --}}
+                       @foreach($events as $row)
+                         @if($row['show'] != 1)
+                           <div class="carousel-item">
+                             <div class="container">
+                               <div class="row">
+                                 <div class=" col-sm-8">
+                                   <div id="img_slot">
+                                     <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
+                                       <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width: 100%;"  id="image_slide">
+                                     </a>
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         @endif
+                       @endforeach
+                     </div>
+                     <!-- Carousel controls -->
+                     <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" style="left: -50px;">
+                         <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;rotation: 180deg;transform: rotate(180deg);"/> </span>
+                     </a>
+                     <a class="carousel-control-next" href="#myCarousel" data-slide="next" style="right:-30px;">
+                       <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;"/> </span>
+
+                     </a>
 
 
-                    </div>
-                </div>
-                <br>
-                <br>
+                 </div>
+             </div>
 
-           </div>
+             <div class="col-sm-4" style="margin-bottom: 0%;">
+               <a href="{{route('XmasBazaar')}}"><img src="{{asset('assets/MakabagongBazaar2021.gif')}}" style="width: 65%;margin: 0 auto;display: block;"/></a>
+             </div>
+
+             <br>
+             <br>
+
         </div>
+     </div>
 
 
 
