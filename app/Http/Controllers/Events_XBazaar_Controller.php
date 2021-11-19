@@ -20,7 +20,7 @@ class Events_XBazaar_Controller extends Controller
      */
     public function index()
     {   
-        $Bazaar = DB::table('events_xbazaar')->orderByRaw("FIELD(status , 'PENDING', 'APPROVED', 'REJECTED')")->paginate(2);
+        $Bazaar = DB::table('events_xbazaar')->orderByRaw("FIELD(status , 'PENDING', 'APPROVED', 'REJECTED')")->paginate(15);
         return view('admin.events.xbazaar.eve_xbazaar_list', compact('Bazaar'));
     }
 
