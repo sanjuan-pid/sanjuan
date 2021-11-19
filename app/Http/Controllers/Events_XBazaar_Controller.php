@@ -20,7 +20,7 @@ class Events_XBazaar_Controller extends Controller
      */
     public function index()
     {   
-        $Bazaar = DB::table('events_xbazaar')->orderByRaw("FIELD(status , 'PENDING', 'APPROVED', 'REJECTED')")->paginate(15);
+        $Bazaar = DB::table('events_xbazaar')->orderByRaw("FIELD(status , 'PENDING', 'APPROVED', 'REJECTED')")->paginate(2);
         return view('admin.events.xbazaar.eve_xbazaar_list', compact('Bazaar'));
     }
 
@@ -105,7 +105,7 @@ class Events_XBazaar_Controller extends Controller
         $Bazaar->category = $request->category;
         $Bazaar->save();
         // return redirect()->route('admin.eve_xbazaar.eve_xbazaar_list')->with('success', 'Application Approved');
-        return redirect()->route('admin.eve_xbazaar.eve_xbazaar_list')->with('success', 'Application Changed');
+        return redirect()->back()->with('success', 'Application Changed');
     }
 
     /**
