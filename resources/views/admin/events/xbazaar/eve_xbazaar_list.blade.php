@@ -68,18 +68,64 @@
                                     @if($row->status == "REJECTED")
                                     <button data-toggle="modal" data-target="#reasonModal{{$row->id}}" class="btn btn-outline-danger m-1" id="reject_btn"><i class="fa fa-eye fa-fw"></i></button>
                                     @elseif($row->status == "PENDING")
-                                        <form method="post" class="approval_form" action="{{action('Events_XBazaar_Controller@update',$row->id)}}" >
+                                    <button data-toggle="modal" data-target="#editModal{{$row->id}}" class="btn btn-outline-info m-1"><i class="fa fa-edit fa-fw"></i></button>
+                                        {{-- <form method="post" class="approval_form" action="{{action('Events_XBazaar_Controller@update',$row->id)}}" >
                                             {{csrf_field()}}
                                             <input type="hidden" name="_method" value="PATCH">
                                             <button type="submit" class="btn btn-outline-success m-1" id="approve_btn"><i class="fa fa-check fa-fw"></i></button>
                                         </form>
-                                            <button data-toggle="modal" data-target="#rejectModal{{$row->id}}" class="btn btn-outline-danger m-1" id="reject_btn"><i class="fa fa-times fa-fw"></i></button>
+                                            <button data-toggle="modal" data-target="#rejectModal{{$row->id}}" class="btn btn-outline-danger m-1" id="reject_btn"><i class="fa fa-times fa-fw"></i></button> --}}
                                     @elseif($row->status == "APPROVED")
                                         
                                     @endif
                                         
                                     </td>
                                 </tr>
+
+                            <!-- Edit Modal -->
+                            <div class="modal fade" id="editModal{{$row->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">{{$row->name}}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="{{action('Events_XBazaar_Controller@update',$row->id)}}" >
+                                            {{csrf_field()}}
+                                            <input type="hidden" name="_method" value="PATCH">
+                                        <h5>Category:</h5>
+                                        <input type="text" name="" id="" class="form-control bg-white" readonly value="{{$row->category}}">
+                                        <h5 class="mt-3">Product Desc:</h5>
+                                        <textarea name="" id="" cols="30" rows="3" class="form-control bg-white" style="resize: none;" readonly>{{$row->product_desc}}</textarea>
+                                        <div class="row text-center mt-3">
+                                            <div class="col">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="category" id="category1" required value="Food">
+                                                    <label class="form-check-label" for="category1">Food</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="category" id="category2" required value="Arts and Craft">
+                                                    <label class="form-check-label" for="category2">Arts and Craft</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="category" id="category3" required value="Clothing/Apparel/Accessories">
+                                                    <label class="form-check-label" for="category3">Clothing/Apparel/Accessories</label>
+                                                  </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                    </form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            
                             <!-- Product Desc Modal -->
                             <div class="modal fade" id="product_descModal{{$row->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
