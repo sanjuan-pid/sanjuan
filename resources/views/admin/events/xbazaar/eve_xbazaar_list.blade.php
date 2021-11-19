@@ -148,8 +148,10 @@
                                 </div>
                             </div>
                          @endforeach
+                         
                         </tbody>
                     </table>
+                    <strong>{{ $Bazaar->links() }}</strong>
                     <strong id="filter-count" class="text-primary float-right"></strong>
                 </div>
             </div>
