@@ -21,7 +21,11 @@ class Events_XBazaar_Controller extends Controller
     public function index()
     {   
         $Bazaar = DB::table('events_xbazaar')->orderByRaw("FIELD(status , 'PENDING', 'APPROVED', 'REJECTED')")->paginate(15);
-        return view('admin.events.xbazaar.eve_xbazaar_list', compact('Bazaar'));
+        $Pending = DB::table('events_xbazaar')->where('status', 'PENDING')->count();
+        $Food = DB::table('events_xbazaar')->where('category', 'Food')->count();
+        $Arts = DB::table('events_xbazaar')->where('category', 'Arts and Craft')->count();
+        $Clothes = DB::table('events_xbazaar')->where('category', 'Clothing/Apparel/Accessories')->count();
+        return view('admin.events.xbazaar.eve_xbazaar_list', compact('Bazaar','Pending','Food','Arts','Clothes'));
     }
 
     /**
@@ -97,15 +101,15 @@ class Events_XBazaar_Controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $Bazaar = Events_XBazaar::find($id);
-        // $Bazaar->status = "APPROVED";
-        // $Bazaar->reason = "APPROVED";
-
         $Bazaar = Events_XBazaar::find($id);
-        $Bazaar->category = $request->category;
+        $Bazaar->status = "APPROVED";
+        $Bazaar->reason = "APPROVED";
         $Bazaar->save();
-        // return redirect()->route('admin.eve_xbazaar.eve_xbazaar_list')->with('success', 'Application Approved');
-        return redirect()->back()->with('success', 'Application Changed');
+        return redirect()->back()->with('success', 'Application Approved');
+
+        // $Bazaar = Events_XBazaar::find($id);
+        // $Bazaar->category = $request->category;
+        //return redirect()->back()->with('success', 'Application Changed');
     }
 
     /**
@@ -124,6 +128,6 @@ class Events_XBazaar_Controller extends Controller
         $Bazaar->status = "REJECTED";
         $Bazaar->reason = $request->reason;
         $Bazaar->save();
-        return redirect()->route('admin.eve_xbazaar.eve_xbazaar_list')->with('success', 'Application Rejected');
+        return redirect()->back()->with('success', 'Application Rejected');
     }
 }

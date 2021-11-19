@@ -37,6 +37,30 @@
                             </div>
                         </div>
                     </form>
+
+                        <div class="card-deck mb-3">
+                        <div class="card bg-warning">
+                            <div class="card-body">
+                              <strong>Pending : {{$Pending}}</strong>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-body bg-success">
+                                <strong>Food : {{$Food}}</strong>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-body bg-primary">
+                                <strong>Arts & Craft : {{$Arts}}</strong>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-body bg-info">
+                                <strong>Clothing/Apparel/Accessories : {{$Clothes}}</strong>
+                            </div>
+                          </div>
+                        </div>
+               
                     <table class="table" id="example">
                         <thead>
                             <tr>
@@ -68,13 +92,13 @@
                                     @if($row->status == "REJECTED")
                                     <button data-toggle="modal" data-target="#reasonModal{{$row->id}}" class="btn btn-outline-danger m-1" id="reject_btn"><i class="fa fa-eye fa-fw"></i></button>
                                     @elseif($row->status == "PENDING")
-                                    <button data-toggle="modal" data-target="#editModal{{$row->id}}" class="btn btn-outline-info m-1"><i class="fa fa-edit fa-fw"></i></button>
-                                        {{-- <form method="post" class="approval_form" action="{{action('Events_XBazaar_Controller@update',$row->id)}}" >
+                                    {{-- <button data-toggle="modal" data-target="#editModal{{$row->id}}" class="btn btn-outline-info m-1"><i class="fa fa-edit fa-fw"></i></button> --}}
+                                        <form method="post" class="approval_form" action="{{action('Events_XBazaar_Controller@update',$row->id)}}" >
                                             {{csrf_field()}}
                                             <input type="hidden" name="_method" value="PATCH">
                                             <button type="submit" class="btn btn-outline-success m-1" id="approve_btn"><i class="fa fa-check fa-fw"></i></button>
                                         </form>
-                                            <button data-toggle="modal" data-target="#rejectModal{{$row->id}}" class="btn btn-outline-danger m-1" id="reject_btn"><i class="fa fa-times fa-fw"></i></button> --}}
+                                            <button data-toggle="modal" data-target="#rejectModal{{$row->id}}" class="btn btn-outline-danger m-1" id="reject_btn"><i class="fa fa-times fa-fw"></i></button>
                                     @elseif($row->status == "APPROVED")
                                         
                                     @endif
@@ -82,7 +106,7 @@
                                     </td>
                                 </tr>
 
-                            <!-- Edit Modal -->
+                            {{-- <!-- Edit Modal -->
                             <div class="modal fade" id="editModal{{$row->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
@@ -124,7 +148,7 @@
                                     </div>
                                 </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             
                             <!-- Product Desc Modal -->
                             <div class="modal fade" id="product_descModal{{$row->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
