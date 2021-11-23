@@ -131,9 +131,9 @@
           <div class="row mt-3 mb-2 d-flex justify-content-center">
           @foreach($trans as $row)
             <div class="col-md-3 clearfix d-md-block">
-              <a target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}"  >
+              <a target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}">
               <div class="card mb-2">
-                <img class="card-img-top" src="{{asset('assets/transparency/executiveorder2021/coverfmz091.png')}}" alt="Card image cap"/>
+                <img class="card-img-top" src="{{asset("uploads/" . $row->trans_image) }}" alt="Card image cap"/>
                 <div class="card-body">
                   <h4>{{$row->trans_title}}</h4>
                 </div>

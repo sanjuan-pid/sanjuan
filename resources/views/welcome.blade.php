@@ -45,9 +45,14 @@
     }
   }
   @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
-        .karosel #img_slot img{
+        .karosel #img_slot1 img{
 
           width: 100% !important;
+
+        }
+         .karosel img{
+
+          width: 70% !important;
 
         }
       }
@@ -57,7 +62,7 @@
           width: 80% !important;
 
         }
-        .karosel #img_slot img{
+        .karosel #img_slot1 img{
 
           width: 100% !important;
 
@@ -142,9 +147,9 @@
                              <div class="container">
                                <div class="row">
                                  <div class=" col-sm-12">
-                                   <div id="img_slot">
+                                   <div id="img_slot1">
                                      <a  href="#"  >
-                                      <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_pc" style=" width: 100% !important; ">
+                                      <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_pc" style=" width: 100%; ">
                                       <img src="{{asset('assets/SANJUAN.jpg')}}"  id="image_slide" class="city_hall_front_mob" style=" margin-top: 7% !important;padding: 0  !important; width: 120% !important; margin-left: -10%  !important;">
 
                                      </a>
@@ -188,10 +193,10 @@
                            <div class="carousel-item">
                              <div class="container">
                                <div class="row">
-                                 <div class=" col-sm-8">
+                                 <div class=" col-sm-12">
                                    <div id="img_slot">
                                      <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                       <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width: 100%;"  id="image_slide">
+                                       <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width:50%!important;"  id="image_slide">
                                      </a>
                                    </div>
                                  </div>

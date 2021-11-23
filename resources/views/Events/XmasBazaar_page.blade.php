@@ -45,16 +45,16 @@
                 <div class="row text-center">
                     <div class="col">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="category" id="category1" required value="Restaurant">
-                            <label class="form-check-label" for="category1">Restaurant</label>
+                            <input class="form-check-input" type="radio" name="category" id="category1" required value="Food">
+                            <label class="form-check-label" for="category1">Food</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="category" id="category2" required value="Artist">
-                            <label class="form-check-label" for="category2">Artist</label>
+                            <input class="form-check-input" type="radio" name="category" id="category2" required value="Arts and Craft">
+                            <label class="form-check-label" for="category2">Arts and Craft</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="category" id="category3" required value="SME">
-                            <label class="form-check-label" for="category3">SME</label>
+                            <input class="form-check-input" type="radio" name="category" id="category3" required value="Clothing/Apparel/Accessories">
+                            <label class="form-check-label" for="category3">Clothing/Apparel/Accessories</label>
                           </div>
                     </div>
                   </div>
