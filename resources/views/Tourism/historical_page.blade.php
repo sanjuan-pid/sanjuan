@@ -42,11 +42,11 @@
 }
 
 .overlay {
-  position: absolute; 
-  bottom: 0; 
+  position: absolute;
+  bottom: 0;
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
+  color: #f1f1f1;
   width: 200%;
   height: 100%;
   transition: .5s ease;
@@ -119,6 +119,68 @@ div.j{
         }
 
       }
+@media screen and (min-device-width: 1551px) and (max-device-width: 1600px){
+  #histo{
+    max-width: 80% !important;
+    width:80% !important;
+   flex: 0 0 100%;
+  }
+}
+@media screen and (min-device-width: 1367px) and (max-device-width: 1500px){
+  #histo{
+    max-width: 80% !important;
+    width:80% !important;
+   flex: 0 0 100%;
+  }
+}
+@media screen and (min-device-width: 1205px) and (max-device-width: 1366px){
+  #histo{
+    max-width: 80% !important;
+    width:80% !important;
+   flex: 0 0 100%;
+  }
+  div.a{
+      line-height: 150% !important;
+  }
+
+  div.b{
+      line-height: 140% !important;
+  }
+
+  div.c{
+      line-height: 150% !important;
+  }
+
+  div.d{
+      line-height: 140% !important;
+  }
+
+  div.e{
+      line-height: 150% !important;
+  }
+
+  div.f{
+      line-height: 180% !important;
+  }
+
+  div.g{
+      line-height: 140% !important;
+  }
+
+  div.h{
+      line-height: 170% !important;
+  }
+
+  div.i{
+      line-height: 200% !important;
+  }
+
+  div.j{
+      line-height: 130% !important;
+  }
+
+
+}
 @media screen and (max-width: 766px) and (min-width: 200px){
   #histo{
     max-width: 100% !important;
@@ -131,7 +193,7 @@ div.j{
     display: block;
     margin-right: auto;
     margin-left: auto;
-        
+
   }
 
   .container1 img
@@ -148,7 +210,7 @@ div.j{
    padding-right: 0 !important;
     padding-left: 0 !important;
 }
-  
+
 
   h4{
     font-size: 10px !important;
@@ -211,7 +273,7 @@ div.j{
 <div class="container" id="histo">
 
     <div class="row">
-        
+
         <div class="responsive4 una">
             <div class="col">
                 <div class="container1" >
@@ -243,7 +305,7 @@ div.j{
 <br>
 
     <div class="row">
-        
+
         <div class="responsive4 una">
             <div class="col">
                 <div class="container1"  >
@@ -295,7 +357,7 @@ div.j{
                     <img src="{{asset('assets/Tourism/Picture27.png')}}" class="image">
                     <div class="overlay">
                         <h4 style="font-weight: 100px;">ST. JOHN THE BAPTIST CHURCH</h4>
-                        <div style="color: white !important; text-align: justify;" class="f">Deriving its name from John the Baptist, St. John the Baptist Church stands a few meters away from the city hall and Pinaglabanan Shrine. Built in 1894, the church is a silent witness to the historical events that happened in the city. 
+                        <div style="color: white !important; text-align: justify;" class="f">Deriving its name from John the Baptist, St. John the Baptist Church stands a few meters away from the city hall and Pinaglabanan Shrine. Built in 1894, the church is a silent witness to the historical events that happened in the city.
                         </div>
                     </div>
                 </div>
@@ -307,7 +369,7 @@ div.j{
 <br>
 
     <div class="row">
-        
+
         <div class="responsive4 una">
             <div class="col">
                 <div class="container1" >
@@ -339,14 +401,14 @@ div.j{
 <br>
 
     <div class="row">
-        
+
         <div class="responsive4 una">
             <div class="col">
                 <div class="container1" >
                     <img src="{{asset('assets/Tourism/Picture30.png')}}" class="image">
                     <div class="overlay">
                         <h4 style="font-weight: 100px;">GREENHILLS LOOP</h4>
-                        <div style="color: white !important; text-align: justify;" class="i">Considered as the “Tiangge Capital” of the Philippines,” the Greenhills Shopping Center is a shopping hub that offers affordable bazaars and thrift shops for rare-finds and novelty merchandises to shoppers. 
+                        <div style="color: white !important; text-align: justify;" class="i">Considered as the “Tiangge Capital” of the Philippines,” the Greenhills Shopping Center is a shopping hub that offers affordable bazaars and thrift shops for rare-finds and novelty merchandises to shoppers.
                         </div>
                     </div>
                 </div>
