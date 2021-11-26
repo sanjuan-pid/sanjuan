@@ -532,11 +532,11 @@
                               <div class="card-deck" id="myItems">
                                   @foreach ($vips as $info)
                                   <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter {{ $info->category }} mb-4" >
-                                      <div class="card cards" id="carddept">
+                                      <div class="card cards" id="carddept" style="height:100% !important;">
                                           <div class="card-body">
                                               <div class="row">
                                                   <div class="col-sm-6">
-                                                      <h5 class="card-title" id="a1" style="font-weight: 700;">{{ $info->establishment }}</h5> 
+                                                      <h5 class="card-title" id="a1" style="font-weight: 700;">{{ $info->establishment }}</h5>
                                                       <span class="iconify text-primary" data-icon="bx:bx-map-pin" style="font-size: 22px;"></span><span style="color: black;"> {{ $info->address }}</span>
                                                       <br>
                                                       <span class="iconify text-primary" data-icon="bx:bx-purchase-tag-alt" style="font-size: 22px;"></span><span style="color: black;"> {{ $info->offers }}</span>
@@ -570,7 +570,7 @@
 //Filter
 $(".filter-button").click(function(){
     var value = $(this).attr('data-filter');
-    
+
     if(value == "all")
     {
         $('.filter').show('1000');
@@ -579,7 +579,7 @@ $(".filter-button").click(function(){
     {
         $(".filter").not('.'+value).hide('3000');
         $(".filter").filter('.'+value).show('3000');
-        
+
     }
 });
 
