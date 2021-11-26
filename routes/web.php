@@ -42,6 +42,7 @@ Route::get('ourcity/vicemayor_page','Pages@vice')->name('vice');
 Route::get('ourcity/citycouncil_page','Pages@city')->name('city');
 Route::get('ourcity/barangay_page','Pages@brgy')->name('brgy');
 Route::get('ourcity/history_page','Pages@history')->name('history');
+Route::get('ourcity/map_freewifi_page','Pages@map_freewifi')->name('map_freewifi');
 
 Route::get('programsandprojects/current_page','Pages@current')->name('current');
 Route::get('programsandprojects/archives_page','Pages@archives')->name('archives');
@@ -195,6 +196,10 @@ Route::prefix('admin')->group(function(){
     Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
     Route::resource('/dept', 'Department_MainController');
 
+    //Department - Content
+    Route::get('/cont_list', 'Department_ContentController@index')->name('admin.dept.cont_list');
+    Route::resource('/cont', 'Department_ContentController');
+    
     //Department - Org Chart
     Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
     Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
