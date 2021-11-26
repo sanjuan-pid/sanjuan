@@ -68,6 +68,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
                                 <li><a class="dropdown-item" href="{{route('admin.dept.dept_list')}}">List</a></li>
                                 <li><a class="dropdown-item" href="{{route('admin.org.org_list')}}">Organizational Chart</a></li>
+                                <li><a class="dropdown-item" href="{{route('admin.dept.cont_list')}}">Department Contents</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown" id="Events">
