@@ -149,8 +149,11 @@ class Pages extends Controller
         ->where('content_type', "Act")
         ->orderBy('created_at', 'desc')
         ->get();
+
+    $vips = DB::table('vip_stores')->where('status','1')->get();
+    
     // return($act);
-    return view('programsandprojects/current_page',compact('act'));
+    return view('programsandprojects/current_page',compact('act','vips'));
   }
   public function archives()
   {

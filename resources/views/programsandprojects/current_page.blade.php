@@ -39,7 +39,42 @@
         flex: 0 0 100%;
       }
     }
+
+    .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius: 5px;
+}
+
+.pagination a.activated {
+  background-color: #1b2560;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.activated) {background-color: #ddd;}
+
+.center {
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+}
+
+.flex-row-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row-container > .flex-row-item {
+    flex: 1 1 30%; /*grow | shrink | basis */
+    height: 100px;
+}
     </style>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <div class="container" id="current_program" style="padding:0 !important;">
             <div class="container my-2" id="concurr" style="padding-right: 0 !important; padding-left: 0 !important;">
               <!-- Trigger the modal with a button -->
@@ -477,9 +512,88 @@
                       </div>
                   </div>
                 </div>
+                <br>
+                <div class="row">
+                  <div class=" col-sm-12">
+                      <div class="card">
+                          <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
+                            <div class="row">
+                              <img src="{{asset('assets/store/VIP.png')}}" style="width: 100%; margin: auto; padding-right: 0 !important; padding-left: 0 !important; ">
+                            </div>
+                            <br>
+                            <div class="pagination center" style="font-weight: 700; width:26%;" id="myBtnContainer">
+                                <a class="bttn activated filter-button" data-filter="all">All</a>
+                                <a class="bttn filter-button" data-filter="Fastfood">Fastfood</a>
+                                <a class="bttn filter-button" data-filter="Restaurant">Restaurant</a>
+                                <a class="bttn filter-button" data-filter="Others">Others</a>
+                            </div>
+                            <br>
+                            <div class="container">
+                              <div class="card-deck" id="myItems">
+                                  @foreach ($vips as $info)
+                                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter {{ $info->category }} mb-4" >
+                                      <div class="card cards" id="carddept">
+                                          <div class="card-body">
+                                              <div class="row">
+                                                  <div class="col-sm-6">
+                                                      <h5 class="card-title" id="a1" style="font-weight: 700;">{{ $info->establishment }}</h5> 
+                                                      <span class="iconify text-primary" data-icon="bx:bx-map-pin" style="font-size: 22px;"></span><span style="color: black;"> {{ $info->address }}</span>
+                                                      <br>
+                                                      <span class="iconify text-primary" data-icon="bx:bx-purchase-tag-alt" style="font-size: 22px;"></span><span style="color: black;"> {{ $info->offers }}</span>
+                                                      <br>
+                                                      <span class="iconify text-primary" data-icon="bx:bx-user" style="font-size: 22px;"></span><span style="color: black;"> {{ $info->contact_person }}</span>
+                                                      <br>
+                                                      <span class="iconify text-primary" data-icon="bx:bx-phone-call" style="font-size: 22px;"></span><span style="color: black;"> {{ $info->contact_no }}</span>
+                                                  </div>
+                                                  <div class="col-sm-6 text-right">
+                                                      <img class="img-thumbnail" src="{{asset("uploads/" . $info->filename) }}" alt="sans" width="200px">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  @endforeach
+                              </div>
+                          </div>
+                          </div>
+
+                      </div>
+                  </div>
+                </div>
             </div>
         <br>
     </div>
   </div>
+<script>
+  $(document).ready(function() {
 
+//Filter
+$(".filter-button").click(function(){
+    var value = $(this).attr('data-filter');
+    
+    if(value == "all")
+    {
+        $('.filter').show('1000');
+    }
+    else
+    {
+        $(".filter").not('.'+value).hide('3000');
+        $(".filter").filter('.'+value).show('3000');
+        
+    }
+});
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("bttn");
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("activated");
+    current[0].className = current[0].className.replace(" activated", "");
+    this.className += " activated";
+});
+}
+
+});
+</script>
 @endsection
