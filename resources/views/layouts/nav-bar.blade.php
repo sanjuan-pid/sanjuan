@@ -145,11 +145,9 @@
                               <li><a class="dropdown-item" href="{{route('biketrail')}}">Bike Trail</a></li>
                               <li><a class="dropdown-item" href="{{route('festivities')}}">Festivities</a></li>
                               <li><a class="dropdown-item" href="{{route('historical')}}">Historical</a></li>
-                              <li><a class="dropdown-item" href="{{route('vip')}}">VIP</a></li>
-                              <li><a class="dropdown-item" href="{{route('vip1')}}">VIP1</a></li>
                             </ul>
                           </li>
-                          
+
                            <li class="nav-item" >
                             <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Departments</a>
                           </li>
