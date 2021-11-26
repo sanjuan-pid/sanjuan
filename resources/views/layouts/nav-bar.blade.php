@@ -142,7 +142,7 @@
                             Tourism
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                              <li><a class="dropdown-item" href="{{route('biketrail')}}">Bike Trail</a></li>
+                              <li><a class="dropdown-item" href="{{route('announce')}}">Bike Trail</a></li>
                               <li><a class="dropdown-item" href="{{route('festivities')}}">Festivities</a></li>
                               <li><a class="dropdown-item" href="{{route('historical')}}">Historical</a></li>
                             </ul>
