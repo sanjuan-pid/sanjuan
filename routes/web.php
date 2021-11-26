@@ -194,7 +194,7 @@ Route::prefix('admin')->group(function(){
     //Department - Main
     Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
     Route::resource('/dept', 'Department_MainController');
-    
+
     //Department - Org Chart
     Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
     Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
@@ -215,5 +215,9 @@ Route::prefix('admin')->group(function(){
     //Events - Bazaar
     Route::get('/eve_xbazaar_list', 'Events_XBazaar_Controller@index')->name('admin.eve_xbazaar.eve_xbazaar_list');
     Route::resource('/eve_xbazaar', 'Events_XBazaar_Controller');
-    
+
+    Route::get('Tourism/biketrail_page','Pages@biketrail')->name('biketrail');
+    Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
+    Route::get('Tourism/historical_page','Pages@historical')->name('historical');
+
 });

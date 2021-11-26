@@ -228,7 +228,7 @@ class Pages extends Controller
             'contact_person' => 'required',
             'products_desc' => 'required',
         ]);
-        
+
         //get values ng mga nasa form to save
         $events_xbazaar_new = new Events_XBazaar();
         $events_xbazaar_new->name = $request->name;
@@ -239,7 +239,7 @@ class Pages extends Controller
         $events_xbazaar_new->product_desc = $request->products_desc;
         $events_xbazaar_new->reason = "PENDING FOR APPROVAL";
         $events_xbazaar_new->status = "PENDING";
-        
+
         $events_xbazaar_new->save();
         return redirect()->route('XmasBazaar')->with('success','Registration Successful, please wait for the confirmation via email/text. Thank you!');
     }
@@ -269,6 +269,19 @@ class Pages extends Controller
   {
       return view('publicnotice/Announcements_page');
   }
+  public function biketrail()
+ {
+     return view('Tourism/biketrail_page');
+ }
+ public function festivities()
+ {
+     return view('Tourism/festivities_page');
+ }
+ public function historical()
+ {
+     return view('Tourism/historical_page');
+ }
+
   public function exeorder2021()
   {
     $trans = DB::table('transparency')->where('trans_tag','show')->get();
@@ -336,7 +349,7 @@ class Pages extends Controller
 
     public function magazine_view($id)
     {
-        $magz = Magazine::find($id); 
+        $magz = Magazine::find($id);
         return view('admin.magazine.magazine_show' ,compact('magz', 'id'));
     }
 }

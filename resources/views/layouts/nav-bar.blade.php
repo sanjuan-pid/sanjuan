@@ -137,9 +137,19 @@
                             <a class="nav-link" href="{{route('transparency')}}"  id="navbarDropdownMenuLink" >Transparency</a>
                           </li> -->
 
-                           <li class="nav-item" >
-                            <a class="nav-link"  href="{{route('announce')}}"  id="navbarDropdownMenuLink" >Tourism</a>
+                          <li class="nav-item dropdown" >
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tourism
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                              <li><a class="dropdown-item" href="{{route('biketrail')}}">Bike Trail</a></li>
+                              <li><a class="dropdown-item" href="{{route('festivities')}}">Festivities</a></li>
+                              <li><a class="dropdown-item" href="{{route('historical')}}">Historical</a></li>
+                              <li><a class="dropdown-item" href="{{route('vip')}}">VIP</a></li>
+                              <li><a class="dropdown-item" href="{{route('vip1')}}">VIP1</a></li>
+                            </ul>
                           </li>
+                          
                            <li class="nav-item" >
                             <a class="nav-link" href="{{route('department')}}"  id="navbarDropdownMenuLink" >Departments</a>
                           </li>
