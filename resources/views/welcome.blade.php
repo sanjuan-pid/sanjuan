@@ -65,7 +65,7 @@
 
         .karosel #img_slot1 img{
 
-          width: 75% !important;
+          width: 70% !important;
 
         }
       }
@@ -197,7 +197,7 @@
                                  <div class=" col-sm-12">
                                    <div id="img_slot">
                                      <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                       <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width:40%!important;"  id="image_slide">
+                                       <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width:35%!important;"  id="image_slide">
                                      </a>
                                    </div>
                                  </div>
