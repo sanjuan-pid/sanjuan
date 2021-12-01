@@ -59,7 +59,7 @@
       @media screen and (min-device-width: 1551px) and (max-device-width: 1600px){
         .karosel img{
 
-          width: 80% !important;
+          width: 100% !important;
 
         }
         .karosel #img_slot1 img{
@@ -225,7 +225,7 @@
 
              <br>
              <br>
-             
+
 
         </div>
      </div>
