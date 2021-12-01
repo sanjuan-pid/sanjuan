@@ -1,7 +1,11 @@
 @extends('layouts.nav-bar')
 
 @section('content')
-
+<style>
+input[type=text]:dis {
+background: #dddddd;
+}
+</style>
 <div class="container mt-4 mb-4">
     <div class="card-group" style="border-style: solid; border-width: 3px; border-image: linear-gradient(to top, #4481eb 0%, #04befe 100%) 1;">
         <div class="card shadow-none">
@@ -23,7 +27,7 @@
             @endif
             @if(count($errors) > 0)
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              <strong>Notice!</strong> 
+              <strong>Notice!</strong>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -35,7 +39,7 @@
                       </li>
                   @endforeach
               </ul>
-              
+
             </div>
             @endif
             <h3 class="card-title font-weight-bold">REGISTER NOW!</h3>
@@ -82,7 +86,7 @@
                   </div>
                   <div class="row mt-3">
                     <div class="col">
-                      <button class="btn btn-success btn-block font-weight-bold" type="submit">REGISTER</button>
+                      <button class="btn btn-success btn-block font-weight-bold" disabled="disabled" type="submit">REGISTER</button>
                     </div>
                   </div>
               </form>
