@@ -61,7 +61,7 @@
 
         .karosel #img_slot1 img{
 
-          width: 80% !important;
+          width: 90% !important;
 
         }
       }
