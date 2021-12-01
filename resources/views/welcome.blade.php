@@ -15,7 +15,7 @@
     z-index: 2;
     cursor: pointer;
   }
-  
+
   #text{
     position: absolute;
     top: 57%;
@@ -219,12 +219,13 @@
                  </div>
              </div>
 
-             <div class="col-sm-4" style="margin-bottom: 0%;">
+             <!-- <div class="col-sm-4" style="margin-bottom: 0%;">
                <a href="{{route('XmasBazaar')}}"><img src="{{asset('assets/MakabagongBazaar2021.gif')}}" style="width: 65%;margin: 0 auto;display: block;"/></a>
-             </div>
+             </div> -->
 
              <br>
              <br>
+             
 
         </div>
      </div>
@@ -232,7 +233,7 @@
 
 
     {{-- @include('layouts.index.directory') --}}
-    
+
 
 <div class="class">
   <div class="row">
@@ -244,7 +245,7 @@
         <!--Controls-->
         <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700;">ANNOUNCEMENTS</h2>
         <div class="controls-top" style="padding: 0 5%;">
-          
+
           <a class="btn btn-outline-primary" href="#multi-item-example" data-slide="prev" style="color : #000; font-size: 20px;">Previous</i></a>
           <a class="btn btn-outline-primary" href="#multi-item-example" data-slide="next" style="float: right;color : #000;font-size: 20px;">Next</a>
         </div>
@@ -258,13 +259,13 @@
         <div class="carousel-inner" role="listbox">
 
           <!--First slide-->
-      
+
           <div class="carousel-item active">
 
             <div class="row">
               <?php $i=0; ?>
               @foreach($announcement as $row22)
-                <?php $i++; 
+                <?php $i++;
                 ?>
                 @if($row22['status'] == 1)
                   @if ($i == 1)
@@ -273,23 +274,23 @@
                       <div class="card_img" style="padding:3%;">
                           <img class="card-img-top"  src="{{asset("uploads/" . $row22['filename']) }}" alt="Card image cap"  />
                       </div>
-                      
+
                       <div class="card-body">
                         {{-- <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> --}}
-     
+
                         <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
                       </div>
                 </div>
-                  @else 
+                  @else
                   <div class="col-md-3 clearfix d-none d-md-block">
                     <div class="card mb-2">
                           <div class="card_img" style="padding:3%;">
                               <img class="card-img-top"  src="{{asset("uploads/" . $row22['filename']) }}" alt="Card image cap"  />
                           </div>
-                          
+
                           <div class="card-body">
                             {{-- <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> --}}
- 
+
                             <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
                           </div>
                     </div>
@@ -310,7 +311,7 @@
             <div class="row">
               <?php $i=0; ?>
               @foreach($announcement3 as $row33)
-                <?php $i++; 
+                <?php $i++;
                 ?>
                 @if($row33['status'] == 1)
                   @if ($i == 1)
@@ -319,26 +320,26 @@
                       <div class="card_img" style="padding:3%;">
                           <img class="card-img-top"  src="{{asset("uploads/" . $row33['filename']) }}" alt="Card image cap"  />
                       </div>
-                      
+
                       <div class="card-body">
                         <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row33->id )}}" target="_blank" ><?php echo $row33['title'] ?> </a></span>
                         {{-- <p class="card-text">
-                      
+
                         </p>// --}}
                         <a class="btn btn-primary">View More</a>
                       </div>
                 </div>
-                  @else 
+                  @else
                   <div class="col-md-3 clearfix d-none d-md-block">
                     <div class="card mb-2">
                           <div class="card_img" style="padding:3%;">
                               <img class="card-img-top"  src="{{asset("uploads/" . $row33['filename']) }}" alt="Card image cap"  />
                           </div>
-                          
+
                           <div class="card-body">
                             <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row33->id )}}" target="_blank" ><?php echo $row33['title'] ?> </a></span>
                             {{-- <p class="card-text">
-                          
+
                             </p> --}}
                             <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row33->id )}}" target="_blank" >View More</a>
                           </div>
@@ -355,7 +356,7 @@
           </div>
           <!--/.Second slide-->
 
-    
+
 
         </div>
         <!--/.Slides-->
@@ -411,58 +412,61 @@
               <div class="card" style="height: 100%;" id="eser">
                       <div class="card-body" id="bulletin_sec" style="padding:0 !important;border: 3px solid #003471;">
                         <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">e-SERVICES</h2>
-                         
-                        <div class="card" style="margin: 2%;">
-                                      <div class="card-body" style="margin-top: -5%;">
-                                          <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                              <a >
-                                                  <img src="{{asset('assets/Eservices/Taxes.svg')}}"style="width:70%; " />
-                                              </a>
-                                      </div>
-                                      <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
-                                            <br>                                            
-                                            <p style="margin: auto; position: absolute;">Real Property Tax (RPTAX)
-                                            </p>
-                                      </div>
-                                  </div>
-                        </div>
 
+                          <a href="https://www.cityofsanjuan.ph" target="_blank">
+                            <div class="card" style="margin: 2%;">
+                              <div class="card-body" style="margin-top: -5%;">
+                                <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+                                  <img src="{{asset('assets/Eservices/Taxes.svg')}}"style="width:70%; " />
+                                </div>
+                                <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                  <br>
+                                  <p style="margin: auto; position: absolute;">Real Property Tax (RPTAX)
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+
+                      <a href="https://www.cityofsanjuan.ph" target="_blank">
                         <div class="card" style="margin: 2%;">
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
+
                                               <img src="{{asset('assets/Eservices/income.svg')}}"style="width:70%; " />
-                                          </a>
+
                                       </div>
                         <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
-                                            <br>                                            
+                                            <br>
                                             <p style="margin: auto; position: absolute;">Business Tax (BTAX)
                                             </p>
                                       </div>
                                   </div>
                         </div>
-
+                      </a>
+                      <a href="https://www.cityofsanjuan.ph" target="_blank">
                         <div class="card" style="margin: 2%;">
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
+
                                               <img src="{{asset('assets/Eservices/CivilReg.svg')}}"style="width:70%; " />
-                                          </a>
+
                                       </div>
                         <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
-                                            <br>                                            
+                                            <br>
                                             <p style="margin: auto; position: absolute;">Local Civil Registry
                                             </p>
                                       </div>
                                   </div>
                         </div>
-
+                      </a>
+                      <a href="https://www.cityofsanjuan.ph" target="_blank">
                         <div class="card" style="margin: 2%;">
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
+
                                               <img src="{{asset('assets/Eservices/insurance.svg')}}"style="width:70%; " />
-                                          </a>
+
                                       </div>
                         <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
 
@@ -471,13 +475,14 @@
                                       </div>
                                   </div>
                         </div>
-
+                      </a>
+                      <a href="https://www.cityofsanjuan.ph" target="_blank">
                         <div class="card" style="margin: 2%;">
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
+
                                               <img src="{{asset('assets/Eservices/Community.svg')}}"style="width:70%; " />
-                                          </a>
+
                                       </div>
                         <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
                                             <br>
@@ -486,13 +491,15 @@
                                       </div>
                                   </div>
                         </div>
+                      </a>
 
+                      <a href="https://www.cityofsanjuan.ph" target="_blank">
                         <div class="card" style="margin: 2%;">
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
+
                                               <img src="{{asset('assets/Eservices/alarm.svg')}}"style="width:70%; " />
-                                          </a>
+
                                       </div>
                                   <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
                                             <p style="margin: auto; position: absolute;">Ordinance Violation Receipts
@@ -500,13 +507,14 @@
                                       </div>
                                   </div>
                         </div>
-
+                      </a>
+                      <a href="https://www.cityofsanjuan.ph" target="_blank">
                         <div class="card" style="margin: 2%;">
                                   <div class="card-body" style="margin-top: -10%;">
                                         <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
+
                                               <img src="{{asset('assets/Eservices/danger.svg')}}"style="width:70%; " />
-                                          </a>
+
                                         </div>
                                         <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
                                             <br>
@@ -515,12 +523,14 @@
                                       </div>
                                   </div>
                         </div>
+                      </a>
+                      <a href="https://www.cityofsanjuan.ph" target="_blank">
                         <div class="card" style="margin: 2%;">
                           <div class="card-body" style="margin-top: -10%;">
                             <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                <a >
+
                                     <img src="{{asset('assets/Eservices/checking.svg')}}"style="width:70%; " />
-                                </a>
+
                             </div>
                             <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
                                   <br>
@@ -529,64 +539,73 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card" style="margin: 2%;">
-                            <div class="card-body" style="margin-top: -10%;">
+                      </a>
+                        <a href="https://www.cityofsanjuan.ph" target="_blank">
+                          <div class="card" style="margin: 2%;">
+                              <div class="card-body" style="margin-top: -10%;">
+                                  <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+
+                                          <img src="{{asset('assets/Eservices/portfolio.svg')}}"style="width:70%; " />
+
+                                  </div>
+                                  <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                        <br>
+                                        <p style="margin: auto; position: absolute;">PESO
+                                        </p>
+                                  </div>
+                              </div>
+                          </div>
+                        </a>
+
+                        <a href="https://www.cityofsanjuan.ph" target="_blank">
+                          <div class="card" style="margin: 2%;">
+                              <div class="card-body" style="margin-top: -10%;">
                                 <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                    <a >
-                                        <img src="{{asset('assets/Eservices/portfolio.svg')}}"style="width:70%; " />
-                                    </a>
+
+                                        <img src="{{asset('assets/Eservices/logical-thinking.svg')}}"style="width:70%; " />
+
                                 </div>
                                 <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
                                       <br>
-                                      <p style="margin: auto; position: absolute;">PESO
+                                      <p style="margin: auto; position: absolute;">Skills
                                       </p>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card" style="margin: 2%;">
-                            <div class="card-body" style="margin-top: -10%;">
-                              <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                  <a >
-                                      <img src="{{asset('assets/Eservices/logical-thinking.svg')}}"style="width:70%; " />
-                                  </a>
                               </div>
-                              <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
-                                    <br>
-                                    <p style="margin: auto; position: absolute;">Skills
-                                    </p>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="card" style="margin: 2%;">
-                                  <div class="card-body" style="margin-top: -10%;">
-                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
-                                              <img src="{{asset('assets/Eservices/buildingpermit.svg')}}"style="width:70%; " />
-                                          </a>
-                                      </div>
-                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
-                                            <br>                                            
-                                            <p style="margin: auto; position: absolute;">Building Permit
-                                            </p>
-                                      </div>
-                                  </div>
-                        </div>
-                        <div class="card" style="margin: 2%;">
-                                  <div class="card-body" style="margin-top: -10%;">
-                                      <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
-                                          <a >
-                                              <img src="{{asset('assets/Eservices/old-man.svg')}}"style="width:70%; " />
-                                          </a>
-                                      </div>
-                        <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
-                                            <br>                                            
-                                            <p style="margin: auto; position: absolute;">OSCA
-                                            </p>
-                                      </div>
-                                  </div>
-                        </div>
-                         
+                          </div>
+                        </a>
+                        <a href="https://www.cityofsanjuan.ph" target="_blank">
+                          <div class="card" style="margin: 2%;">
+                                    <div class="card-body" style="margin-top: -10%;">
+                                        <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+
+                                                <img src="{{asset('assets/Eservices/buildingpermit.svg')}}"style="width:70%; " />
+
+                                        </div>
+                          <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                              <br>
+                                              <p style="margin: auto; position: absolute;">Building Permit
+                                              </p>
+                                        </div>
+                                    </div>
+                          </div>
+                        </a>
+                        <a href="https://www.cityofsanjuan.ph" target="_blank">
+                          <div class="card" style="margin: 2%;">
+                                    <div class="card-body" style="margin-top: -10%;">
+                                        <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
+
+                                                <img src="{{asset('assets/Eservices/old-man.svg')}}"style="width:70%; " />
+
+                                        </div>
+                          <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
+                                              <br>
+                                              <p style="margin: auto; position: absolute;">OSCA
+                                              </p>
+                                        </div>
+                                    </div>
+                          </div>
+                        </a>
+
                       </div>
 
 
@@ -624,7 +643,7 @@
                                 @endif
                             @endforeach
                     </div>
-  
+
                 </div>
             </div>
           </div>
@@ -694,7 +713,7 @@
     function on() {
       document.getElementById("overlay").style.display = "block";
     }
-    
+
     $(document).ready(function(){
      $("#off").click(function(){
        var div = $("#overlay");
@@ -702,5 +721,5 @@
        div.hide(0);
         });
       });
-  </script> 
+  </script>
 @endsection
