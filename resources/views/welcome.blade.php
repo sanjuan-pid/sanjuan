@@ -47,7 +47,7 @@
   @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
         .karosel #img_slot1 img{
 
-          width: 100% !important;
+          width: 70% !important;
 
         }
          .karosel img{
@@ -59,13 +59,13 @@
       @media screen and (min-device-width: 1551px) and (max-device-width: 1600px){
         .karosel img{
 
-          width: 100% !important;
+          width: 80% !important;
 
         }
 
         .karosel #img_slot1 img{
 
-          width: 100% !important;
+          width: 75% !important;
 
         }
       }
@@ -118,7 +118,7 @@
       <div class="container karosel" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
         <div class="row justify-content-md-center" style="position:relative;">
 
-              <div class="col-sm-8" style="margin-bottom: 0%;">
+              <div class="col-sm-12" style="margin-bottom: 0%;">
                  {{-- <div class="card" id="qr" style="width: 100%; border: 0px solid;">
                      <br>
                      <img class="card-img-top" style="width:50%; height:70%; position: relative; margin:0 auto;" src="{{asset('assets/v.png')}}" alt="Card image cap">
