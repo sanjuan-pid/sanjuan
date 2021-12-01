@@ -62,12 +62,16 @@
           width: 80% !important;
 
         }
-
         .karosel #img_slot1 img{
 
-          width: 70% !important;
+          width: 75% !important;
 
         }
+        .karosel .vidito{
+
+          width: 60% !important;
+        }
+
       }
   </style>
     {{-- <div class="flex-center position-ref full-height">
@@ -164,7 +168,7 @@
                                <div class="row">
                                  <div class=" col-sm-12">
                                    <div id="img_slot1">
-                                     <video width="1250" id="first_vid" controls>
+                                     <video class="vidito" width="1250" id="first_vid" controls>
                                        <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
                                        Your browser does not support HTML video.
                                      </video>
@@ -178,7 +182,7 @@
                                <div class="row">
                                  <div class=" col-sm-12">
                                    <div id="img_slot1">
-                                     <video width="1250" id="second_vid" controls>
+                                     <video class="vidito" width="1250" id="second_vid" controls>
                                        <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
                                        Your browser does not support HTML video.
                                      </video>
