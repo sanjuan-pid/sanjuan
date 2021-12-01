@@ -183,6 +183,7 @@
                                </div>
                              </div>
                            </div>
+                           
                          {{-- @endif
                        @endforeach --}}
                        @foreach($events as $row)
