@@ -47,21 +47,25 @@
   @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
         .karosel #img_slot1 img{
 
-          width: 80% !important;
+          width: 100% !important;
 
         }
          .karosel img{
 
-          width: 50% !important;
+          width: 70% !important;
 
         }
       }
       @media screen and (min-device-width: 1551px) and (max-device-width: 1600px){
+        .karosel img{
 
+          width: 100% !important;
+
+        }
 
         .karosel #img_slot1 img{
 
-          width: 90% !important;
+          width: 100% !important;
 
         }
       }
@@ -114,7 +118,7 @@
       <div class="container karosel" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
         <div class="row justify-content-md-center" style="position:relative;">
 
-              <div class="col-sm-10" style="margin-bottom: 0%;">
+              <div class="col-sm-8" style="margin-bottom: 0%;">
                  {{-- <div class="card" id="qr" style="width: 100%; border: 0px solid;">
                      <br>
                      <img class="card-img-top" style="width:50%; height:70%; position: relative; margin:0 auto;" src="{{asset('assets/v.png')}}" alt="Card image cap">
@@ -183,7 +187,6 @@
                                </div>
                              </div>
                            </div>
-                           
                          {{-- @endif
                        @endforeach --}}
                        @foreach($events as $row)
@@ -371,7 +374,7 @@
       <br>
       <br>
       <div class="row" id="news">
-          <div class=" col-sm-10">
+          <div class=" col-sm-8">
               <div class="card" id="news_card">
                   <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
                       <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">NEWS & ARTICLES</h2>
