@@ -80,7 +80,7 @@ Route::get('Tourism/vip_page','Pages@vip')->name('vip');
 
 Route::get('/magazine_view/{id}', 'Pages@magazine_view')->name('magazine_view');
 
-
+Route::group(['middleware' => 'preventBackHistory'],function(){
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
@@ -225,4 +225,5 @@ Route::prefix('admin')->group(function(){
     Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
     Route::get('Tourism/historical_page','Pages@historical')->name('historical');
 
+});
 });

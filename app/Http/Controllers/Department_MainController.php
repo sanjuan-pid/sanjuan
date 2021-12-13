@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Department_Main;
 use App\Department_Org;
+use App\Department_Content;
 use DB;
 
 class Department_MainController extends Controller
@@ -72,6 +73,18 @@ class Department_MainController extends Controller
         $org_new->member_tag = "HEAD";
         $org_new->member_align = "CENTER";
         $org_new->save();
+
+        $cont_new = new Department_Content();
+        $cont_new->dept_code = $request->code;
+        $cont_new->dept_desc = "";
+        $cont_new->dept_mission = "";
+        $cont_new->dept_vision = "";
+        $cont_new->dept_philosophy = "";
+        $cont_new->dept_services = "";
+        $cont_new->dept_socmed = "";
+        $cont_new->dept_objectives = "";
+        $cont_new->dept_services = "";
+        $cont_new->save();
 
         return redirect()->route('admin.dept.dept_list')->with('success','Department Added');
     }
