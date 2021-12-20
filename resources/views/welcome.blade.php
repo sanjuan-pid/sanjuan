@@ -413,8 +413,8 @@
 
               </div>
           </div>
-           <div class=" col-sm-4" id="eser1" style="height: 100% !important;">
-              <div class="card" id="eser">
+           <div class=" col-sm-4" id="eser1">
+              <div class="card" style="height: 100%;" id="eser">
                       <div class="card-body" id="bulletin_sec" style="padding:0 !important;border: 3px solid #003471;">
                         <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important;">e-SERVICES</h2>
 
@@ -550,7 +550,7 @@
                               <div class="card-body" style="margin-top: -10%;">
                                   <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
 
-                                          <img src="{{asset('assets/Eservices/newlogopeso.png')}}"style="width:70%; " />
+                                          <img src="{{asset('assets/Eservices/portfolio.svg')}}"style="width:70%; " />
 
                                   </div>
                                   <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
@@ -567,7 +567,7 @@
                               <div class="card-body" style="margin-top: -10%;">
                                 <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
 
-                                        <img src="{{asset('assets/Eservices/skills.png')}}"style="width:70%; " />
+                                        <img src="{{asset('assets/Eservices/logical-thinking.svg')}}"style="width:70%; " />
 
                                 </div>
                                 <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
