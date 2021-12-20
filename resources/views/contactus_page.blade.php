@@ -391,6 +391,9 @@ section .container .contactinfo {
             </div>
           </div>
         </div>
+        <br>
+        <br>
+        <br>
         <div class="responsive-map-container d-flex justify-content-center">
               <iframe src="https://maps.google.com/maps?q=san%20juan%20city%20hall&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1000" height="500" frameborder="0" style="border:0"></iframe>
         </div>
