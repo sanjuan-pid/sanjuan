@@ -75,7 +75,6 @@
            <div class="snowflake snowsnow">
              ❆
            </div>
-         </div>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" style="font-size:30px;"></i></button>
         <div class="container" id="nav">
             <div class="row" style="background:rgb(27, 37, 96); color:#fff; padding: 4px 0;">
