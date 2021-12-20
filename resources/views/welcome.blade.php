@@ -567,7 +567,7 @@
                               <div class="card-body" style="margin-top: -10%;">
                                 <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
 
-                                        <img src="{{asset('assets/Eservices/skills.png')}}"style="width:70%; " />
+                                        <img src="{{asset('assets/Eservices/sklogo.png')}}"style="width:70%; " />
 
                                 </div>
                                 <div class="col-8 col-sm-8" style="display: inline-block; padding:3px;">
