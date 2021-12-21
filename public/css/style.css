@@ -261,18 +261,33 @@ nav ul.dropdown-menu.show {
 }
 /*carousel-end*/
 /*mayors-start*/
-#mayors_link{
-    margin-right: 10%;
-    margin-bottom: 3%;
-    float: right;
-    font-weight: 600;
-    font-size: 1.5rem;
-    border: 3px solid #1b2560;
-    padding: 0.5% 3%;
-    color: #fff;
-    background: #e63946;
-    border-radius: 8px;
-    text-decoration: none;
+.mayors_link{
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius:5px;
+  margin-right: 10%;
+  margin-top: -7%;
+  float: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.mayorcornerbtn {
+  background-color: #e63946;
+  color: white;
+  border: 5px solid #008CBA;
+}
+
+.mayorcornerbtn:hover {
+  background-color: white;
+  color: black;
 }
 #article_contents{
     height: 100px;
@@ -719,8 +734,8 @@ div#end_footer h3 {
     }
     .congpic .col-12.col-sm-12 {
         padding: 0;
-    }  
-      
+    }
+
     #directory .card-title {
         font-size: 20px;
     }
@@ -784,35 +799,35 @@ div#end_footer h3 {
     margin-left: -40% !important;
   }
     /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr { 
-        display: block; 
+    table, thead, tbody, th, td, tr {
+        display: block;
     }
-    
+
     /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr { 
+    thead tr {
         position: absolute;
         top: -9999px;
         left: -9999px;
     }
-    
+
     tr { border: 1px solid #ccc; }
-    
-    td { 
+
+    td {
         /* Behave  like a "row" */
         border: none;
-        border-bottom: 1px solid #eee; 
+        border-bottom: 1px solid #eee;
         position: relative;
-        padding-left: 50%; 
+        padding-left: 50%;
     }
-    
-    td:before { 
+
+    td:before {
         /* Now like a table header */
         position: absolute;
         /* Top/left values mimic padding */
         top: 6px;
         left: 6px;
-        width: 45%; 
-        padding-right: 10px; 
+        width: 45%;
+        padding-right: 10px;
         white-space: nowrap;
     }
 }
@@ -860,7 +875,7 @@ div#end_footer h3 {
         left: 5%;
     }
 
-    
+
     #article_link{
         float:left !important;
     }
@@ -945,7 +960,7 @@ div#bulletin_bod {
 
 .recent_big {
     margin-top: 4%;
-    
+
 }
 .recent_big img {
     padding: 1%;
@@ -1313,7 +1328,7 @@ div#eser {
     left:-160px;
     position:absolute;
     width: 100%;
-    
+
 }
 h1 {
     font-size: 30px !important;
@@ -1599,7 +1614,7 @@ div#myCarousel img {
         margin-top: 0 !important;
         margin-bottom: 3%;
     }
-    
+
     div#side_prof_mob a {
         display: inline-block !important;
         width: 24%;
@@ -1622,7 +1637,7 @@ div#myCarousel img {
     div#act {
         margin: 13% 0;
     }
-    
+
     body {
         background: #fff !important;
     }
@@ -1664,7 +1679,7 @@ div#myCarousel img {
       color:#1b2560;
       font-weight: 900;
       text-align: center;
-  
+
     }
     .directbtn{
       font-size: 15px;
@@ -1688,7 +1703,7 @@ div#myCarousel img {
       color:red;
       font-weight: 700;
     }
-  
+
   }
 
   /* vice mayor's page */
@@ -1717,7 +1732,7 @@ div#myCarousel img {
       width: 100% !important;
       flex: 0 0 100%;
     }
-  
+
     #vicempage .col-sm-6 .newshead{
       font-size: 30px !important;
     }
@@ -1888,7 +1903,7 @@ li.list-group-item.latest_news a{
     div#eser1 .card-body {
         margin: 0 !important;
     }
-    
+
 }
 @media only screen and (max-width: 1200px) and (min-width: 1099px)  {
     div#eser1 .card-body {
@@ -1904,7 +1919,7 @@ li.list-group-item.latest_news a{
     img.card-img-top {
         height: 350px !important;
     }
-    
+
     #nav .container{
         margin: 0 !important;
     }
@@ -1931,7 +1946,7 @@ li.list-group-item.latest_news a{
       width: 100% !important;
       margin: 0 auto !important;
     }
-    
+
     div#social_med {
         width: 80% !important;
         margin: 5% auto !important;
@@ -2083,7 +2098,7 @@ li.list-group-item.latest_news a{
     display: none;
 }
 @media screen and (min-device-width: 300px) and (max-device-width: 767px) {
-   
+
     .mobile_backtop{
         display: block;
         position: fixed !important;
@@ -2190,7 +2205,7 @@ div#agenda_row img {
     }
     .modalss{
         margin:0 !important;
-        margin-top:50% !important;  
+        margin-top:50% !important;
     }
     div#img_slot{
         padding: 0 0% !important;

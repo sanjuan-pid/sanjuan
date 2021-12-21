@@ -113,12 +113,48 @@
                   <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
                 </div>
               </div>
+              <!-- <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                  <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
+                </div>
+              </div> -->
+              <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="/bplocarousel/renewalbplo.pdf"><img class="d-block w-100" src="{{asset('assets/bplorenew.png')}}" alt="First slide"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{asset('assets/SANJUAN.jpg')}}" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div> -->
               </div>
             </div>
           </div>
       </div>
 
-      <br>
+      <div class="container bannerevents mb-3" style="padding:0;">
+        <div class="col-12 d-flex justify-content-center" style="padding:0; ">
+          <img style=" width: 100%;" src="{{asset('assets/xmas.gif')}}">
+        </div>
+      </div>
+
       <div class="container karosel" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
         <div class="row justify-content-md-center" style="position:relative;">
 
@@ -261,7 +297,7 @@
         <!--/.Indicators-->
 
         <!--Slides-->
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner" role="listbox" style="width:95% !important;">
 
           <!--First slide-->
 
@@ -374,7 +410,7 @@
 </div>
 @include('layouts.index.mayors')
     {{-- @include('layouts.index.news') --}}
-  <div class="container" id="news_sec">
+  <div class="container" id="news_sec" style="width:95% !important;">
       <br>
       <br>
       <div class="row" id="news">
