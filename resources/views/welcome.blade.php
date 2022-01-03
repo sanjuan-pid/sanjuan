@@ -149,13 +149,13 @@
           </div>
       </div>
 
-      <div class="container bannerevents mb-3" style="padding:0;">
+      <!-- <div class="container bannerevents mb-3" style="padding:0;">
         <div class="col-12 d-flex justify-content-center" style="padding:0; ">
           <img style=" width: 100%;" src="{{asset('assets/xmas.gif')}}">
         </div>
-      </div>
+      </div> -->
 
-      <div class="container karosel" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
+      <div class="container karosel mt-2" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
         <div class="row justify-content-md-center" style="position:relative;">
 
               <div class="col-sm-12" style="margin-bottom: 0%;">
