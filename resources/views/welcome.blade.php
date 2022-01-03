@@ -43,6 +43,21 @@
       width: 100% !important;
       flex: 0 0 100%;
     }
+    .annindex{
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+    }
+    .carousel-inner{
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+    }
+    #news_sec{
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+    }
   }
   @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
         .karosel #img_slot1 img{
@@ -54,6 +69,11 @@
 
           width: 70% !important;
 
+        }
+        .carousel-inner{
+          max-width: 95% !important;
+          width: 95% !important;
+          flex: 0 0 100%;
         }
       }
       @media screen and (min-device-width: 1551px) and (max-device-width: 1600px){
@@ -279,7 +299,7 @@
 <div class="class">
   <div class="row">
 
-    <div class="container my-4">
+    <div class="container my-4 annindex">
       <!--Carousel Wrapper-->
       <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
@@ -297,7 +317,7 @@
         <!--/.Indicators-->
 
         <!--Slides-->
-        <div class="carousel-inner" role="listbox" style="width:95% !important;">
+        <div class="carousel-inner" role="listbox" style="width:95%;">
 
           <!--First slide-->
 
@@ -410,7 +430,7 @@
 </div>
 @include('layouts.index.mayors')
     {{-- @include('layouts.index.news') --}}
-  <div class="container" id="news_sec" style="width:95% !important;">
+  <div class="container" id="news_sec" style="width:95%;">
       <br>
       <br>
       <div class="row" id="news">
