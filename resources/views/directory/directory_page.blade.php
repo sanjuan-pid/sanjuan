@@ -221,8 +221,8 @@
             <tr class="ctus">
               <td>BUSINESS PERMIT & <br> LICENSE OFFICE </td>
               <td class="pula">8655 9697</td>
-              <td>bplo_csj@yahoo.com / <br> bplo@sanjuancity.gov.ph</td>
-            </tr>
+              <td>bplo_csj@yahoo.com</td>
+            </tr>x
             <tr class="ctus">
               <td>CITY ASSESSOR'S OFFICE</td>
               <td class="pula">09674699655</td>
@@ -831,7 +831,7 @@
             <tr class="ctus">
               <td>BUSINESS PERMIT & <br> LICENSE OFFICE </td>
               <td class="pula">8655 9697</td>
-              <td>bplo_csj@yahoo.com / <br> bplo@sanjuancity.gov.ph</td>
+              <td>bplo_csj@yahoo.com</td>
             </tr>
             <tr class="ctus">
               <td>CITY ASSESSOR'S OFFICE</td>
