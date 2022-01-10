@@ -574,6 +574,7 @@
           <img  class="demo cursor" src="{{asset('assets/vaxcert/v5.jpg')}}" style="width:80%" onclick="currentSlide(5)" alt="STEP 5">
         </div>
       </div>
+      <br>
       </div>
         </div>
       </div>
