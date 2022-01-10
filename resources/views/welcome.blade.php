@@ -71,6 +71,11 @@
 
         }
         .carousel-inner{
+          max-width: 100% !important;
+          width: 100% !important;
+          flex: 0 0 100%;
+        }
+        .annupload{
           max-width: 95% !important;
           width: 95% !important;
           flex: 0 0 100%;
@@ -93,6 +98,94 @@
         }
 
       }
+      .vaxxcert {
+  font-family: Arial;
+  margin: 0;
+}
+
+
+.imgcert {
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.vaxxcert {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
   </style>
     {{-- <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
@@ -317,7 +410,7 @@
         <!--/.Indicators-->
 
         <!--Slides-->
-        <div class="carousel-inner" role="listbox" style="width:95%;">
+        <div class="carousel-inner annupload" role="listbox" style="width:90%;">
 
           <!--First slide-->
 
@@ -428,6 +521,67 @@
 
   </div>
 </div>
+<div class="container vaxxcert">
+  <div class="row">
+    <div class="col-12">
+      <div class="card" id="news_card">
+        <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
+          <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; font-weight:700; text-align:center;">HOW TO GET VAXCERTPH</h2>
+          <div class="col-12">
+            <div class="mySlides">
+              <div class="numbertext" style="color:black;">1 / 6</div>
+              <img class="imgcert" src="{{asset('assets/vaxcert/v1.jpg')}}" style="width:25%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext" style="color:black;">2 / 6</div>
+              <img class="imgcert" src="{{asset('assets/vaxcert/v2.jpg')}}" style="width:25%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext" style="color:black;">3 / 6</div>
+              <img class="imgcert" src="{{asset('assets/vaxcert/v3.jpg')}}" style="width:25%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext" style="color:black;">4 / 6</div>
+              <img class="imgcert" src="{{asset('assets/vaxcert/v4.jpg')}}" style="width:25%">
+            </div>
+
+      <div class="mySlides">
+        <div class="numbertext" style="color:black;">5 / 6</div>
+        <img class="imgcert" src="{{asset('assets/vaxcert/v5.jpg')}}" style="width:25%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <br>
+      <div class="row d-flex justify-content-center">
+        <div class="column">
+          <img  class="demo cursor" src="{{asset('assets/vaxcert/v1.jpg')}}" style="width:80%" onclick="currentSlide(1)" alt="STEP 1">
+        </div>
+        <div class="column">
+          <img  class="demo cursor" src="{{asset('assets/vaxcert/v2.jpg')}}" style="width:80%" onclick="currentSlide(2)" alt="STEP 2">
+        </div>
+        <div class="column">
+          <img  class="demo cursor" src="{{asset('assets/vaxcert/v3.jpg')}}" style="width:80%" onclick="currentSlide(3)" alt="STEP 3">
+        </div>
+        <div class="column">
+          <img  class="demo cursor" src="{{asset('assets/vaxcert/v4.jpg')}}" style="width:80%" onclick="currentSlide(4)" alt="STEP 4">
+        </div>
+        <div class="column">
+          <img  class="demo cursor" src="{{asset('assets/vaxcert/v5.jpg')}}" style="width:80%" onclick="currentSlide(5)" alt="STEP 5">
+        </div>
+      </div>
+      </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<br>
 @include('layouts.index.mayors')
     {{-- @include('layouts.index.news') --}}
   <div class="container" id="news_sec" style="width:95%;">
@@ -782,5 +936,34 @@
        div.hide(0);
         });
       });
+
+      var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
   </script>
 @endsection
