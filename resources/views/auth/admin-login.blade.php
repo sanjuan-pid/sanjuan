@@ -43,11 +43,17 @@
     <div class="container mt--8 pb-5">
       <div class="row justify-content-center">
         <div class="col-lg-5 col-md-7">
-          <div class="card bg-secondary border-0">
-           
-            <div class="card-body px-lg-5 py-lg-5">
-              <div class="text-center text-muted mb-4">
-                <small>Sign in with credentials</small>
+          <div class="card card-profile bg-secondary mt-5">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <img src="{{asset('assets/makabago.png')}}" class="rounded-circle">
+                </div>
+              </div>
+            </div>
+            <div class="card-body pt-7 px-5">
+              <div class="text-center mb-4">
+                <h3>Sign in with credentials</h3>
               </div>
               <form method="POST" action="{{ route('admin.login.submit') }}">
                 @csrf
