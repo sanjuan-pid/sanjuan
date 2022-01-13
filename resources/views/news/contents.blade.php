@@ -8,7 +8,7 @@
                 <div class="card-body">
                         <br>
                         @foreach($ann as $row)
-                            <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 25%;  margin-bottom: 5%;" />
+                            <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 35%;  margin-bottom: 0%;" />
                             <h1 style="font-size:30px !important;">{{ $row->title }}</h1>
                             <p><?php echo $row->desc ?></p>
                         @endforeach
@@ -26,7 +26,7 @@
                 <ul class="list-group list-group-flush">
                     <?php $i=0; ?>
                     @foreach($news as $row)
-                        <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 25%;  margin-bottom: 5%;" />
+                        <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 35%;  margin-bottom: 0%;" />
                         <?php $i++; ?>
                         <li class="list-group-item latest_news" ><a style="color:black;" href="{{action( 'Pages@news_contents', $row['id'] )}}"  > {{$row['title']}} </a></li>
                         @if ($i == 3)
