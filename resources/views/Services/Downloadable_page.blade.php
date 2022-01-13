@@ -72,7 +72,7 @@
 
 
               <div class="col-md-4 clearfix d-md-block">
-                <a href="/assets/dlforms/APPLICATIONFORMNEWGREYSCALE.pdf" download>
+                <a href=" {{asset('assets/dlforms/APPLICATIONFORMNEWGREYSCALE.pdf')}}" download>
                   <div class="card mb-2 dlcard">
                     <img class="card-img-top" src="{{asset('assets/dlforms/newbuspermit.jpg')}}"
                          alt="Card image cap">
@@ -87,7 +87,7 @@
               </div>
 
             <div class="col-md-4 clearfix d-md-block">
-              <a href="/assets/dlforms/APPLICATIONFORMRENEWALGREYSCALE.pdf" download>
+              <a href="{{asset('assets/dlforms/APPLICATIONFORMRENEWALGREYSCALE.pdf')}}" download>
                 <div class="card mb-2 dlcard">
                   <img class="card-img-top" src="{{asset('assets/dlforms/renewalpermit.jpg')}}"
                        alt="Card image cap">
