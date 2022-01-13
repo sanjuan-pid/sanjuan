@@ -43,7 +43,7 @@
                 <ul class="list-group list-group-flush">
                     <?php $i=0; ?>
                     @foreach($events as $row)
-                      <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 35%;  margin-bottom: 0%;" />
+                      <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 40%;  margin-bottom: 0%;" />
                         <?php $i++; ?>
                         <li class="list-group-item latest_news"><a  style="color:black;" href="{{action( 'Pages@news_contents', $row['id'] )}}"  > {{$row['title']}} </a></li>
                         @if ($i == 3)
