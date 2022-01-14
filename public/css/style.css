@@ -264,7 +264,7 @@ nav ul.dropdown-menu.show {
 .mayors_link{
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -504,7 +504,7 @@ div#bulletin_sec, #news_card {
         margin-bottom:5%;
     }
     #mayors_corner a{
-        font-size:25px;
+        font-size:18px;
         z-index:1;
     }
 
