@@ -28,9 +28,9 @@
 
   .thmb:hover{
     box-shadow: 10px 10px 10px rgb(0 0 0 / 50%) !important;
-    -ms-transform: scale(1.1); /* IE 9 /
+    -ms-transform: scale(1.0); /* IE 9 /
     -webkit-transform: scale(1.1); / Safari 3-8 */
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
     @media screen and (max-width: 766px) and (min-width: 200px){
     div#overlay {
