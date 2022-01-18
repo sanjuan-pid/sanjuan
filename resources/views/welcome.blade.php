@@ -39,8 +39,8 @@
       flex: 0 0 100%;
     }
     div#text {
-      max-width: 100% !important;
-      width: 100% !important;
+      max-width: 80% !important;
+      width: 80% !important;
       flex: 0 0 100%;
     }
     .annindex{
@@ -57,6 +57,16 @@
       max-width: 100% !important;
       width: 100% !important;
       flex: 0 0 100%;
+    }
+    .carousel-item img{
+      width: 100% !important;
+    }
+    #overlay .btn-sm{
+      padding-left: 3% !important;
+      padding-right: 3% !important;
+      padding-top: 1% !important;
+      padding-bottom: 1% !important;
+
     }
   }
   @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
@@ -221,8 +231,8 @@
           <div class="card shadow-none" style="border-style: solid; border-width: 3px;">
             <div class="card-body text-center" style="padding:15px; padding-bottom:40px;">
               <div class="row">
-                <div class="col-12">
-                  <button type="button" class="btn btn-default close_pause" id="off" style="background-color:red; float:right; font-weight:900; font-size:20px; margin-top: 0;">X</button>
+                <div class="col-12" style="padding:0;">
+                  <button type="button" class="btn btn-sm btn-default close_pause" id="off" style="background-color:red; float:right; font-weight:600; font-size:15px; margin-top: 0; padding-left: 2%; padding-right: 2%;">X</button>
                 </div>
               </div>
               <!-- <div class="row">
