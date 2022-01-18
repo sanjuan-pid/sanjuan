@@ -531,67 +531,25 @@
 
   </div>
 </div>
-<div class="container vaxxcert">
+</div>
+<div class="container vaxxcert" style="width:100%;">
   <div class="row">
     <div class="col-12">
-      <div class="card" id="news_card">
-        <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
-          <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; font-weight:700; text-align:center;">HOW TO GET VAXCERTPH</h2>
-          <div class="col-12">
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">1 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v1.jpg')}}" style="width:25%">
+        <div class="card">
+          <div class="card-body" style="padding: 0;overflow-y: auto; border: 3px solid #003471; border-radius: 5px;">
+            <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; font-weight:700; text-align:center;">HOW TO GET VAXCERTPH</h2>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8">
+                <video style="width:100%;" controls autoplay controls loop>
+                  <source src="{{asset('assets/vxcert.mp4')}}" type="video/mp4">
+                </video>
+              </div>
             </div>
-
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">2 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v2.jpg')}}" style="width:25%">
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">3 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v3.jpg')}}" style="width:25%">
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">4 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v4.jpg')}}" style="width:25%">
-            </div>
-
-      <div class="mySlides">
-        <div class="numbertext" style="color:black;">5 / 6</div>
-        <img class="imgcert" src="{{asset('assets/vaxcert/v5.jpg')}}" style="width:25%">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-
-      <br>
-      <div class="row d-flex justify-content-center">
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v1.jpg')}}" style="width:80%" onclick="currentSlide(1)" alt="STEP 1">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v2.jpg')}}" style="width:80%" onclick="currentSlide(2)" alt="STEP 2">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v3.jpg')}}" style="width:80%" onclick="currentSlide(3)" alt="STEP 3">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v4.jpg')}}" style="width:80%" onclick="currentSlide(4)" alt="STEP 4">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v5.jpg')}}" style="width:80%" onclick="currentSlide(5)" alt="STEP 5">
+          </div>
         </div>
       </div>
-      <br>
-      </div>
-        </div>
-      </div>
-    </div>
     </div>
   </div>
-</div>
 <br>
 @include('layouts.index.mayors')
     {{-- @include('layouts.index.news') --}}
