@@ -66,6 +66,7 @@
       padding-right: 3% !important;
       padding-top: 1% !important;
       padding-bottom: 1% !important;
+      font-size: 10px !important;
 
     }
   }
