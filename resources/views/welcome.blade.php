@@ -186,6 +186,10 @@
 .demo:hover {
   opacity: 1;
 }
+
+/* .caro_sel .caro_item {
+    transition-duration: 5s;
+} */
   </style>
     {{-- <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
@@ -221,32 +225,34 @@
                   <button type="button" class="btn btn-default close_pause" id="off" style="background-color:red; float:right; font-weight:900; font-size:20px; margin-top: 0;">X</button>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-                  <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
-                </div>
-              </div>
               <!-- <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                   <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
                 </div>
               </div> -->
-              <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <!-- <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                  <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
+                </div>
+              </div> -->
+               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <a href="/bplocarousel/renewalbplo.pdf"><img class="d-block w-100" src="{{asset('assets/bplorenew.png')}}" alt="First slide"></a>
+                <div class="carousel-inner caro_sel">
+                  <div class="carousel-item caro_item active" data-interval="5000">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-12">
+                          <img style="width:60%;" src="{{asset('assets/schedtax.jpg')}}" alt="First slide"/>
+                      </div>
+                    </div>
+
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="{{asset('assets/SANJUAN.jpg')}}" alt="Second slide">
+                  <div class="carousel-item" data-interval="5000">
+                    <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" alt="Second slide" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
                   </div>
-                  <div class="carousel-item">
-                    <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
-                  </div>
+
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -256,7 +262,7 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div> -->
+              </div>
               </div>
             </div>
           </div>
@@ -430,7 +436,7 @@
                       </div>
 
                       <div class="card-body">
-                         <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> 
+                         <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span>
 
                         <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
                       </div>
