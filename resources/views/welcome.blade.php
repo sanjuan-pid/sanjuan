@@ -253,7 +253,7 @@
                 </ol>
                 <div class="carousel-inner caro_sel">
                   <div class="carousel-item caro_item active" data-interval="5000">
-                    <img style="width:60%;" src="{{asset('assets/schedtax.jpg')}}" alt="First slide"/>
+                    <img class="w-50 thmb" src="{{asset('assets/schedtax.jpg')}}" alt="First slide"/>
                   </div>
                   <div class="carousel-item" data-interval="5000">
                     <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" alt="Second slide" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
