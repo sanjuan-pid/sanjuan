@@ -2259,6 +2259,10 @@ div#agenda_row img {
       flex: 0 0 100%;
     }
 
+    div#news_contents .card {
+      width: 100% !important;
+    }
+
     #article_title{
         height: 75px !important;
     }
