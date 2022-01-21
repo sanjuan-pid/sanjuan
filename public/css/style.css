@@ -299,6 +299,17 @@ nav ul.dropdown-menu.show {
     -webkit-box-orient: vertical;
     margin-top: 20%;
 }
+
+#article_c{
+    height: 100px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    margin-top: 20%;
+}
 #image_slide{
     width: 473px;
     height: auto;
@@ -309,6 +320,11 @@ div#myCarousel1 div#img_slot {
 div#article_contents {
     padding-right: 15%;
 }
+
+div#article_c {
+    padding-right: 15%;
+}
+
 #article_title{
     height: 90px;
     margin: 0;
@@ -495,9 +511,20 @@ div#bulletin_sec, #news_card {
         height: 178px;
         margin-top:20%;
     }
+    #article_c{
+        font-size:20px;
+        height: 178px;
+        margin-top:20%;
+    }
+
     div#myCarousel1 #article_contents {
         margin-top: 0 !important;
     }
+
+    div#myCarousel1 #article_c {
+        margin-top: 0 !important;
+    }
+
     #article_title{
         font-size:32px;
         height: 75px !important;
@@ -1190,6 +1217,11 @@ div#mayorqr, div#mayors_corner, div#covid_updates, div#news_sec {
     margin-top: 0;
     height: 200px !important;
 }
+#news #article_c{
+    margin-top: 0;
+    height: 200px !important;
+}
+
 #mayorqr .recent_small {
     height: 12px !important;
 }
@@ -2219,6 +2251,11 @@ div#agenda_row img {
     div#article_contents {
         margin-top: 3px;
     }
+
+    div#article_c {
+        margin-top: 3px;
+    }
+
     #current_program .modal-dialog.modal-lg {
         max-width: 100%;
         width: 100%  !important;
