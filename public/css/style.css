@@ -2253,6 +2253,12 @@ div#agenda_row img {
       font-size:25px !important;
     }
 
+    div#news_contents {
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+    }
+
     #article_title{
         height: 75px !important;
     }
