@@ -2245,9 +2245,14 @@ div#agenda_row img {
     div#news_contents img {
         padding: 0 !important;
     }
-    div#news_contents img {
+    div#news_contents .latesimg {
       width: 40% !important;
     }
+
+    div#news_contents h1 {
+      font-size:25px !important;
+    }
+
     #article_title{
         height: 75px !important;
     }
