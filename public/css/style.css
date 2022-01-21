@@ -2245,6 +2245,9 @@ div#agenda_row img {
     div#news_contents img {
         padding: 0 !important;
     }
+    div#news_contents img {
+      width: 40% !important;
+    }
     #article_title{
         height: 75px !important;
     }
