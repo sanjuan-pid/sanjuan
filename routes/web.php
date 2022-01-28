@@ -80,6 +80,10 @@ Route::get('Tourism/vip_page','Pages@vip')->name('vip');
 
 Route::get('/magazine_view/{id}', 'Pages@magazine_view')->name('magazine_view');
 
+//Certificate of Recovery
+Route::get('/certificate_request', 'HomeController1@request_form');
+Route::post('/submit_request', 'HomeController1@submit');
+
 Route::group(['middleware' => 'preventBackHistory'],function(){
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
@@ -224,6 +228,7 @@ Route::prefix('admin')->group(function(){
     Route::get('Tourism/biketrail_page','Pages@biketrail')->name('biketrail');
     Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
     Route::get('Tourism/historical_page','Pages@historical')->name('historical');
+
 
 });
 });
