@@ -151,7 +151,7 @@ class Pages extends Controller
         ->get();
 
     $vips = DB::table('vip_stores')->where('status','1')->get();
-    
+
     // return($act);
     return view('programsandprojects/current_page',compact('act','vips'));
   }
@@ -283,6 +283,11 @@ class Pages extends Controller
  public function historical()
  {
      return view('Tourism/historical_page');
+ }
+ //cert of Recovery
+ public function certofreco()
+ {
+     return view('Services/certofreco_page');
  }
 
   public function exeorder2021()

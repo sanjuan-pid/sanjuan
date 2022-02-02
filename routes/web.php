@@ -51,6 +51,8 @@ Route::get('Services/Announcements1_page','Pages@announce')->name('announce');
 Route::get('Services/Downloadable_page','Pages@downloadable')->name('downloadable');
 Route::get('Services/QuarantineFacilities_page','Pages@quarantine')->name('quarantine');
 Route::get('Services/SJMC_page','Pages@SJMC')->name('SJMC');
+Route::get('Services/certofreco_page','Pages@certofreco')->name('certofreco');
+
 
 Route::get('Events/TourismFestivities_page','Pages@tourism')->name('tourism');
 Route::get('Events/majorcalendar_page','Pages@calendar')->name('calendar');
@@ -203,7 +205,7 @@ Route::prefix('admin')->group(function(){
     //Department - Content
     Route::get('/cont_list', 'Department_ContentController@index')->name('admin.dept.cont_list');
     Route::resource('/cont', 'Department_ContentController');
-    
+
     //Department - Org Chart
     Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
     Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');

@@ -207,6 +207,7 @@
                               <li><a class="dropdown-item" href="{{route('SJMC')}}">SJMC </a></li>
                               <li><a class="dropdown-item" href="{{route('quarantine')}}">Quarantine Facilities</a></li>
                               <li><a class="dropdown-item" href="{{route('downloadable')}}">Downloadable Forms</a></li>
+                              <li><a class="dropdown-item" href="{{route('certofreco')}}">Certificate of Recovery</a></li>
                             </ul>
                           </li>
                           <li class="nav-item dropdown">
@@ -325,6 +326,7 @@
                 <li><a class="dropdown-item" href="{{route('SJMC')}}">SJMC</a></li>
                 <li><a class="dropdown-item" href="{{route('quarantine')}}">Quarantine Facilities</a></li>
                 <li><a class="dropdown-item" href="{{route('downloadable')}}">Downloadable Forms </a></li>
+                <li><a class="dropdown-item" href="{{route('certofreco')}}">Certificate of Recovery</a></li>
                   </ul>
              </li>
              <li class="nav-item dropdown">
