@@ -49,6 +49,6 @@ class AdminController extends Controller
          $clients->save();
         //to redirect
         return redirect()->route('admin.dashboard')->with('success','Data Added');
-        
+
     }
 }
