@@ -254,8 +254,11 @@ $("#monitoring_sheet").on('change', function () {
 
 </script>
 
+<<<<<<< HEAD
 <script>
   datePickerId.max = new Date().toISOString().split("T")[0];
   date_start.max = new Date().toISOString().split("T")[0];
   date_end.max = new Date().toISOString().split("T")[0];
 </script>
+=======
+>>>>>>> fe7c51cfc19e4fc5c5780eeae79162dcffb58007
