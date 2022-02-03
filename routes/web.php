@@ -12,13 +12,17 @@
 */
 
 Route::get('/welcome', 'WelcomeController@index')->name('index');
+Route::get('/sampWelcome', 'Pages@sampWelcome');
 
 Route::get('/', function () {
     return redirect()->route('index');
 });
 
-
 Auth::routes();
+
+Route::get('web/home', 'HomeController@webAdmin')->name('web.admin')->middleware('is_admin');
+Route::get('cho/home', 'HomeController@choAdmin')->name('cho.admin');
+
 Route::get('/contactus_page','Pages@contactus');
 Route::get('/contactus_page', 'EmailerContactUs@index')->name('contactus');
 Route::post('/contactus_page/send', 'EmailerContactUs@send');
@@ -85,12 +89,21 @@ Route::get('/magazine_view/{id}', 'Pages@magazine_view')->name('magazine_view');
 //Certificate of Recovery
 Route::get('/certificate_request', 'HomeController1@request_form');
 Route::post('/submit_request', 'HomeController1@submit');
+Route::get('/list', 'HomeController1@list');
+
+Route::post('/update/{id?}', 'HomeController1@update');
+Route::post('/print_later', 'HomeController1@print_later');
+Route::post('/decline', 'HomeController1@decline');
+
+Route::get('/cho_dashboard', 'HomeController1@cho_dashboard')->name('cho.admin.dashboard');
+Route::get('/cho_request', 'HomeController1@admin')->name('cho.admin.request');
 
 Route::group(['middleware' => 'preventBackHistory'],function(){
 Route::prefix('admin')->group(function(){
+
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard')->middleware('is_admin');
     //user
     Route::get('/records_user/records', 'RecordsController@index')->name('admin.records_user.records');
     Route::resource('/records_user','RecordsController');

@@ -116,7 +116,7 @@
 
                           <div class="col-sm-3">
                              <label>Date Swabbed</label><span style="color: red">*</span>
-                             <input type="date" class="form-control" id="swab_date" name="swab_date" required>
+                             <input type="date" class="form-control" id="datePickerId" id="swab_date" name="swab_date" required>
                           </div>
 
                           <div class="col-sm-3">
@@ -144,9 +144,17 @@
                              </select>
                              <input type="text" class="form-control" style="display: none;" id="other_facility" name="other_facility">
                           </div>
-                          <div class="col-sm-4">
+                          <!-- <div class="col-sm-4">
                                <label>Fit to Work</label><span style="color: red">*</span>
                                <input type="text" class="form-control" id="fit_to_work" name="fit_to_work" required>
+                          </div> -->
+
+                          <div class="col-sm-4">
+                             <label>Fit to Work</label><span style="color: red">*</span>
+                             <select class="form-control" id="fit_to_work" name="fit_to_work">
+                               <option value="YES">Yes</option>
+                               <option value="NO">No</option>
+                             </select>
                           </div>
 
                           <div class="col-sm-4">
@@ -186,7 +194,7 @@
               </div>
 
         </div>
-      
+
       </div>
 
       </div>
@@ -244,4 +252,10 @@ $("#monitoring_sheet").on('change', function () {
     }
 });
 
+</script>
+
+<script>
+  datePickerId.max = new Date().toISOString().split("T")[0];
+  date_start.max = new Date().toISOString().split("T")[0];
+  date_end.max = new Date().toISOString().split("T")[0];
 </script>

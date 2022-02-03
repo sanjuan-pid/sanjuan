@@ -1,13 +1,24 @@
 <?php
-
+  
 namespace App\Http\Controllers\Auth;
-
-use Illuminate\Http\Request;
+   
 use App\Http\Controllers\Controller;
-use Auth;
-
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+   
 class AdminLoginController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+  
     public function __construct()
     {
         $this->middleware('guest:admin');
@@ -16,25 +27,27 @@ class AdminLoginController extends Controller
     {
         return view('auth.admin-login');
     }
-
+   
     public function login(Request $request)
-    {
-      //  validate the form data
-        $this->validate($request,[
+    {   
+        $input = $request->all();
+   
+        $this->validate($request, [
             'email' => 'required|email',
-            'password' => 'required|min:6'
+            'password' => 'required',
         ]);
-      // attemt to login returns true of false
-        if(Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password ], $request->remember)){
-            // if success , redirect home
-            return redirect()->intended(route('admin.dashboard')); // ito para maredirect sa last url / page si user
+   
+        if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
+        {
+            if (auth()->user()->is_admin == 1) {
+                return redirect()->route('admin.dashboard');
+            }elseif (auth()->user()->is_admin == 0){
+                return redirect()->route('cho.admin.dashboard');
+            }
+        }else{
+            return redirect()->route('admin.login')
+                ->with('error','Email-Address And Password Are Wrong.');
         }
-        else{
-            // else, balik sa login
-            return redirect()->back()->withInpit($request->only('email','remember'));
-        }
-     
-        
-      
+          
     }
 }

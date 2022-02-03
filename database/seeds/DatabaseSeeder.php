@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\admin;
+use App\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,14 +12,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
-        admin::create([
-            'name'    => 'Admin',
-            'email'    => 'admin@gmail.com',
-            'filename'    => ' ',
-            'password'   =>  Hash::make('admin123'),
-            'job_title'    => 'superadmin',
-            'remember_token' =>  str_random(10),
-        ]);
+        $user = [
+            [
+               'name'=>'Admin',
+               'email'=>'admin@gmail.com',
+                'is_admin'=>'1',
+               'password'=> bcrypt('123456'),
+            ],
+            [
+               'name'=>'User',
+               'email'=>'user@gmail.com',
+                'is_admin'=>'0',
+               'password'=> bcrypt('123456'),
+            ],
+        ];
+  
+        foreach ($user as $key => $value) {
+            User::create($value);
+        }
     }
 }
