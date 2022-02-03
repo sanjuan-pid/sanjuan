@@ -7,15 +7,6 @@
   height: 150px;
 }
 </style>
-@if(session()->has('message'))
-    <div class="alert alert-success" role="alert" style="text-align: center;">
-        {{ session()->get('message') }}
-    </div>
-@elseif(session()->has('declined'))
-    <div class="alert alert-danger" role="alert" style="text-align: center;">
-        {{ session()->get('declined') }}
-    </div>
-@endif
 <div class="header bg-primary pb-6">
     <div class="container-fluid">
       <div class="header-body">
@@ -30,6 +21,23 @@
         <!-- Card stats -->
         <div class="row">
           <div class="col-xl-12 col-md-12">
+            @if(session()->has('message'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                <span class="alert-text"><strong>Success!</strong>  {{ session()->get('message') }}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            @elseif(session()->has('declined'))
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                <span class="alert-text"><strong>Notice!</strong> {{ session()->get('declined') }}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            @endif
             <div class="card card-stats">
               <!-- Card body -->
               <input type="hidden" id="confirmed" name="confirmed" readonly>
