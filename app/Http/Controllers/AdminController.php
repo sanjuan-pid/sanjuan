@@ -15,7 +15,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth');
     }
 
     /**
@@ -49,6 +49,6 @@ class AdminController extends Controller
          $clients->save();
         //to redirect
         return redirect()->route('admin.dashboard')->with('success','Data Added');
-        
+
     }
 }
