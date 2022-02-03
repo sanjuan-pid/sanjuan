@@ -87,12 +87,15 @@ Route::get('Tourism/vip_page','Pages@vip')->name('vip');
 Route::get('/magazine_view/{id}', 'Pages@magazine_view')->name('magazine_view');
 
 Auth::routes();
+
+//Certificate of Recovery
+Route::get('/certificate_request', 'HomeController@request_form');
+Route::post('/submit_request', 'HomeController@submit');
+
 Route::group(['middleware' => 'preventBackHistory'],function(){
 
     
-    //Certificate of Recovery
-    Route::get('/certificate_request', 'HomeController1@request_form');
-    Route::post('/submit_request', 'HomeController1@submit');
+    //Certificate of Recovery - Admin
     Route::get('/list', 'HomeController1@list');
 
     Route::post('/update/{id?}', 'HomeController1@update');

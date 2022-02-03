@@ -52,7 +52,7 @@
                     <!-- <div class="card-header">Certificate of Recovery Request Form</div> -->
 
                     <div class="card-body">
-                        <form method="POST" action="{{action('HomeController1@submit')}}" id="data_form" enctype="multipart/form-data">
+                        <form method="POST" action="{{action('HomeController@submit')}}" id="data_form" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
 
@@ -254,11 +254,8 @@ $("#monitoring_sheet").on('change', function () {
 
 </script>
 
-<<<<<<< HEAD
 <script>
   datePickerId.max = new Date().toISOString().split("T")[0];
   date_start.max = new Date().toISOString().split("T")[0];
   date_end.max = new Date().toISOString().split("T")[0];
 </script>
-=======
->>>>>>> fe7c51cfc19e4fc5c5780eeae79162dcffb58007
