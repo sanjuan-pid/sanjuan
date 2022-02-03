@@ -12,11 +12,12 @@ use Yajra\DataTables\Facades\DataTables;
 use File;
 use Carbon\Carbon;
 use App\User;
-use App\Applicants;
+use App\Covid_ApplicantsRecovery;
+use JasperPHP\JasperPHP;
 
 class HomeController1 extends Controller
 {
-    
+
 
     /**
      * Show the application dashboard.
@@ -28,14 +29,19 @@ class HomeController1 extends Controller
         return view('home1');
     }
 
+    public function cho_dashboard()
+    {
+        return view('cho - recoverysys.admin_dashboard');
+    }
+
     public function admin()
     {
-        return view('admin_page');
+        return view('cho - recoverysys.admin_page1');
     }
 
     public function list()
     {
-        $applicants = Applicants::all();
+        $applicants = Covid_ApplicantsRecovery::all();
 
         return DataTables::of($applicants)
             ->setRowId('id')
@@ -67,7 +73,7 @@ class HomeController1 extends Controller
 
     public function submit(Request $request)
     {
-        $submit = new Applicants;
+        $submit = new Covid_ApplicantsRecovery;
         $date = Carbon::now();
 
         $submit->date_requested = Carbon::today();
@@ -83,7 +89,7 @@ class HomeController1 extends Controller
         $submit->quarantine_duration = $request->qrtn_duration;
         $submit->date_start = $request->date_start;
         $submit->date_end = $request->date_end;
-        
+
         $fac = $request->facility;
         if($fac == "Others")
         {
@@ -95,7 +101,7 @@ class HomeController1 extends Controller
         }
 
         $submit->fit_to_work = $request->fit_to_work;
-        $submit->contact = $request->contact;        
+        $submit->contact = $request->contact;
         $submit->email = $request->email;
         $submit->save();
 
@@ -107,7 +113,7 @@ class HomeController1 extends Controller
             $this->validate($request, [
                 'swab_result.*' => 'file|mimes:jpeg,png,jpg'
             ]);
-            
+
             $name=$request->swab_result->getClientOriginalName();
             $request->swab_result->move(public_path().'/files/'.$submit->id, $name);  // your folder path
             $submit->swab_result = $name;
@@ -120,7 +126,7 @@ class HomeController1 extends Controller
             $this->validate($request, [
                 'monitoring_sheet.*' => 'file|mimes:jpeg,png,jpg'
             ]);
-            
+
             $name=$request->monitoring_sheet->getClientOriginalName();
             $request->monitoring_sheet->move(public_path().'/files/'.$submit->id, $name);  // your folder path
             $submit->monitoring_sheet = $name;
@@ -128,22 +134,22 @@ class HomeController1 extends Controller
             $submit->save();
         }
 
-        $applicationno = Applicants::find($submit->id);
-        $apps = Applicants::where('year_applied', $date->year)->count();
+        $applicationno = Covid_ApplicantsRecovery::find($submit->id);
+        $apps = Covid_ApplicantsRecovery::where('year_applied', $date->year)->count();
 
         if ($apps<10)
         {
           $save ='CertRequest-'.$date->year.'-0000'.$apps;
         }
-        else if ($apps>=10 && $apps<100) 
+        else if ($apps>=10 && $apps<100)
         {
           $save ='CertRequest-'.$date->year.'-000'.$apps;
         }
-        else if ($apps>=100 && $apps<1000) 
+        else if ($apps>=100 && $apps<1000)
         {
           $save ='CertRequest-'.$date->year.'-00'.$apps;
         }
-        else if ($apps>=1000) 
+        else if ($apps>=1000)
         {
           $save ='CertRequest-'.$date->year.'-0'.$apps;
         }
@@ -160,19 +166,19 @@ class HomeController1 extends Controller
 
     public function update($id)
     {
-        $update = Applicants::find($id);
+        $update = Covid_ApplicantsRecovery::find($id);
         $update->confirmed = 1;
         $update->filename = "CertRecovery_".$id.".pdf";
         $update->save();
 
-        
+
 
         return Response::json($update);
     }
 
     public function decline(Request $request)
     {
-        $update = Applicants::where('id', $request->id)->first();
+        $update = Covid_ApplicantsRecovery::where('id', $request->id)->first();
         $update->confirmed = 2;
         $update->remarks = $request->remarks;
         $update->save();
@@ -182,7 +188,7 @@ class HomeController1 extends Controller
 
     public function print_later(Request $request)
     {
-        $update = Applicants::where('id', $request->printID)->first();
+        $update = Covid_ApplicantsRecovery::where('id', $request->printID)->first();
         $update->print_now = 0;
         $update->save();
         // dd($update);
