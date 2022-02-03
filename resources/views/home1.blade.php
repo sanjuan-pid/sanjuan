@@ -186,9 +186,7 @@
               </div>
 
         </div>
-        <!-- <div class="col-4 imgdes">
-            <img class="w-100 mt-4" src="{{asset('assets/cert.png')}}" alt="Card image cap">
-        </div> -->
+      
       </div>
 
       </div>
