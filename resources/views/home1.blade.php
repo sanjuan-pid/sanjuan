@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <style>
   .certreco{
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 70%), 0 2px 10px 0 rgb(0 0 0 / 70%);
@@ -41,7 +39,7 @@
       <div class="certreco">
         <div class="row">
           <div class="col-12" style="padding:0;">
-            <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700; font-size:40px;">Request Form</h2>
+            <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700; font-size:40px;">REQUEST FORM</h2>
           </div>
 
             <div class="col-12" style="padding-left: 20px; padding-right: 20px;">
@@ -116,20 +114,20 @@
                               <input type="text" class="form-control" id="city" name="city" value="San Juan City" readonly>
                           </div>
 
-                          <div class="col-sm-12">
+                          <div class="col-sm-3">
                              <label>Date Swabbed</label><span style="color: red">*</span>
                              <input type="date" class="form-control" id="swab_date" name="swab_date" required>
                           </div>
 
-                          <div class="col-sm-4">
+                          <div class="col-sm-3">
                               <label>Quarantine Date Start</label><span style="color: red">*</span>
                               <input type="date" class="form-control qrt_date" id="date_start" name="date_start" required>
                           </div>
-                          <div class="col-sm-4">
+                          <div class="col-sm-3">
                               <label>Quarantine Date End</label><span style="color: red">*</span>
                               <input type="date" class="form-control qrt_date" id="date_end" name="date_end" required>
                           </div>
-                          <div class="col-sm-4">
+                          <div class="col-sm-3">
                               <label>Quarantine Duration</label>
                               <input type="text" class="form-control" id="qrtn_duration" name="qrtn_duration" value="0" readonly>
                           </div>
@@ -249,5 +247,3 @@ $("#monitoring_sheet").on('change', function () {
 });
 
 </script>
-
-@endsection
