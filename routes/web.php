@@ -18,7 +18,7 @@ Route::get('/', function () {
     return redirect()->route('index');
 });
 
-Auth::routes();
+
 
 Route::get('web/home', 'HomeController@webAdmin')->name('web.admin')->middleware('is_admin');
 Route::get('cho/home', 'HomeController@choAdmin')->name('cho.admin');
@@ -86,20 +86,24 @@ Route::get('Tourism/vip_page','Pages@vip')->name('vip');
 
 Route::get('/magazine_view/{id}', 'Pages@magazine_view')->name('magazine_view');
 
-//Certificate of Recovery
-Route::get('/certificate_request', 'HomeController1@request_form');
-Route::post('/submit_request', 'HomeController1@submit');
-Route::get('/list', 'HomeController1@list');
-
-Route::post('/update/{id?}', 'HomeController1@update');
-Route::post('/print_later', 'HomeController1@print_later');
-Route::post('/decline', 'HomeController1@decline');
-
-Route::get('/cho_dashboard', 'HomeController1@cho_dashboard')->name('cho.admin.dashboard');
-Route::get('/cho_request', 'HomeController1@admin')->name('cho.admin.request');
-
+Auth::routes();
 Route::group(['middleware' => 'preventBackHistory'],function(){
+
+    
+    //Certificate of Recovery
+    Route::get('/certificate_request', 'HomeController1@request_form');
+    Route::post('/submit_request', 'HomeController1@submit');
+    Route::get('/list', 'HomeController1@list');
+
+    Route::post('/update/{id?}', 'HomeController1@update');
+    Route::post('/print_later', 'HomeController1@print_later');
+    Route::post('/decline', 'HomeController1@decline');
+
+    Route::get('/cho_dashboard', 'HomeController1@cho_dashboard')->name('cho.admin.dashboard');
+    Route::get('/cho_request', 'HomeController1@admin')->name('cho.admin.request');
+
 Route::prefix('admin')->group(function(){
+ 
 
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
