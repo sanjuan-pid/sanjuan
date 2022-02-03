@@ -31,7 +31,11 @@ class HomeController1 extends Controller
 
     public function cho_dashboard()
     {
-        return view('cho - recoverysys.admin_dashboard');
+        $Total = Covid_ApplicantsRecovery::all()->count();
+        $Pending = Covid_ApplicantsRecovery::where('confirmed','=', null)->count();
+        $Confirmed = Covid_ApplicantsRecovery::where('confirmed','=', '1')->count();
+        $Declined = Covid_ApplicantsRecovery::where('confirmed','=', '2')->count();
+       return view('cho - recoverysys.admin_dashboard', compact('Total','Pending','Confirmed','Declined'));
     }
 
     public function admin()
