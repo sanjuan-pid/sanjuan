@@ -478,13 +478,13 @@
             </a>
           </div>
 
-          <div class="col-5 clearfix d-md-block" style="visibility: hidden;">
-            <a href="{{asset('assets/dlforms/CFEI (CERTIFICATE OF FINAL ELECTRICAL INSPECTION-COMPLETION).pdf')}}" download>
+          <div class="col-5 clearfix d-md-block">
+            <a href="{{asset('assets/dlforms/UNIFIED APPLICATION FORM FOR BUILDING PERMIT rev 02FEB2022.pdf')}}" download>
               <div class="card mb-2 dlcard">
                 <div class="card-body" style="padding: 10px;">
                   <div class="row">
                     <div class="col-10" style="padding-top:2%;">
-                      <h5 class="dltitle" style="font-size:18px;">CFEI (CERTIFICATE OF FINAL ELECTRICAL INSPECTION-COMPLETION)</h5>
+                      <h5 class="dltitle" style="font-size:18px;">UNIFIED APPLICATION FORM FOR BUILDING PERMIT rev 02FEB2022</h5>
                     </div>
                     <div class="col-2">
                       <button class="dlbtn"><i class="fa fa-download"></i></button>
