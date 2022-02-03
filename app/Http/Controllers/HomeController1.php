@@ -12,7 +12,8 @@ use Yajra\DataTables\Facades\DataTables;
 use File;
 use Carbon\Carbon;
 use App\User;
-use App\Applicants;
+use App\Covid_ApplicantsRecovery;
+use JasperPHP\JasperPHP;
 
 class HomeController1 extends Controller
 {
@@ -28,14 +29,19 @@ class HomeController1 extends Controller
         return view('home1');
     }
 
+    public function cho_dashboard()
+    {
+        return view('cho - recoverysys.admin_dashboard');
+    }
+
     public function admin()
     {
-        return view('admin_page');
+        return view('cho - recoverysys.admin_page1');
     }
 
     public function list()
     {
-        $applicants = Applicants::all();
+        $applicants = Covid_ApplicantsRecovery::all();
 
         return DataTables::of($applicants)
             ->setRowId('id')
@@ -67,7 +73,7 @@ class HomeController1 extends Controller
 
     public function submit(Request $request)
     {
-        $submit = new Applicants;
+        $submit = new Covid_ApplicantsRecovery;
         $date = Carbon::now();
 
         $submit->date_requested = Carbon::today();
@@ -128,8 +134,8 @@ class HomeController1 extends Controller
             $submit->save();
         }
 
-        $applicationno = Applicants::find($submit->id);
-        $apps = Applicants::where('year_applied', $date->year)->count();
+        $applicationno = Covid_ApplicantsRecovery::find($submit->id);
+        $apps = Covid_ApplicantsRecovery::where('year_applied', $date->year)->count();
 
         if ($apps<10)
         {
@@ -160,7 +166,7 @@ class HomeController1 extends Controller
 
     public function update($id)
     {
-        $update = Applicants::find($id);
+        $update = Covid_ApplicantsRecovery::find($id);
         $update->confirmed = 1;
         $update->filename = "CertRecovery_".$id.".pdf";
         $update->save();
@@ -172,7 +178,7 @@ class HomeController1 extends Controller
 
     public function decline(Request $request)
     {
-        $update = Applicants::where('id', $request->id)->first();
+        $update = Covid_ApplicantsRecovery::where('id', $request->id)->first();
         $update->confirmed = 2;
         $update->remarks = $request->remarks;
         $update->save();
@@ -182,7 +188,7 @@ class HomeController1 extends Controller
 
     public function print_later(Request $request)
     {
-        $update = Applicants::where('id', $request->printID)->first();
+        $update = Covid_ApplicantsRecovery::where('id', $request->printID)->first();
         $update->print_now = 0;
         $update->save();
         // dd($update);
