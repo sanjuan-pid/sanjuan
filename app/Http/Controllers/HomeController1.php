@@ -84,7 +84,14 @@ class HomeController1 extends Controller
         $update->filename = "CertRecovery_".$id.".pdf";
         $update->save();
 
-
+        $connection = ['driver' => 'generic',
+                    'username' => 'root',
+                    'password' => '',
+                    'jdbc_driver' => 'com.mysql.jdbc.Driver',
+                    'jdbc_url' => 'jdbc:mysql://localhost/pid'];
+        $jasperPHP = new JasperPHP;
+        $output = public_path().'/files/'.$id.'/CertRecovery_'.$update->id;
+        $jasperPHP->process(public_path() . '/report1.jasper',$output,array("pdf"),array("app_id" => $update->id),$connection)->execute();
 
         return Response::json($update);
     }
