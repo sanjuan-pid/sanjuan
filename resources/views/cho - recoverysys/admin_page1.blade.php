@@ -12,11 +12,18 @@ button.dt-button {
     font-size: 15px;
     font-weight: 700;
 }
+div.dt-buttons {
+    float: right;
+}
 button.dt-button:hover{
   background-color: lightgreen !important;
   color: black;
   font-size: 15px;
   font-weight: 700 !important;
+}
+.dataTables_wrapper .dataTables_filter {
+    float: left;
+    text-align: left;
 }
 @media only screen and (max-width: 1600px) and (min-width: 900px){
   #datat.d-flex {
