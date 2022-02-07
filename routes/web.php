@@ -74,9 +74,9 @@ Route::get('publicnotice/Announcements_page','Pages@announce1')->name('announce1
 
 Route::get('/directory_page','Pages@directory')->name('direct');
 
-Route::get('/department_page','Pages@department')->name('department');
-Route::get('/department_content','Pages@department_content')->name('dept_cont');
-Route::get('/department_selected','Pages@department_selected')->name('department_selected');
+// Route::get('/department_page','Pages@department')->name('department');
+// Route::get('/department_content','Pages@department_content')->name('dept_cont');
+// Route::get('/department_selected','Pages@department_selected')->name('department_selected');
 
 Route::get('Login/employee_page','Pages@employee')->name('employee');
 Route::get('Login/residence_page','Pages@residence')->name('residence');
@@ -207,29 +207,29 @@ Route::prefix('admin')->group(function(){
     Route::resource('/article','ArticleController');
 
 
-    //Department
-    Route::get('/department/department-list', 'DeparmentController@index')->name('admin.department.deparment-list');
-    Route::post('/department/department-create', 'DeparmentController@create')->name('admin.department.deparment-create');
-    //child
-    Route::get('/department/child_dept/{id}','DeparmentController@child')->name('admin.department.child_dept');
-    Route::get('/department/child_dept_edit/{id}', 'DeparmentController@child_edit')->name('admin.department.deparment-edit');
-    Route::get('/department/department-create-child', 'DeparmentController@create_child')->name('admin.department.deparment-creates');
-    Route::post('/department/child_dept_edit/{id}', 'DeparmentController@update_child')->name('admin.department.deparment-update');
-    Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
-    Route::resource('/department','DeparmentController');
+    // Department
+    // Route::get('/department/department-list', 'DeparmentController@index')->name('admin.department.deparment-list');
+    // Route::post('/department/department-create', 'DeparmentController@create')->name('admin.department.deparment-create');
+    // child
+    // Route::get('/department/child_dept/{id}','DeparmentController@child')->name('admin.department.child_dept');
+    // Route::get('/department/child_dept_edit/{id}', 'DeparmentController@child_edit')->name('admin.department.deparment-edit');
+    // Route::get('/department/department-create-child', 'DeparmentController@create_child')->name('admin.department.deparment-creates');
+    // Route::post('/department/child_dept_edit/{id}', 'DeparmentController@update_child')->name('admin.department.deparment-update');
+    // Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
+    // Route::resource('/department','DeparmentController');
 
     //Department - Main
-    Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
-    Route::resource('/dept', 'Department_MainController');
+    // Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
+    // Route::resource('/dept', 'Department_MainController');
 
     //Department - Content
-    Route::get('/cont_list', 'Department_ContentController@index')->name('admin.dept.cont_list');
-    Route::resource('/cont', 'Department_ContentController');
+    // Route::get('/cont_list', 'Department_ContentController@index')->name('admin.dept.cont_list');
+    // Route::resource('/cont', 'Department_ContentController');
 
     //Department - Org Chart
-    Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
-    Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
-    Route::resource('/org', 'Department_OrgChartController');
+    // Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
+    // Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
+    // Route::resource('/org', 'Department_OrgChartController');
 
     //VIP Stores
     Route::get('/vip_list', 'Admin_VIPController@index')->name('admin.vip.vip_list');
@@ -250,6 +250,27 @@ Route::prefix('admin')->group(function(){
     Route::get('Tourism/biketrail_page','Pages@biketrail')->name('biketrail');
     Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
     Route::get('Tourism/historical_page','Pages@historical')->name('historical');
+
+    Route::get('deparment/department_page','Pages@department')->name('department');
+    Route::get('deparment/department_content','Pages@deptcon')->name('cd');
+    Route::get('deparment/department_content2','Pages@deptcon2')->name('cd2');
+    Route::get('deparment/department_content3','Pages@deptcon3')->name('cd3');
+    Route::get('deparment/department_content4','Pages@deptcon4')->name('cd4');
+    Route::get('deparment/department_content5','Pages@deptcon5')->name('cd5');
+
+    Route::get('departmentname/admin_page','Pages@Admin')->name('Admin');
+    Route::get('departmentname/cityassessor_page','Pages@assessor')->name('assessor');
+    Route::get('departmentname/citybudget_page','Pages@budget')->name('budget');
+    Route::get('departmentname/brgyoperations_page','Pages@brgyope')->name('brgyope');
+    Route::get('departmentname/brgyoperations_page','Pages@civilreg')->name('civilreg');
+    Route::get('departmentname/citycooperativedevelopment_page','Pages@citycooperative')->name('citycooperative');
+    Route::get('departmentname/generalservices_page','Pages@generalservices')->name('generalservices');
+    Route::get('departmentname/cityhealthdepartment_page','Pages@cityhealth')->name('cityhealth');
+    Route::get('departmentname/businesspermitandlicenseoffice_page','Pages@bplo')->name('bplo');
+    Route::get('departmentname/citybuilding_page','Pages@obo')->name('obo');
+
+    Route::get('/departmentname/accounting_page','Pages@accounting')->name('acct');
+    Route::get('/departmentname/treasury_page','Pages@treasury')->name('trea');
 
 
 });

@@ -318,38 +318,38 @@ class Pages extends Controller
     {
         return view('Login/visitor_page');
     }
-    public function department()
-    {
-      return view('Events/Brgy_page');
-    $dept = DB::select('select * from department
-    where status= 1');
-    // dd($dept);
-        return view('deparment.department_page',compact('dept'));
-    //    return view('deparment.department_page',compact('dept'));
-    }
-    public function department_content()
-    {
-        $dept = DB::select('select * from department
-        where status= 1');
-        $child = DB::select('SELECT *
-                            FROM department
-                            JOIN department_child ON department.id=department_child.sector');
-        // dd($dept);
-            return view('deparment.department_content',compact('dept','child'));
-    }
+    // public function department()
+    // {
+    //   return view('Events/Brgy_page');
+    // $dept = DB::select('select * from department
+    // where status= 1');
+    // // dd($dept);
+    //     return view('deparment.department_page',compact('dept'));
+    // //    return view('deparment.department_page',compact('dept'));
+    // }
+    // public function department_content()
+    // {
+    //     $dept = DB::select('select * from department
+    //     where status= 1');
+    //     $child = DB::select('SELECT *
+    //                         FROM department
+    //                         JOIN department_child ON department.id=department_child.sector');
+    //     // dd($dept);
+    //         return view('deparment.department_content',compact('dept','child'));
+    //}
 
     public function directory()
     {
         return view('directory.directory_page');
     }
-    public function department_selected()
-    {
-        $child = DB::select('SELECT *
-                            FROM department_child
-                            WHERE status= 1');
-        //  dd($child);
-        return view('deparment.department_selected',compact('child'));
-    }
+    // public function department_selected()
+    // {
+    //     $child = DB::select('SELECT *
+    //                         FROM department_child
+    //                         WHERE status= 1');
+    //     //  dd($child);
+    //     return view('deparment.department_selected',compact('child'));
+    // }
     public function transparency()
     {
         return view('transparency');
@@ -360,4 +360,76 @@ class Pages extends Controller
         $magz = Magazine::find($id);
         return view('admin.magazine.magazine_show' ,compact('magz', 'id'));
     }
+
+    //Department
+public function department()
+{
+    return view('deparment/department_page');
 }
+public function deptcon()
+{
+    return view('deparment/department_content');
+}
+public function deptcon2()
+{
+    return view('deparment/department_content2');
+}
+public function deptcon3()
+{
+    return view('deparment/department_content3');
+}
+public function deptcon4()
+{
+    return view('deparment/department_content4');
+}
+public function deptcon5()
+{
+    return view('deparment/department_content5');
+}
+public function Admin()
+{
+  return view('departmentname/admin_page');
+}
+public function assessor()
+{
+    return view('departmentname/cityassessor_page');
+}
+public function budget()
+{
+return view('departmentname/citybudget_page');
+}
+public function brgyope()
+{
+return view('departmentname/brgyoperations_page');
+}
+public function civilreg()
+{
+return view('departmentname/civilregistry_page');
+}
+public function citycoop()
+{
+return view('departmentname/citycooperativedevelopment_page');
+}
+public function citycooperative()
+{
+return view('departmentname/citycooperativedevelopment_page');
+}
+public function generalservices()
+{
+return view('departmentname/generalservices_page');
+}
+public function cityhealth()
+{
+return view('departmentname/cityhealthdepartment_page');
+}
+public function obo()
+{
+return view('departmentname/citybuilding_page');
+}
+public function bplo()
+{
+return view('departmentname/businesspermitandlicenseoffice_page');
+}
+}
+
+
