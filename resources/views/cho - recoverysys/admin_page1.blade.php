@@ -19,14 +19,14 @@ button.dt-button:hover{
   font-weight: 700 !important;
 }
 @media only screen and (max-width: 1600px) and (min-width: 900px){
-  .d-flex {
+  #datat.d-flex {
     display: flex !important;
     flex-direction: column;
 }
 }
 </style>
 <div class="header bg-primary pb-6">
-    <div class="container-fluid d-flex justify-content-center" style="max-width: 100% !important;">
+    <div id="datat" class="container-fluid d-flex justify-content-center" style="max-width: 100% !important;">
 
         <!-- Card stats -->
         <div class="row mt-3">
