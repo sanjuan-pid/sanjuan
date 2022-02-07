@@ -23,6 +23,7 @@ button.dt-button:hover{
     display: flex !important;
     flex-direction: column;
 }
+}
 </style>
 <div class="header bg-primary pb-6">
     <div class="container-fluid d-flex justify-content-center" style="max-width: 100% !important;">
