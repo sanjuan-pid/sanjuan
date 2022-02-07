@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<style>
+  .nav-link-text{
+    font-size: 20px;
+  }
+</style>
 <html>
 
 <head>
