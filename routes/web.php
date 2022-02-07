@@ -12,13 +12,17 @@
 */
 
 Route::get('/welcome', 'WelcomeController@index')->name('index');
+Route::get('/sampWelcome', 'Pages@sampWelcome');
 
 Route::get('/', function () {
     return redirect()->route('index');
 });
 
 
-Auth::routes();
+
+Route::get('web/home', 'HomeController@webAdmin')->name('web.admin')->middleware('is_admin');
+Route::get('cho/home', 'HomeController@choAdmin')->name('cho.admin');
+
 Route::get('/contactus_page','Pages@contactus');
 Route::get('/contactus_page', 'EmailerContactUs@index')->name('contactus');
 Route::post('/contactus_page/send', 'EmailerContactUs@send');
@@ -51,6 +55,8 @@ Route::get('Services/Announcements1_page','Pages@announce')->name('announce');
 Route::get('Services/Downloadable_page','Pages@downloadable')->name('downloadable');
 Route::get('Services/QuarantineFacilities_page','Pages@quarantine')->name('quarantine');
 Route::get('Services/SJMC_page','Pages@SJMC')->name('SJMC');
+Route::get('Services/certofreco_page','Pages@certofreco')->name('certofreco');
+
 
 Route::get('Events/TourismFestivities_page','Pages@tourism')->name('tourism');
 Route::get('Events/majorcalendar_page','Pages@calendar')->name('calendar');
@@ -80,11 +86,31 @@ Route::get('Tourism/vip_page','Pages@vip')->name('vip');
 
 Route::get('/magazine_view/{id}', 'Pages@magazine_view')->name('magazine_view');
 
+Auth::routes();
+
+//Certificate of Recovery
+Route::get('/certificate_request', 'HomeController@request_form');
+Route::post('/submit_request', 'HomeController@submit');
+
 Route::group(['middleware' => 'preventBackHistory'],function(){
+
+    
+    //Certificate of Recovery - Admin
+    Route::get('/list', 'HomeController1@list');
+
+    Route::post('/update/{id?}', 'HomeController1@update');
+    Route::post('/print_later', 'HomeController1@print_later');
+    Route::post('/decline', 'HomeController1@decline');
+
+    Route::get('/cho_dashboard', 'HomeController1@cho_dashboard')->name('cho.admin.dashboard');
+    Route::get('/cho_request', 'HomeController1@admin')->name('cho.admin.request');
+
 Route::prefix('admin')->group(function(){
+ 
+
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard')->middleware('is_admin');
     //user
     Route::get('/records_user/records', 'RecordsController@index')->name('admin.records_user.records');
     Route::resource('/records_user','RecordsController');
@@ -199,7 +225,7 @@ Route::prefix('admin')->group(function(){
     //Department - Content
     Route::get('/cont_list', 'Department_ContentController@index')->name('admin.dept.cont_list');
     Route::resource('/cont', 'Department_ContentController');
-    
+
     //Department - Org Chart
     Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
     Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
@@ -224,6 +250,7 @@ Route::prefix('admin')->group(function(){
     Route::get('Tourism/biketrail_page','Pages@biketrail')->name('biketrail');
     Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
     Route::get('Tourism/historical_page','Pages@historical')->name('historical');
+
 
 });
 });
