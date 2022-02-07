@@ -28,9 +28,9 @@
 
   .thmb:hover{
     box-shadow: 10px 10px 10px rgb(0 0 0 / 50%) !important;
-    -ms-transform: scale(1.1); /* IE 9 /
+    -ms-transform: scale(1.0); /* IE 9 /
     -webkit-transform: scale(1.1); / Safari 3-8 */
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
     @media screen and (max-width: 766px) and (min-width: 200px){
     div#overlay {
@@ -39,8 +39,8 @@
       flex: 0 0 100%;
     }
     div#text {
-      max-width: 100% !important;
-      width: 100% !important;
+      max-width: 80% !important;
+      width: 80% !important;
       flex: 0 0 100%;
     }
     .annindex{
@@ -57,6 +57,17 @@
       max-width: 100% !important;
       width: 100% !important;
       flex: 0 0 100%;
+    }
+    .carousel-item img{
+      width: 100% !important;
+    }
+    #overlay .btn-sm{
+      padding-left: 3% !important;
+      padding-right: 3% !important;
+      padding-top: 1% !important;
+      padding-bottom: 1% !important;
+      font-size: 10px !important;
+
     }
   }
   @media screen and (min-device-width: 1601px) and (max-device-width: 1920px) {
@@ -186,6 +197,10 @@
 .demo:hover {
   opacity: 1;
 }
+
+/* .caro_sel .caro_item {
+    transition-duration: 5s;
+} */
   </style>
     {{-- <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
@@ -217,13 +232,8 @@
           <div class="card shadow-none" style="border-style: solid; border-width: 3px;">
             <div class="card-body text-center" style="padding:15px; padding-bottom:40px;">
               <div class="row">
-                <div class="col-12">
-                  <button type="button" class="btn btn-default close_pause" id="off" style="background-color:red; float:right; font-weight:900; font-size:20px; margin-top: 0;">X</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-                  <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
+                <div class="col-12" style="padding:0;">
+                  <button type="button" class="btn btn-sm btn-default close_pause" id="off" style="background-color:red; float:right; font-weight:600; font-size:15px; margin-top: 0; padding-left: 2%; padding-right: 2%;">X</button>
                 </div>
               </div>
               <!-- <div class="row">
@@ -231,42 +241,42 @@
                   <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
                 </div>
               </div> -->
-              <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <!-- <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                  <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
+                </div>
+              </div> -->
+               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <a href="/bplocarousel/renewalbplo.pdf"><img class="d-block w-100" src="{{asset('assets/bplorenew.png')}}" alt="First slide"></a>
+                <div class="carousel-inner caro_sel">
+                  <div class="carousel-item caro_item active" data-interval="5000">
+                    <img class="w-50 thmb" src="{{asset('assets/schedtax.jpg')}}" alt="First slide"/>
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="{{asset('assets/SANJUAN.jpg')}}" alt="Second slide">
+                  <div class="carousel-item" data-interval="5000">
+                    <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" alt="Second slide" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
                   </div>
-                  <div class="carousel-item">
-                    <a target="_blank" href="{{action('Pages@magazine_view', $thumbnail->id)}}"><img class="w-50 thmb" src="{{asset("uploads/" . $thumbnail->magz_filename)}}" style=" box-shadow: 0 2px 8px rgba(0, 0, 0, 40%);"></a>
-                  </div>
+
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
+                    <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%;rotation: 180deg;transform: rotate(180deg); fill:white !important;"/> </span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
+                  <span><img src={{asset('assets/right-arrow.svg')}} style="width: 25%; fill:white !important;"/> </span>
                 </a>
-              </div> -->
+              </div>
               </div>
             </div>
           </div>
       </div>
 
-      <!-- <div class="container bannerevents mb-3" style="padding:0;">
+      <div class="container bannerevents mb-3" style="padding:0;">
         <div class="col-12 d-flex justify-content-center" style="padding:0; ">
-          <img style=" width: 100%;" src="{{asset('assets/xmas.gif')}}">
+          <img style=" width: 100%;" src="{{asset('assets/hearts.gif')}}">
         </div>
-      </div> -->
+      </div>
 
       <div class="container karosel mt-2" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
         <div class="row justify-content-md-center" style="position:relative;">
@@ -430,7 +440,7 @@
                       </div>
 
                       <div class="card-body">
-                         <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span> 
+                         <span class="card-title" style="margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;"><a href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" ><?php echo $row22['title'] ?> </a></span>
 
                         <a class="btn btn-primary" href="{{action( 'Pages@news_contents', $row22->id )}}" target="_blank" >View More</a>
                       </div>
@@ -521,67 +531,25 @@
 
   </div>
 </div>
-<div class="container vaxxcert">
+</div>
+<div class="container vaxxcert" style="width:100%;">
   <div class="row">
     <div class="col-12">
-      <div class="card" id="news_card">
-        <div class="card-body" style="padding: 0;overflow-y: auto;border: 3px solid #003471;">
-          <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; font-weight:700; text-align:center;">HOW TO GET VAXCERTPH</h2>
-          <div class="col-12">
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">1 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v1.jpg')}}" style="width:25%">
+        <div class="card">
+          <div class="card-body" style="padding: 0;overflow-y: auto; border: 3px solid #003471; border-radius: 5px;">
+            <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; font-weight:700; text-align:center;">HOW TO GET VAXCERTPH</h2>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8">
+                <video style="width:100%;" controls autoplay controls loop>
+                  <source src="{{asset('assets/vxcert.mp4')}}" type="video/mp4">
+                </video>
+              </div>
             </div>
-
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">2 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v2.jpg')}}" style="width:25%">
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">3 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v3.jpg')}}" style="width:25%">
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext" style="color:black;">4 / 6</div>
-              <img class="imgcert" src="{{asset('assets/vaxcert/v4.jpg')}}" style="width:25%">
-            </div>
-
-      <div class="mySlides">
-        <div class="numbertext" style="color:black;">5 / 6</div>
-        <img class="imgcert" src="{{asset('assets/vaxcert/v5.jpg')}}" style="width:25%">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-
-      <br>
-      <div class="row d-flex justify-content-center">
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v1.jpg')}}" style="width:80%" onclick="currentSlide(1)" alt="STEP 1">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v2.jpg')}}" style="width:80%" onclick="currentSlide(2)" alt="STEP 2">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v3.jpg')}}" style="width:80%" onclick="currentSlide(3)" alt="STEP 3">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v4.jpg')}}" style="width:80%" onclick="currentSlide(4)" alt="STEP 4">
-        </div>
-        <div class="column">
-          <img  class="demo cursor" src="{{asset('assets/vaxcert/v5.jpg')}}" style="width:80%" onclick="currentSlide(5)" alt="STEP 5">
+          </div>
         </div>
       </div>
-      <br>
-      </div>
-        </div>
-      </div>
-    </div>
     </div>
   </div>
-</div>
 <br>
 @include('layouts.index.mayors')
     {{-- @include('layouts.index.news') --}}

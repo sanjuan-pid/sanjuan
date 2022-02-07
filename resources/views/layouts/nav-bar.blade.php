@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<style>
+  .heart{
+    color: red;
+    font-size: 30px !important;
+  }
+</style>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
       <meta charset="UTF-8">
@@ -40,44 +46,30 @@
           <a href="{{route('calendar')}}"><img  style="width:13%; position: fixed; margin-top: 28%; z-index: 999; margin-left: 85%;"src="{{asset('assets/yorme.png')}}"/></a>
         </div> -->
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" style="font-size:30px;"></i></button>
-        <!-- <div class="container snowflakes" id="nav">
-          <div class="snowflake snowsnow">
-           ❅
+        <div class="container snowflakes" id="nav">
+          <div class="snowflake heart">
+           ♥
            </div>
-           <div class="snowflake snowsnow">
-           ❆
+           <div class="snowflake heart">
+           ♥
            </div>
-           <div class="snowflake snowsnow">
-           ❅
+           <div class="snowflake heart">
+           ♥
            </div>
-           <div class="snowflake snowsnow">
-           ❆
+           <div class="snowflake heart">
+           ♥
            </div>
-           <div class="snowflake snowsnow">
-           ❅
+           <div class="snowflake heart">
+           ♥
            </div>
-           <div class="snowflake snowsnow">
-           ❆
+           <div class="snowflake heart">
+           ♥
            </div>
-           <div class="snowflake snowsnow">
-             ❅
+           <div class="snowflake heart">
+             ♥
            </div>
-           <div class="snowflake snowsnow">
-             ❆
-           </div>
-           <div class="snowflake snowsnow">
-             ❅
-           </div>
-           <div class="snowflake snowsnow">
-             ❆
-           </div>
-           <div class="snowflake snowsnow">
-             ❅
-           </div>
-           <div class="snowflake snowsnow">
-             ❆
-           </div>
-         </div> -->
+           
+         </div>
         <div class="container" id="nav">
             <div class="row" style="background:rgb(27, 37, 96); color:#fff; padding: 4px 0;">
               {{-- <div class="soc_med col-sm-6">
@@ -207,6 +199,7 @@
                               <li><a class="dropdown-item" href="{{route('SJMC')}}">SJMC </a></li>
                               <li><a class="dropdown-item" href="{{route('quarantine')}}">Quarantine Facilities</a></li>
                               <li><a class="dropdown-item" href="{{route('downloadable')}}">Downloadable Forms</a></li>
+                              <li><a class="dropdown-item" href="{{route('certofreco')}}">Certificate of Recovery</a></li>
                             </ul>
                           </li>
                           <li class="nav-item dropdown">
@@ -325,6 +318,7 @@
                 <li><a class="dropdown-item" href="{{route('SJMC')}}">SJMC</a></li>
                 <li><a class="dropdown-item" href="{{route('quarantine')}}">Quarantine Facilities</a></li>
                 <li><a class="dropdown-item" href="{{route('downloadable')}}">Downloadable Forms </a></li>
+                <li><a class="dropdown-item" href="{{route('certofreco')}}">Certificate of Recovery</a></li>
                   </ul>
              </li>
              <li class="nav-item dropdown">
