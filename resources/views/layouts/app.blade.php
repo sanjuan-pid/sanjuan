@@ -3,6 +3,9 @@
   .nav-link-text{
     font-size: 20px;
   }
+  .navbar-vertical .navbar-nav .nav-link > i {
+    font-size: 25px !important;
+  }
 </style>
 <html>
 
