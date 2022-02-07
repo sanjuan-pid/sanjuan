@@ -33,7 +33,7 @@
      <div class="scrollbar-inner">
        <!-- Brand -->
        <div class="sidenav-header d-flex align-items-center">
-         <a class="navbar-brand" href="../../pages/dashboards/dashboard.html">
+         <a class="navbar-brand" href="{{route('cho.admin.dashboard')}}">
            <img src="{{asset('img/brand/cho-blue.png')}}" class="navbar-brand-img" alt="...">
          </a>
          <div class="ml-auto">
