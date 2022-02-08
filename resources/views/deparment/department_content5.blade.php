@@ -626,7 +626,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Office of the City Admin</h5>
-                                <p class="card-text"></p>
+                                <p class="card-text" style="width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> The Office of the City Administrator, through its ceaseless determination for better governance of the City of San Juan, devises strategic plans of action and initiatives to bolster management within the City Government and to improve the delivery of various government services.</p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
