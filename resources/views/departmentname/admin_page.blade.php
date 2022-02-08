@@ -101,9 +101,58 @@ body {
     height: 100%;
   }
 }
+@media screen and (max-width: 766px) and (min-width: 200px){
+  #adminpg{
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+  #adminpg img{
+    width: 100% !important;
+  }
+  .ourserve{
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+  .ourserve .capbody h4{
+    font-size: 15px !important;
+  }
+  #adminpg h3{
+    font-size: 20px;
+  }
+  .adminmenu{
+    display: none;
+  }
+  .adminmenumob{
+    display: block !important;
+  }
+  a.btn.btn-primary {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .admincard .col-4{
+    flex: 100% !important;
+    max-width: 100% !important;
+  }
+  .ourserve .modalss{
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+}
+
+
+
 .capbody h4{
   font-weight: 800 !important;
 }
+.adminmenumob .btn-primary{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
 </style>
 <div class="container">
     <div class="row">
@@ -113,11 +162,17 @@ body {
 
 <br>
 
-<div class="container" style="width: 95%;">
-  <div class="row">
+<div class="container" id="adminpg" style="width: 95%;">
+  <div class="row adminmenu">
     <div class="col-6">
       <h3><a class="deptlink" href="/">HOME</a> <a style="font-size: 18px !important; font-weight: 600 !important;" href=""> ></a> <a class="deptlink" href="{{route('department')}}"> DEPARTMENTS</a> <a style="font-size: 18px !important; font-weight: 600 !important;" href=""> ></a> <a class="deptlink" href="{{route('cd')}}"> INSTITUTIONAL DEVELOPMENT</a></h3>
     </div>
+  </div>
+  <div class="row adminmenumob" style="display:none;">
+    <div class="col-12">
+    <a class="btn btn-primary" href="{{route('department')}}" role="button">DEPARTMENTS</a> <a class="btn btn-primary" href="{{route('cd')}}" role="button">INSTITUTIONAL DEVELOPMENT</a>
+    </div>
+
   </div>
 <div class="row">
             <div class="col-sm-6">
@@ -182,7 +237,7 @@ body {
 <br>
 <div class="container ourserve" style="padding-right: 0 !important; padding-left: 0 !important; width:90%;">
       <div class="modal fade" id="uno" data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog modal-lg modalss" style="width: 90%; max-width: 90%;">
+        <div class="modal-dialog modal-lg modalss" style="width: 80%; max-width: 80%;">
 
           <!-- Modal content-->
           <div class="modal-content">
@@ -227,9 +282,9 @@ body {
 
         </div>
       </div>
-    <div class="row">
-          <div class="row" style="margin-bottom: 2%;">
-              <div class="col-4 clearfix d-md-block">
+    <div class="row admincard" style="margin-bottom: 2%;">
+
+              <div class="col-4">
                 <a data-toggle="modal" data-target="#uno">
                   <div class="card mb-2 hovcard">
                     <img class="card-img-top" src="{{asset('assets/Department/service1mod.png')}}"
@@ -240,7 +295,7 @@ body {
                   </div>
               </a>
               </div>
-            <div class="col-4 clearfix d-md-block">
+            <div class="col-4">
               <a data-toggle="modal" data-target="#dos">
                 <div class="card mb-2 hovcard">
                   <img class="card-img-top" src="{{asset('assets/Department/service2mod.png')}}"
@@ -251,7 +306,7 @@ body {
                 </div>
               </a>
             </div>
-            <div class="col-4 clearfix d-md-block">
+            <div class="col-4">
               <a data-toggle="modal" data-target="#tres">
                 <div class="card mb-2 hovcard">
                   <img class="card-img-top" src="{{asset('assets/Department/service3mod.png')}}"
@@ -262,10 +317,9 @@ body {
                 </div>
               </a>
             </div>
-          </div>
-      </div>
+        </div>
     </div>
-</div>
+
 
 <h2 class="card-title red" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700;">ORGANIZATIONAL CHART</h2>
 
