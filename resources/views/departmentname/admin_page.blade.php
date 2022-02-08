@@ -101,7 +101,9 @@ body {
     height: 100%;
   }
 }
-
+.capbody h4{
+  font-weight: 800 !important;
+}
 </style>
 <div class="container">
     <div class="row">
@@ -178,7 +180,7 @@ body {
 <h2 class="card-title red" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700;">OUR SERVICES</h2>
 
 <br>
-<div class="container ourserve" style="padding-right: 0 !important; padding-left: 0 !important; width:60%;">
+<div class="container ourserve" style="padding-right: 0 !important; padding-left: 0 !important; width:90%;">
       <div class="modal fade" id="uno" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-lg modalss" style="width: 90%; max-width: 90%;">
 
@@ -209,12 +211,28 @@ body {
 
         </div>
       </div>
+
+      <div class="modal fade" id="tres" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg modalss" style="width: 80%; max-width: 80%;">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn btn-default close_pause"  data-dismiss="modal" style="background-color:red; float:right; font-weight:900; font-size:15px;">X</button>
+                <img class="card-img-top" src="{{asset('assets/Department/service3.png')}}"/>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+
+        </div>
+      </div>
     <div class="row">
           <div class="row" style="margin-bottom: 2%;">
-              <div class="col-6 clearfix d-md-block">
+              <div class="col-4 clearfix d-md-block">
                 <a data-toggle="modal" data-target="#uno">
                   <div class="card mb-2 hovcard">
-                    <img class="card-img-top" src="{{asset('assets/Department/service1.png')}}"
+                    <img class="card-img-top" src="{{asset('assets/Department/service1mod.png')}}"
                          alt="Card image cap">
                     <div class="card-body capbody">
                       <h4>REVIEW / APPROVAL OF VARIOUS DOCUMENTS</h4>
@@ -222,13 +240,24 @@ body {
                   </div>
               </a>
               </div>
-            <div class="col-6 clearfix d-md-block">
+            <div class="col-4 clearfix d-md-block">
               <a data-toggle="modal" data-target="#dos">
                 <div class="card mb-2 hovcard">
-                  <img class="card-img-top" src="{{asset('assets/Department/service2.png')}}"
+                  <img class="card-img-top" src="{{asset('assets/Department/service2mod.png')}}"
                        alt="Card image cap">
                   <div class="card-body capbody">
                     <h4>REVIEW OF VOUCHERS / ALOBS AND OTHER RELATED DOCUMENTS</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-4 clearfix d-md-block">
+              <a data-toggle="modal" data-target="#tres">
+                <div class="card mb-2 hovcard">
+                  <img class="card-img-top" src="{{asset('assets/Department/service3mod.png')}}"
+                       alt="Card image cap">
+                  <div class="card-body capbody">
+                    <h4>RECEPTION / ACTION ON VARIOUS COMPLAINTS</h4>
                   </div>
                 </div>
               </a>
