@@ -268,7 +268,7 @@
               <div class="card cc hehe1" id="carddept">
                 <div class="card-body">
                   <h5 class="card-title" id="title1" style="font-size:25px;">INSTITUTIONAL DEVELOPMENT</h5>
-                  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p style="font-size:14px;"></p>
                 </div>
               </div>
             </a>
@@ -282,7 +282,7 @@
               <div class="card cc3" id="carddept">
                 <div class="card-body">
                   <h5 class="card-title" id="title1" style="font-size:25px;">ECONOMIC CENTER</h5>
-                  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p style="font-size:14px;"></p>
                 </div>
               </div>
             </a>
@@ -298,7 +298,7 @@
               <div class="card cc2" id="carddept">
                 <div class="card-body">
                   <h5 class="card-title" id="title1" style="font-size:25px;">ENVIRONMENTAL SECTOR</h5>
-                  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p style="font-size:14px;"></p>
                 </div>
               </div>
             </a>
@@ -312,7 +312,7 @@
               <div class="card cc4" id="carddept">
                 <div class="card-body">
                   <h5 class="card-title" id="title1" style="font-size:25px;">SOCIAL SERVICES</h5>
-                  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p style="font-size:14px;"></p>
                 </div>
               </div>
             </a>
@@ -328,7 +328,7 @@
               <div class="card cc5" id="carddept">
                 <div class="card-body">
                   <h5 class="card-title" id="title1" style="font-size:25px;">PHYSICAL / INFRASTRUCTURE</h5>
-                  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p style="font-size:14px;"></p>
                 </div>
               </div>
             </a>

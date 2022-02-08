@@ -608,7 +608,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Office of the Mayor</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -625,7 +625,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Office of the Vice Mayor</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -645,7 +645,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Office of the City Admin</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -662,7 +662,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Accounting Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -682,7 +682,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Assessment Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -699,7 +699,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Treasury Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%;"src="{{asset('assets/makabago.png')}}"/>
@@ -719,7 +719,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Human Resources and Development Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -736,7 +736,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Legal Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -756,7 +756,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Public Information Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -773,7 +773,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Budget Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -793,7 +793,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Development and Planning Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -810,7 +810,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">General Services Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -830,7 +830,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Information and Communications Technology Office</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -847,7 +847,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Barangay Operations Center</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -867,7 +867,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">Internal Audit Services</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -884,7 +884,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">BAC Secretariat</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -917,7 +917,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">Business Permit and Licensing Office</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -937,7 +937,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">City Cooperative Development Department</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -957,7 +957,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">City Tourism and Cultural Affairs Office</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -977,7 +977,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">Local Civil Registry</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -997,7 +997,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">City Investments Promotion Center</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1017,7 +1017,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">Market Administration</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1037,7 +1037,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">Public Employment and Services Office</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1057,7 +1057,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">Skills and Livelihood Center</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1088,7 +1088,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">City Environment and Natural Resources Department</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1108,7 +1108,7 @@
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                   <h5 class="card-title" id="a1">City Disaster Risk Reduction and Management Office</h5>
-                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                  <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                   <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1139,7 +1139,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Health Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1159,7 +1159,7 @@
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                 <h5 class="card-title" id="a1">City Social Welfare and Development Department</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1179,7 +1179,7 @@
                                     <div class="row">
                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                         <h5 class="card-title" id="a1">San Juan Medical Center</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <p class="card-text"></p>
                                       </div>
                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1199,7 +1199,7 @@
                                     <div class="row">
                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                         <h5 class="card-title" id="a1">City Population Development Office</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <p class="card-text"></p>
                                       </div>
                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1219,7 +1219,7 @@
                                             <div class="row">
                                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                 <h5 class="card-title" id="a1">Public Order and Safety Office</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <p class="card-text"></p>
                                               </div>
                                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1239,7 +1239,7 @@
                                             <div class="row">
                                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                 <h5 class="card-title" id="a1">Public Information Department</h5>
-                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <p class="card-text"></p>
                                               </div>
                                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                 <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1259,7 +1259,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">City Anti-Drug Abuse Council Office</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1279,7 +1279,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Traffic and Parking Management Office</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1299,7 +1299,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Transport Regulatory Board</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1319,7 +1319,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Task Force Disiplina</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1339,7 +1339,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Sports Development Office</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1356,7 +1356,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Urban Poor Affairs Office</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1378,7 +1378,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Office of the Senior Citizen Affairs</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1395,7 +1395,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Persons with Disability Affairs Office</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1416,7 +1416,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Public Assistance Center</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1433,7 +1433,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Cemetery</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1453,7 +1453,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Educational Support Services / School Board</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1470,7 +1470,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">Office of the Veterinary Services</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1490,7 +1490,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">City Library</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1507,7 +1507,7 @@
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                                                         <h5 class="card-title" id="a1">City Youth Development Office</h5>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                                                         <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1539,7 +1539,7 @@
                           <div class="row">
                             <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                               <h5 class="card-title" id="a1">City Architecture Department</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p class="card-text"></p>
                             </div>
                             <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                               <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1556,7 +1556,7 @@
                           <div class="row">
                             <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                               <h5 class="card-title" id="a1">City Building Official</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p class="card-text"></p>
                             </div>
                             <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                               <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1576,7 +1576,7 @@
                           <div class="row">
                             <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                               <h5 class="card-title" id="a1">City Engineering Department</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p class="card-text"></p>
                             </div>
                             <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                               <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
@@ -1593,7 +1593,7 @@
                           <div class="row">
                             <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
                               <h5 class="card-title" id="a1">Zoning Administration Office</h5>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <p class="card-text"></p>
                             </div>
                             <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
                               <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
