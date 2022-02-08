@@ -124,6 +124,7 @@
         max-width: 100% !important;
         width: 100% !important;``
         flex: 0 0 100%;
+        padding-bottom: 5%;
       }
       #deptone{
         margin-left: 5rem!important;
@@ -171,6 +172,7 @@
         max-width: 100% !important;
         width: 100% !important;
         flex: 0 0 100%;
+        padding-bottom: 5%;
       }
       .deptside{
         margin-top: 1%;
@@ -243,6 +245,7 @@
         max-width: 90% !important;
         width: 90% !important;
         flex: 0 0 100%;
+        padding-bottom: 5%;
       }
       .deptside{
         margin-top: 1%;
@@ -315,6 +318,7 @@
         max-width: 90% !important;
         width: 90% !important;
         flex: 0 0 100%;
+        padding-bottom: 5%;
       }
       .deptside{
         margin-top: 0;
