@@ -8,16 +8,26 @@
 }
 @media only screen and (max-width: 1600px) and (min-width: 900px)  {
   div#map {
-    max-width: 110% !important;
-    width: 110% !important;
+    max-width: 100% !important;
+    width: 100% !important;
     flex: 0 0 100%;
-
+  }
+  #map .m{
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100%;
+  }
+  .brgy_links h1 img{
+    width: 300px !important;
   }
 }
 @media only screen and (max-width: 1366px) {
   div#map {
     max-width: 80% !important;
     width: 80% !important;
+  }
+  .brgy_links h1 img{
+    width: 300px !important;
   }
   #map .riv_1{
     font-size: 30px !important;
@@ -430,17 +440,14 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<div class="container 1st_cont" id="map" style="box-shadow: 0px 3px 0px #cccccc; padding: 0;">
+<div class="container 1st_cont" id="map" style="box-shadow: 0px 3px 0px #cccccc; padding: 0; style="width: 60%;"">
     <div class="row" style="">
       <div class="col-sm-12 mapppy" style="margin-left:0; margin-top: -5%; ">
         <img class="m" src="{{asset('assets/sjcity2.png')}}" id="mapsj" style="width: 100%;">
         <div class="brgy_links">
             <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 13px; right:22%;top:25%;position: absolute;">West Crame</a>
-            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:19%;top:40%;position: absolute;">West Crame</a>
-            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 8px; right:21%;top:30%;position: absolute;">West Crame</a>
-            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:20%;top:37%;position: absolute;">West Crame</a>
-            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 6px; right:21%;top:34%;position: absolute;">West Crame</a>
-            <h1 class="display west_" data-toggle="modal" data-target=".wcm" style="cursor: pointer; font-size: 25px !important; right:15%;top:28%;position: absolute;">West Crame</h1>
+            <a class="lahat west_" data-toggle="modal" data-target=".wcm" style="color:transparent; cursor: pointer;font-size: 92px; right:20%;top:24%;position: absolute;">0</a>
+            <h1 class="display west_" data-toggle="modal" data-target=".wcm" style="cursor: pointer; font-size: 25px !important; right:27%;top:6%;position: absolute;"><img src="{{asset('assets/BRGY/westhov.png')}}" style="width: 360px;"></h1>
 
             <a class="lahat gh_2" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 30px;right:35%;top:31%;position: absolute;color: transparent;">Greenhills</a>
             <a class="lahat gh_9" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 30px;right:33%;top:66%;position: absolute;color: transparent;">Greenhills</a>
@@ -455,80 +462,80 @@
             <a class="lahat gh_1" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 21px;right:35%;top:26%;position: absolute;color: transparent;">Greenhills</a>
             <a class="lahat gh_5" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:15px;right:34%;top:72%;position: absolute; color: transparent;">Greenhills</a>
             <a class="lahat gh_6" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size:33px;right:25%;top:45%;position: absolute; color: transparent;">Greenhills</a>
-            <h1 class="display gh_" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 25px !important; right:26%;top:44%;position: absolute; ">Greenhills</h1>
+            <h1 class="display gh_" data-toggle="modal" data-target=".ghm" style="cursor: pointer; font-size: 25px !important; right:40%;top:30%;position: absolute; "><img src="{{asset('assets/BRGY/ghhov.png')}}" style="width: 360px;"></h1>
 
-            <a class="lahat adh_1" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 42%; top: 74%; position: absolute;">Additon Hills</a>
-            <a class="lahat adh_2" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 12px; right: 42%; top: 78%; position: absolute;">Additon Hills</a>
             <a class="lahat adh_3" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 22px; right: 45%; top: 84%; position: absolute;">Additon Hills</a>
-            <h1 class="display adh_" data-toggle="modal" data-target=".bd-example-modal-lg" style="cursor: pointer; font-size: 25px !important; right: 43%; top: 82%; position: absolute;">Additon Hills</h1>
+            <a class="lahat adh_2" data-toggle="modal" data-target=".bd-example-modal-lg" style=" color:transparent; cursor: pointer; font-size: 135px; right: 43%; top: 65%; position: absolute;">0</a>
+            <h1 class="display adh_" data-toggle="modal" data-target=".bd-example-modal-lg" style="cursor: pointer; font-size: 25px !important; right: 55%; top:65%; position: absolute;"><img src="{{asset('assets/BRGY/addhov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat maytu_1" data-toggle="modal" data-target=".mtm" style="color:transparent; cursor: pointer; font-size: 23px; right:53%;top:77%;position: absolute;">Maytunas</a>
-            <h1  class="display maytu_" data-toggle="modal" data-target=".mtm" style="cursor: pointer; font-size: 25px !important;  right:52%;top:74%;position: absolute;">Maytunas</h1>
+            <h1  class="display maytu_" data-toggle="modal" data-target=".mtm" style="cursor: pointer; font-size: 25px !important;  right:62%;top:59%;position: absolute;"><img src="{{asset('assets/BRGY/maytunashov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat baguio_1" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer;  font-size: 24px; right:45%; top:49% ;position: absolute;">Little <br>Baguio</a>
-            <h1   class="display baguio_" data-toggle="modal" data-target=".lbm" style="cursor: pointer; font-size: 25px !important; right:45%; top:49% ;position: absolute; z-index:4;">Little <br>Baguio</h1>
+            <h1   class="display baguio_" data-toggle="modal" data-target=".lbm" style="cursor: pointer; font-size: 25px !important; right:52%; top:30% ;position: absolute; z-index:4;"><img src="{{asset('assets/BRGY/lbhov.png')}}" style="width: 360px;"></h1>
             <a   class="lahat baguio_2" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 47px;right:49%; top:40% ;position: absolute;">..........</a>
             <a   class="lahat baguio_3" data-toggle="modal" data-target=".lbm" style="color:transparent; cursor: pointer; font-size: 21px;right:47%; top:62% ;position: absolute;">..........</a>
 
             <a  class="lahat lucia_1" data-toggle="modal" data-target=".stm" style="color:transparent; cursor: pointer; font-size: 80px;right:54.6%;top:55%;position: absolute;">O</a>
-            <h1  class="display lucia_" data-toggle="modal" data-target=".stm" style="cursor: pointer; font-size: 25px !important; right:55%;top:57%;position: absolute;">Sta. Lucia</h1>
+            <h1  class="display lucia_" data-toggle="modal" data-target=".stm" style="cursor: pointer; font-size: 25px !important; right:60%;top:43%;position: absolute;"><img src="{{asset('assets/BRGY/luciahov.png')}}" style="width: 360px;"></h1>
 
 
 
             <a  class="lahat kabayanan_1" data-toggle="modal" data-target=".kbm" style="color:transparent; cursor: pointer; font-size: 34px;right:63.5%;top:63%;position: absolute;">O</a>
             <a  class="lahat kabayanan_2" data-toggle="modal" data-target=".kbm" style="color:transparent; cursor: pointer; font-size: 65px;right:66.5%;top:63%;position: absolute;">O</a>
-            <h1  class="display kabayanan_" data-toggle="modal" data-target=".kbm" style=" cursor: pointer; font-size: 25px !important; right:63.5%;top:64%;position: absolute;z-index:4;">Kabayanan</h1>
+            <h1  class="display kabayanan_" data-toggle="modal" data-target=".kbm" style=" cursor: pointer; font-size: 25px !important; right:71%;top:50%;position: absolute;z-index:4;"><img src="{{asset('assets/BRGY/kabayananhov.png')}}" style="width: 360px;"></h1>
 
 
             <a class="lahat onse_1" data-toggle="modal" data-target=".om" style="color:transparent; cursor: pointer; font-size: 42px;right:62.5%;top:51%;position: absolute;">O</a>
-            <h1  class="display onse_" data-toggle="modal" data-target=".om" style=" cursor: pointer; font-size: 25px !important; right:61.5%;top:53%;position: absolute;z-index:4;">Onse</h1>
+            <h1  class="display onse_" data-toggle="modal" data-target=".om" style=" cursor: pointer; font-size: 25px !important; right:65%;top:35%;position: absolute;z-index:4;"><img src="{{asset('assets/BRGY/onsehov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat joseph_" data-toggle="modal" data-target=".sjm" style="color:transparent; cursor: pointer; font-size: 26px;right:61.5%;top:44%;position: absolute;">O</a>
-            <h1  class="display joseph_" data-toggle="modal" data-target=".sjm" style=" cursor: pointer;font-size: 25px !important; right:55%;top:43%;position: absolute;z-index:4;">St. Joseph</h1>
+            <h1  class="display joseph_" data-toggle="modal" data-target=".sjm" style=" cursor: pointer;font-size: 25px !important; right:63%;top:25%;position: absolute;z-index:4;"><img src="{{asset('assets/BRGY/josephhov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat" data-toggle="modal" data-target=".ism" style="color:transparent; cursor: pointer; font-size: 23px;right:64.8%;top:44%; position: absolute;">O</a>
-            <h1  class="display" data-toggle="modal" data-target=".ism" style=" cursor: pointer; font-size: 25px !important; right:63%;top:45%; position: absolute;z-index:4;">Isabelita</h1>
+            <h1  class="display" data-toggle="modal" data-target=".ism" style=" cursor: pointer; font-size: 25px !important; right:66.5%;top:27%; position: absolute;z-index:4;"><img src="{{asset('assets/BRGY/isahov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat tib_1" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 11px; right:70%;top:46%; position: absolute;">Tibagan</a>
             <a  class="lahat tib_3" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 49px; right:67%;top:55%; position: absolute;">O</a>
             <a  class="lahat tib_2" data-toggle="modal" data-target=".tbm" style="color:transparent; cursor: pointer; font-size: 47px; right:69.5%;top:47%; position: absolute;">O</a>
-            <h1  class="display tib_" data-toggle="modal" data-target=".tbm" style="cursor: pointer; font-size: 25px !important; right:66%;top:51%; position: absolute; z-index:4;">Tibagan</h1>
+            <h1  class="display tib_" data-toggle="modal" data-target=".tbm" style="cursor: pointer; font-size: 25px !important; right:72%;top:33%; position: absolute; z-index:4;"><img src="{{asset('assets/BRGY/tibaganhov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat batis_1" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 58px; right:74%;top:61%; position: absolute;">/</a>
             <a  class="lahat batis_2" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 46px; right:81%;top:48%; position: absolute;">0</a>
             <a  class="lahat batis_3" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 40px; right:85%;top:49%; position: absolute;">0</a>
             <a  class="lahat batis_4" data-toggle="modal" data-target=".bm" style="color:transparent; cursor: pointer; font-size: 80px; right:75%;top:49%; position: absolute;">O</a>
-            <h1  class="display batis_" data-toggle="modal" data-target=".bm" style="cursor: pointer; font-size: 25px !important; right:75%;top:56%; position: absolute;">Batis</h1>
+            <h1  class="display batis_" data-toggle="modal" data-target=".bm" style="cursor: pointer; font-size: 25px !important; right:80%;top:37%; position: absolute;"><img src="{{asset('assets/BRGY/batishov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat sanper_1" data-toggle="modal" data-target=".spm" style="color:transparent; cursor: pointer; font-size: 34px;right:83.5%;top:41%; position: absolute;">0</a>
-            <h1  class="display sanper_" data-toggle="modal" data-target=".spm" style="cursor: pointer; font-size: 25px !important; right:77%;top:45%; position: absolute;">San Perfecto</h1>
+            <h1  class="display sanper_" data-toggle="modal" data-target=".spm" style="cursor: pointer; font-size: 25px !important; right:85%;top:25%; position: absolute;"><img src="{{asset('assets/BRGY/perfectohov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat prog_1" data-toggle="modal" data-target=".pm" style="color:transparent; cursor: pointer; font-size:35px; right:88.5%;top:42%; position: absolute;">0</a>
-            <h1  class="display prog_" data-toggle="modal" data-target=".pm" style=" cursor: pointer;font-size: 25px !important; right:86%;top:42%; position: absolute;">Progreso</h1>
+            <h1  class="display prog_" data-toggle="modal" data-target=".pm" style=" cursor: pointer;font-size: 25px !important; right:90%;top:25%; position: absolute;"><img src="{{asset('assets/BRGY/proghov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat riv_1" data-toggle="modal" data-target=".rm" style="color:transparent; cursor: pointer; font-size: 34px; right:85.5%;top:34%; position: absolute;">0</a>
-            <h1  class="display riv_2" data-toggle="modal" data-target=".rm" style="cursor: pointer; font-size: 25px !important; right:85%;top:34%; position: absolute;">Rivera</h1>
+            <h1  class="display riv_2" data-toggle="modal" data-target=".rm" style="cursor: pointer; font-size: 25px !important; right:87%;top:15%; position: absolute;"><img src="{{asset('assets/BRGY/riverahov.png')}}" style="width: 360px;"></h1>
 
 
             <a  class="lahat pedro_1" data-toggle="modal" data-target=".pdm" style=" color:transparent; cursor: pointer; font-size: 69px; right:75%;top:31%; position: absolute;">O</a>
-            <h1  class="display pedro_" data-toggle="modal" data-target=".pdm" style=" cursor: pointer; font-size: 25px !important; right:72%;top:34%; position: absolute;">Pedro Cruz</h1>
+            <h1  class="display pedro_" data-toggle="modal" data-target=".pdm" style=" cursor: pointer; font-size: 25px !important; right:80%;top:18%; position: absolute;"><img src="{{asset('assets/BRGY/pedrohov.png')}}" style="width: 360px;"></h1>
 
             <a  class="lahat balong_1" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 15px; right:74%;top:25%; position: absolute;">Balong-Bato</a>
-            <h1  class="display balong_" data-toggle="modal" data-target=".bbm" style=" cursor: pointer; font-size: 25px !important; right:72%;top:23%; position: absolute;">Balong-Bato</h1>
+            <h1  class="display balong_" data-toggle="modal" data-target=".bbm" style=" cursor: pointer; font-size: 25px !important; right:83%;top:7%; position: absolute;"><img src="{{asset('assets/BRGY/balongbatohov.png')}}" style="width: 360px;"></h1>
             <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:81%;top:28%; position: absolute;">O</a>
-            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 39px; right:71%;top:18%; position: absolute;">O</a>
-            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:79%;top:20%; position: absolute;">O</a>
-            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 28px; right:76%;top:19%; position: absolute;">O</a>
-            <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 28px; right:83%;top:22%; position: absolute;">O</a>
+           <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 39px; right:71%;top:18%; position: absolute;">O</a>
+           <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 30px; right:79%;top:20%; position: absolute;">O</a>
+           <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 28px; right:76%;top:19%; position: absolute;">O</a>
+           <a  class="lahat balong_" data-toggle="modal" data-target=".bbm" style=" color:transparent; cursor: pointer; font-size: 28px; right:83%;top:22%; position: absolute;">O</a>
+
 
             <a  class="lahat cora_1" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 13px; right:62%; top: 33%; position: absolute;">Corazon de Jesus</a>
-            <h1  class="display cora_" data-toggle="modal" data-target=".cdm" style=" cursor: pointer; font-size: 25px !important; right:57%;top:30%; position: absolute;">Corazon de Jesus</h1>
+            <h1  class="display cora_" data-toggle="modal" data-target=".cdm" style=" cursor: pointer; font-size: 25px !important; right:69%;top:15%; position: absolute;"><img src="{{asset('assets/BRGY/corahov.png')}}" style="width: 360px;"></h1>
             <a  class="lahat cora_2" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 55px; right:67%;top:22%; position: absolute;">O</a>
             <a  class="lahat cora_3" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:67%;top:37%; position: absolute;">O</a>
             <a  class="lahat cora_4" data-toggle="modal" data-target=".cdm" style=" color:transparent; cursor: pointer; font-size: 30px; right:63%;top:36%; position: absolute;">O</a>
 
             <a  class="lahat pasa_1" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 61px; right:58%;top:21%; position: absolute;">O</a>
-            <h1  class="display pasa_" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 25px !important; right:54%;top:25%; position: absolute;">Pasadena</h1>
+            <h1  class="display pasa_" data-toggle="modal" data-target=".psdm" style="cursor: pointer; font-size: 25px !important; right:62%;top:6%; position: absolute;"><img src="{{asset('assets/BRGY/pasahov.png')}}" style="width: 360px;"></h1>
             <a  class="lahat pasa_" data-toggle="modal" data-target=".psdm" style=" color: transparent; cursor: pointer; font-size: 36px; right:53%;top:27%; position: absolute;">O</a>
             <a  class="lahat pasa_" data-toggle="modal" data-target=".psdm" style=" color:transparent; cursor: pointer; font-size: 36px; right:62%;top:16%; position: absolute;">O</a>
 
@@ -536,10 +543,10 @@
           <a  class="lahat salapan_2" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 30px; right:75%;top:11%; position: absolute;">0</a>
           <a  class="lahat salapan_3" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 40px; right: 83%; top: 14%; position: absolute;">....</a>
           <a  class="lahat salapan_4" data-toggle="modal" data-target=".slpm" style=" color:transparent; cursor: pointer; font-size: 40px; right: 80%; top: 10%; position: absolute;">0</a>
-          <h1  id="salapanmap" class="display salapan_" data-toggle="modal" data-target=".slpm" style="cursor: pointer; font-size: 25px !important;right:76%;top:14%; position: absolute;">Salapan</h1>
+          <h1  id="salapanmap" class="display salapan_" data-toggle="modal" data-target=".slpm" style="cursor: pointer; font-size: 25px !important;right:83%;top:-6%; position: absolute;"><img src="{{asset('assets/BRGY/salahov.png')}}" style="width: 360px;"></h1>
 
           <a  class="lahat ermi_1" data-toggle="modal" data-target=".ermm" style=" color:transparent; cursor: pointer; font-size: 15px; right:65%;top:14%; position: absolute;">Ermitaño</a>
-          <h1  class="display ermi_" data-toggle="modal" data-target=".ermm" style="cursor: pointer; font-size: 25px !important;right:64%;top:12%; position: absolute;">Ermitaño</h1>
+          <h1  class="display ermi_" data-toggle="modal" data-target=".ermm" style="cursor: pointer; font-size: 25px !important;right:70%;top:-5%; position: absolute;"><img src="{{asset('assets/BRGY/ermihov.png')}}" style="width: 360px;"></h1>
 
 
         </div>
@@ -2312,3 +2319,8 @@ color:red;
 </script>
     </div>
 </div> -->
+<script>
+$(function () {
+$('[data-toggle="tooltip"]').tooltip()
+})
+</script>

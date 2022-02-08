@@ -111,7 +111,7 @@
     </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="css/modal-box.min.css" rel="stylesheet">
-  <div class="container"style="width:60%;" id="brgypage">
+  <div class="container"style="width:100%;" id="brgypage">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         <h1 id="bsj">SAN JUAN CITY</h1>
