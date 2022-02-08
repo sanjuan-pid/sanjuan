@@ -1519,7 +1519,7 @@
                     </a>
                   </div>
                   <div class=" col-6 col-sm-6 col-md-6 col-lg-6">
-                    <a class="department"href="{{route('obo')}}">
+                    <a class="department"href="{{route('announce')}}">
                       <div class="card" id="carddept">
                         <div class="card-body">
                           <div class="row">
