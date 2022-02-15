@@ -230,7 +230,7 @@ $('#facility').on('change', function(){
   }
   else
   {
-    $('#other_facility').prop('required', true);
+    $('#other_facility').prop('required', false);
     $('#other_facility').hide();
     $('#other_facility').val("");
   }

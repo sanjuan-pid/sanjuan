@@ -236,7 +236,10 @@ button.dt-button:hover{
           <form method="POST" action="{{action('HomeController1@print_later')}}" id="print_now">
             @csrf
             <div class="modal-body">
-              <h3>Print Certificate Now?</h3>
+              <h3>
+                Request has been approved, a copy of the certificate has been sent to the requestor's email.<br>
+                Do you want to print a copy?
+              </h3>
               <input type="hidden" id="printID" name="printID" readonly>
             </div>
             <div class="modal-footer">

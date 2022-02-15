@@ -9,11 +9,15 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Redirect;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Mail;
 use File;
 use Carbon\Carbon;
 use App\User;
 use App\Covid_ApplicantsRecovery;
 use JasperPHP\JasperPHP;
+use QRCode;
+use App\Mail\AttachmentMail;
+use App\Mail\DeclineMail;
 
 class HomeController1 extends Controller
 {
@@ -82,7 +86,14 @@ class HomeController1 extends Controller
         $update = Covid_ApplicantsRecovery::find($id);
         $update->confirmed = 1;
         $update->filename = "CertRecovery_".$id.".pdf";
+        $update->qr_filename = "QRCode_".$update->id.".png";
         $update->save();
+
+        $file = public_path().'/files/'.$update->id.'/'.$update->qr_filename;    
+        QRCode::text("Name: ".$update->last_name.", ".$update->first_name." ".$update->middle_name." ".$update->suffix."\n".
+                    "Date of Recovery: ".Carbon::parse($update->date_end)->format('M d Y')."\n".
+                    "Quarantine Facility: ".$update->quarantine_facility)->setSize(8)
+                ->setMargin(2)->setOutFile($file)->png();
 
         $connection = ['driver' => 'generic',
                     'username' => 'root',
@@ -93,6 +104,16 @@ class HomeController1 extends Controller
         $output = public_path().'/files/'.$id.'/CertRecovery_'.$update->id;
         $jasperPHP->process(public_path() . '/report1.jasper',$output,array("pdf"),array("app_id" => $update->id),$connection)->execute();
 
+        $data = ([
+            'first_name' => $update->first_name,
+            'middle_name' => $update->middle_name,
+            'last_name' => $update->last_name,
+            'suffix' => $update->suffix,
+            'file' => public_path().'/files/'.$id."/".$update->filename,
+        ]);
+
+        Mail::to($update->email)->send(new AttachmentMail($data));
+        
         return Response::json($update);
     }
 
@@ -102,6 +123,16 @@ class HomeController1 extends Controller
         $update->confirmed = 2;
         $update->remarks = $request->remarks;
         $update->save();
+
+        $data = ([
+            'first_name' => $update->first_name,
+            'middle_name' => $update->middle_name,
+            'last_name' => $update->last_name,
+            'suffix' => $update->suffix,
+            'remarks' => $update->remarks,
+        ]);
+
+        Mail::to($update->email)->send(new DeclineMail($data));
 
         return back()->with('declined', 'Successfully declined request!');
     }

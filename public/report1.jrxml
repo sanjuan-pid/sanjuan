@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="50" bottomMargin="20" uuid="d9278d32-d158-44b9-9ba8-2c356d7192c1">
-	<property name="ireport.zoom" value="2.8531167061100033"/>
+	<property name="ireport.zoom" value="1.0000000000000007"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="1488"/>
+	<property name="ireport.y" value="19"/>
 	<parameter name="app_id" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select * from applicants where id = $P{app_id}]]>
+		<![CDATA[SELECT * FROM applicants where id = $P{app_id}]]>
 	</queryString>
 	<field name="id" class="java.lang.Integer"/>
 	<field name="request_no" class="java.lang.String"/>
@@ -17,6 +17,8 @@
 	<field name="first_name" class="java.lang.String"/>
 	<field name="middle_name" class="java.lang.String"/>
 	<field name="suffix" class="java.lang.String"/>
+	<field name="birthday" class="java.sql.Date"/>
+	<field name="sex" class="java.lang.String"/>
 	<field name="house_no" class="java.lang.String"/>
 	<field name="barangay" class="java.lang.String"/>
 	<field name="city" class="java.lang.String"/>
@@ -27,13 +29,17 @@
 	<field name="quarantine_facility" class="java.lang.String"/>
 	<field name="fit_to_work" class="java.lang.String"/>
 	<field name="contact" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
 	<field name="confirmed" class="java.lang.String"/>
 	<field name="print_now" class="java.lang.String"/>
 	<field name="swab_result" class="java.lang.String"/>
 	<field name="monitoring_sheet" class="java.lang.String"/>
+	<field name="remarks" class="java.lang.String"/>
 	<field name="filename" class="java.lang.String"/>
+	<field name="qr_filename" class="java.lang.String"/>
 	<field name="created_at" class="java.sql.Timestamp"/>
 	<field name="updated_at" class="java.sql.Timestamp"/>
+	<field name="age" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -41,7 +47,7 @@
 		<band height="89" splitType="Stretch">
 			<image onErrorType="Blank">
 				<reportElement x="78" y="4" width="72" height="75" uuid="38a973b9-6101-49d4-9c2a-fea7fc636391"/>
-				<imageExpression><![CDATA["C:\\xampp\\htdocs\\certificate\\public\\images\\sjc.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\sanjuan\\pid\\public\\assets\\sjc.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="0" y="14" width="572" height="20" uuid="777ab4de-9495-49aa-8a1b-dfeda9543a9a"/>
@@ -71,6 +77,10 @@
 				</textElement>
 				<text><![CDATA[CITY HEALTH DEPARTMENT]]></text>
 			</staticText>
+			<image onErrorType="Blank">
+				<reportElement x="434" y="8" width="67" height="67" uuid="b1a4cb5c-9f43-4c59-ab1f-4714f19f2ec3"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\sanjuan\\pid\\public\\assets\\chd.jpg"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -92,7 +102,7 @@
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="27" splitType="Stretch">
+		<band height="29" splitType="Stretch">
 			<textField pattern="MMMMM dd, yyyy" isBlankWhenNull="true">
 				<reportElement x="50" y="0" width="143" height="20" uuid="be0d360f-64ea-4bef-ac66-a4daae888c49"/>
 				<textElement>
@@ -100,10 +110,21 @@
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="204" y="0" width="348" height="20" uuid="60e28358-1add-4c4d-bccc-811cb865c58a"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Request No.: "+$F{request_no}]]></textFieldExpression>
+			</textField>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="332" splitType="Stretch">
+		<band height="419" splitType="Stretch">
+			<image onErrorType="Blank">
+				<reportElement x="358" y="261" width="224" height="92" uuid="5e4fae50-70f2-4313-b3e0-a1494fbff31c"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\sanjuan\\pid\\public\\assets\\e-sig.png"]]></imageExpression>
+			</image>
 			<staticText>
 				<reportElement x="50" y="13" width="257" height="20" uuid="c41bd480-a4ae-4a11-b7c6-a9052dde8f46"/>
 				<textElement>
@@ -112,106 +133,89 @@
 				<text><![CDATA[TO WHOM IT MAY CONCERN:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="95" y="52" width="129" height="20" uuid="d712f4f6-56b6-4828-b413-6798ca06237c"/>
+				<reportElement x="95" y="51" width="109" height="20" uuid="d712f4f6-56b6-4828-b413-6798ca06237c"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[This is to CERTIFY ]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="225" y="52" width="327" height="20" uuid="6c45453c-ef2d-4d48-88c1-974722e01b1e"/>
+				<reportElement x="204" y="51" width="347" height="20" uuid="6c45453c-ef2d-4d48-88c1-974722e01b1e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{last_name}+($F{suffix}==null?"":" "+$F{suffix})+", "+$F{first_name}+" "+($F{middle_name}==null?"":$F{middle_name})]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="225" y="71" width="327" height="1" uuid="ff3a0264-4243-499f-9a67-dea959dfa8f3"/>
+				<reportElement x="204" y="71" width="347" height="1" uuid="ff3a0264-4243-499f-9a67-dea959dfa8f3"/>
 			</line>
 			<staticText>
-				<reportElement x="50" y="76" width="67" height="20" uuid="2cb91287-8496-4163-b2b0-97043c266585"/>
+				<reportElement x="117" y="74" width="67" height="20" uuid="2cb91287-8496-4163-b2b0-97043c266585"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[who lives at ]]></text>
 			</staticText>
-			<line>
-				<reportElement x="117" y="96" width="434" height="1" uuid="6dba0ff3-94e7-429e-9aa3-847435b905dc"/>
-			</line>
-			<textField isBlankWhenNull="true">
-				<reportElement x="117" y="76" width="434" height="20" uuid="dd16c5e3-3b43-44cc-a039-d54d65fa9bc9"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{house_no}+", Brgy. "+$F{barangay}+", "+$F{city}+", Metro Manila"]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement x="50" y="97" width="83" height="20" uuid="40decc48-4964-4a51-8460-3ddad62d0e94"/>
+				<reportElement x="50" y="95" width="83" height="20" uuid="40decc48-4964-4a51-8460-3ddad62d0e94"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[is a confirmed]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="133" y="97" width="67" height="20" uuid="2b28ef4c-9987-4173-bd70-2d2958d024b3"/>
+				<reportElement x="133" y="95" width="67" height="20" uuid="2b28ef4c-9987-4173-bd70-2d2958d024b3"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[COVID 19]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="200" y="97" width="351" height="20" uuid="ffdb9c50-c0ff-42b4-89d2-29b7c4d2db86"/>
+				<reportElement x="200" y="95" width="351" height="20" uuid="ffdb9c50-c0ff-42b4-89d2-29b7c4d2db86"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[patient, currently asymptomatic. Person whose name is written ]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="50" y="117" width="320" height="20" uuid="beb142a9-2853-45b5-9ad2-e96cc4c2fab1"/>
-				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[above has completed the prescribed days of isolation from ]]></text>
-			</staticText>
 			<textField pattern="MMM dd, yyyy" isBlankWhenNull="true">
-				<reportElement x="403" y="117" width="102" height="20" uuid="0f28bc0f-a4b0-422c-8fec-390b50cf7cfb"/>
+				<reportElement x="369" y="115" width="114" height="20" uuid="0f28bc0f-a4b0-422c-8fec-390b50cf7cfb"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{date_start}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="403" y="136" width="102" height="1" uuid="9107a1ae-c333-4158-8c45-a98c8e9379e7"/>
+				<reportElement x="369" y="135" width="114" height="1" uuid="9107a1ae-c333-4158-8c45-a98c8e9379e7"/>
 			</line>
 			<staticText>
-				<reportElement x="530" y="117" width="21" height="20" uuid="372f3e12-8e7d-4b5d-afc8-a97facb2b075"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement x="483" y="115" width="21" height="20" uuid="372f3e12-8e7d-4b5d-afc8-a97facb2b075"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[to]]></text>
 			</staticText>
 			<line>
-				<reportElement x="50" y="157" width="102" height="1" uuid="9265bde3-e197-4a5d-80c0-4516fa213d09"/>
+				<reportElement x="50" y="156" width="80" height="1" uuid="9265bde3-e197-4a5d-80c0-4516fa213d09"/>
 			</line>
 			<textField pattern="MMM dd, yyyy" isBlankWhenNull="true">
-				<reportElement x="50" y="137" width="102" height="20" uuid="93fda14c-361c-43fa-95a7-3f1d7f270da8"/>
+				<reportElement x="50" y="136" width="80" height="20" uuid="93fda14c-361c-43fa-95a7-3f1d7f270da8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{date_end}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="152" y="137" width="21" height="20" uuid="e84d3093-f585-4f1a-aba1-c5695fb9a99a"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement x="131" y="136" width="21" height="20" uuid="e84d3093-f585-4f1a-aba1-c5695fb9a99a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[at]]></text>
 			</staticText>
 			<line>
-				<reportElement x="173" y="157" width="378" height="1" uuid="75165646-2056-4777-b8e8-028695c53774"/>
+				<reportElement x="152" y="156" width="399" height="1" uuid="75165646-2056-4777-b8e8-028695c53774"/>
 			</line>
 			<textField isBlankWhenNull="true">
-				<reportElement x="173" y="137" width="378" height="20" uuid="b16b8f45-de35-40e9-96bb-8d2656fcce92"/>
+				<reportElement x="152" y="136" width="399" height="20" uuid="b16b8f45-de35-40e9-96bb-8d2656fcce92"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
 				</textElement>
@@ -224,90 +228,110 @@
 				</textElement>
 				<text><![CDATA[and is considered a recovered patient based on DOH Guidelines.]]></text>
 			</staticText>
-			<textField isBlankWhenNull="true">
-				<reportElement x="50" y="178" width="434" height="20" uuid="96d4a200-975b-489d-924f-e3b7b7053a4b"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="50" y="180" width="500" height="20" uuid="96d4a200-975b-489d-924f-e3b7b7053a4b"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{fit_to_work}!=null?"*At present he/she is physically fit to work.":""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{fit_to_work}!=null?"*At present "+ ($F{sex}=="Male"?"he":"she") +" is physically fit to work.":""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="216" width="67" height="20" uuid="0b3e10b6-127d-4679-86bf-1c2d89ada67e"/>
+				<reportElement x="50" y="238" width="67" height="20" uuid="0b3e10b6-127d-4679-86bf-1c2d89ada67e"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[Issued this]]></text>
 			</staticText>
 			<textField pattern="MMMMM dd, yyyy" isBlankWhenNull="true">
-				<reportElement x="117" y="216" width="127" height="20" uuid="14576013-4c91-46e6-a816-60a65786d652"/>
+				<reportElement x="117" y="238" width="127" height="20" uuid="14576013-4c91-46e6-a816-60a65786d652"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true" isItalic="true" isUnderline="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="117" y="236" width="127" height="1" uuid="58867b32-c6ac-4fc8-bdf2-b49703cffc74"/>
+				<reportElement x="117" y="258" width="127" height="1" uuid="58867b32-c6ac-4fc8-bdf2-b49703cffc74"/>
 			</line>
 			<staticText>
-				<reportElement x="244" y="216" width="328" height="20" uuid="8c3be30a-0c28-4b3d-bd51-035e882c3558"/>
+				<reportElement x="244" y="238" width="328" height="20" uuid="8c3be30a-0c28-4b3d-bd51-035e882c3558"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="12" isBold="true" isItalic="true"/>
 				</textElement>
 				<text><![CDATA[for whatever purpose it may serve best.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="356" y="281" width="216" height="20" uuid="061048aa-03ff-482a-b0b7-ede4852f494f"/>
+				<reportElement x="307" y="324" width="265" height="20" uuid="061048aa-03ff-482a-b0b7-ede4852f494f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="true"/>
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="false" isUnderline="true"/>
 				</textElement>
 				<text><![CDATA[Mitzi A. Tanchoco M.D., MMHoA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="356" y="299" width="216" height="16" uuid="e37cb97d-9efd-42f2-bbfe-d5c1d4fe4ddd"/>
+				<reportElement x="307" y="342" width="265" height="16" uuid="e37cb97d-9efd-42f2-bbfe-d5c1d4fe4ddd"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[City Health Officer]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="356" y="314" width="216" height="14" uuid="2acb3d17-3113-45b6-b4cf-d29b23844b7d"/>
+				<reportElement x="307" y="357" width="265" height="14" uuid="2acb3d17-3113-45b6-b4cf-d29b23844b7d"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="SansSerif" size="9" isBold="true" isItalic="false" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[CONTROL NUMBER: SJCRC7998A]]></text>
 			</staticText>
-		</band>
-	</detail>
-	<columnFooter>
-		<band height="52" splitType="Stretch">
-			<staticText>
-				<reportElement x="0" y="25" width="572" height="24" uuid="2c8e0283-11ec-4a85-bc87-8fbd287c0776"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="SansSerif" size="8" isBold="false" isItalic="true" isUnderline="false"/>
+			<image scaleImage="RetainShape" hAlign="Left" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="50" y="277" width="174" height="94" uuid="6c635446-4f86-4653-8fd9-7c6abfb7737c"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\sanjuan\\pid\\public\\files\\"+$F{id}+"\\"+$F{qr_filename}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="50" y="94" width="65" height="1" uuid="10df74f1-8247-49ba-bd67-8cc012eb3362"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="74" width="65" height="20" uuid="d525f662-ce95-419a-970a-4661a320e769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[*DOH Department Memorandum No. 2020-0439, Omnibus Interim Guidelines on Prevention, Detection, Isolation, Treatment, and Reintegration Strategies for COVID-19, dated October 6, 2020.]]></text>
+				<textFieldExpression><![CDATA[$F{age}+", "+$F{sex}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="74" width="367" height="20" uuid="6b5d729b-2fc1-4687-b44e-26ca1ae30a23"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{house_no}+", Brgy. "+$F{barangay}+", " + $F{city}+", Metro Manila"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="184" y="94" width="367" height="1" uuid="61d18117-0c10-4ded-a6b9-cae0abb33dbf"/>
+			</line>
+			<staticText>
+				<reportElement x="50" y="115" width="319" height="20" uuid="5bf2c954-eded-439a-9547-8a3d5041a6a4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[above has completed the prescribed days of isolation from ]]></text>
 			</staticText>
 		</band>
-	</columnFooter>
+	</detail>
 	<pageFooter>
-		<band height="93" splitType="Stretch">
+		<band height="85" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="18" width="572" height="14" uuid="79acd47a-c10e-4cd4-981f-b8abe90e020e"/>
+				<reportElement x="0" y="11" width="572" height="14" uuid="79acd47a-c10e-4cd4-981f-b8abe90e020e"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[Pinaglabanan st., cor P. Narciso st., Brgy. Corazon de Jesus, San Juan City 1500]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="32" width="572" height="14" uuid="b1998257-294f-4abf-bc3c-61ae11f14bc2"/>
+				<reportElement x="0" y="25" width="572" height="14" forecolor="#000000" uuid="b1998257-294f-4abf-bc3c-61ae11f14bc2"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="SansSerif" size="8" isBold="false" isItalic="false" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[Email: sanjuanopcen@gmail.com]]></text>
 			</staticText>
 			<image onErrorType="Blank">
-				<reportElement x="261" y="47" width="46" height="45" uuid="46fb3ed9-5561-4344-bb77-bf1fa05a894f"/>
-				<imageExpression><![CDATA["C:\\xampp\\htdocs\\certificate\\public\\images\\makabago.png"]]></imageExpression>
+				<reportElement x="261" y="40" width="46" height="45" uuid="46fb3ed9-5561-4344-bb77-bf1fa05a894f"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\sanjuan\\pid\\public\\assets\\makabago.png"]]></imageExpression>
 			</image>
 		</band>
 	</pageFooter>

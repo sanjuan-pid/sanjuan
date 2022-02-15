@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Redirect;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Mail;
 use File;
 use Carbon\Carbon;
 use App\User;
 use App\Covid_ApplicantsRecovery;
 use JasperPHP\JasperPHP;
+use App\Mail\SendMail1;
 
 class HomeController extends Controller
 {
@@ -83,7 +85,10 @@ class HomeController extends Controller
         $submit->save();
 
         $save_path = public_path().'/files/'.$submit->id;
-        File::makeDirectory($save_path);
+        if (!file_exists($save_path)) 
+        {	
+            File::makeDirectory($save_path);
+        }
 
         if($request->has("swab_result"))
         {
@@ -116,27 +121,36 @@ class HomeController extends Controller
 
         if ($apps<10)
         {
-          $save ='CertRequest-'.$date->year.'-0000'.$apps;
+          $save ='SJCRC-'.$date->year.'-0000'.$apps;
         }
         else if ($apps>=10 && $apps<100)
         {
-          $save ='CertRequest-'.$date->year.'-000'.$apps;
+          $save ='SJCRC-'.$date->year.'-000'.$apps;
         }
         else if ($apps>=100 && $apps<1000)
         {
-          $save ='CertRequest-'.$date->year.'-00'.$apps;
+          $save ='SJCRC-'.$date->year.'-00'.$apps;
         }
         else if ($apps>=1000)
         {
-          $save ='CertRequest-'.$date->year.'-0'.$apps;
+          $save ='SJCRC-'.$date->year.'-0'.$apps;
         }
         else
         {
-          $save ='CertRequest-'.$date->year.'-'.$apps;
+          $save ='SJCRC-'.$date->year.'-'.$apps;
         }
         $submit->request_no = $save;
 
         $submit->save();
+
+        $data = ([
+            'first_name' => $request->first_name,
+            'middle_name' => $request->middle_name,
+            'last_name' => $request->last_name,
+            'suffix' => $request->suffix,
+        ]);
+
+        Mail::to($submit->email)->send(new SendMail1($data));
 
         return back()->with('message', 'Successfully sent new request!');
     }
