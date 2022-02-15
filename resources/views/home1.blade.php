@@ -77,6 +77,7 @@
                             <div class="col-sm-1">
                                <label>Sex</label><span style="color: red">*</span>
                                <select class="form-control" id="sex" name="sex">
+                                 <option value="">--Select--</option>
                                  <option value="Male">Male</option>
                                  <option value="Female">Female</option>
                                </select>
