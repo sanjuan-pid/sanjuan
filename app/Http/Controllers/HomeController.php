@@ -62,7 +62,7 @@ class HomeController extends Controller
         $submit->middle_name = $request->middle_name;
         $submit->suffix = $request->suffix;
         $submit->sex = $request->sex;
-        $submit->bday = $request->bday;
+        $submit->birthday = $request->bday;
         $submit->age = $request->age;
         $submit->house_no = $request->address;
         $submit->barangay = $request->barangay;
