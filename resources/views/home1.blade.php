@@ -74,7 +74,7 @@
                                 <label>Suffix</label><br>
                                 <input type="text" class="form-control" id="suffix" name="suffix">
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-1">
                                <label>Sex</label><span style="color: red">*</span>
                                <select class="form-control" id="sex" name="sex">
                                  <option value="Male">Male</option>
