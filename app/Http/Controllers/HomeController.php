@@ -33,7 +33,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    
+
     public function choAdmin()
     {
         $cho = "You are logged in as CHO Admin!";
@@ -61,6 +61,9 @@ class HomeController extends Controller
         $submit->first_name = $request->first_name;
         $submit->middle_name = $request->middle_name;
         $submit->suffix = $request->suffix;
+        $submit->sex = $request->sex;
+        $submit->bday = $request->bday;
+        $submit->age = $request->age;
         $submit->house_no = $request->address;
         $submit->barangay = $request->barangay;
         $submit->city = $request->city;
@@ -85,8 +88,8 @@ class HomeController extends Controller
         $submit->save();
 
         $save_path = public_path().'/files/'.$submit->id;
-        if (!file_exists($save_path)) 
-        {	
+        if (!file_exists($save_path))
+        {
             File::makeDirectory($save_path);
         }
 

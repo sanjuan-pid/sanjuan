@@ -74,12 +74,24 @@
                                 <label>Suffix</label><br>
                                 <input type="text" class="form-control" id="suffix" name="suffix">
                             </div>
-                            <div class="col-sm-12">
+                            <div class="col-sm-1">
+                                <label>Sex</label><br>
+                                <input type="text" class="form-control" id="sex" name="suffix">
+                            </div>
+                            <div class="col-sm-2">
+                               <label>Birthdate</label><span style="color: red">*</span>
+                               <input type="date" class="form-control" id="datePickerId" id="bday" name="swab_date" required>
+                            </div>
+                            <div class="col-sm-1">
+                                <label>Age</label><br>
+                                <input type="text" class="form-control" id="age" name="suffix">
+                            </div>
+                            <div class="col-sm-4">
                                 <label>House No. and Street No.</label><span style="color: red">*</span>
                                 <input type="text" class="form-control" id="address" name="address" required>
                             </div>
-                        <div class="row">
-                          <div class="col-sm-6">
+
+                          <div class="col-sm-2">
                             <label>Barangay</label><span style="color: red">*</span>
                             <select name="barangay" id="barangay" class="form-control" required>
                               <option value="">--Select--</option>
@@ -104,16 +116,14 @@
                               <option value="STA. LUCIA">STA. LUCIA</option>
                               <option value="TIBAGAN">TIBAGAN</option>
                               <option value="WEST CRAME">WEST CRAME</option>
-                              <option value="SAN JUAN MEDICAL CENTER">SAN JUAN MEDICAL CENTER</option>
-                              <option value="KALINGA">KALINGA</option>
-                              <option value="SAN JUAN CITY HALL">SAN JUAN CITY HALL</option>
                             </select>
                           </div>
-                          <div class="col-sm-6">
+                          <div class="col-sm-2">
                               <label>City</label>
                               <input type="text" class="form-control" id="city" name="city" value="San Juan City" readonly>
                           </div>
-
+                        </div>
+                        <div class="row">
                           <div class="col-sm-3">
                              <label>Date Swabbed</label><span style="color: red">*</span>
                              <input type="date" class="form-control" id="datePickerId" id="swab_date" name="swab_date" required>
