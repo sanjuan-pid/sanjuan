@@ -74,17 +74,20 @@
                                 <label>Suffix</label><br>
                                 <input type="text" class="form-control" id="suffix" name="suffix">
                             </div>
-                            <div class="col-sm-1">
-                                <label>Sex</label><br>
-                                <input type="text" class="form-control" id="sex" name="suffix">
+                            <div class="col-sm-4">
+                               <label>Sex</label><span style="color: red">*</span>
+                               <select class="form-control" id="sex" name="sex">
+                                 <option value="Male">Yes</option>
+                                 <option value="Female">No</option>
+                               </select>
                             </div>
                             <div class="col-sm-2">
                                <label>Birthdate</label><span style="color: red">*</span>
-                               <input type="date" class="form-control" id="datePickerId" id="bday" name="swab_date" required>
+                               <input type="date" class="form-control" id="datePickerId" id="bday" name="bday" required>
                             </div>
                             <div class="col-sm-1">
                                 <label>Age</label><br>
-                                <input type="text" class="form-control" id="age" name="suffix">
+                                <input type="text" class="form-control" id="age" name="age">
                             </div>
                             <div class="col-sm-4">
                                 <label>House No. and Street No.</label><span style="color: red">*</span>
