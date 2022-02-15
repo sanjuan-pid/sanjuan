@@ -612,7 +612,7 @@
                             </div>
                           </a>
 
-                      <a href="https://www.cityofsanjuan.ph" target="_blank">
+                      <a href="http://e-services.sanjuancity.gov.ph/" target="_blank">
                         <div class="card" style="margin: 2%;">
                                   <div class="card-body" style="margin-top: -10%;">
                                       <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
@@ -708,7 +708,7 @@
                                   </div>
                         </div>
                       </a>
-                      <a href="https://www.cityofsanjuan.ph" target="_blank">
+                      <a href="http://e-services.sanjuancity.gov.ph/" target="_blank">
                         <div class="card" style="margin: 2%;">
                           <div class="card-body" style="margin-top: -10%;">
                             <div class="col-4 col-sm-4 mt-2" style="float: left; display: inline-block;">
