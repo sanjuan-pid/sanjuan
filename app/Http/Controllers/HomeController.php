@@ -157,4 +157,13 @@ class HomeController extends Controller
 
         return back()->with('message', 'Successfully sent new request!');
     }
+
+
+    public function getAge()
+    {
+        $birthday -> $request->birthday;
+
+        $age = $birthday->diff(Carbon::today())->format('%y years old');;
+        return view('index',compact('age'));
+    }
 }

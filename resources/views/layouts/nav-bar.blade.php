@@ -68,7 +68,7 @@
            <div class="snowflake heart">
              ♥
            </div>
-           
+
          </div>
         <div class="container" id="nav">
             <div class="row" style="background:rgb(27, 37, 96); color:#fff; padding: 4px 0;">

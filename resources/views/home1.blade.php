@@ -84,11 +84,12 @@
                             </div>
                             <div class="col-sm-2">
                                <label>Birthdate</label><span style="color: red">*</span>
-                               <input type="date" class="form-control" id="datePickerId" id="bday" name="bday" required>
+                               <input type="date" class="form-control" id="bday" name="bday" required>
                             </div>
+
                             <div class="col-sm-1">
-                                <label>Age</label><br>
-                                <input type="text" class="form-control" id="age" name="age">
+                                <label>Age</label>
+                                <input type="text" class="form-control" id="age" name="age" value="0" readonly>
                             </div>
                             <div class="col-sm-4">
                                 <label>House No. and Street No.</label><span style="color: red">*</span>
@@ -130,7 +131,7 @@
                         <div class="row">
                           <div class="col-sm-3">
                              <label>Date Swabbed</label><span style="color: red">*</span>
-                             <input type="date" class="form-control" id="datePickerId" id="swab_date" name="swab_date" required>
+                             <input type="date" class="form-control" id="swab_date" name="swab_date" required>
                           </div>
 
                           <div class="col-sm-3">
@@ -269,7 +270,44 @@ $("#monitoring_sheet").on('change', function () {
 </script>
 
 <script>
-  datePickerId.max = new Date().toISOString().split("T")[0];
+  swab_date.max = new Date().toISOString().split("T")[0];
   date_start.max = new Date().toISOString().split("T")[0];
   date_end.max = new Date().toISOString().split("T")[0];
+  bday.max = new Date().toISOString().split("T")[0];
+</script>
+<script>
+  $(document).ready(function(){
+    $("#bday").change(function(){
+      var bday = $("#bday").val();
+      var bdate = new Date(bday);
+      var today = new Date();
+
+      var yearbday = bdate.getFullYear();
+      var yeartoday = today.getFullYear();
+
+      var monthbday = bdate.getMonth()+1;
+      var monthtoday = today.getMonth()+1;
+
+      var datebday = bdate.getDate();
+      var datetoday = today.getDate();
+
+      if(monthbday > monthtoday) {
+        var yearsold = yeartoday - yearbday - 1;
+      }
+      else if(monthbday < monthtoday) {
+        var yearsold = yeartoday - yearbday;
+      }
+      else {
+        if(datebday >= datetoday)
+        {
+          var yearsold = yeartoday - yearbday;
+        }
+        else {
+          var yearsold = yeartoday - yearbday - 1;
+        }
+      }
+
+      $("#age").val(yearsold);
+    });
+	});
 </script>
