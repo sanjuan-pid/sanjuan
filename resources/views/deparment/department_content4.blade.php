@@ -417,8 +417,11 @@
       }
        #deptone .ins h1{
        font-size: 14px !important;
-       left: 34% !important;
+       left: 50% !important;
       }
+      #deptone .coldept{
+        top: 20px !important;
+     }
       #deptone #a1{
         font-size: 18px !important;
       }
@@ -467,12 +470,14 @@
       }
        #depttwo .ins h1{
        font-size: 18px !important;
-       left: 34% !important;
+       left: 35% !important;
       }
       #depttwo #a1{
         font-size: 18px !important;
       }
-
+      #depttwo .coldept{
+        top: 20px !important;
+     }
       #deptthree{
         margin-left: 0rem!important;
         padding-left: 0 !important;
@@ -491,12 +496,14 @@
       }
        #deptthree .ins h1{
        font-size: 15px !important;
-       left: 34% !important;
+       left: 50% !important;
       }
       #deptthree #a1{
         font-size: 18px !important;
       }
-
+      #deptthree .coldept{
+        top: 20px !important;
+     }
       #deptfour{
         margin-left: 0rem!important;
         padding-left: 0 !important;
@@ -515,12 +522,14 @@
       }
        #deptfour .ins h1{
        font-size: 18px !important;
-       left: 34% !important;
+       left: 40% !important;
       }
       #deptfour #a1{
         font-size: 18px !important;
       }
-
+      #deptfour .coldept{
+        top: 20px !important;
+     }
       #deptfive{
         margin-left: 0rem!important;
         padding-left: 0 !important;
@@ -539,23 +548,31 @@
       }
        #deptfive .ins h1{
        font-size: 15px !important;
-       left: 34% !important;
+       left: 40% !important;
       }
       #deptfive #a1{
         font-size: 18px !important;
       }
+      #deptfive .coldept{
+        top: 20px !important;
+     }
       button.w3-button.w3-teal.w3-xlarge.w3-hide-large.deptmenu {
           font-size: 15px !important;
           padding-left: 12px;
       }
     }
 
+    .mobdep{
+      background-color: blue !important;
+    }
     </style>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <div class="container hahahe">
-      <div class="deptside  dt" id="mysb">
+      <div class="0
+
+      deptside  dt" id="mysb">
         <button class="w3-bar-item w3-button w3-large w3-hide-large" style="font-weight:7s00;color:red;" onclick="w3_close()">Close &times;</button>
         <br>
         <button class="buttondept deptlinks" onclick="deptcon(event, 'deptone')"><span>INSTITUTIONAL<br>DEVELOPMENT</span></button>
@@ -572,7 +589,7 @@
   <div class="container" id="dpcon">
     <div class="container" id="dtpage">
       <div class="w3-main" style="margin-left:200px">
-        <div class="w3-teal">
+        <div class="w3-teal mobdep">
           <button class="w3-button w3-teal w3-xlarge w3-hide-large deptmenu" style="font-size:5px;"onclick="w3_open()">&#9776; MENU</button>
         </div>
 
@@ -580,7 +597,9 @@
             <div class="row">
             <!-- <h3 id="h3con" style="text-align: center; color: #1f1c4b; font-size: 50px; font-weight: 700;">INSTITUTIONAL DEVELOPMENT</h3> -->
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 ins mt-2" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-                <h1 style="position: absolute; top: 50%; left: 30%;transform: translate(-50%, -50%); color:white !important; font-size:35px;font-weight:700;">INSTITUTIONAL DEVELOPMENT</h1>
+                <div class="col-10 coldept" style="top: 50%;">
+                  <h1 style="position: absolute; left: 40%;transform: translate(-50%, -50%); color:white !important; font-size:35px;font-weight:700;">INSTITUTIONAL DEVELOPMENT</h1>
+                </div>
                 <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
               </div>
             </div>
@@ -885,9 +904,13 @@
         </div>
 
           <div class="w3-container ml-5 deptcontent" id="depttwo">
-            <div class="col-12 ins mt-3" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-              <h1 style="position: absolute; top: 50%; left: 30%;transform: translate(-50%, -50%); color:white !important; font-size:35px;font-weight:700;">ECONOMIC CENTER</h1>
-              <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
+            <div class="row">
+              <div class="col-12 ins mt-3" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
+                <div class="col-10 coldept" style="top: 50%;">
+                  <h1 style="position: absolute; left: 40%;transform: translate(-50%, -50%); color:white !important; font-size:35px;font-weight:700;"> ECONOMIC CENTER</h1>
+                </div>
+                <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
+              </div>
             </div>
             <br>
                     <div class="row">
@@ -1052,9 +1075,13 @@
           </div>
 
           <div class="w3-container ml-5 deptcontent" id="deptthree">
-            <div class="col-12 ins mt-3" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-              <h1 style="position: absolute; top: 50%; left: 30%;transform: translate(-50%, -50%); color:white !important; font-size:35px; font-weight:700;">ENVIRONMENTAL SECTOR</h1>
-              <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
+            <div class="row">
+              <div class="col-12 ins mt-3" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
+                <div class="col-10 coldept" style="top: 50%;">
+                  <h1 style="position: absolute; left: 40%;transform: translate(-50%, -50%); color:white !important; font-size:35px;font-weight:700;"> ENVIRONMENTAL SECTOR</h1>
+                </div>
+                <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
+              </div>
             </div>
             <br>
                     <div class="row">
@@ -1099,9 +1126,13 @@
         </div>
 
         <div class="w3-container ml-5 deptcontent" id="deptfour">
-          <div class="col-12 ins mt-3" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-            <h1 style="position: absolute; top: 50%; left: 30%;transform: translate(-50%, -50%); color:white !important; font-size:35px; font-weight:700;">SOCIAL SERVICES</h1>
-            <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
+          <div class="row">
+            <div class="col-12 ins mt-3" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
+              <div class="col-10 coldept" style="top: 50%;">
+                <h1 style="position: absolute; left: 40%;transform: translate(-50%, -50%); color:white !important; font-size:35px;font-weight:700;"> SOCIAL SERVICES</h1>
+              </div>
+              <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
+            </div>
           </div>
           <br>
                   <div class="row">
@@ -1495,10 +1526,14 @@
       </div>
 
       <div class="w3-container ml-5 deptcontent" id="deptfive">
+        <div class="row">
             <div class="col-12 ins mt-3" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-              <h1 style="position: absolute; top: 50%; left: 30%;transform: translate(-50%, -50%); color:white !important; font-size:35px; font-weight:700;">PHYSICAL / INFRASTRUCTURE</h1>
+              <div class="col-10 coldept" style="top: 50%;">
+                <h1 style="position: absolute; left: 40%;transform: translate(-50%, -50%); color:white !important; font-size:35px;font-weight:700;"> PHYSICAL INFRASTRUCTURE</h1>
+              </div>
               <img style=" width: 100%; border-radius: 10px !important;" src="{{asset('assets/bandept2.png')}}" />
             </div>
+          </div>
             <br>
                 <div class="row">
                   <div class=" col-6 col-sm-6 col-md-6 col-lg-6">
