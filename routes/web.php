@@ -74,6 +74,28 @@ Route::get('publicnotice/Announcements_page','Pages@announce1')->name('announce1
 
 Route::get('/directory_page','Pages@directory')->name('direct');
 
+Route::get('deparment/department_page','Pages@department')->name('department');
+Route::get('deparment/department_content','Pages@deptcon')->name('cd');
+Route::get('deparment/department_content2','Pages@deptcon2')->name('cd2');
+Route::get('deparment/department_content3','Pages@deptcon3')->name('cd3');
+Route::get('deparment/department_content4','Pages@deptcon4')->name('cd4');
+Route::get('deparment/department_content5','Pages@deptcon5')->name('cd5');
+
+Route::get('departmentname/admin_page','Pages@Admin')->name('Admin');
+Route::get('departmentname/cityassessor_page','Pages@assessor')->name('assessor');
+Route::get('departmentname/citybudget_page','Pages@budget')->name('budget');
+Route::get('departmentname/brgyoperations_page','Pages@brgyope')->name('brgyope');
+Route::get('departmentname/brgyoperations_page','Pages@civilreg')->name('civilreg');
+Route::get('departmentname/citycooperativedevelopment_page','Pages@citycooperative')->name('citycooperative');
+Route::get('departmentname/generalservices_page','Pages@generalservices')->name('generalservices');
+Route::get('departmentname/cityhealthdepartment_page','Pages@cityhealth')->name('cityhealth');
+Route::get('departmentname/businesspermitandlicenseoffice_page','Pages@bplo')->name('bplo');
+Route::get('departmentname/citybuilding_page','Pages@obo')->name('obo');
+
+Route::get('/departmentname/accounting_page','Pages@accounting')->name('acct');
+Route::get('/departmentname/treasury_page','Pages@treasury')->name('trea');
+
+
 // Route::get('/department_page','Pages@department')->name('department');
 // Route::get('/department_content','Pages@department_content')->name('dept_cont');
 // Route::get('/department_selected','Pages@department_selected')->name('department_selected');
@@ -101,9 +123,12 @@ Route::group(['middleware' => 'preventBackHistory'],function(){
     Route::post('/update/{id?}', 'HomeController1@update');
     Route::post('/print_later', 'HomeController1@print_later');
     Route::post('/decline', 'HomeController1@decline');
+    Route::post('/editdata', 'HomeController1@editdata');
 
     Route::get('/cho_dashboard', 'HomeController1@cho_dashboard')->name('cho.admin.dashboard');
     Route::get('/cho_request', 'HomeController1@admin')->name('cho.admin.request');
+
+
 
 Route::prefix('admin')->group(function(){
  
@@ -251,26 +276,7 @@ Route::prefix('admin')->group(function(){
     Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
     Route::get('Tourism/historical_page','Pages@historical')->name('historical');
 
-    Route::get('deparment/department_page','Pages@department')->name('department');
-    Route::get('deparment/department_content','Pages@deptcon')->name('cd');
-    Route::get('deparment/department_content2','Pages@deptcon2')->name('cd2');
-    Route::get('deparment/department_content3','Pages@deptcon3')->name('cd3');
-    Route::get('deparment/department_content4','Pages@deptcon4')->name('cd4');
-    Route::get('deparment/department_content5','Pages@deptcon5')->name('cd5');
-
-    Route::get('departmentname/admin_page','Pages@Admin')->name('Admin');
-    Route::get('departmentname/cityassessor_page','Pages@assessor')->name('assessor');
-    Route::get('departmentname/citybudget_page','Pages@budget')->name('budget');
-    Route::get('departmentname/brgyoperations_page','Pages@brgyope')->name('brgyope');
-    Route::get('departmentname/brgyoperations_page','Pages@civilreg')->name('civilreg');
-    Route::get('departmentname/citycooperativedevelopment_page','Pages@citycooperative')->name('citycooperative');
-    Route::get('departmentname/generalservices_page','Pages@generalservices')->name('generalservices');
-    Route::get('departmentname/cityhealthdepartment_page','Pages@cityhealth')->name('cityhealth');
-    Route::get('departmentname/businesspermitandlicenseoffice_page','Pages@bplo')->name('bplo');
-    Route::get('departmentname/citybuilding_page','Pages@obo')->name('obo');
-
-    Route::get('/departmentname/accounting_page','Pages@accounting')->name('acct');
-    Route::get('/departmentname/treasury_page','Pages@treasury')->name('trea');
+    
 
 
 });
