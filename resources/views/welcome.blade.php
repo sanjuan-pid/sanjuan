@@ -278,7 +278,7 @@
         </div>
       </div> -->
 
-      <div class="container karosel mt-2" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0;">
+      <div class="container karosel mt-2" id="mayorqr" style="box-shadow: 0px 3px 3px #cccccc; padding: 0; padding: 2% 0; background-color: #f4f4f4;">
         <div class="row justify-content-md-center" style="position:relative;">
 
               <div class="col-sm-12" style="margin-bottom: 0%;">
@@ -553,7 +553,7 @@
 <br>
 @include('layouts.index.mayors')
     {{-- @include('layouts.index.news') --}}
-  <div class="container" id="news_sec" style="width:95%;">
+  <div class="container mt-2" id="news_sec" style="width:95%; background-color: #f4f4f4;">
       <br>
       <br>
       <div class="row" id="news">
@@ -834,7 +834,7 @@
       </div>
   </div>
 
-  <div class="container" id="gov-sites" style="background:#fff; padding:2% 0;">
+  <div class="container" id="gov-sites" style="background:#fff; padding:2% 0; background-color: #f4f4f4 !important;">
     <div class="row">
 
           <div class="col-sm">
