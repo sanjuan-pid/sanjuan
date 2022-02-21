@@ -156,6 +156,7 @@
           <h2 class="card-title blue" style="color:#fff !important; padding: 0 !important; text-align: center; color: #1f1c4b;font-weight: 700;">OFFICE OF THE BUILDING OFFICIAL</h2>
         </div>
       </div>
+
       <div class="row d-flex justify-content-center mt-2 mb-3">
           <div class="col-5 clearfix d-md-block">
             <a href=" {{asset('assets/dlforms/APPLICATION FORM FOR ANNUAL INSPECTION & CERTIFICATE OF USE (2022).pdf')}}" download>
@@ -393,22 +394,7 @@
             </a>
           </div>
 
-          <div class="col-5 clearfix d-md-block">
-            <a href="{{asset('assets/dlforms/UNIFIED APPLICATION FORM FOR BUILDING PERMIT.pdf')}}" download>
-              <div class="card mb-2 dlcard">
-                <div class="card-body" style="padding: 10px;">
-                  <div class="row">
-                    <div class="col-10" style="padding-top:2%;">
-                      <h5 class="dltitle" style="font-size:18px;">UNIFIED APPLICATION FORM FOR BUILDING PERMIT</h5>
-                    </div>
-                    <div class="col-2">
-                      <button class="dlbtn"><i class="fa fa-download"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
+
 
           <div class="col-5 clearfix d-md-block">
             <a href="{{asset('assets/dlforms/PERMIT - SIDEWALK CONSTRUCTION.pdf')}}" download>
@@ -496,9 +482,17 @@
           </div>
 
 
-
+          <div class="row">
+            <div class="col-12">
+              <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading text-black" style="font-weight:700;">Note:</h4>
+                <h4 class="alert-heading text-black" style="font-weight:500; font-size:20px;"> In printing please use the long size bond paper.</h4>
+              </div>
+            </div>
+          </div>
 
         </div>
+
       </div>
 
 

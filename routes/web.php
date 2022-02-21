@@ -119,7 +119,7 @@ Route::post('/submit_request', 'HomeController@submit');
 
 Route::group(['middleware' => 'preventBackHistory'],function(){
 
-    
+
     //Certificate of Recovery - Admin
     Route::get('/list', 'HomeController1@list');
 
@@ -134,7 +134,7 @@ Route::group(['middleware' => 'preventBackHistory'],function(){
 
 
 Route::prefix('admin')->group(function(){
- 
+
 
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
