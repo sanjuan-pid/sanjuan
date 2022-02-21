@@ -1,155 +1,139 @@
-@extends('layouts.admin-app')
-
+@extends('layouts.app-admin')
 @section('content')
-<style>
-    th {
-        cursor: pointer;
-    }
-</style>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            @if(\Session::has('success'))
-            {{-- session ung nilagay mo sa return ng controller --}}
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Success!</strong> {{ \Session::get('success')}}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            @endif
-            @if(count($errors) > 0)
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              <strong>Warning!</strong> 
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <p>Please check the following:</p>
-                <ul>
-                  @foreach($errors->all() as $error)
-                      <li>
-                          {{$error}}
-                      </li>
-                  @endforeach
-              </ul>
-              
+    <!-- Header -->
+    <div class="header pb-6">
+        <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+                <h6 class="h2 d-inline-block mb-0">DEPARTMENTS / CONTENTS</h6>
             </div>
-            @endif
-            <div class="card">
-                
-                <div class="card-header">
-                    <strong>Department List</strong>
-                    {{-- <a href="{{action('MagazineController@create')}}" class="btn btn-outline-success" style="float:right;">Add New</a> --}}
-                </div>
-                <div class="card-body">
-                    <form id="live-search" action="" method="GET">
-                        <div class="form-group row mb-4">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Search Department:</label>
-                            <div class="col-sm-10">
-                            <input type="text" name="filter" class="form-control" id="filter" >
-                            </div>
-                        </div>
-                    </form>           
-                    <table class="table" id="example">
-                        <thead>
-                            <tr>
-                                <th>Sector <i class="fa fa-unsorted fa-fw"></i></th>
-                                <th>Code <i class="fa fa-unsorted fa-fw"></i></th>
-                                <th>Department Name <i class="fa fa-unsorted fa-fw"></i></th>
-                                <th>Contact No. <i class="fa fa-unsorted fa-fw"></i></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="search-show">
-                         @foreach($Dept_Cont_List as $row)
-                                <tr id={{$row->id}} class="search-group">
-                                    <td >{{$row->dept_sector}}</td>
-                                    <td >{{$row->dept_code}}</td>
-                                    <td >{{$row->dept_name}}</td>
-                                    <td >{{$row->dept_contactno}}</td>
-                                    <td >
-                                        <a href="{{action('Department_ContentController@edit', $row->id)}}" class="btn btn-outline-primary mb-1 btn-block font-weight-bold">Edit Contents</a>                                 
-                                        
-                                    </td>
-                                </tr>
-                         @endforeach
-                        </tbody>
-                    </table>
-                    <strong>{{ $Dept_Cont_List->links() }}</strong>
-                    <strong id="filter-count" class="text-primary float-right"></strong>
-                </div>
             </div>
         </div>
+        </div>
     </div>
-</div>
+    <!-- /Header -->
+
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+
+        @if(\Session::has('success'))
+            {{-- session ung nilagay mo sa return ng controller --}}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-check-bold"></i></span>
+                <span class="alert-text"><strong>Success!</strong> {{ \Session::get('success')}}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
+        <!-- Department Table -->
+        <div class="row">
+            <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header border-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                      <form id="live-search" action="" method="GET">
+                        <input type="text" class="form-control" id="filter" name="filter" placeholder="Search Office Code / Department Name">
+                      </form>
+                    </div>
+                </div>
+                </div>
+                <div class="table-responsive">
+                <!-- Projects table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                        <tr>
+                        <th scope="col" class="sort" data-sort="name">Office Code</th>
+                        <th scope="col" class="sort" data-sort="budget">Department Name</th>
+                        <th scope="col" class="sort" data-sort="budget">Sector</th>
+                        <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list" id="search-show">
+                      @foreach($Dept_Cont_List as $row)
+                        <tr id={{$row->id}} class="search-group">
+                            <th scope="row">
+                                <div class="media align-items-center">
+                                <div class="avatar rounded-circle mr-3">
+                                    <img alt="Logo" src="{{asset('department_files/'.$row->dept_code.'/'.$row->dept_logo)}}">
+                                </div>
+                                <div class="media-body">
+                                    <span class="name mb-0 text-sm">{{$row->dept_code}}</span>
+                                </div>
+                                </div>
+                            </th>
+                            <td>{{$row->dept_name}}</td>
+                            <td>{{$row->dept_sector}}</td>
+                            <td>
+                                <a href="{{action('Department_ContentController@edit', $row->dept_code)}}" class="btn btn-primary mb-1 btn-block font-weight-bold btn-sm">Edit</a>
+                            </td>
+                        </tr>
+                       @endforeach
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+            <strong id="filter-count" class="text-primary float-right"></strong>
+            </div>
+
+        </div>
+        <!-- /Department Table -->
 <script>
-$(document).ready(function() {
+  $(document).ready(function() {
 
-    // Live Search
         $('#live-search').submit(function(){
-            // Retrieve the input field text and reset the count to zero
-            var filter = $(this).val(), count = 0;
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
 
-            // Loop through the comment list
-            $(".search-group").each(function(){
+        // Loop through the comment list
+        $(".search-group").each(function(){
 
-                // If the list item does not contain the text phrase fade it out
-                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                    $(this).fadeOut();
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
 
-                // Show the list item if the phrase matches and increase the count by 1
-                } else {
-                    $(this).show();
-                    count++;
-                }
-            });
-
-            // Update the count
-            var numberItems = count;
-            $("#filter-count").text(count+"results out of");
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
         });
 
-        $("#filter").keyup(function(){
-    
-            // Retrieve the input field text and reset the count to zero
-            var filter = $(this).val(), count = 0;
+        // Update the count
+        var numberItems = count;
+        $("#filter-count").text(count+"results out of");
+    });
 
-            var countTable = $('#search-show').find('tr').length
+    $("#filter").keyup(function(){
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
 
-            // Loop through the comment list
-            $(".search-group").each(function(){
+        var countTable = $('#search-show').find('tr').length
 
-                // If the list item does not contain the text phrase fade it out
-                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                    $(this).fadeOut();
+        // Loop through the comment list
+        $(".search-group").each(function(){
 
-                // Show the list item if the phrase matches and increase the count by 1
-                } else {
-                    $(this).show();
-                    count++;
-                }
-            });
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
 
-            // Update the count
-            var numberItems = count;
-            $("#filter-count").text("Showing "+count+" out of "+countTable+" entries");
-            });
-} );
-
-    //Sorter
-        $('th').click(function(){
-            var table = $(this).parents('table').eq(0)
-            var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
-            this.asc = !this.asc
-            if (!this.asc){rows = rows.reverse()}
-            for (var i = 0; i < rows.length; i++){table.append(rows[i])}
-        })
-        function comparer(index) {
-            return function(a, b) {
-                var valA = getCellValue(a, index), valB = getCellValue(b, index)
-                return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
             }
-        }
-        function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
+        });
+
+        // Update the count
+        var numberItems = count;
+        $("#filter-count").text("Showing "+count+" out of "+countTable+" entries");
+        });
+  });
 </script>
 @endsection

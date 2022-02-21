@@ -51,7 +51,17 @@
                 </div>
               </div>
             </div>
-            <div class="card-body pt-7 px-5">
+            <div class="card-body pt-7 px-4">
+              @if(\Session::has('success'))
+                  {{-- session ung nilagay mo sa return ng controller --}}
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <span class="alert-icon"><i class="fa fas fa-times"></i></span>
+                      <span class="alert-text"><strong>Login Failed!</strong> {{ \Session::get('success')}}</span>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+              @endif
               <div class="text-center mb-4">
                 <h3>Sign in with credentials</h3>
               </div>
