@@ -19,6 +19,8 @@ Route::get('/', function () {
 });
 
 
+//Webpage - Historical Bike Lane
+Route::get('/Historical_page','WebpageController@Historical_page');
 
 Route::get('web/home', 'HomeController@webAdmin')->name('web.admin')->middleware('is_admin');
 Route::get('cho/home', 'HomeController@choAdmin')->name('cho.admin');
@@ -81,6 +83,7 @@ Route::get('deparment/department_content3','Pages@deptcon3')->name('cd3');
 Route::get('deparment/department_content4','Pages@deptcon4')->name('cd4');
 Route::get('deparment/department_content5','Pages@deptcon5')->name('cd5');
 
+Route::get('departmentname/department_page_contents','Pages@Departments_Contents')->name('Department_Contents');
 Route::get('departmentname/admin_page','Pages@Admin')->name('Admin');
 Route::get('departmentname/cityassessor_page','Pages@assessor')->name('assessor');
 Route::get('departmentname/citybudget_page','Pages@budget')->name('budget');
@@ -244,17 +247,17 @@ Route::prefix('admin')->group(function(){
     // Route::resource('/department','DeparmentController');
 
     //Department - Main
-    // Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
-    // Route::resource('/dept', 'Department_MainController');
+    Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
+    Route::resource('/dept', 'Department_MainController');
 
     //Department - Content
-    // Route::get('/cont_list', 'Department_ContentController@index')->name('admin.dept.cont_list');
-    // Route::resource('/cont', 'Department_ContentController');
+    Route::get('/cont_list', 'Department_ContentController@index')->name('admin.dept.cont_list');
+    Route::resource('/cont', 'Department_ContentController');
 
     //Department - Org Chart
-    // Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
-    // Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
-    // Route::resource('/org', 'Department_OrgChartController');
+    Route::get('/org_list', 'Department_OrgChartController@index')->name('admin.org.org_list');
+    Route::get('/org_emp_create/{id}', 'Department_OrgChartController@emp_create')->name('admin.org.org_emp_create');
+    Route::resource('/org', 'Department_OrgChartController');
 
     //VIP Stores
     Route::get('/vip_list', 'Admin_VIPController@index')->name('admin.vip.vip_list');
@@ -275,9 +278,6 @@ Route::prefix('admin')->group(function(){
     Route::get('Tourism/biketrail_page','Pages@biketrail')->name('biketrail');
     Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
     Route::get('Tourism/historical_page','Pages@historical')->name('historical');
-
-
-
 
 });
 });
