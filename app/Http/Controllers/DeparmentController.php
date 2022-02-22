@@ -12,7 +12,7 @@ class DeparmentController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth');
     }
 
     /**
@@ -23,7 +23,7 @@ class DeparmentController extends Controller
     public function index()
     {
         $dept = DB::select('select * from department
-            where status = 1 
+            where status = 1
             order by created_at desc;');
         return view('admin.department.department-list', compact('dept'));
     }
@@ -37,21 +37,21 @@ class DeparmentController extends Controller
             'sector' => 'required',
             'description' => 'required',
         ]);
-        
+
         $dept = new department();
         $dept->title = $request->sector;
         $dept->description = $request->description;
         $dept->logo="";
         $dept->status = 1;
         $dept->save();
-        
+
         return redirect()->route('admin.department.deparment-list')->with('success','Data Added');
     }
     public function edit($id)
     {
-        $dept = department::find($id); 
+        $dept = department::find($id);
         return view('admin.department.department-edit',compact('dept', 'id'));
-       
+
     }
     public function update(Request $request, $id)
     {
@@ -66,7 +66,7 @@ class DeparmentController extends Controller
         $dept_update->save();
 
         return redirect()->route('admin.department.deparment-list')->with('success', 'Data inserted');
-        
+
     }
     public function child($id)
     {
@@ -76,7 +76,7 @@ class DeparmentController extends Controller
                                 where department_child.sector='.$id, [1]);
         $dept = DB::select('SELECT *
             FROM department
-            where id='.$id, [1]);                            
+            where id='.$id, [1]);
         return view('admin.department.child_dept',compact('dept_child','dept', 'id'));
     }
     public function child_edit($id)
@@ -104,7 +104,7 @@ class DeparmentController extends Controller
         $dept->status = 1;
         $dept->save();
         $id = $request->sector;
-        
+
         return redirect()->route('admin.department.child_dept', ['id' => $id])->with('success','Data Added');
     }
 
@@ -123,6 +123,6 @@ class DeparmentController extends Controller
         $dept_update->save();
 
         return redirect()->route('admin.department.child_dept', ['id' => $dept_update->sector])->with('success', 'Data Updated');
-        
+
     }
 }
