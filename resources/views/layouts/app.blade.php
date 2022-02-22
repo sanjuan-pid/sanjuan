@@ -12,8 +12,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
   <title>City Health Office - Recovery Tracking System</title>
 
   <!-- Fonts -->
@@ -153,8 +151,7 @@
   <script src="{{asset('vendor/chart.js/dist/Chart.extension.js')}}"></script>
   <!-- Argon JS -->
   <script src="{{asset('js/argon.js')}}"></script>
-  <!-- Demo JS - remove this in your project -->
-  <script src="{{asset('js/demo.min.js')}}"></script>
+  
 </body>
 
 </html>
