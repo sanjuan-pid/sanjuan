@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Department_Main;
 use App\Department_Org;
 use App\Department_Content;
 use DB;
+use File;
 
 class Department_MainController extends Controller
 {
@@ -52,8 +52,13 @@ class Department_MainController extends Controller
             'placement' => 'required',
             'contact_no' => 'required',
             'email' => 'required',
+            'dept_logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
         
+        $Dept_Code = $request->code;
+        $File_Path = public_path().'/department_files/'.$Dept_Code;
+        File::makeDirectory($File_Path);
+
         //get values ng mga nasa form to save
         $dept_new = new Department_Main();
         $dept_new->dept_name = $request->name;
@@ -63,10 +68,14 @@ class Department_MainController extends Controller
         $dept_new->dept_contactno = $request->contact_no;
         $dept_new->dept_email = $request->email;
         $dept_new->dept_status = "ACTIVE";
+        $Filename = $request->dept_logo->getClientOriginalName();
+        $request->dept_logo->move(public_path().'/department_files/'.$Dept_Code, $Filename );  // your folder path
+        $dept_new->dept_logo = $Filename;
         $dept_new->save();
 
         $org_new = new Department_Org();
         $org_new->dept_code = $request->code;
+        $org_new->dept_chartfile = null;
         $org_new->member_name = $request->depthead;
         $org_new->member_designation = $request->designation;
         $org_new->member_sg = $request->get('sg');
@@ -76,14 +85,9 @@ class Department_MainController extends Controller
 
         $cont_new = new Department_Content();
         $cont_new->dept_code = $request->code;
-        $cont_new->dept_desc = "";
-        $cont_new->dept_mission = "";
-        $cont_new->dept_vision = "";
-        $cont_new->dept_philosophy = "";
-        $cont_new->dept_services = "";
-        $cont_new->dept_socmed = "";
-        $cont_new->dept_objectives = "";
-        $cont_new->dept_services = "";
+        $cont_new->dept_content_type = 'Description';
+        $cont_new->dept_content = null;
+        $cont_new->dept_content_tag = "Primary";
         $cont_new->save();
 
         return redirect()->route('admin.dept.dept_list')->with('success','Department Added');
@@ -167,10 +171,18 @@ class Department_MainController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        $affected = DB::table('department_main')
+    {   
+        //Update Main - Inactive
+        DB::table('department_main')
               ->where('dept_id', $id)
               ->update(['dept_status' => 'INACTIVE']);
+
+        //Update Contents - Hide
+        $Dept_Code = DB::table('department_main')->where('dept_id',$id)->value('dept_code');
+        DB::table('department_contents')
+            ->where('dept_code', $Dept_Code)
+            ->update(['dept_content_tag' => "Hide"]);
+
               
         return redirect()->route('admin.dept.dept_list')->with('success', 'Department is removed from the list');
     }

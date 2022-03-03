@@ -1,7 +1,8 @@
-@extends('layouts.admin-app')
+@extends('layouts.app-admin')
 
 @section('content')
-<div class="container col-12">
+{{-- Old Content - DO NOT REMOVE!!! --}}
+{{-- <div class="container col-12">
     <div class="row justify-content-center">
         <div class="">
             <div class="card">
@@ -52,7 +53,7 @@
                                         
                                     {{-- <h5 class="card-title">{{$item->member_sg}}</h5> --}}
                                     {{-- <p class="card-text">{{$item->member_designation}}</p> --}}
-                                    </div>
+                                    {{-- </div>
                                 </div>
                                 </div>
                             </div>
@@ -62,5 +63,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+
 @endsection

@@ -25,8 +25,9 @@ class Department_ContentController extends Controller
         $Dept_Cont_List = DB::table('department_contents')
             ->join('department_main', 'department_contents.dept_code', '=', 'department_main.dept_code')
             ->select('department_contents.*', 'department_main.*')
+            ->where('department_main.dept_status','ACTIVE')
             ->where('department_contents.dept_content_tag','Primary')
-            ->paginate(15);
+            ->get();
 
         return view('admin.department.cont_list', compact('Dept_Cont_List'));
     }

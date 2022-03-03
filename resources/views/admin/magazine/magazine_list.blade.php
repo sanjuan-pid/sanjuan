@@ -1,82 +1,94 @@
-@extends('layouts.admin-app')
-
+@extends('layouts.app-admin')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            @if(\Session::has('success'))
-            {{-- session ung nilagay mo sa return ng controller --}}
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Success!</strong> {{ \Session::get('success')}}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            @endif
-            <div class="card">
-                @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-                @endif
-                <div class="card-header">
-                    <strong>Magazines</strong>
-                    <a href="{{action('MagazineController@create')}}" class="btn btn-outline-success" style="float:right;">Add New</a>
-                </div>
-                <div class="card-body">
-                    <form id="live-search" action="" method="GET">
-                        <div class="form-group row mb-4">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Search Magazine:</label>
-                            <div class="col-sm-10">
-                            <input type="text" name="filter" class="form-control" id="filter" >
-                            </div>
-                        </div>
-                    </form>
-                    <table class="table" id="example">
-                        <thead>
-                            <tr>
-                                <th>Thumbnail</th>
-                                <th>Title</th>
-                                <th>Month Issued</th>
-                                <th>Year Issued</th>
-                                <th>Tag</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="search-show">
-                         @foreach($magz as $row)
-                                <tr id={{$row->id}} class="search-group">
-                                    <td class="p-3 w-25"><img src="{{asset("uploads/" . $row->magz_filename) }}" alt="{{$row->magz_filename}}" class="img-thumbnail" width="50%;"></td>
-                                    <td >{{$row->magz_name}}</td>
-                                    <td >{{$row->magz_month}}</td>
-                                    <td >{{$row->magz_year}}</td>
-                                    <td >{{$row->magz_tag}}</td>
-                                    <td >
-                                        <a href="{{action('MagazineController@show', $row->id)}}" class="btn btn-outline-secondary font-weight-bold btn-block" target="_blank">View</a>
-                                        <a href="{{action('MagazineController@edit', $row->id)}}" class="btn btn-outline-primary font-weight-bold btn-block">Edit</a>
-                                    </td>
-                                </tr>
-                         @endforeach
-                        </tbody>
-                    </table>
-                    <strong id="filter-count" class="text-primary float-right"></strong>
-                </div>
+    <!-- Header -->
+    <div class="header pb-6">
+        <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+                <h6 class="h2 d-inline-block mb-0">CITY / MAGAZINE</h6>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+                <a href="{{action('MagazineController@create')}}" class="btn btn-success"><i class="fa fa-plus fa-fw"></i> Add Magazine</a>
+            </div>
             </div>
         </div>
+        </div>
     </div>
-</div>
-<script>
-$(document).ready(function() {
-    $('.delete_form').submit(function(){
-        if(confirm("Are you sure you want to delete it?")){
-            return true;
-        }
-        else{
-            return false;
-        }
-    });
+    <!-- /Header -->
 
-    $('#live-search').submit(function(){
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+
+        @if(\Session::has('success'))
+            {{-- session ung nilagay mo sa return ng controller --}}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-check-bold"></i></span>
+                <span class="alert-text"><strong>Success!</strong> {{ \Session::get('success')}}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
+        <!-- Department Table -->
+        <div class="row">
+            <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header border-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                      <form id="live-search" action="" method="GET">
+                        <input type="text" class="form-control" id="filter" name="filter" placeholder="Search Title / Date Posted">
+                      </form>
+                    </div>
+                </div>
+                </div>
+                <div class="table-responsive">
+                <!-- Projects table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                        <tr>
+                        <th scope="col" class="sort" data-sort="name">Thumbnail</th>
+                        <th scope="col" class="sort" data-sort="budget">Title</th>
+                        <th scope="col" class="sort" data-sort="budget">Month Issued</th>
+                        <th scope="col" class="sort" data-sort="name">Year Issued</th>
+                        <th scope="col" class="sort" data-sort="budget">Tag</th>
+                        <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list" id="search-show">
+                      @foreach($magz as $row)
+                        <tr id={{$row->id}} class="search-group">
+                            <td width="15%;"><img src="{{asset("uploads/" . $row->magz_filename) }}" alt="{{$row->magz_filename}}" class="img-thumbnail" width="50%;"></td>
+                            <td class="">{{$row->magz_name}}</td>
+                            <td class="">{{$row->magz_month}}</td>
+                            <td class="">{{$row->magz_year}}</td>
+                            <td class="">{{$row->magz_tag}}</td>
+                            <td>
+                                <a href="{{action('MagazineController@show', $row->id)}}" class="btn btn-info mb-1 btn-block font-weight-bold btn-sm" target="_blank">Show</a>
+                                <a href="{{action('MagazineController@edit', $row->id)}}" class="btn btn-primary mb-1 btn-block font-weight-bold btn-sm">Edit</a>
+                            </td>
+                        </tr>
+                       @endforeach
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+            <strong id="filter-count" class="text-primary float-right"></strong>
+            </div>
+
+        </div>
+        <!-- /Department Table -->
+<script>
+  $(document).ready(function() {
+    $('.delete_form').submit(function(){
+        if(confirm("Are you sure you want to delete it?")){ return true; }
+        else{ return false; }});
+
+        $('#live-search').submit(function(){
         // Retrieve the input field text and reset the count to zero
         var filter = $(this).val(), count = 0;
 
@@ -124,6 +136,6 @@ $(document).ready(function() {
         var numberItems = count;
         $("#filter-count").text("Showing "+count+" out of "+countTable+" entries");
         });
-} );
+  });
 </script>
 @endsection

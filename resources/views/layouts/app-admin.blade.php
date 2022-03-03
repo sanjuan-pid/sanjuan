@@ -18,6 +18,7 @@
    <link rel="stylesheet" href="{{asset('vendor/nucleo/css/nucleo.css')}}" type="text/css">
    <link rel="stylesheet" href="{{asset('vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
    <!-- Page plugins -->
+   <link rel="stylesheet" href="{{asset('vendor/quill/dist/quill.core.css')}}">
    <!-- Argon CSS -->
    <link rel="stylesheet" href="{{asset('css/argon.css')}}" type="text/css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -135,7 +136,7 @@
              </li>
              <li class="nav-item">
               <a class="nav-link" href="{{route('admin.dashboard')}}">
-                <i class="ni ni-shop text-primary"></i>
+                <i class="fa fas fa-users text-primary"></i>
                 <span class="nav-link-text text-dark">Users</span>
               </a>
            </li>
@@ -294,6 +295,7 @@
    <script src="{{asset('vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
    <script src="{{asset('vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
    <!-- Optional JS -->
+   <script src="{{asset('vendor/quill/dist/quill.min.js')}}"></script>
    <script src="{{asset('vendor/chart.js/dist/Chart.min.js')}}"></script>
    <script src="{{asset('vendor/chart.js/dist/Chart.extension.js')}}"></script>
    <script src="{{asset('vendor/jvectormap-next/jquery-jvectormap.min.js')}}"></script>

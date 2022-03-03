@@ -12,7 +12,7 @@ class ActivityController extends Controller
 {
      public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth');
     }
 
     /**
@@ -44,19 +44,19 @@ class ActivityController extends Controller
 
         
         $this->validate($request,[
-            'title' => 'required',
-            'description' => 'required',
-            'filename' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'Act_Title' => 'required',
+            'Act_Desc' => 'required',
+            'Act_Image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
         
-        $cover = $request->file('filename');
+        $cover = $request->file('Act_Image');
         $extension = $cover->getClientOriginalExtension();
         Storage::disk('public')->put('Activity/'.$cover->getFilename().'.'.$extension,  File::get($cover));
         //get values ng mga nasa form to save
         $ann = new News();
-        $ann->title = $request->title;
-        $ann->desc = $request->description;
-        $ann->filename = $request->filename;
+        $ann->title = $request->Act_Title;
+        $ann->desc = $request->Act_Desc;
+        $ann->filename = $request->Act_Image;
         $ann->status = 1;
         $ann->show = 1;
         $ann->content_type = "Act";
@@ -77,28 +77,28 @@ class ActivityController extends Controller
     {
 
         $this->validate($request,[
-            'title' => 'required',
-            'description' => 'required',
+            'Act_Title' => 'required',
+            'Act_Desc' => 'required',
            
         ]);
 
-        if($request->file('filename') != null){
-            $cover = $request->file('filename');
+        if($request->file('Act_Image') != null){
+            $cover = $request->file('Act_Image');
             $extension = $cover->getClientOriginalExtension();
             Storage::disk('public')->put('Activity/'.$cover->getFilename().'.'.$extension,  File::get($cover));
             //get values ng mga nasa form to save
             $filename = 'Activity/'.$cover->getFilename().'.'.$extension;
         }
         else{
-            $filename= $request->get('filename_');
+            $filename= $request->get('Act_Image_Recent');
         }
         $update = News::find($id);
-        $update->title = $request->get('title');
-        $update->desc = $request->get('description');
+        $update->title = $request->get('Act_Title');
+        $update->desc = $request->get('Act_Desc');
         $update->filename = $filename;
 
         $update->save();
-        return redirect()->route('admin.activity.act-list')->with('success','Data Updated');
+        return redirect()->route('admin.activity.act-list')->with('success','Activity Updated');
         
     }
     public function destroy($id)

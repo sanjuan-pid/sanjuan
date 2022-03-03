@@ -22,14 +22,14 @@ class Department_OrgChartController extends Controller
      */
     public function index()
     {
-        $org = DB::table('department_main')
-            ->join('department_chart', 'department_main.dept_code', '=', 'department_chart.dept_code')
-            ->select('department_chart.dept_code', 'department_main.dept_name','department_chart.member_name','department_chart.id','department_chart.updated_at')
-            ->where('department_chart.member_tag','HEAD')
+        $Dept_Org_List = DB::table('department_chart')
+            ->join('department_main', 'department_chart.dept_code', '=', 'department_main.dept_code')
+            ->select('department_chart.*', 'department_main.*')
+            ->where('department_main.dept_status','ACTIVE')
             ->get();
 
         //$org = DB::select('select * from department_chart;');
-        return view('admin.department.org_list', compact('org'));
+        return view('admin.department.org_list', compact('Dept_Org_List'));
         //return $users;
     }
 
@@ -101,8 +101,6 @@ class Department_OrgChartController extends Controller
      */
     public function show($id)
     {   
-        //$org = Department_Org::find($id);
-
         $org = DB::table('department_chart')
             ->join('department_main', 'department_chart.dept_code', '=', 'department_main.dept_code')
             ->select('department_chart.*', 'department_main.dept_name')
@@ -117,7 +115,7 @@ class Department_OrgChartController extends Controller
                 ->where('dept_code',$code)
                 ->get()
                 ->groupBy('member_sg','member_align');
-        //return $member;
+
        return view('admin.department.org_view' ,compact('org', 'member'));
     }
 
@@ -127,18 +125,18 @@ class Department_OrgChartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        $code = DB::table('department_chart')->where('id',$id)->value('dept_code');
+        // $code = DB::table('department_chart')->where('id',$id)->value('dept_code');
 
-        $dept = DB::table('department_chart')->where('dept_code', $code)->orderBy('member_sg','DESC')->get();
+        // $dept = DB::table('department_chart')->where('dept_code', $code)->orderBy('member_sg','DESC')->get();
 
-        // $dept = DB::table('department_chart')
-        // ->join('department_main', 'department_main.dept_code', '=', 'department_chart.dept_code')
-        // ->select('department_chart.*', 'department_main.*')
-        // ->where('department_main.dept_id',$id)
-        // ->where('department_chart.member_tag',"HEAD")
-        // ->get();
+        // // $dept = DB::table('department_chart')
+        // // ->join('department_main', 'department_main.dept_code', '=', 'department_chart.dept_code')
+        // // ->select('department_chart.*', 'department_main.*')
+        // // ->where('department_main.dept_id',$id)
+        // // ->where('department_chart.member_tag',"HEAD")
+        // // ->get();
         return view('admin.department.org_edit' ,compact('dept','id'));
         //return $dept;
     }
@@ -160,19 +158,32 @@ class Department_OrgChartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $scores = $request->input('members');  //here data is the input array param 
+        // $scores = $request->input('members');  //here data is the input array param 
 
-        foreach($scores as $row){
-            $score = Department_Org::find($row['id']); 
-            $score->member_name = $row['name'];
-            $score->dept_code = $row['department'];
-            $score->member_designation = $row['designation'];
-            $score->member_sg = $row['sg'];
-            $score->member_align = $row['placement'];
-            $score->save(); 
-        }
+        // foreach($scores as $row){
+        //     $score = Department_Org::find($row['id']); 
+        //     $score->member_name = $row['name'];
+        //     $score->dept_code = $row['department'];
+        //     $score->member_designation = $row['designation'];
+        //     $score->member_sg = $row['sg'];
+        //     $score->member_align = $row['placement'];
+        //     $score->save(); 
+        // }
+        $Dept_Code = DB::table('department_chart')->where('id',$id)->value('dept_code');
+        if($request->Dept_Chartfile != null)
+           {
+             $Filename = $request->Dept_Chartfile->getClientOriginalName();
+             $request->Dept_Chartfile->move(public_path().'/department_files/'.$Dept_Code, $Filename );
+           }
+        else
+           { $Filename = $request->Dept_Chartfile_Recent; }
 
-        return redirect()->route('admin.org.org_list')->with('success','Member/s Information Updated');
+           DB::table('department_chart')
+           ->where('dept_code', $Dept_Code)
+           ->update(['dept_chartfile' =>  $Filename]);
+
+        //return redirect()->route('admin.org.org_list')->with('success','Member/s Information Updated');
+        return redirect()->back()->with('success', 'Chart updated!');
     }
 
     /**
