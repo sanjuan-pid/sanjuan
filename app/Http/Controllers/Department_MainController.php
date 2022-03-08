@@ -144,7 +144,16 @@ class Department_MainController extends Controller
         DB::table('department_chart')
                        ->where('dept_code',$request->get('code_hidden'))
                        ->update(['dept_code' => $request->get('code')]);
+
         //Update ng mismong dept
+        $Dept_Code = DB::table('department_main')->where('dept_id',$id)->value('dept_code');
+        if($request->dept_logo != null)
+           {
+             $Filename = $request->dept_logo->getClientOriginalName();
+             $request->dept_logo->move(public_path().'/department_files/'.$Dept_Code, $Filename );
+           }
+        else
+           { $Filename = $request->dept_logo_recent; }
         DB::table('department_main')
                        ->where('dept_id',$id)
                        ->update(['dept_name' => $request->get('name'),
@@ -152,7 +161,9 @@ class Department_MainController extends Controller
                                  'dept_placement' => $request->get('placement'),
                                  'dept_sector' => $request->get('sector'),
                                  'dept_email' => $request->get('email'),
+                                 'dept_logo' => $Filename,
                                  'dept_contactno' => $request->get('contact_no')]);
+
         //Update ng head
         DB::table('department_chart')
             ->where('member_tag', "HEAD")

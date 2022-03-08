@@ -11,7 +11,7 @@ class transparencyController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth');
     }
 
     /**
@@ -112,9 +112,9 @@ class transparencyController extends Controller
     {
       $this->validate($request,[
         'category' => 'required',
-        'transimg' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        
         'title' => 'required',
-        'pdf_filename' => '  required|file|mimes:pdf',
+        
         'year' => 'required',
         'tag' => 'required',
       ]);
@@ -138,7 +138,7 @@ class transparencyController extends Controller
           $filename_image = 'transparency/'.$cover_image->getFilename().'.'.$extension_image;
       }
       else{
-          $filename_image= $request->get('transimg');
+          $filename_image= $request->get('transimg_');
       }
 
       $trans_update = transparency::find($id);
@@ -151,7 +151,7 @@ class transparencyController extends Controller
 
 
       $trans_update->save();
-        return redirect()->route('admin.transparency.trans_list')->with('success','Data Upadated');
+        return redirect()->route('admin.transparency.trans_list')->with('success','Information Updated');
 
     }
 

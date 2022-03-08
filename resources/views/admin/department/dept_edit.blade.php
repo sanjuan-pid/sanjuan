@@ -95,7 +95,7 @@
                 <label class="form-control-label" for="example3cols3Input">Department Logo</label>
                 <input type="hidden" name="dept_logo_recent" value="{{$item->dept_logo}}">
                   <div class="custom-file">
-                    <input required type="file" class="custom-file-input" id="customFileLang" lang="en" name="dept_logo">
+                    <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="dept_logo">
                     <label class="custom-file-label" for="customFileLang">Select file</label>
                   </div>
               </div>

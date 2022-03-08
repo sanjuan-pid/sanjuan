@@ -135,7 +135,7 @@ class AnnouncementController extends Controller
         $ann_update->filename = $filename;
 
         $ann_update->save();
-        return redirect()->route('admin.announcment.announcement')->with('success','Data Updated');
+        return redirect()->route('admin.announcment.announcement')->with('success','Announcement updated!');
         
     }
 
@@ -151,7 +151,7 @@ class AnnouncementController extends Controller
         $ann_update = News::find($id);
         $ann_update->status = 0;
         $ann_update->save();
-        return redirect()->route('admin.announcment.announcement')->with('success', 'Article is already removed');
+        return redirect()->route('admin.announcment.announcement')->with('success', 'Announcement is removed from the list!');
     }
 
 
@@ -167,6 +167,6 @@ class AnnouncementController extends Controller
             // $news = mayors::find($id);
             // $news->status = 1;
             // $news->save();
-            return redirect()->route('admin.announcment.announcement')->with('success', 'Article is alread moved first');
+            return redirect()->route('admin.announcment.announcement')->with('success', 'Announcement is alread moved first');
     }
 }

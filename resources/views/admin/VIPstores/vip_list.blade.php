@@ -1,86 +1,107 @@
-@extends('layouts.admin-app')
-
+@extends('layouts.app-admin')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            @if(\Session::has('success'))
-                {{-- session ung nilagay mo sa return ng controller --}}
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Success!</strong> {{ \Session::get('success')}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-            @endif
-            <div class="card">
-                @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-                @endif
-                <div class="card-header font-weight-bold">VIP Stores
-                    <a href="{{action('Admin_VIPController@create')}}" class="btn btn-outline-success" style="float:right;">Add New VIP Store</a>
-                </div>
-                <div class="card-body">
-                    <form id="live-search" action="" method="GET">
-                        <div class="form-group row mb-4">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Search Department:</label>
-                            <div class="col-sm-10">
-                            <input type="text" name="filter" class="form-control" id="filter" >
-                            </div>
-                        </div>
-                    </form>
-                    <table class="table" id="example">
-                        <thead>
-                            <tr>
-                                <th>Establishment</th>
-                                <th>Offers</th>
-                                <th>Address</th>
-                                <th>Contact Person</th>
-                                <th>Contact No</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="search-show">
-                         @foreach($vips as $row)
-                                <tr id={{$row->id}} class="search-group">
-                                    <td >{{$row->establishment}}</td>
-                                    <td >{{$row->offers}}</td>
-                                    <td >{{$row->address}}</td>
-                                    <td >{{$row->contact_person}}</td>
-                                    <td >{{$row->contact_no}}</td>
-                                    <td>
-                                        <a href="{{action('Admin_VIPController@edit', $row->id)}}" class="btn btn-outline-primary mb-1 btn-block">Edit</a>
-                                        <form method="post" class="delete_form" action="{{action('Admin_VIPController@destroy',$row->id)}}" >
-                                            {{csrf_field()}}
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <button type="submit" class="btn btn-outline-danger delete_btn btn-block" id="delete_btn">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                         @endforeach
-                         
-                        </tbody>
-                    </table>
-                </div>
-
+    <!-- Header -->
+    <div class="header pb-6">
+        <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+                <h6 class="h2 d-inline-block mb-0">CITY / VIP STORES</h6>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+                <a href="{{action('Admin_VIPController@create')}}" class="btn btn-success"><i class="fa fa-plus fa-fw"></i> Add VIP Store</a>
+            </div>
             </div>
         </div>
+        </div>
     </div>
-</div>
-<script>
-$(document).ready(function() {
-    $('.delete_form').submit(function(){
-        if(confirm("Are you sure you want to delete it?")){
-            return true;
-        }
-        else{
-            return false;
-        }
-    });
+    <!-- /Header -->
 
-    $('#live-search').submit(function(){
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+
+        @if(\Session::has('success'))
+            {{-- session ung nilagay mo sa return ng controller --}}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-check-bold"></i></span>
+                <span class="alert-text"><strong>Success!</strong> {{ \Session::get('success')}}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
+        <!-- Department Table -->
+        <div class="row">
+            <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header border-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                      <form id="live-search" action="" method="GET">
+                        <input type="text" class="form-control" id="filter" name="filter" placeholder="Search Store Name / Establishment Name">
+                      </form>
+                    </div>
+                </div>
+                </div>
+                <div class="table-responsive">
+                <!-- Projects table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                        <tr>
+                        <th scope="col" class="sort" data-sort="name">Establishment</th>
+                        <th scope="col" class="sort" data-sort="budget">Offers</th>
+                        <th scope="col" class="sort" data-sort="budget">Address</th>
+                        <th scope="col" class="sort" data-sort="budget">Contact Person</th>
+                        <th scope="col" class="sort" data-sort="status">Contact No.</th>
+                        <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list" id="search-show">
+                      @foreach($vips as $row)
+                        <tr id={{$row->id}} class="search-group">
+                            <th scope="row">
+                                <div class="media align-items-center">
+                                <div class="avatar rounded-circle mr-3">
+                                    <img alt="Logo" src="{{asset("uploads/" . $row->filename) }}">
+                                </div>
+                                <div class="media-body">
+                                    <span class="name mb-0 text-sm text-wrap w-50">{{$row->establishment}}</span>
+                                </div>
+                                </div>
+                            </th>
+                            <td class="text-wrap w-50">{!!$row->offers!!}</td>
+                            <td class="text-wrap w-50">{{$row->address}}</td>
+                            <td>{{$row->contact_person}}</td>
+                            <td>{{$row->contact_no}}</td>
+                            <td>
+                                <a href="{{action('Admin_VIPController@edit', $row->id)}}" class="btn btn-primary mb-1 btn-block font-weight-bold btn-sm">Edit</a>
+                                <form method="post" class="delete_form" action="{{action('Admin_VIPController@destroy',$row->id)}}" >
+                                    {{csrf_field()}}
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger delete_btn mb-1 btn-block font-weight-bold btn-sm" id="delete_btn">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                       @endforeach
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+            <strong id="filter-count" class="text-primary float-right"></strong>
+            </div>
+
+        </div>
+        <!-- /Department Table -->
+<script>
+  $(document).ready(function() {
+    $('.delete_form').submit(function(){
+        if(confirm("Are you sure you want to delete it?")){ return true; }
+        else{ return false; }});
+
+        $('#live-search').submit(function(){
         // Retrieve the input field text and reset the count to zero
         var filter = $(this).val(), count = 0;
 
@@ -128,6 +149,6 @@ $(document).ready(function() {
         var numberItems = count;
         $("#filter-count").text("Showing "+count+" out of "+countTable+" entries");
         });
-});
+  });
 </script>
 @endsection

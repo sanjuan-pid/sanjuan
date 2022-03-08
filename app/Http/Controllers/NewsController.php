@@ -81,7 +81,7 @@ class NewsController extends Controller
 
 
         //to redirect
-        return redirect()->route('admin.news.index')->with('success','Data Added');
+        return redirect()->route('admin.news.index')->with('success','News added!');
     }
 
     /**
@@ -139,7 +139,7 @@ class NewsController extends Controller
         $update->filename = $filename;
 
         $update->save();
-        return redirect()->route('admin.news.index')->with('success','Data Updated');
+        return redirect()->route('admin.news.index')->with('success','News updated!');
         
     }
 
@@ -155,7 +155,7 @@ class NewsController extends Controller
         $news = news::find($id);
         $news->status = 0;
         $news->save();
-        return redirect()->route('admin.news.index')->with('success', 'News is already removed');
+        return redirect()->route('admin.news.index')->with('success', 'News is removed from the list!');
     }
     public function makefirst(Request $request)
     {
