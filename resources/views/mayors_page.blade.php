@@ -206,6 +206,22 @@
 
             </div>
         </div>
+        <div class="row mt-5 state">
+          <div class="col-4">
+            <h1 style="color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 75px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: right;">The State of the City Address of San Juan Mayor Francisco Javier M. Zamora</h1>
+          </div>
+          <div class="col-8">
+            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMayorFrancisZamora%2Fvideos%2F230078509142960%2F&show_text=false&width=560&t=0" width="100%" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          </div>
+        </div>
+
+        <div class="row mt-5 statemob" style="display:none;">
+          <div class="col-12">
+          <h1 style="text-align:center;">The State of the City Address of San Juan Mayor Francisco Javier M. Zamora</h1>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FMayorFrancisZamora%2Fvideos%2F230078509142960%2F&show_text=false&width=560&t=0" width="100%" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          </div>
+        </div>
+
         <div class=" col-sm-12" style="display: none;">
             <div class="card">
                     <div class="card-body" id="bulletin_sec">
@@ -228,6 +244,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row" id="social_med">
             {{-- FB --}}
               <div class=" col-sm-4">

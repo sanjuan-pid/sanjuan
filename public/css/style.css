@@ -661,6 +661,22 @@ button.navbar-toggler{
     flex: 0 0 100% !important;
     max-width: 100% !important;
 }
+.statemob{
+  width: 100% !important;
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+
+}
+.statemob{
+  display: block !important;
+}
+.statemob iframe{
+  width: 100% !important;
+  height: 200px !important;
+}
+.state{
+  display: none !important;
+}
 
 .mayor_  #_viewmore a {
     color: #2b92b0 !important;
