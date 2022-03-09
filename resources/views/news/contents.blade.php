@@ -30,7 +30,7 @@
                 <div class="card-body">
                         <br>
                         @foreach($ann as $row)
-                            <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 25%;  margin-bottom: 5%;" />
+                            <img src="{{asset("uploads/" . $row->filename) }}"  style="width: 100%; padding: 0 10%;  margin-bottom: 5%;" />
                             <h1 style="font-size:30px;">{{ $row->title }}</h1>
                             <p><?php echo $row->desc ?></p>
                         @endforeach
