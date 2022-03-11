@@ -100,6 +100,12 @@
                </div>
              </li>
              <li class="nav-item">
+              <a class="nav-link" href="{{route('admin.brgy.brgy_list')}}">
+                <i class="ni ni-shop text-primary"></i>
+                <span class="nav-link-text text-dark">Barangay</span>
+              </a>
+           </li>
+             <li class="nav-item">
                <a class="nav-link" href="#navbar-events" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-events">
                  <i class="fas fa-newspaper text-primary"></i>
                  <span class="nav-link-text text-dark">Events</span>

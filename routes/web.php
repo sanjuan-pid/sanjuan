@@ -29,7 +29,7 @@ Route::get('/contactus_page','Pages@contactus');
 Route::get('/contactus_page', 'EmailerContactUs@index')->name('contactus');
 Route::post('/contactus_page/send', 'EmailerContactUs@send');
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'Auth\AdminLoginController@showLoginForm');
 Route::get('/news_article','Pages@index');
 Route::get('/mayors_page','Pages@mayor')->name('mayor');
 Route::get('/skills_page','Pages@skills');
@@ -246,6 +246,10 @@ Route::prefix('admin')->group(function(){
     // Route::post('/department/department-create-child', 'DeparmentController@store_child')->name('admin.department.deparment-create');
     // Route::resource('/department','DeparmentController');
 
+    //Brgy - Content
+    Route::get('/brgy_list', 'Brgy_ContentController@index')->name('admin.brgy.brgy_list');
+    Route::resource('/brgy', 'Brgy_ContentController');
+
     //Department - Main
     Route::get('/dept_list', 'Department_MainController@index')->name('admin.dept.dept_list');
     Route::resource('/dept', 'Department_MainController');
@@ -278,6 +282,12 @@ Route::prefix('admin')->group(function(){
     Route::get('Tourism/biketrail_page','Pages@biketrail')->name('biketrail');
     Route::get('Tourism/festivities_page','Pages@festivities')->name('festivities');
     Route::get('Tourism/historical_page','Pages@historical')->name('historical');
+
+});
+
+Route::prefix('resident')->group(function(){
+
+    Route::get('/resident_home', 'RSDNT_DashboardController@index')->name('resident.dashboard');
 
 });
 });
