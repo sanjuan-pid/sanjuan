@@ -898,6 +898,23 @@
                         </div>
                       </a>
                     </div>
+                    <div class=" col-6 col-sm-6 col-md-6 col-lg-6 mt-4">
+                      <a class="department"href="{{route('announce')}}">
+                        <div class="card" id="carddept">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
+                                <h5 class="card-title" id="a1">Parole and Probation</h5>
+                                <p class="card-text"></p>
+                              </div>
+                              <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
+                                <img style=" width:80%; "src="{{asset('assets/makabago.png')}}"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -1511,7 +1528,7 @@
                                                   <div class="card-body">
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                                        <h5 class="card-title" id="a1">City Nutrition</h5>
+                                                        <h5 class="card-title" id="a1">City Nutrition Office</h5>
                                                         <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
