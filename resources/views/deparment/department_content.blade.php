@@ -579,9 +579,9 @@
         <br>
         <button class="buttondept deptlinks" onclick="deptcon(event, 'depttwo')"><span>ECONOMIC<br>CENTER</span></button>
         <br>
-        <button class="buttondept deptlinks" onclick="deptcon(event, 'deptthree')" ><span>ENVIRONMENTAL SECTOR</span></button>
+        <button class="buttondept deptlinks" onclick="deptcon(event, 'deptthree')"><span>ENVIRONMENTAL SECTOR</span></button>
         <br>
-        <button class="buttondept deptlinks" onclick="deptcon(event, 'deptfour')" ><span>SOCIAL <br> SERVICES</span></button>
+        <button class="buttondept deptlinks" onclick="deptcon(event, 'deptfour')"><span>SOCIAL <br> SERVICES</span></button>
         <br>
         <button class="buttondept deptlinks" onclick="deptcon(event, 'deptfive')" ><span>PHYSICAL <br> INFRASTRUCTURE</span></button>
       </div>
@@ -771,7 +771,7 @@
                       </a>
                     </div>
                     <div class=" col-6 col-sm-6 col-md-6 col-lg-6">
-                      <a class="department"href="{{route('budget')}}">
+                      <a class="department"href="{{route('announce')}}">
                         <div class="card" id="carddept">
                           <div class="card-body">
                             <div class="row">
@@ -870,7 +870,7 @@
                           <div class="card-body">
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                <h5 class="card-title" id="a1">Internal Audit Services</h5>
+                                <h5 class="card-title" id="a1">Commission on Audit</h5>
                                 <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
@@ -887,7 +887,7 @@
                           <div class="card-body">
                             <div class="row">
                               <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                <h5 class="card-title" id="a1">BAC Secretariat</h5>
+                                <h5 class="card-title" id="a1">Bids and Awards Committee</h5>
                                 <p class="card-text"></p>
                               </div>
                               <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
@@ -915,7 +915,7 @@
             <br>
                     <div class="row">
                       <div class=" col-6 col-sm-6 col-md-6 col-lg-6">
-                        <a class="department"href="{{route('bplo')}}">
+                        <a class="department"href="{{route('announce')}}">
                           <div class="card" id="carddept">
                             <div class="card-body">
                               <div class="row">
@@ -980,7 +980,7 @@
                             <div class="card-body">
                               <div class="row">
                                 <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                  <h5 class="card-title" id="a1">Local Civil Registry</h5>
+                                  <h5 class="card-title" id="a1">City Civil Registry</h5>
                                   <p class="card-text"></p>
                                 </div>
                                 <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
@@ -1456,7 +1456,7 @@
                                                   <div class="card-body">
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                                        <h5 class="card-title" id="a1">Educational Support Services / School Board</h5>
+                                                        <h5 class="card-title" id="a1">Division of Schools / School Board</h5>
                                                         <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
@@ -1487,13 +1487,14 @@
                                           </div>
                                           <br>
                                           <div class="row">
+
                                             <div class=" col-6 col-sm-6 col-md-6 col-lg-6">
                                               <a class="department"href="{{route('announce')}}">
                                                 <div class="card" id="carddept">
                                                   <div class="card-body">
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                                        <h5 class="card-title" id="a1">City Library</h5>
+                                                        <h5 class="card-title" id="a1">City Youth Development Office</h5>
                                                         <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
@@ -1510,7 +1511,7 @@
                                                   <div class="card-body">
                                                     <div class="row">
                                                       <div class=" col-9 col-sm-9 col-md-9 col-lg-9">
-                                                        <h5 class="card-title" id="a1">City Youth Development Office</h5>
+                                                        <h5 class="card-title" id="a1">City Nutrition</h5>
                                                         <p class="card-text"></p>
                                                       </div>
                                                       <div class=" col-3 col-sm-3 col-md-3 col-lg-3">
