@@ -2329,7 +2329,7 @@ div.imgslot {
     .imagesl{
       height: 0 !important;
     }
-video #first_vid{
+video #first_vid, #second_vid, #third_vid{
     height: 200px !important;
     }
 }
