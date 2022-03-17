@@ -2042,7 +2042,7 @@ li.list-group-item.latest_news a{
         text-align: right;
     }
     div#myCarousel img {
-        width: 40% !important;
+        width: 29.1% !important;
     }
     footer .container .row {
         margin: 0% 8% !important;
@@ -2304,8 +2304,9 @@ div#agenda_row img {
     div#news .mt-2, .my-2 {
         margin-top: 1.5rem !important;
     }
-    video#first_vid,video#second_vid {
+    video#first_vid,video#second_vid, video#third_vid{
         width: 100% !important;
+        height: 200px !important;
     }
     #mayors_corner h1, ol.carousel-indicators{
         display: none;
@@ -2317,4 +2318,18 @@ div#agenda_row img {
 
 div#news_sec div#news{
     width: 100% !important;
+}
+
+@media screen and (min-device-width: 319px) and (max-device-width: 767px){
+div.imgslot {
+    padding: 0 0% !important;
+    height: 345px !important;
+
+      }
+    .imagesl{
+      height: 0 !important;
+    }
+video #first_vid{
+    height: 200px !important;
+    }
 }
