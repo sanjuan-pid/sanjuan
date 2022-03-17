@@ -326,8 +326,8 @@
                              <div class="container">
                                <div class="row">
                                  <div class=" col-sm-12">
-                                   <div id="img_slot1">
-                                     <video class="vidito" width="1250" id="first_vid" controls>
+                                   <div id="img_slot1" style="height:659.5px !important;">
+                                     <video class="vidito" width="1250" height="657" id="first_vid" controls>
                                        <source src="{{asset('assets/vid1.mp4')}}" type="video/mp4">
                                        Your browser does not support HTML video.
                                      </video>
@@ -340,9 +340,23 @@
                              <div class="container">
                                <div class="row">
                                  <div class=" col-sm-12">
-                                   <div id="img_slot1">
-                                     <video class="vidito" width="1250" id="second_vid" controls>
+                                   <div id="img_slot1" style="height:659.5px !important;">
+                                     <video class="vidito" width="1250" height="657" id="second_vid" controls>
                                        <source src="{{asset('assets/vid2.mp4')}}" type="video/mp4">
+                                       Your browser does not support HTML video.
+                                     </video>
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="carousel-item">
+                             <div class="container">
+                               <div class="row">
+                                 <div class=" col-sm-12">
+                                   <div id="img_slot1" style="height:659.5px !important;">
+                                     <video class="vidito" width="1250" height="657" id="third_vid" controls>
+                                       <source src="{{asset('assets/vid4.mp4')}}" type="video/mp4">
                                        Your browser does not support HTML video.
                                      </video>
                                    </div>
@@ -360,7 +374,7 @@
                                  <div class=" col-sm-12">
                                    <div id="img_slot">
                                      <a  href="{{action( 'Pages@news_contents', $row['id'] )}}"  >
-                                       <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width:35%!important;"  id="image_slide">
+                                       <img src="{{asset("uploads/" . $row['filename']) }}" style="height: auto;width:29.1%!important;"  id="image_slide">
                                      </a>
                                    </div>
                                  </div>
