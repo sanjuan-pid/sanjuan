@@ -169,7 +169,23 @@
 
             </div>
           </div>
-        <div class="row">
+          <div class="modal fade" id="myModal7" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg modalss" style="width: 100%; max-width: 100%;">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                    <h2>FUND UTILIZATION AND STATUS OF PROGRAM/PROJECT IMPLEMENTATION FOR THE 4TH QUARTER ENDED DECEMBER 31, 2021</h2>
+                    <img class="card-img-top" src="{{asset('assets/reports/decfund.jpg')}}" />
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default close_pause"  data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        <div class="row d-flex justify-content-center">
             {{-- <img src="{{asset('assets/mock/SKILLS.jpg')}}" style="width: 100%;margin: 0 auto;display: block;"/>  --}}
             <br>
             <div class="col-12 mt-2" style=" width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
@@ -234,6 +250,18 @@
                           <h4>FINANCIAL ASSISTANCE FOR THE MONTH OF OCTOBER 2021</h4>
                           <br>
                           <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal6" style="float: right; font-size:18px;" >VIEW</button>
+                          {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 clearfix d-md-block">
+                      <div class="card mb-2">
+                        <img class="card-img-top" src="{{asset('assets/reports/decfund.jpg')}}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                          <h4>FUND UTILIZATION AND STATUS OF PROGRAM/PROJECT 2021</h4>
+                          <br>
+                          <button type="button" class="btn btn-info btn-lg" id="optic_btn" data-toggle="modal" data-target="#myModal7" style="float: right; font-size:18px;" >VIEW</button>
                           {{-- <img class="card-img-top" src="{{asset('assets/play-button.svg')}}" style="width: 5%;" > --}}
                         </div>
                       </div>
