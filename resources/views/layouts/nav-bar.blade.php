@@ -4,6 +4,16 @@
     color: red;
     font-size: 30px !important;
   }
+  .tinted-image {
+    width: 100% !important;
+    background:linear-gradient(rgb(255 0 0 / 80%),rgb(72 5 5 / 80%)),url("{{asset('assets/pinaglabanan.png')}}");
+    background-repeat: no-repeat;
+  }
+  @media screen and (max-width: 766px) and (min-width: 200px){
+    .tinted-image{
+      height: 100% !important;
+    }
+  }
 </style>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -172,9 +182,8 @@
                             Tourism
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                              <li><a class="dropdown-item" href="{{route('announce')}}">Bike Trail</a></li>
                               <li><a class="dropdown-item" href="{{route('festivities')}}">Festivities</a></li>
-                              <li><a class="dropdown-item" href="{{route('historical')}}">Historical</a></li>
+                              <li><a class="dropdown-item" href="{{route('historical')}}">Historical Bike Trail</a></li>
                             </ul>
                           </li>
 
@@ -292,8 +301,14 @@
                   <li><a class="dropdown-item" href="{{route('announce')}}">Press Releases / Media Advisories</a></li>
                 </ul>
               </li>
-              <li class="nav-item" >
-                <a class="nav-link"  href="{{route('announce')}}"  id="navbarDropdownMenuLink" >Tourism</a>
+              <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tourism
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                  <li><a class="dropdown-item" href="{{route('festivities')}}">Festivities</a></li>
+                  <li><a class="dropdown-item" href="{{route('historical')}}">Historical Bike Trail</a></li>
+                </ul>
               </li>
 
                 <li class="nav-item" >
@@ -369,7 +384,7 @@
         @yield('content')
     </body>
     <footer>
-      <div class="container" style="margin-bottom: 0%; background-color: #e82525;">
+      <div class="container tinted-image" style="margin-bottom: 0%; height:300px;">
           <br>
           <div class="row">
               {{-- <h1 style="text-align: center; margin-top:-2%;">FOOTERsss</h1> --}}
