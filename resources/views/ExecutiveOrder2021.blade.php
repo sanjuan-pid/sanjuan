@@ -605,7 +605,7 @@
                   @if ($row->trans_category == 'Executive Orders' )
                   <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                     <a class="executive" style="text-decoration: none;" target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}">
-                    <div class="card execard">
+                    <div class="card execard mb-5">
                       <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(2px);
                       -webkit-filter: blur(2px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
                         <div class="container exetitle zoom" style="">
@@ -624,7 +624,7 @@
               @if ($row->trans_category == 'Executive Orders' && $row->trans_year == '2021')
               <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                 <a class="executive" style="text-decoration: none;" target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}">
-                <div class="card execard">
+                <div class="card execard mb-5">
                   <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(2px);
                   -webkit-filter: blur(2px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
                     <div class="container exetitle zoom" style="">
@@ -644,7 +644,7 @@
               @if ($row->trans_category == 'Executive Orders' && $row->trans_year == '2022')
               <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                 <a class="executive" style="text-decoration: none;" target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}">
-                <div class="card execard">
+                <div class="card execard mb-5">
                   <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(2px);
                   -webkit-filter: blur(2px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
                     <div class="container exetitle zoom" style="">
