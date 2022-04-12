@@ -565,8 +565,8 @@
     }
 
     .execard:hover img{
-      filter: blur(0px) !important;
-      -webkit-filter: blur(0px) !important;
+      filter: blur(2px) !important;
+      -webkit-filter: blur(2px) !important;
     }
 
     </style>
@@ -606,8 +606,8 @@
                   <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                     <a class="executive" style="text-decoration: none;" target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}">
                     <div class="card execard mb-5">
-                      <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(2px);
-                      -webkit-filter: blur(2px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
+                      <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(0px);
+                      -webkit-filter: blur(0px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
                         <div class="container exetitle zoom" style="">
                           <h4>{{$row->trans_title}}</h4>
                         </div>
@@ -625,8 +625,8 @@
               <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                 <a class="executive" style="text-decoration: none;" target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}">
                 <div class="card execard mb-5">
-                  <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(2px);
-                  -webkit-filter: blur(2px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
+                  <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(0px);
+                  -webkit-filter: blur(0px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
                     <div class="container exetitle zoom" style="">
                       <h4>{{$row->trans_title}}</h4>
                     </div>
@@ -645,8 +645,8 @@
               <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                 <a class="executive" style="text-decoration: none;" target="_blank" href="{{asset("uploads/" . $row->trans_pdf) }}">
                 <div class="card execard mb-5">
-                  <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(2px);
-                  -webkit-filter: blur(2px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
+                  <img style=" width:100%; margin-left: auto; margin-right: auto; filter: blur(0px);
+                  -webkit-filter: blur(0px);"src="{{asset("uploads/" . $row->trans_image) }}"/>
                     <div class="container exetitle zoom" style="">
                       <h4>{{$row->trans_title}}</h4>
                     </div>
